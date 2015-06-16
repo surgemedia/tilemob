@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="es">
+	<langstring name="LNG_BOOKMARK_DELETE">Borrar este punto de libro</langstring>
+	<langstring name="LNG_BOOKMARK_ADD">Añadir punto de libro</langstring>
+	<langstring name="LNG_BOOKMARK_OK">Confirma</langstring>
+	<langstring name="LNG_BOOKMARK_CANCEL">Cancela</langstring>
+	<langstring name="LNG_BOOKMARK_DEFAULT_TITLE">Página $1</langstring>
+</lang>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="it">
+	<langstring name="LNG_BOOKMARK_DELETE">Elimina questo segnalibro</langstring>
+	<langstring name="LNG_BOOKMARK_ADD">Aggiungi un segnalibro</langstring>
+	<langstring name="LNG_BOOKMARK_OK">Conferma</langstring>
+	<langstring name="LNG_BOOKMARK_CANCEL">Annulla</langstring>
+	<langstring name="LNG_BOOKMARK_DEFAULT_TITLE">Pagina $1</langstring>
+</lang>

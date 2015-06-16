@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="es">
+    <langstring name="LNG_HELP">Mostrar ayuda</langstring>
+    <langstring name="LNG_HELP_CLOSE">Cerrar ayuda</langstring>
+    <langstring name="LNG_HELP_NEXT">Siguiente</langstring>
+    <langstring name="LNG_HELP_PREV">Anterior</langstring>
+    
+    <!-- Note: help messages should not contain new lines. Use <br/> tags instead. -->
+    <langstring name="LNG_HELP1"><![CDATA[<b>Bienvenido</b><br/><br/>Para hojear este libro puede usar las flechas de su teclado (izquierda y derecha) o pulsar en las esquinas de las páginas. También puede arrastrar las páginas pulsando sobre una esquina y, sin soltar el botón izquierdo, mover en la dirección deseada.<br/><br/>Para mostrar de nuevo esta ventana de ayuda use el botón "?" en la barra de herramientas bajo las páginas.]]></langstring>
+    <langstring name="LNG_HELP1B"><![CDATA[<b>Bienvenido</b><br/><br/>Para hojear este libro puede usar las flechas de su teclado (izquierda y derecha) o pulsar en las esquinas de las páginas. También puede arrastrar las páginas pulsando sobre una esquina y, sin soltar el botón izquierdo, mover en la dirección deseada.]]></langstring>
+    <langstring name="LNG_HELP2"><![CDATA[<b>Navegación</b><br/><br/>Use los botones de navegación (puntos) situados bajo las páginas para saltar rápidamente de una página a otra.<br/><br/>Se mostrará una miniatura al situar el cursor sobre uno de los botones (puede tardar unos segundos en mostrarse la miniatura la primera vez, por favor sea paciente.]]></langstring>
+    <langstring name="LNG_HELP3"><![CDATA[<b>Modo Zoom</b><br/><br/>Si hay una pequeña lupa en la página (normalmente sobre una imagen) esto indica que existe una versión con mayor resolución. Pulse sobre la lupa para abrir el Modo Zoom.<br/><br/>En el Modo Zoom, use la rueda del ratón para ampliar o reducir. Si la imagen es mayor que la zona de visualización, arrastre con el ratón o en el rectángulo de miniatura (arriba a la derecha) para desplazarse por la zona visible.<br/><br/>Si la imagen es parte de una galería aparecerán dos botones con forma de flecha en la esquina superior derecha, que pueden usarse para navegar entre las imágenes de esa galería.<br/><br/>Use el botón X en la caja de miniatura o la tecla ESC para salir del modo zoom.]]></langstring>
+    <langstring name="LNG_HELP4"><![CDATA[<b>Pantalla completa</b><br/><br/>Use el último botón de la derecha en la barra de navegación para entrar en el modo de pantalla completa. Su propósito es permitir una mejor visualización de las imágenes, ya que se aprovecha toda la pantalla, mientras en el modo normal se utiliza el tamaño del libro abierto.<br/><br/>Normalmente al entrar en modo zoom se cambia a modo de pantalla completa. Si no es así puede usar el citado botón para entrar manualmente en este modo.]]></langstring>
+    <langstring name="LNG_HELP5"><![CDATA[<b>Pase automático</b><br/><br/>El botón de la barra de navegación con el símbolo de "play" activa el modo de pase automático de páginas. Cada página se mostrará durante unos segundos antes de pasar a la siguiente.]]></langstring>
+</lang>

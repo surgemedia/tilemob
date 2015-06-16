@@ -1,0 +1,57 @@
+#nav_main, #nav_main ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+}
+
+#nav_main a {
+	display: block;
+	width: 4em;
+	height: 1.5em;
+}
+
+#nav_main li {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	float: left;
+	width: 4.5em;
+	height: 1.5em;
+}
+
+#nav_main li ul { /*second-and-above-level lists*/
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	position: absolute;
+	width: 80px;
+	left: -999em;
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	border-width: 5px 1px 1px 1px;
+	border: 1px solid #EE3B33;
+	background: #FFFFFF;
+}
+
+#nav_main li ul ul { /* third-and-above-level lists */
+	margin: -1em 0 0 1em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	position: absolute;
+	width: 80px;
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	border-width: 5px 1px 1px 1px;
+	border: 1px solid #EE3B33;
+	background: #FFFFFF;
+}
+
+#nav_main li:hover ul ul, #nav_main li.sfhover ul ul {
+	left: -999em;
+}
+
+#nav_main li:hover ul, #nav_main li li:hover ul, #nav_main li li li:hover ul, #nav_main li.sfhover ul, #nav_main li li.sfhover ul, #nav_main li li li.sfhover ul  {
+	left: auto;
+}

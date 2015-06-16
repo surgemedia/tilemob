@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lang id="fr">
+	<langstring name="LNG_PRINTPDF">Enregistrer au format PDF</langstring>
+	<langstring name="LNG_PRINTPDF_CLOSE">Fermer</langstring>
+	<langstring name="LNG_PRINTPDF_INFO">Sélectionnez les pages que vous souhaitez enregistrer en tant que PDF en cliquant dessus.</langstring>
+	<langstring name="LNG_PRINTPDF_INFO2">Ou entrez le numéro de page manuellement. Séparez les numéros en utilisant des points-virgules. Définir des plages de l'aide '-' (​​par exemple, 10-20). </langstring>
+	<langstring name="LNG_PRINTPDF_PREV">Pages précédentes</langstring>
+	<langstring name="LNG_PRINTPDF_NEXT">Pages suivantes</langstring>
+	<langstring name="LNG_PRINTPDF_PRINT">Enregistrer les pages sélectionnées</langstring>
+	<langstring name="LNG_PRINTPDF_SAVE_COMPLETE">Enregistrer le livre complet (ne tient pas compte de sélection)</langstring>
+	
+	<langstring name="LNG_PRINTPDF_TOO_MANY_PAGES"><![CDATA[<b>Avertissement</b><br/>En raison de limitations techniques, il n'est pas possible d'engeristrer plus de <b>$1</b> pages à la fois. Merci de réduire votre sélection (vous avez actuellement sélectionné <b>$2</b> pages).<br/>Vous pouvez également enregistrer le livre en entier en cliquant sur "Enregistrer le livre complet"]]></langstring>
+</lang>

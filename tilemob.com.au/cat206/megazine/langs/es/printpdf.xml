@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="es">
+	<langstring name="LNG_PRINTPDF">Guardar como PDF</langstring>
+	<langstring name="LNG_PRINTPDF_CLOSE">Cerrar</langstring>
+	<langstring name="LNG_PRINTPDF_INFO">Selecciona la(s) página(s) que quieres guardar como PDF haciendo click en ella(s).</langstring>
+	<langstring name="LNG_PRINTPDF_INFO2">También puedes introducir los números manualmente. Separa los números con ;. Define rangos usando 'desde-a': p.ej. 10-20.</langstring>
+	<langstring name="LNG_PRINTPDF_PREV">Páginas anteriores</langstring>
+	<langstring name="LNG_PRINTPDF_NEXT">Páginas siguientes</langstring>
+	<langstring name="LNG_PRINTPDF_PRINT">Guardar páginas seleccionadas</langstring>
+	<langstring name="LNG_PRINTPDF_SAVE_COMPLETE">Guardar libro completo (ignora tu selección)</langstring>
+	
+	<langstring name="LNG_PRINTPDF_TOO_MANY_PAGES"><![CDATA[<b>¡Aviso!</b><br/>Debido a limitaciones técnicas no es possible guardar más de <b>$1</b> páginas a la vez. Por favor reduzca tu selección (tienes seleccionadas <b>$2</b> páginas).<br/>Como alternativa puedes guardar el libro completo haciendo click en el botón 'Guardar libro completo'.]]></langstring>
+</lang>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="it">
+    <langstring name="LNG_SETTINGS">Opzioni</langstring>
+    <langstring name="LNG_SETTINGS_ACCEPT">Salva opzioni</langstring>
+    <langstring name="LNG_SHADOWS">Ombra</langstring>
+    <langstring name="LNG_SHADOWS_LONG">Attivare l'uso di effetti voltando le pagine. Può influenzare la velocità dell'animazione.</langstring>
+    <langstring name="LNG_REFLECTION">Riflesso</langstring>
+    <langstring name="LNG_REFLECTION_LONG">Attivare/disattivare riflessi delle pagine sul libro. Può influenzare la velocità dell'animazione</langstring>
+</lang>

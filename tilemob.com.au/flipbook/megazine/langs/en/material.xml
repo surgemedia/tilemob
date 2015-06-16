@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="en">
+	<langstring name="LNG_MATERIAL_CLOSE">Close</langstring>
+	<langstring name="LNG_MATERIAL_INFO">Download a material by clicking on its thumbnail.</langstring>
+	<langstring name="LNG_MATERIAL_PREV">Previous materials</langstring>
+	<langstring name="LNG_MATERIAL_NEXT">Next materials</langstring>
+</lang>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Test</title>
+
+<script language="Javascript1.2">
+var rc_alert = "Right click has been disabled on this Website.";
+bV  = parseInt(navigator.appVersion);
+bNS = navigator.appName=="Netscape";
+bIE = navigator.appName=="Microsoft Internet Explorer";
+
+function disableRightClick(e) {
+	if (bNS && e.which > 1){
+		alert(rc_alert);
+		return false;
+	} else if (bIE && (event.button >1)) {
+		alert(rc_alert);
+		return false;
+	}
+}
+document.onmousedown = disableRightClick;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+if (bNS && bV<5) window.onmousedown = disableRightClick;
+</script>
+</head>
+
+<body oncontextmenu="return false;">
+This is a test.
+</body>
+</html>

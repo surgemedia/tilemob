@@ -1,0 +1,146 @@
+body{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.spacer {
+	padding-left: 15px;
+}
+
+.the-tile-mob {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 15px;
+	padding-right: 4px;
+}
+
+.the-tile-mob2 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 15px;
+	padding-right: 4px;
+}
+
+.the-tile-mob2 a:link, .the-tile-mob2 a:visited {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #EE3B33;
+	padding-left: 0px;
+	padding-right: 4px;
+}
+
+.the-tile-mob2 a:HOVER {
+	color: #999999;
+	text-decoration: none;
+}
+
+.the-tile-mob-banner {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.the-tile-stylists {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 7px;
+	padding-right: 4px;
+}
+
+.terms {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+	padding-left: 0px;
+	padding-right: 4px;
+}
+
+.the-tile-mob-dark {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.the-tile-mob-dark a:LINK,  .the-tile-mob-dark a:VISITED {
+	color: #EE3B33;
+	text-decoration: none;
+}
+
+.the-tile-mob-dark a:HOVER {
+	color: #666666;
+	text-decoration: none;
+}
+
+a:link {
+	color: #666666;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #999999;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #EE3B33;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+/******** Style: CMS form elements **********************************/
+.loginfield {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #efefef;
+	border: 1px solid #959595;
+	font-size: 9pt;
+	color: #707070;
+	padding: 3px;
+}
+
+.textfields {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	font-size: 9pt;
+	color: #000000;
+	padding: 3px;
+}
+
+.btn_textfields {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #EE3B33;
+	font-size: 9pt;
+	color: #000000;
+	padding: 3px;
+}
+
+.textfields2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	font-size: 9pt;
+	color: #000000;
+	padding: 3px;
+}
+
+.btn_textfields2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #EE3B33;
+	font-size: 9pt;
+	color: #000000;
+	padding: 3px;
+}

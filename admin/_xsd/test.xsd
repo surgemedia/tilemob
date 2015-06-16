@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.clearsoftware.com.au"
+xmlns="http://www.clearsoftware.com.au"
+xmlns:doc="http://www.clearsoftware.com.au/schemas/documentation"
+elementFormDefault="qualified">
+This is a test
+Test
+test!

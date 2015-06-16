@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="it">
+	<langstring name="LNG_PRINT">Stampa</langstring>
+	<langstring name="LNG_PRINT_CLOSE">Chiudi</langstring>
+	<langstring name="LNG_PRINT_INFO">Selezionare le pagine che si desidera stampare facendo clic su di esse.</langstring>
+	<langstring name="LNG_PRINT_INFO2">Oppure immettere i numeri di pagina manualmente. Separare i numeri con virgola. Definire intervalli utilizzando 'da-a': ad esempio 10-20.</langstring>
+	<langstring name="LNG_PRINT_PREV">Pagine precedenti</langstring>
+	<langstring name="LNG_PRINT_NEXT">Pagine successive</langstring>
+	<langstring name="LNG_PRINT_PRINT">Stampa le pagine selezionate</langstring>
+	<langstring name="LNG_PRINT_TOO_MANY_PAGES"><![CDATA[<b> Warning </ b> <br/> causa di limitazioni tecniche non è possibile stampare più di <b> $ 1 </ b> pagine alla volta. Si prega di ridurre la selezione (che hai selezionato <b> $ 2 </ b> pagine).]]></langstring>
+</lang>

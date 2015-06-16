@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.clearsoftware.com.au"
+xmlns="http://www.clearsoftware.com.au"
+xmlns:doc="http://www.clearsoftware.com.au/schemas/documentation"
+elementFormDefault="qualified">
+  <xs:element name="Creditors">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="Creditor" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="Code" doc:description="Creditor Code.">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="Name" doc:description="Creditor Name.">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

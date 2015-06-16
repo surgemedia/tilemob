@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<html lang='en'>
+	<head>
+		<title>Technicrystal_Versafloor_Catalogue  (Thu 06/02/2014 / 12:48:53.81)</title>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<link type='text/css' href='css/style.css' rel='stylesheet' />
+		<link rel='image_src' href='http://megazine3.de/tl_files/images/logos/MegaZine3/MZ3-Logo.jpg' />
+		<link rel='icon' type="image/vnd.microsoft.icon"  href='http://megazine3.de/tl_files/images/logos/MegaZine3/MZ3-Logo.ico' />
+	</head>
+	<body>
+		 <!--
+		    Settings for MegaZine3 Flash:
+		    {string} data-mz3-swf
+		    	Path to the main SWF file to load (preloader or megazine.swf).	
+		        The default value is 'megazine/preloader.swf'.	
+		    {string} data-mz3-bgcolor
+		        Background color for the Flash element.
+		        Default value is #333333.
+		    {string} data-mz3-wmode
+		        The value to use for the 'wmode' parameter, e.g. 'transparent'
+		        to display the Flash behind HTML content. Not recommended
+		        because it slows things down dramatically. Consider using
+		        book/background instead.
+		    {boolean} data-mz3-logtojs
+		        Whether to log messages to the JavaScript console in addition
+		        to possible Flash internal logging. Default value is 'false'.
+
+		    Settings for MegaZine3 Flash and the fallback JS renderer:
+		    {string} data-mz3-basepath
+		        This is the ABSOLUTE base that to use for all path resolving.
+		        This has an effect on ALL paths (including GUI, sounds etc).
+		    {string} data-mz3-xml
+		        Used to pass the name of the xml file to use. Path is RELATIVE
+		        to data-mz3-basepath, or, if not set, to the megazine.swf file.
+
+		    Settings for the fallback JS renderer:
+		    {boolean} data-mz3-nojs
+		        Completely disable the fallback JS renderer. Note that the
+				data-mz3-forcejs setting overrides this setting if both are
+				set to 'true'. Default value is 'false'.
+		    {boolean} data-mz3-autoadjust
+		        Adjust book display mode (widescreen / protrait) automatically
+		        on orientation change or not. The default is 'true'.
+		    {boolean} data-mz3-viewport
+		        Adjust the viewport settings automatically for mobile devices,
+		        to get full screen use. The default is 'true'.
+		    {boolean} data-mz3-forcejs
+		        Force using the fallback JS renderer. Meant for testing only.
+		        Default value is 'false'.
+			{boolean} data-mz3-linkvids
+				Only link to videos, do not directly embed them.
+				If available, this uses the videos preview image instead.
+				The default is 'true'.
+
+		    Usage:
+		    Simply apply the settings as attributes to the div that should contain
+		    the MegaZine3 instance.
+
+		    Example:
+		    <div id="megazine"
+		         data-mz3-xml="path/to/custom.mz3"
+		         data-mz3-logtojs="true">
+		  -->
+				<div id='megazine' 
+					data-mz3-swf='megazine/preloader_tm.swf'
+					data-mz3-xml='../Technicrystal/Versafloor_Catalogue/megazine_Technicrystal_Versafloor_Catalogue.mz3'
+					data-mz3-bgcolor='#e0e0e0' 
+					data-mz3-nojs='true'>
+				  <div class='alt-content'>
+			        <h1><em>MegaZine3&reg requires:</em></h1>
+			        <h2><em>Adobe&reg; Flash&reg; Player 11</em> and <em>JavaScript</em></h2>
+		    	    <h1>OR</h1>
+			        <p>You use 'Puffin', a great browser supporting mobile devices also, with full FLASH support as cloud service</p>
+			        <p><a href='http://www.puffinbrowser.com/index.php'><img width='100px' height='100px' src='http://megazine3.de/tl_files/images/website/Elements/logos+pictures/Puffin Logo_small.png' alt='check out the browser alternative PUFFIN'/></a></p>
+		    	    <h1>OR</h1>
+		        	<h2><em>JavaScript</em> and the MegaZine3&reg JS option</h2>
+			        <p>To get the Javascript extensions for MegaZine3, please look for the optJS option in our shop (expected in Q2 2013)</p>
+			        <p><a href='http://www.megazine3.de/licenses.html'><img width='100px' height='100px' src='http://megazine3.de/tl_files/images/logos/MegaZine3/MZ3-Logo.jpg' alt='Visit our Shop'/></a></p>
+		    	    <p>-----------------------</p>
+			        <p>To install the Adobe&reg; Flash&reg; Player, follow the links below:</p>
+			        <p><a href='http://get.adobe.com/flashplayer/'><img src='http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png' alt='Get Adobe Flash Player'/></a></p>
+			        <p>If you still encounter problems after installing the Adobe&reg; Flash&reg; Player, from the above link, try this one:</p>
+		    	    <p><a href='http://get.adobe.com/shockwave/'><img src='http://www.adobe.com/images/shared/download_buttons/get_adobe_shockwave_player.png' alt='Get Adobe Shockwave Player'/></a></p>
+		        	<p><a href='http://www.megazine3.de/'>Powered by MegaZine3</a></p>
+			      </div>
+				</div>
+		</div>
+  <!-- Used to embed Flash -->
+		<script src='js/swfobject.js'></script>
+  <!-- Used for deep linking into books -->
+		<script src='js/swfaddress.js'></script>
+  <!-- Framework used by the JavaScript fallback renderer -->
+		<script src='js/jquery-1.10.2.min.js'></script>
+		<script src='js/jquery-migrate-1.2.1.js'></script>
+		<script src='js/jquery-1.10.2.min.map'></script>
+  <!-- Used for interacting with books from JavaScript -->
+		<script src='js/megazine.js'></script>
+  <!-- Used to load MegaZine3, first trying Flash,
+	  if that fails the JavaScript fallback renderer -->
+		<script src='js/jquery.mz3.min.js'></script>
+  <!-- Language names to resolve language shortcuts in book definition -->
+		<script src='js/jquery.mz3-lang.js'></script>
+  <!-- Automatically initialize MegaZine3 in a div with id 'megazine' -->
+		<script>jQuery(function($){
+			$('div#megazine').mz3js()
+	    })
+		</script>
+	</body>
+</html>

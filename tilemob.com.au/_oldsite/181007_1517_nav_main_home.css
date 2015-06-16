@@ -1,0 +1,147 @@
+.menu {
+/*width: 295px; 
+_width: 310px;*/
+width: 350px;
+font-size:0.85em; 
+font-family: arial, sans-serif;
+position: relative;
+top: 0px;
+left: 0px;
+z-index: 100;
+}
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul {
+padding:0;
+margin:0;
+list-style-type:none;
+}
+.menu ul ul {
+width:70px;
+_width: 50px;
+}
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu li {
+float:left;
+width:70px;
+position:relative;
+_width: 50px;
+}
+/* style the links for the top level */
+.menu a {
+display:block;
+font-size:10px;
+text-decoration:none; 
+color:#FFFFFF; 
+width:70px; 
+height:24px; 
+/*background:#EE3B33 url(images/img_arrowbullet2.gif) center left no-repeat;*/
+line-height:24px;
+text-align:left;
+/*padding-left: 20px;*/
+padding-left: 0px;
+}
+
+/* a hack so that IE5.5 faulty box model is corrected */
+* html .menu a, * html .menu a:visited {
+color:#FFFFFF; 
+width:35px;
+w\idth:35px;
+}
+
+/* style the second level background */
+.menu ul ul a.drop {
+background:#e1e1e1;
+}
+/* style the second level hover */
+.menu ul ul a.drop:hover{
+background:#EE3B33;
+color:#FFFFFF; 
+}
+.menu ul ul :hover > a.drop {
+background:#EE3B33;
+color:#FFFFFF; 
+}
+/* style the third level background */
+.menu ul ul ul a, .menu ul ul ul a:visited {
+background:#e1e1e1;
+}
+/* style the third level hover */
+.menu ul ul ul a:hover {
+background:#EE3B33;
+color:#FFFFFF; 
+}
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.menu ul ul {
+visibility:hidden;
+position:absolute;
+height:0;
+top:24px;
+left:0; 
+width:70px;
+}
+/* another hack for IE5.5 */
+* html .menu ul ul {
+top:24px;
+t\op:24px;
+}
+
+/* position the third level flyout menu */
+.menu ul ul ul{
+left:90px; 
+top:0;
+width:90px;
+}
+/* position the third level flyout menu for a left flyout */
+.menu ul ul ul.left {
+left:-69px;
+}
+
+/* style the table so that it takes no ppart in the layout - required for IE to work */
+.menu table {position:absolute; top:0; left:0;}
+
+/* style the second level links */
+.menu ul ul a {
+background:#e1e1e1; 
+color:#000; 
+height:auto; 
+line-height:1em; 
+padding:5px 10px; 
+width:70px;
+/* yet another hack for IE5.5 */
+}
+* html .menu ul ul a, * html .menu ul ul a:VISITED {
+color:#000; 
+width:70px;
+w\idth:70px;
+}
+* html .menu ul ul a:HOVER {
+color:#FFF; 
+width:70px;
+w\idth:70px;
+}
+
+/* style the top level hover */
+.menu  a:hover {
+background:#EE3B33;
+color:#FFFFFF; 
+}
+
+.menu ul a:hover{
+background:#EE3B33;
+color:#FFFFFF; 
+}
+.menu :hover > a, .menu ul :hover > a {
+background:#EE3B33;*
+color:#FFFFFF; 
+}
+
+.menu li:hover > ul {visibility: visible; background: #EE3B33;}
+.menu ul a:hover ul ul {visibility: hidden; background: #EE3B33;}
+.menu ul a:hover ul a:hover ul ul {visibility: hidden; background: #EE3B33;}
+.menu ul a:hover ul a:hover ul a:hover ul ul {visibility: hidden; background: #EE3B33;}
+.menu ul a:hover ul {visibility: visible; background: #EE3B33;}
+.menu ul a:hover ul a:hover ul {visibility: visible; background: #EE3B33;}
+.menu ul a:hover ul a:hover ul a:hover ul {visibility: visible; background: #EE3B33;}
+.menu ul a:hover ul a:hover ul a:hover ul a:hover ul {visibility: visible; background: #EE3B33;}

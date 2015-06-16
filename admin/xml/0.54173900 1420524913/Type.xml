@@ -1,0 +1,22 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>COVE</Code>
+    <Description>COVE TILE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MOSAIC</Code>
+    <Description>SHEETED MOSAIC</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>REBATED</Code>
+    <Description>REBATED BULLNOSE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ROUNDEDGE</Code>
+    <Description>ROUND-EDGE BULLNOSE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TILE</Code>
+    <Description>TILE</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+html, body { background: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; overflow: hidden; text-align: center;  margin: 0; padding: 0; width: 100%; height: 100%; }
+#megazine { width: 100%; height: 100%; clear: both}
+#megazine { margin: 0 auto 0 auto; outline: none; position: relative; }
+#megazine .alt-content { position: absolute; width: 40em; height: 30em; margin-left: -20em;  margin-top:1em; left: 50%; top: 0; }
+/* "Flash not found" notice formatting */
+#megazine h1 { color: #FFFFFF; }
+#megazine h2 { color: #E0E0E0; }
+#megazine img { border: none; }
+#megazine p { color: #999999; font-size: 0.6em; }
+#megazine a, a:visited { color: #CCCCCC; text-decoration: none; }
+#megazine a:active { color: #FFFFFF; text-decoration: none; }
+#megazine a:hover, a:focus { color: #FFFFFF; text-decoration: underline; }
+/* For JS renderer */
+#megazine .page-wrapper {
+    -webkit-perspective:2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    perspective: 2000px;
+}
+#megazine .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#megazine .even:not(.hard) .gradient {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, rgba(0,0,0,0.2)));
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
+    background-image: linear-gradient(left, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
+}
+#megazine .odd:not(.hard) .gradient {
+    background: -webkit-gradient(linear, right top, left top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, rgba(0,0,0,0.15)));
+    background-image: -webkit-linear-gradient(right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+    background-image: -moz-linear-gradient(right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+    background-image: -ms-linear-gradient(right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+    background-image: -o-linear-gradient(right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+    background-image: linear-gradient(right, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+}

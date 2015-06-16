@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="de">
+	<langstring name="LNG_DRAWING">Zeichentools anzeigen/verbergen</langstring>
+	<langstring name="LNG_DRAWING_PEN_THICKNESS">Strichdicke</langstring>
+	<langstring name="LNG_DRAWING_PEN_ALPHA">Deckkraft</langstring>
+	<langstring name="LNG_DRAWING_PEN_DYNAMICS">Dynamische Strichdicke</langstring>
+	<langstring name="LNG_DRAWING_PEN_COLOR">Farbe</langstring>
+	<langstring name="LNG_DRAWING_CLEAR">Aktuelle Seiten zurücksetzen. Um eine einzelne Linie zu entfernen, halten Sie die ALT-Taste gedrückt und klicken Sie auf sie.</langstring>
+	<langstring name="LNG_DRAWING_SAVE">Änderungen speichern</langstring>
+	<langstring name="LNG_DRAWING_CLOSE">Schließen</langstring>
+</lang>

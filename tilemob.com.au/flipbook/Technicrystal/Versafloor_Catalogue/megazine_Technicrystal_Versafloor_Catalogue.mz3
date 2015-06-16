@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE book SYSTEM 'http://megazine3.de/megazine2.dtd'> 
+<book
+plugins=' console,navigationbar, keyboardnavigation, links, pdflinks, anchors, zoom, index, bookmarks, printpdf, bookmarks, swfaddress, javascript, search' 
+printpdf='../Technicrystal/Versafloor_Catalogue/Technicrystal_Versafloor_Catalogue.pdf'	 
+printpdfsaveonly='true' 
+pagewidth=''	 
+pageheight=''	 
+errorlevel='WARNING'
+dragrange='*'
+bgcolor='#f0f0f0'
+searchmethod='client'
+searchclear='false'
+zoomminscale='0.25'
+zoommaxscale='2.0'
+zoomsnap='0.25,0.5,0.75,1.0,1.5,2.0'
+zoomsteps='2'
+thumbloadtext='please wait' 
+thumbloadtextsize='12' 
+searchindex='../Technicrystal/Versafloor_Catalogue/_search_index/Technicrystal_Versafloor_Catalogue_en.txt' 
+licensekey='ca42e013f31cb669e5a5fc79ae25013e' 
+ >
+
+<bookmarks> 
+    <bookmark 
+       title='VERSAFLOOR' 
+       page='3' 
+       color='#f97f7e' 
+       description='VERSAFLOOR' /> 
+<bookmark 
+       title='VESUVIUS' 
+       page='8' 
+       color='#7cdaf6' 
+       description='VESUVIUS'/>
+<bookmark 
+       title='QUARTZSTONE' 
+       page='9' 
+       color='#f7be7b' 
+       description='QUARTZSTONE'/>
+ <bookmark 
+       title='BRITANNIA' 
+       page='11' 
+       color='#bcf97a' 
+       description='BRITANNIA'/> 
+<bookmark 
+       title='FERRO METALLIC' 
+       page='13' 
+       color='#a7baf5' 
+       description='FERRO METALLIC'/>
+
+<bookmark 
+       title='TRAVERTINE PORCELAIN' 
+       page='14' 
+       color='#f2f5a4' 
+       description='TRAVERTINE PORCELAIN'/>
+
+<bookmark 
+       title='WALL TILES' 
+       page='15' 
+       color='#ffffff' 
+       description='WALL TILES'/>
+<bookmark 
+       title='ELEGANT MARBLE PORCELAIN' 
+       page='16' 
+       color='#f97f7e' 
+       description='ELEGANT MARBLE PORCELAIN'/>
+<bookmark 
+       title='TECHNICRYSTAL' 
+       page='18' 
+       color='#7cdaf6' 
+       description='TECHNICRYSTAL'/>
+<bookmark 
+       title='MACCHINA' 
+       page='24' 
+       color='#f7be7b' 
+       description='MACCHINA'/>
+<bookmark 
+       title='IMMORTAL' 
+       page='25' 
+       color='#bcf97a' 
+       description='IMMORTAL'/>
+<bookmark 
+       title='IMMORTAL' 
+       page='26' 
+       color='#a7baf5' 
+       description='IMMORTAL'/>
+<bookmark 
+       title='EVOQUE' 
+       page='26' 
+       color='#f2f5a4' 
+       description='EVOQUE'/>
+<bookmark 
+       title='CEMENTRIX' 
+       page='27' 
+       color='#ffffff' 
+       description='CEMENTRIX'/>
+<bookmark 
+       title='TIMBERGRAIN' 
+       page='27' 
+       color='#f97f7e' 
+       description='TIMBERGRAIN'/>
+<bookmark 
+       title='TIMBERMAX' 
+       page='28'
+       color='#7cdaf6' 
+       description='TIMBERMAX'/>
+<bookmark 
+       title='WOODGRAIN' 
+       page='29' 
+       color='#f7be7b' 
+       description='WOODGRAIN'/>
+<bookmark 
+       title='PASSAGGIO' 
+       page='30' 
+       color='#bcf97a' 
+       description='PASSAGGIO'/>
+<bookmark 
+       title='QUARTZA' 
+       page='30' 
+       color='#a7baf5' 
+       description='QUARTZA'/>
+<bookmark 
+       title='PIETRA ROMANO' 
+       page='30' 
+       color='#f2f5a4' 
+       description='PIETRA ROMANO'/>
+</bookmarks>
+<!-- single pages for chapter 1 -->
+<!-- starting with page number 1 and going until the last page  -->
+  <chapter  anchor='Chapter_1'   >
+<!--    image 1 and single page 1  -->
+<!--     first page of chapter 1, must always be a single page  -->
+    <page  buffer='true' stiff='true'>
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00010.swf</src>
+      </img>
+    </page>
+<!--    image 2 and single page 2  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00020.swf</src>
+      </img>
+    </page>
+<!--    image 3 and single page 3  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00030.swf</src>
+      </img>
+    </page>
+<!--    image 4 and single page 4  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00040.swf</src>
+      </img>
+    </page>
+<!--    image 5 and single page 5  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00050.swf</src>
+      </img>
+    </page>
+<!--    image 6 and single page 6  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00060.swf</src>
+      </img>
+    </page>
+<!--    image 7 and single page 7  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00070.swf</src>
+      </img>
+    </page>
+<!--    image 8 and single page 8  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00080.swf</src>
+      </img>
+    </page>
+<!--    image 9 and single page 9  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00090.swf</src>
+      </img>
+    </page>
+<!--    image 10 and single page 10  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00100.swf</src>
+      </img>
+    </page>
+<!--    image 11 and single page 11  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00110.swf</src>
+      </img>
+    </page>
+<!--    image 12 and single page 12  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00120.swf</src>
+      </img>
+    </page>
+<!--    image 13 and single page 13  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00130.swf</src>
+      </img>
+    </page>
+<!--    image 14 and single page 14  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00140.swf</src>
+      </img>
+    </page>
+<!--    image 15 and single page 15  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00150.swf</src>
+      </img>
+    </page>
+<!--    image 16 and single page 16  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00160.swf</src>
+      </img>
+    </page>
+<!--    image 17 and single page 17  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00170.swf</src>
+      </img>
+    </page>
+<!--    image 18 and single page 18  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00180.swf</src>
+      </img>
+    </page>
+<!--    image 19 and single page 19  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00190.swf</src>
+      </img>
+    </page>
+<!--    image 20 and single page 20  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00200.swf</src>
+      </img>
+    </page>
+<!--    image 21 and single page 21  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00210.swf</src>
+      </img>
+    </page>
+<!--    image 22 and single page 22  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00220.swf</src>
+      </img>
+    </page>
+<!--    image 23 and single page 23  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00230.swf</src>
+      </img>
+    </page>
+<!--    image 24 and single page 24  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00240.swf</src>
+      </img>
+    </page>
+<!--    image 25 and single page 25  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00250.swf</src>
+      </img>
+    </page>
+<!--    image 26 and single page 26  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00260.swf</src>
+      </img>
+    </page>
+<!--    image 27 and single page 27  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00270.swf</src>
+      </img>
+    </page>
+<!--    image 28 and single page 28  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00280.swf</src>
+      </img>
+    </page>
+<!--    image 29 and single page 29  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00290.swf</src>
+      </img>
+    </page>
+<!--    image 30 and single page 30  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00300.swf</src>
+      </img>
+    </page>
+<!--    image 31 and single page 31  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00310.swf</src>
+      </img>
+    </page>
+<!--    image 32 and single page 32  -->
+    <page  buffer='true' >
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00320.swf</src>
+      </img>
+    </page>
+<!--    image 33 and single page 33  -->
+<!--     last page of chapter 1, must always be a single page  -->
+    <page  buffer='true' stiff='true'>
+      <img  width='2048'   height='2048'  position='center middle'  >
+        <src >../Technicrystal/Versafloor_Catalogue/en/images/low/page_00330.swf</src>
+      </img>
+    </page>
+  </chapter>
+</book>

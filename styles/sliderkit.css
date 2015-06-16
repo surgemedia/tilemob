@@ -1,0 +1,196 @@
+/*---------------------------------
+ *  Carousel > Comon
+ *---------------------------------*/
+ 
+.sliderkit {
+	display:none;
+	position:relative;
+	overflow:hidden;
+	text-align:left;
+}
+.sliderkit a,  .sliderkit a:hover {
+	text-decoration:none;
+}
+.sliderkit a:focus {
+	outline:1px dotted #000;/*optional*/
+}
+.sliderkit img {
+	border:0;
+}
+/*---------------------------------
+	 *  Navigation
+	 *---------------------------------*/
+	.sliderkit .sliderkit-nav {
+	z-index:10;
+	position:absolute;
+	/*text-align:center;*/
+}
+/* Nav > Clip */
+	.sliderkit .sliderkit-nav-clip {
+	position:relative;
+	overflow:hidden;
+	margin:0 auto;
+}
+.sliderkit .sliderkit-nav-clip ul {
+	position:relative;
+	left:0;
+	top:0;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.sliderkit .sliderkit-nav-clip ul li {
+	float:left;
+}
+.sliderkit .sliderkit-nav-clip ul li a {
+	overflow:hidden;
+}
+/* Buttons */
+	.sliderkit .sliderkit-nav .sliderkit-nav-btn {
+	position:absolute;
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-btn span {
+	display:none;
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-btn a {
+	display:block;
+	outline:none;
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-prev {
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-next {
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-prev a {
+	display:block;
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-next a {
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-prev a:hover,  .sliderkit .sliderkit-nav .sliderkit-nav-prev a:focus {
+}
+.sliderkit .sliderkit-nav .sliderkit-nav-next a:hover,  .sliderkit .sliderkit-nav .sliderkit-nav-next a:focus {
+}
+/* Buttons > Disable */
+	.sliderkit .sliderkit-btn-disable {/*opacity:0.3can be set to any value until 1;*/
+	cursor:default;
+}
+/*---------------------------------
+	 *  Carousel > Comon End
+	 *---------------------------------*/
+
+
+
+	
+	.carouselBottomProduct {
+	min-height:292px;
+	width:100%;
+	margin-top:20px;
+}
+.carouselBottomProduct .sliderkit-nav {
+	right:0;
+	top:0;
+	display:block;
+	width:99%;
+        border: 1px solid #dfdfdf;
+        background-color:#f5f5f5;
+        padding:15px 0;
+}
+.carouselBottomProduct .sliderkit-nav-clip {
+	width:890px;
+	padding-right:10px;
+}
+.carouselBottomProduct .sliderkit-btn {
+	top:50%;
+	margin-top:-21.5px;
+}
+.carouselBottomProduct .sliderkit-btn a {
+	width:21px;
+	height:42px;
+	background:url(../images/slider-controls.png) no-repeat 0 0
+}
+.carouselBottomProduct .sliderkit-nav-prev {
+	left:0px;
+}
+.carouselBottomProduct .sliderkit-nav-next {
+	right:0px;
+}
+.carouselBottomProduct .sliderkit-nav-prev a {
+	background-position:-60px 0;
+}
+.carouselBottomProduct .sliderkit-nav-prev a:hover {
+	background-position:-60px -43px;
+}
+.carouselBottomProduct .sliderkit-nav-next a {
+	background-position:-82px 0;
+}
+.carouselBottomProduct .sliderkit-nav-next a:hover {
+	background-position:-82px -43px;
+}
+.carouselBottomProduct .sliderkit-nav-prev.sliderkit-btn-disable a {
+	background-position:-60px 0;
+}
+.carouselBottomProduct .sliderkit-nav-next.sliderkit-btn-disable a {
+	background-position:-82px 0;
+}
+.carouselBottomProduct ul li {
+	width:135px ;
+	height:250px;
+	
+	margin:0 6px;
+	/*border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+        border:1px solid #dddddd;
+        */
+}
+.carouselBottomProduct li .imgBox {
+	width: 135px;
+	height:135px;
+	display: block;
+}
+.carouselBottomProduct li .imgBox div {
+	height: 139px;
+	width: 139px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.carouselBottomProduct li .imgBox img {
+	max-height: 139px;
+	max-width: 139px;
+	display: block;
+	margin: auto;
+}
+.carouselBottomProduct li p.productName span {
+	display: block;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #686868;
+}
+p {
+	line-height: 20px;
+}
+li a.productName {
+	color: #171717;
+	font-size: 12px;
+	font-weight:bold;
+	text-align: left;
+	
+	display: block;
+	padding: 0 3px;
+	word-wrap: break-word;
+        text-transform: none;
+}
+li a.enquiry {
+	color: #ee1c25;
+        font-size: 10px;
+        font-weight:100;
+	display: block;
+        line-height: 18px;
+     
+	/*margin: 0 auto;*/
+}
+.carouselBottomProduct .sliderkit-nav-clip a.productName{font-size: 11px;display: block;}
+.pagebody p.productName{margin:0em;height:62px;overflow:hidden;}
+div.price_buy a.productName{color:#ee1c25;font-size: 12px;font-weight:bold;}
+
+

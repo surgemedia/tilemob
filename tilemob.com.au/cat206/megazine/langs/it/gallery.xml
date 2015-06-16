@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="it">
+    <langstring name="LNG_GALLERY_ZOOM_IN">Aumenta ingrandimento</langstring>
+    <langstring name="LNG_GALLERY_ZOOM_OUT">Riduci ingrandimento</langstring>
+    <langstring name="LNG_GALLERY_OPEN">Apri modo galleria</langstring>
+    <langstring name="LNG_GALLERY_EXIT">Chiudi modo galleria</langstring>
+    <langstring name="LNG_GALLERY_NEXT">Immagine successiva</langstring>
+    <langstring name="LNG_GALLERY_PREV">Immagine precedente</langstring>
+    <langstring name="LNG_GALLERY_FIRST">Prima immagine</langstring>
+    <langstring name="LNG_GALLERY_LAST">Ultima immagine</langstring>
+    <langstring name="LNG_GALLERY_ROTATE_RIGHT">Ruota l'immagine in senso oriario</langstring>
+    <langstring name="LNG_GALLERY_ROTATE_LEFT">Ruota l'immagine in senso antiorario</langstring>
+</lang>

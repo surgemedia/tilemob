@@ -1,0 +1,1 @@
+<script language="JavaScript" type="text/javascript" src="/scripts/disablerightclick.js"></script>';

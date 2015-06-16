@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="it">
+    <langstring name="LNG_HELP">AIUTO</langstring>
+	<langstring name="LNG_HELP_CLOSE">Chiudere finestra</langstring>
+	<langstring name="LNG_HELP_NEXT">Prossima indicazione</langstring>
+	<langstring name="LNG_HELP_PREV">Indicazione precedente</langstring>
+	
+	<!-- Note: help messages should not contain new lines. Use <br/> tags instead. -->
+    <langstring name="LNG_HELP1"><![CDATA[<b>Salve</b><br/><br/>Per navigare in questo libro, si usano o i tasti freccia o si clicca un angolo del libro. Si possono anche sfogliare le pagine cliccando il bordo della pagina con il mouse (dragging). Per chiudere immediatamente una finestra d'informazione (come questo testo), si clicca nella finestra.<br/><br/>Per aprire questa finestra un'altra volta, si clicca il bottone '?' a destra nelbarra strumenti in basso.]]></langstring>
+    <langstring name="LNG_HELP1B"><![CDATA[<b>Salve</b><br/><br/>Per navigare in questo libro, si usano o i tasti freccia o si clicca un angolo del libro. Si possono anche sfogliare le pagine cliccando il bordo della pagina con il mouse (dragging). Per chiudere immediatamente una finestra d'informazione (come questo testo), si clicca nella finestra.]]></langstring>
+
+    <langstring name="LNG_HELP2"><![CDATA[<b>Menu di navigazione</b><br/><br/>Usa la barra strumenti in basso le pagine per navigare rapidamente da una pagina all' altra. Quando si posiziona il cursore su un segna-pagina (il cerchio bianco) si ottiene un'anteprima della pagina. La prima volta occorre un attimo di tempo per caricare l'anteprima.]]></langstring>
+
+   <langstring name="LNG_HELP3"><![CDATA[<b>Zoom mode ON</b><br/><br/>Quando una foto è ingrandita si può modificare il valore dello zoom girando la rotella del mouse. Se la foto diventa più grande dello schermo visibile, si può spostare l'immagine usando la piccola finestra in alto a destra<br/><br/>Con la modalità zoom ON se ci sono altre foto si attivano due frecce per visionare la gallery di immagini. Con questi bottoni si può passare da un'immagine all'altra (avanzare - freccia a destra, ritornare - freccia a sinistra)<br/><br/>Per uscire dalla modalità zoom o premere 'ESC' o il tasto 'X' in alto a destra.]]></langstring>
+
+	<langstring name="LNG_HELP4"><![CDATA[<b>Schermo intero</b><br/><br/>Se si clicca il primo bottone a sinistra nella barra strumenti in basso si attiva la modalità schermo intero.<br/><br/>La modalità schermo intero si attiva automaticamente se si clicca il bottone zoom.]]></langstring>
+
+    <langstring name="LNG_HELP5"><![CDATA[<b>Modalità presentazione</b><br/><br/>Il bottone con il simbolo "play" attiva o interrompe la modalità presentazione automatica. In questo modo le pagine avanzano automaticamente dopo qualche secondo.]]></langstring>
+</lang>

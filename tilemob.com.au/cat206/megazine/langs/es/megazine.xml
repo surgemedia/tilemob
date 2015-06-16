@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="es">
+    <langstring name="LNG_LANGUAGE_NAME">Español</langstring>
+    <langstring name="LNG_LOADING">Cargando... $1%</langstring>
+</lang>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang id="fr">
+	<langstring name="LNG_ZOOM_OUT">Zoom arrière</langstring>
+	<langstring name="LNG_ZOOM_SLIDE">Faites glisser pour contrôler le niveau de zoom</langstring>
+	<langstring name="LNG_ZOOM_IN">Zoom avant</langstring>
+</lang>

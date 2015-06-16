@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.clearsoftware.com.au"
+xmlns="http://www.clearsoftware.com.au"
+xmlns:doc="http://www.clearsoftware.com.au/schemas/documentation"
+elementFormDefault="qualified">
+  <xs:element name="TaxCodes">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="TaxCode" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="Code" doc:description="Code for tax.">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="Description" doc:description="Description for tax code.">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="Rate" doc:description="Rate for tax code.">
+                <xs:simpleType>
+                  <xs:restriction base="xs:double">
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

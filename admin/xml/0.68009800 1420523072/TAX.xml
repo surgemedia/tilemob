@@ -1,0 +1,47 @@
+<TaxCodes xmlns="http://www.clearsoftware.com.au">
+  <TaxCode>
+    <Code>1</Code>
+    <Description>GST Normal</Description>
+    <Rate>10</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>2</Code>
+    <Description>Export Sales</Description>
+    <Rate>0</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>3</Code>
+    <Description>GST Free</Description>
+    <Rate>0</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>4</Code>
+    <Description>Capital Acquisitions</Description>
+    <Rate>10</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>5</Code>
+    <Description>Input Taxed</Description>
+    <Rate>0</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>6</Code>
+    <Description>Wine Equalisation</Description>
+    <Rate>29</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>7</Code>
+    <Description>Luxury Car</Description>
+    <Rate>29</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>8</Code>
+    <Description>GST Free Capital Acq</Description>
+    <Rate>0</Rate>
+  </TaxCode>
+  <TaxCode>
+    <Code>99</Code>
+    <Description>Not Applicable</Description>
+    <Rate>0</Rate>
+  </TaxCode>
+</TaxCodes>

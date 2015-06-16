@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><asul><style><![CDATA[button.draw > box{background:image(gui/draw/btn_draw.png)}button.trash > box{background:image(gui/draw/btn_trash.png)}button.save > box{background:image(gui/draw/btn_save.png)}button.close > box{background:image(gui/draw/btn_close.png)}button.close{width:16;height:16;filter:dropshadow(2,45,0x000000,1,3,3,0.5,2)}button.close box{width:14;height:14}scrollbar > button > box{background:image(gui/search/btn_scroll_handle.png);width:15;height:15}scrollbar > button > box.over{background:image(gui/search/btn_scroll_handle1.png)}.sizetext text{color:0xFFFFFF;font:Verdana;size:11}hflow.colors{collapse_width:34;mouseenabled:true}.color{width:32;height:32;padding:4;onclick:handleColorClicked(event.currentTarget)}.color > box{width:24;height:24}]]></style><script><![CDATA[
+	import de.mightypirates.megazine.plugins.draw.Pen;
+	import de.mightypirates.megazine.plugins.draw.Line;
+	import flash.geom.Point;
+	
+	// Pen size logic.
+	var penSize;
+	var penSizeBar;
+	
+	// Setup the pen size text box / scroll bar linking. We wait for the objects
+	// to be added to the stage, then get a reference to them and set up events.
+	function penSizeAdded(textfield) {
+		penSize = textfield;
+		penSize.text = megazine.settings.getSetting("drawminpensize");
+	}
+	function sizeScrollbarAdded(scrollbar) {
+		penSizeBar = scrollbar;
+		penSizeBar.maximum = megazine.settings.getSetting("drawmaxpensize") - megazine.settings.getSetting("drawminpensize");
+		addListener(penSizeBar, "change", sizeScrollbarChanged);
+		penSizeBar.intValue = 1;
+	}
+	
+	// Update text box when scroll bar changes.
+	function sizeScrollbarChanged() {
+		if (penSize) penSize.text = penSizeBar.intValue + megazine.settings.getSetting("drawminpensize");
+		updatePreview();
+	}
+	
+	// Pen alpha logic.
+	var penAlpha;
+	var penAlphaBar;
+	
+	// Setup is the same as for size.
+	function penAlphaAdded(textfield) {
+		penAlpha = textfield;
+		if (penAlpha) penAlpha.text = megazine.settings.getSetting("drawdefaultpenalpha");
+	}
+	function alphaScrollbarAdded(scrollbar) {
+		penAlphaBar = scrollbar;
+		addListener(penAlphaBar, "change", alphaScrollbarChanged);
+		penAlphaBar.value = megazine.settings.getSetting("drawdefaultpenalpha");
+	}
+	function alphaScrollbarChanged() {
+		if (penAlpha) penAlpha.text = int(penAlphaBar.value * 10) / 10;
+		updatePreview();
+	}
+	
+	// Pen dynamics logic.
+	var penDynamics;
+	var penDynamicsBar;
+	
+	// Setup is the same as for size.
+	function penDynamicsAdded(textfield) {
+		penDynamics = textfield;
+		if (penDynamics) penDynamics.text = megazine.settings.getSetting("drawdefaultpenalpha");
+	}
+	function dynamicsScrollbarAdded(scrollbar) {
+		penDynamicsBar = scrollbar;
+		addListener(penDynamicsBar, "change", dynamicsScrollbarChanged);
+		penDynamicsBar.value = megazine.settings.getSetting("drawdynamics");
+	}
+	function dynamicsScrollbarChanged() {
+		if (penDynamics) penDynamics.text = int(penDynamicsBar.value * 10) / 10;
+		updatePreview();
+	}
+	
+	// Pen color logic.
+	var currentColor;
+	
+	// Setup follows same philosophy as for size/alpha.
+	function currentColorAdded(color) {
+		currentColor = color;
+	}
+	function colorListAdded(list) {
+		var hasFirst;
+		for (var ci = 0; ci < list.numChildren; ++ci) {
+			var child = list.getChildAt(ci);
+			if (child.name) {
+				if (!hasFirst) {
+					setCurrentColor(child.name);
+					hasFirst = true;
+				}
+				child.graphics.clear();
+				child.graphics.beginFill(child.name);
+				child.graphics.drawRect(4, 4, 24, 24);
+				child.graphics.endFill();
+			}
+		}
+	}
+	
+	var pen = new Pen(megazine.settings.getSetting("drawminpensize") / 2.0, 0x330000,
+										megazine.settings.getSetting("drawsmoothing"),
+										megazine.settings.getSetting("drawdynamics"));
+	var line;
+	function updatePreview() {
+		if (!currentColor) return;
+		
+		// Clear old content.
+		currentColor.graphics.clear();
+		
+		// Draw color outline.
+		currentColor.graphics.beginFill(currentColor.opaqueBackground);
+		currentColor.graphics.drawRect(0, 0, 33, 33);
+		currentColor.graphics.endFill();
+		
+		// Draw background. Bright or dark depending on color brightness.
+		var r = (currentColor.opaqueBackground >> 16) & 0xFF;
+		var g = (currentColor.opaqueBackground >> 8) & 0xFF;
+		var b = (currentColor.opaqueBackground) & 0xFF;
+		var l = 0.2126 * r / 255.0 + 0.7152 * g / 255.0 + 0.0722 * b / 255.0;
+		if (l > 0.7) {
+			currentColor.graphics.beginFill(0x000000);
+		} else {
+			currentColor.graphics.beginFill(0xFFFFFF);
+		}
+		currentColor.graphics.drawRect(4, 4, 25, 57);
+		currentColor.graphics.endFill();
+		
+		// Draw example line.
+		if (line && line.parent) {
+			currentColor.removeChild(line);
+		}
+		
+		pen.minThickness = (penSizeBar.intValue + megazine.settings.getSetting("drawminpensize")) / 2;
+		pen.thicknessFactor = penDynamicsBar.value / 2;
+		pen.alpha = penAlphaBar.value;
+		pen.color = currentColor.opaqueBackground;
+		
+		line = Line.begin(currentColor, new Point(16, 8), pen);
+		var minThickness = pen.minThickness;
+		for (var i = 1; i <= 16; ++i) {
+			var y = i / 16.0;
+			var x = Math.sin(y * Math.PI * 2);
+			pen.minThickness = minThickness + pen.thicknessFactor * 2 * (8 - Math.abs(8 - i));
+			line.lineTo(new Point(16 + x * 8, 8 + y * 48));
+		}
+		pen.minThickness = minThickness;
+		line.end();
+	}
+	
+	// When the selected color changed we fill the color display.
+	function setCurrentColor(color) {
+		if (!currentColor) return;
+		
+		// This has to be set, because we use it to read the selected color in AS3.
+		currentColor.opaqueBackground = uint(color);
+		
+		updatePreview();
+	}
+	function handleColorClicked(color) {
+		setCurrentColor(color.name);
+	}
+	]]></script><button id="btn_draw" style="common draw" title="localize(LNG_DRAWING, Toggle drawing tools)"/><window background="color(0x7f000000)" clipchildren="false" id="draw" minwidth="42" mouseenabled="true" padding="0,0,0,5" resize="true" style="container" x="25" y="25"><box anchors="0,0,pw,16" background="gradient(linear-vertical,0xCCCCCC,0x999999)" name="$drag_handle$"/><button anchors="pw-w-1" name="$btn_close$" style="common close" title="localize(LNG_DRAWING_CLOSE, Close)"/><vflow clipchildren="false" maxwidth="32" padding="5" y="21"><hflow center="true" collapse_width="32" mouseenabled="true"><box height="21" style="input" width="32"><text align="center" maxchars="2" name="txt_pensize" onaddedtostage="penSizeAdded(event.currentTarget)" restrict="0123456789" style="sizetext" title="localize(LNG_DRAWING_PEN_THICKNESS, Line thickness)"/></box><box height="21" width="115"><scrollbar background="gradient(linear-vertical,0x666666,0x4d4d4d)" height="15" onaddedtostage="sizeScrollbarAdded(event.currentTarget)" orientation="horizontal" width="100" x="10" y="3"><button height="15" name="$scroll_handle$" width="15"/></scrollbar></box></hflow><box height="10" width="1"/><hflow center="true" collapse_width="32" mouseenabled="true"><box height="21" style="input" width="32"><text align="center" maxchars="3" name="txt_penalpha" onaddedtostage="penAlphaAdded(event.currentTarget)" restrict="0123456789." style="sizetext" title="localize(LNG_DRAWING_PEN_ALPHA, Opacity)"/></box><box height="21" width="115"><scrollbar background="gradient(linear-vertical,0x666666,0x4d4d4d)" height="15" onaddedtostage="alphaScrollbarAdded(event.currentTarget)" orientation="horizontal" width="100" x="10" y="3"><button height="15" name="$scroll_handle$" width="15"/></scrollbar></box></hflow><box height="10" width="1"/><hflow center="true" collapse_width="32" mouseenabled="true"><box height="21" style="input" width="32"><text align="center" maxchars="3" name="txt_pendynamics" onaddedtostage="penDynamicsAdded(event.currentTarget)" restrict="0123456789." style="sizetext" title="localize(LNG_DRAWING_PEN_DYNAMICS, Dynamic line thickness)"/></box><box height="21" width="115"><scrollbar background="gradient(linear-vertical,0x666666,0x4d4d4d)" height="15" onaddedtostage="dynamicsScrollbarAdded(event.currentTarget)" orientation="horizontal" width="100" x="10" y="3"><button height="15" name="$scroll_handle$" width="15"/></scrollbar></box></hflow><box height="10" width="1"/><hflow style="colors"><box height="64" mouseenabled="true" title="localize(LNG_DRAWING_PEN_COLOR, Color)" width="37"><box height="64" name="pencolor" onaddedtostage="currentColorAdded(event.currentTarget)" width="32"/></box><vflow maxheight="64" onaddedtostage="colorListAdded(event.currentTarget)"><button name="0x000000" style="color"/><button name="0xFFFFFF" style="color"/><button name="0x990000" style="color"/><button name="0x009900" style="color"/><button name="0x000099" style="color"/><button name="0x00bbbb" style="color"/><button name="0xefef00" style="color"/><button name="0xdd00dd" style="color"/></vflow></hflow><box height="32" width="32"><button name="btn_clear" style="common trash" title="localize(LNG_DRAWING_CLEAR, Clear current pages)" x="4" y="4"/></box><box height="32" width="32"><button name="btn_save" style="common save" title="localize(LNG_DRAWING_SAVE, Save changes)" x="4" y="4"/></box></vflow></window></asul>

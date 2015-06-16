@@ -1,0 +1,30 @@
+12700 this is a description for tile number 12700 by dmwcreative
+12650 This is a description for tile number 12650 by dmwcreative
+12600 This is a tile by dmwcreative
+12550 This is a description for tile number 12550
+12500 This is a description for tile number 12500 by dmwcreative
+12450 This is a description for tile number 12450
+12400 This is a description for tile number 12400
+12350 This is a description for tile number 12350
+12300 This is a description for tile number 12300
+12250 This is a description for tile number 12250
+12200 PROVENCALE 300x300x14mm
+12150 ALMOND 300x300x14mm
+12100 CREME BRULEE 300x300x14mm
+12050 PROVENCALE 300x360x14mm REBATED BULLNOSE
+12000 PROVENCALE 300x300x14mm WITH PROVENVALE ROUND EDGE BULLNOSE
+11950 CREME BRULEE 300x300x14mm
+
+
+11300 11300
+11850 GRANDE TERRE 300x300x14mm
+11900 CREME BRULEE 300x300x14mm
+11750 GRANDE TERRE 300x300x14mm WITH REBATED BULLNOSE
+11700 GRANDE TERRE 300x300x14mm WITH REBATED BULLNOSE
+11650 GRANDE TERRE 300x300x14mm
+11600 BORDEAUX 300x300x14mm
+11550 GRANDE TERRE 300x300x14mm WITH CREME BRULEE 300x300x14mm
+11500 CREME BRULEE 300x300x14mm
+11450 PROVENCALE 300x300x14mm
+11400 CREME BRULEE 300x300x14mm
+11800 BORDEAUX 300x300x14mm

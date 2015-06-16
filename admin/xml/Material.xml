@@ -1,0 +1,78 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>ALUMINIUM</Code>
+    <Description>ALUMINIUM</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BAMBOO</Code>
+    <Description>BAMBOO</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BLUESTONE</Code>
+    <Description>BLUESTONE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BRASS</Code>
+    <Description>BRASS</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CERGLZ</Code>
+    <Description>CERAMIC (GLAZED)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GLASS</Code>
+    <Description>GLASS</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GRANITE</Code>
+    <Description>GRANITE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>LIMESTONE</Code>
+    <Description>LIMESTONE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MARBLE</Code>
+    <Description>MARBLE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MIXG&amp;P</Code>
+    <Description>MIXED -- GLASS &amp; PORCELAIN</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MIXG&amp;S</Code>
+    <Description>MIXED -- GLASS &amp; STONE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MIXP&amp;M</Code>
+    <Description>MIXED -- PORCELAIN &amp; METAL</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PORBOD</Code>
+    <Description>PORCELAIN (FULL BODY)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PORGLZ</Code>
+    <Description>PORCELAIN (GLAZED)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SANDSTONE</Code>
+    <Description>SANDSTONE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SLATE</Code>
+    <Description>SLATE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>STAINLESS</Code>
+    <Description>STAINLESS STEEL</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TERRACOTTA</Code>
+    <Description>TERRACOTTA (FIRED CLAY)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WOOD</Code>
+    <Description>WOOD</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>

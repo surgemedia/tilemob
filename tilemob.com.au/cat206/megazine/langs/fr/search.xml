@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lang id="fr">
+	<langstring name="LNG_SEARCH_TITLE">Rechercher</langstring>
+	<langstring name="LNG_SEARCH_START">Lancer la recherche</langstring>
+	<langstring name="LNG_SEARCH_RESULT_INFO">Page(s) $1, $2 correspond à la recherche.</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_CLOSE">Fermer</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_TITLE">Résultats de la recherche</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_SEARCHING">Recherche...</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_SUMMARY">Liste $1 of $2 des résultats obtenus pour '$3'.</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_EMPTY">Aucun résultat pour '$1'.</langstring>
+	<langstring name="LNG_SEARCH_RESULTS_ERROR">Une erreur s'est produite lors de la recherche.</langstring>
+</lang>

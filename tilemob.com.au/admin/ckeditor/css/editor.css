@@ -1,0 +1,38 @@
+P {
+	margin-bottom: 15px;
+}
+H1 {
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: normal;
+	color: #000000;
+}
+H2 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #000000;
+}
+H3 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #000000;
+}
+H4 {
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #000000;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	line-height: 20px;
+}
+
+TD {
+	border: 1px dotted #CCCCCC;
+}
