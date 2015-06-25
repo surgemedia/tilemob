@@ -9,10 +9,16 @@ wordpress/wp-content/themes/twentyfifteen
 wordpress/wp-content/themes/twentysixteen
 wordpress/wp-content/themes/twentyseventeen
 
-*.DS_Store
+npm-debug.log
 wordpress/wp-content/.DS_Store
 wordpress/wp-content/plugin/.DS_Store
+wordpress/wp-content/themes/.DS_Store
+wordpress/wp-content/.DS_Store
 
 # Include wp-config.php and other wordpress themes and plugins
 !wordpress/wp-config.php
 !wordpress/wp-content/*
+
+
+
+
