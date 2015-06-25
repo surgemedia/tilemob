@@ -8,6 +8,12 @@ wordpress/wp-content/themes/twentyfourteen
 wordpress/wp-content/themes/twentyfifteen
 wordpress/wp-content/themes/twentysixteen
 wordpress/wp-content/themes/twentyseventeen
+wordpress/wp-content/themes/*/bower_components
+wordpress/wp-content/themes/*/node_modules
+.DS_Store
+*/*/.DS_Store
+
+
 
 
 
