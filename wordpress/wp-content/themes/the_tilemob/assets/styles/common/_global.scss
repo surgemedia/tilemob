@@ -1,1 +1,17 @@
-
+body {
+	background:$grey;
+}
+#wp-content-editor-container {
+	body {
+		background:#fff;
+	}
+}
+.white_bg {
+	background:#fff;
+}
+.red_bg {
+	background:$red;
+}
+.grey_light_bg {
+	background:$grey-light;
+}
