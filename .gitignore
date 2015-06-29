@@ -2,7 +2,9 @@
 Database_Backup/
 
 # Ignore the wordpress directory and default themes 
-wordpress/*
+wordpress/wp-includes/*
+wordpress/wp-admin/*
+wordpress/wp-plugins/*
 wordpress/wp-content/themes/twentythirteen
 wordpress/wp-content/themes/twentyfourteen
 wordpress/wp-content/themes/twentyfifteen
@@ -25,6 +27,8 @@ wordpress/wp-content/.DS_Store
 !wordpress/wp-config.php
 !wordpress/wp-content/*
 !wordpress/wp-content/updraft/*
+!wordpress/wp-content/themes/the_tilemob
+
 
 
 
