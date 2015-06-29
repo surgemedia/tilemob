@@ -13,7 +13,11 @@ wordpress/wp-content/themes/*/node_modules
 .DS_Store
 */*/.DS_Store
 
-
+npm-debug.log
+wordpress/wp-content/.DS_Store
+wordpress/wp-content/plugin/.DS_Store
+wordpress/wp-content/themes/.DS_Store
+wordpress/wp-content/.DS_Store
 
 
 
@@ -25,8 +29,4 @@ wordpress/wp-content/themes/*/node_modules
 
 
 
-npm-debug.log
-wordpress/wp-content/.DS_Store
-wordpress/wp-content/plugin/.DS_Store
-wordpress/wp-content/themes/.DS_Store
-wordpress/wp-content/.DS_Store
+
