@@ -24,7 +24,7 @@ wordpress/wp-content/.DS_Store
 # Include wp-config.php and other wordpress themes and plugins
 !wordpress/wp-config.php
 !wordpress/wp-content/*
-!wordpress/wp-content/updraft/*.gz
+!wordpress/wp-content/updraft/*
 
 
 
