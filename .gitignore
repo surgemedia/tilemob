@@ -20,6 +20,8 @@ wordpress/wp-content/themes/*/node_modules
 # Include wp-config.php and other wordpress themes and plugins
 !wordpress/wp-config.php
 !wordpress/wp-content/*
+!wordpress/wp-content/updraft/*.gz
+
 
 
 
