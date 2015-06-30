@@ -10,25 +10,25 @@
     <ul class="clearfix">
         <li class="col-lg-4">
             <div class="icon">
-            <i class="fa fa-images"></i>
+            <i class="fa fapictures"></i>
             </div>
             <span></span>
         </li>
         <li class="col-lg-4">
             <div class="icon">
-            <i class="fa fa-images"></i>
+            <i class="fa fa-picture"></i>
             </div>
             <span></span>
         </li>
         <li class="col-lg-4">
             <div class="icon">
-            <i class="fa fa-images"></i>
+            <i class="fa fa-picture"></i>
             </div>
             <span></span>
         </li>
         <li class="col-lg-4">
             <div class="icon">
-            <i class="fa fa-images"></i>
+            <i class="fa fa-picture"></i>
             </div>
             <span></span>
         </li>
