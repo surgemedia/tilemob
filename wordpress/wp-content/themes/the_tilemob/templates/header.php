@@ -1,5 +1,6 @@
 <header class="banner" role="banner">
 <div class="container">
+  <p>Here is <?php echo get_field('logo','option'); ?></p>
   <div class="social-networks col-lg-4 pull-right">
   <ul class="">
     <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>

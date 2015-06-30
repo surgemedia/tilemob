@@ -36,6 +36,7 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
+//Theme Settings Page
 if( function_exists('acf_add_options_page') ) {
   
   acf_add_options_page(array(
