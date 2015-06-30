@@ -1,11 +1,12 @@
 body {
 	background:$grey;
 }
-#wp-content-editor-container {
-	body {
+body.wp-admin {
+	body{
 		background:#fff;
 	}
-}
+	}
+
 .white_bg {
 	background:#fff;
 }

@@ -29,11 +29,12 @@ use Roots\Sage\Wrapper;
           </aside><!-- /.sidebar -->
         <?php endif; ?>
       </div><!-- /.content -->
-    </div><!-- /.wrap -->
-    <?php
+       <?php
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
     ?>
+    </div><!-- /.wrap -->
+   
   </body>
 </html>

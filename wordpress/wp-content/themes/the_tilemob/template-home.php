@@ -4,7 +4,6 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-<?php get_template_part('templates/page', 'header'); ?>
 <div class="clearfix">
     <div class="col-lg-9 white_bg">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -74,21 +73,3 @@
     </div>
 </div>
 <?php endwhile; ?>
-<footer class="clearfix">
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi doloribus necessitatibus quibusdam, dignissimos sunt error, vitae officiis nulla velit voluptate, doloremque debitis magnam assumenda dicta natus et aut fugiat! Voluptate. </p>
-    </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est non perferendis minima quae ut atque ex, provident fugit cum? Fugit ab nobis dolor debitis quod deleniti, temporibus earum tenetur.</p>
-    </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatum sequi cumque iste esse, tempore ipsam est assumenda quod eaque, quam dolores veniam aliquam. Velit voluptatem nostrum in ut maiores.</p>
-    </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, explicabo. Fugiat adipisci, suscipit minus, laboriosam quae voluptates aspernatur et. Facere ipsam earum esse quas ipsum quod vel, commodi! Soluta, a.</p>
-    </div>
-</footer>
