@@ -20,6 +20,8 @@ $sage_includes = [
   'lib/extras.php',                // Custom functions
   //New Post Types 
   'lib/post-type-news-flash.php',  // News Flash post-type Function
+  'lib/post-type-new-in-store.php',  // News Flash post-type Function
+
 
 ];
 
