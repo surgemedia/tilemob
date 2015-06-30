@@ -18,6 +18,8 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/function-debug.php',                // Custom functions
+
   //New Post Types 
   'lib/post-type-news-flash.php',  // News Flash post-type Function
   'lib/post-type-new-in-store.php',  // News Flash post-type Function
