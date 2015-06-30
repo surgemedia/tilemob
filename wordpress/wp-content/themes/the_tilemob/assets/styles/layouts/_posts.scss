@@ -1,0 +1,21 @@
+/*=====================================
+=            PDF Post Type            =
+		As seen on New in Store
+=====================================*/
+.pdf-object {
+	a {
+		text-align: center;
+		img {
+			display: inline-block;
+			width:90%;
+		}
+		span {
+			background: $light-grey;
+			text-align: center;
+			padding: 1em;
+			width: 100%;
+		}
+	}
+}
+
+
