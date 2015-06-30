@@ -15,7 +15,7 @@ wordpress/wp-content/themes/twentysixteen
 wordpress/wp-content/themes/twentyseventeen
 wordpress/wp-content/themes/*/bower_components
 wordpress/wp-content/themes/*/node_modules
-wordpress/wp-content/updraft/*
+#wordpress/wp-content/updraft/*
 
 
 

@@ -18,6 +18,9 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  //New Post Types 
+  'lib/post-type-news-flash.php',  // News Flash post-type Function
+
 ];
 
 foreach ($sage_includes as $file) {
