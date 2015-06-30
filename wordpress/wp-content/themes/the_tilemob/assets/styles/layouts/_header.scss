@@ -1,5 +1,7 @@
 .list-reset {
-
+	margin: 0;
+	padding: 0;
+	display:block;
 }
 
 
@@ -17,5 +19,8 @@
 }
 
 .social-networks {
-	ul 
+	ul {
+		@extend .list-reset
+	}
+
 }

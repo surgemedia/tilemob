@@ -1,11 +1,13 @@
-body {
-	background:$grey;
-}
-body.wp-admin {
-	body{
-		background:#fff;
-	}
-	}
+/*==========================================
+=            	Body Classes            =
+==========================================*/
+ 
+/* Body has grey_bg attached */
+
+
+/*==========================================
+=            Background Classes            =
+==========================================*/
 
 .white_bg {
 	background:#fff;
@@ -15,4 +17,31 @@ body.wp-admin {
 }
 .grey_light_bg {
 	background:$grey-light;
+}
+.grey_bg {
+	background:$grey;
+}
+/*==========================================
+=            Gutter Classes           		 =
+==========================================*/
+.gutter-left {
+
+	border-left:$gutter solid $grey;
+}
+.gutter-right {
+	border-right:$gutter solid $grey;
+
+}
+.gutter-top {
+	margin-top:$gutter;
+
+}
+.gutter-bottom {
+	margin-bottom:$gutter;
+
+}
+
+.gutter-both {
+	@extend .gutter-left;
+	@extend .gutter-right;
 }
