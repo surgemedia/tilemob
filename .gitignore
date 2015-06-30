@@ -15,6 +15,7 @@ wordpress/wp-content/themes/twentysixteen
 wordpress/wp-content/themes/twentyseventeen
 wordpress/wp-content/themes/*/bower_components
 wordpress/wp-content/themes/*/node_modules
+wordpress/wp-content/updraft/*
 
 
 
@@ -22,6 +23,7 @@ wordpress/wp-content/themes/*/node_modules
 */*/.DS_Store
 */.DS_Store
 npm-debug.log
+wordpress/wp-content/.DS_Store
 wordpress/wp-content/plugin/.DS_Store
 wordpress/wp-content/themes/.DS_Store
 wordpress/wp-content/.DS_Store
@@ -31,9 +33,8 @@ wordpress/wp-content/.DS_Store
 # Include wp-config.php and other wordpress themes and plugins
 !wordpress/wp-config.php
 !wordpress/wp-content/*
+!wordpress/wp-content/updraft/*
 !wordpress/wp-content/themes/the_tilemob
-!wordpress/wp-content/updraft/
-
 
 
 
