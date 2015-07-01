@@ -10,16 +10,27 @@
         <img src="<?php the_field('other_image','option'); ?>" alt="Since 1976">
       </div>
     </div>
-    <div class="col-sm-6 col-lg-6 translateY-117">
-      <div class="col-sm-6 col-lg-6">
-        <p><?php the_field('address','option'); ?></p>
+    <div class="col-sm-6 col-lg-6 translateY-106">
+      <div class="col-sm-8 col-lg-8 address">
+        <?php 
+          if(have_rows('address','option')):
+            while(have_rows('address','option')) : the_row();
+              ?>
+                <h4><?php the_sub_field('showroom','option');?></h4>
+                <p><?php the_sub_field('address_line_1','option');?></p>
+                <p><?php the_sub_field('address_line_2','option');?></p>
+                <a href="<?php the_sub_field('link_to_contact_page','option');?>">Go to our Contact/Map page >></a>
+              <?php
+            endwhile;
+          endif;
+        ?>
       </div>
-      <div class="col-sm-6 col-lg-6 translateY-169">
-        <p><?php the_field('phone_number','option'); ?></p>
+      <div class="col-sm-4 col-lg-4 translateY-106 phone">
+        <p><span>Ph. </span><?php the_field('phone_number','option'); ?></p>
       </div>
     </div>
     <ul class="social-networks">
-        <li>The Mob Social Networks: </li>
+        <li><small>The Mob Social Networks: </small></li>
         <?php 
         if(have_rows('social_networking','option')) :
           while(have_rows('social_networking','option')) : the_row();

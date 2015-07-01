@@ -9,11 +9,8 @@
 	.translateY-37 {
 		@include translateY(37%);
 	}
-	.translateY-117 {
-		@include translateY(117%);
-	}
-	.translateY-169 {
-		@include translateY(169%);
+	.translateY-106 {
+		@include translateY(106%);
 	}
 	.social-networks {
 		position: absolute;
@@ -28,6 +25,28 @@
 	}
 	small {
 		  line-height: 30px;
+	}
+	.address {
+		text-align: right;
+		p,h4 {
+			color: $grey-font;
+			font-size: 12px;
+			margin: 0;
+			padding: 0;
+			line-height: 20px;
+		}
+		h4 {
+			color: #fff;
+		}
+	}
+	.phone {
+		font-size: 18px;
+		color: #fff;
+		text-align: right;
+		border-left: 1px solid $grey-light;
+		span {
+			color: $red;
+		}
 	}
 }
 
