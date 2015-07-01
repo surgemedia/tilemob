@@ -52,97 +52,11 @@
                 "class": "",
                 "id": ""
             },
-            "min": 1,
-            "max": 1,
-            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
             "button_label": "Add Row",
-            "sub_fields": [
-                {
-                    "key": "field_559338441d8c9",
-                    "label": "Showroom",
-                    "name": "showroom",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_5593385b1d8ca",
-                    "label": "Address line 1",
-                    "name": "address_line_1",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_559338711d8cb",
-                    "label": "Address line 2",
-                    "name": "address_line_2",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_55933c1d12dbe",
-                    "label": "Link to Contact Page",
-                    "name": "link_to_contact_page",
-                    "prefix": "",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": "",
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0
-                }
-            ]
+            "sub_fields": []
         },
         {
             "key": "field_559237139c374",
@@ -238,5 +152,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435712560
+    "modified": 1435712226
 }
