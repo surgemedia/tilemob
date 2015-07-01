@@ -46,5 +46,12 @@
 	@extend .gutter-right;
 }
 /*==========================================
-=            Common Classes           		 =
+= Navigation Classes - Add this class to ul =
 ==========================================*/
+.style-to-nav {
+	display: inline-block;
+  	list-style: none;
+  	li {
+  		float: left;
+  	}
+}

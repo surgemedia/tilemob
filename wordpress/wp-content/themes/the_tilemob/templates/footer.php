@@ -4,20 +4,83 @@
   </div>
 </footer> -->
 <footer class="clearfix">
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi doloribus necessitatibus quibusdam, dignissimos sunt error, vitae officiis nulla velit voluptate, doloremque debitis magnam assumenda dicta natus et aut fugiat! Voluptate. </p>
+    <div class="row footer-nav">
+        <div class="col-sm-2 col-lg-2">
+            <p><?php the_field('copyrights','option');?></p>
+        </div>
+        <div class="col-sm-7 col-lg-7">
+            <ul class="style-to-nav">
+                <?php 
+                    if(have_rows('footer_navigation','option')):
+                        while(have_rows('footer_navigation','option')): the_row();
+                        ?>
+                            <li><a href="<?php the_sub_field('nav_link','option');?>" target="_blank"><?php the_sub_field('nav_link_text','option');?></a></li>
+                        <?php
+                        endwhile;
+                    endif;
+                ?>
+            </ul>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <?php 
+                    if(have_rows('web_designer_link','option')):
+                        while(have_rows('web_designer_link','option')): the_row();
+                        ?>
+                            <a href="<?php the_sub_field('wd_link','option');?>" target="_blank"><?php the_sub_field('wd_link_text','option');?></a>
+                        <?php
+                        endwhile;
+                    endif;
+            ?>
+        </div>
     </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est non perferendis minima quae ut atque ex, provident fugit cum? Fugit ab nobis dolor debitis quod deleniti, temporibus earum tenetur.</p>
+    <div class="row quick-links">
+        <h4>Quick Links</h4>
+        <div class="col-sm-4 col-lg-4">
+            <ul>
+                <?php 
+                    if(have_rows('quick_links_1','option')):
+                        while(have_rows('quick_links_1','option')): the_row();
+                        ?>
+                            <li><a href="<?php the_sub_field('ql1_link','option');?>" target="_blank"><?php the_sub_field('ql1_link_text','option');?></a></li>
+                        <?php
+                        endwhile;
+                    endif;
+                ?>
+            </ul>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+            <ul>
+                <?php 
+                    if(have_rows('quick_links_2','option')):
+                        while(have_rows('quick_links_2','option')): the_row();
+                        ?>
+                            <li><a href="<?php the_sub_field('ql2_link','option');?>" target="_blank"><?php the_sub_field('ql2_link_text','option');?></a></li>
+                        <?php
+                        endwhile;
+                    endif;
+                ?>
+            </ul>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+            <ul>
+                <?php 
+                    if(have_rows('quick_links_3','option')):
+                        while(have_rows('quick_links_3','option')): the_row();
+                        ?>
+                            <li><a href="<?php the_sub_field('ql3_link','option');?>" target="_blank"><?php the_sub_field('ql3_link_text','option');?></a></li>
+                        <?php
+                        endwhile;
+                    endif;
+                ?>
+            </ul>
+        </div>
     </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatum sequi cumque iste esse, tempore ipsam est assumenda quod eaque, quam dolores veniam aliquam. Velit voluptatem nostrum in ut maiores.</p>
-    </div>
-    <div class="col-lg-3">
-        <div class="heading"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, explicabo. Fugiat adipisci, suscipit minus, laboriosam quae voluptates aspernatur et. Facere ipsam earum esse quas ipsum quod vel, commodi! Soluta, a.</p>
+    <div class="row footer-notes">
+        <div class="col-sm-6 col-lg-6">
+            <p><?php the_field('footer_notes_1','option');?></p>
+        </div>
+        <div class="col-sm-6 col-lg-6">
+            <p><?php the_field('footer_notes_2','option');?></p>
+        </div>
     </div>
 </footer>
