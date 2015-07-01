@@ -6,6 +6,7 @@
 .header {
 	color: $grey-sober;
 	position: relative;
+	min-height: 180px;
 	.translateY-37 {
 		@include translateY(37%);
 	}
