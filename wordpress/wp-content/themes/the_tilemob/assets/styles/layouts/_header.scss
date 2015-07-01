@@ -51,15 +51,29 @@
 }
 
 #menu-primary-menu {
-		padding:0px;
-		margin: 0px;
+	padding:0px;
+	margin: 0 0 10px 0;
+	background: $red;
+	@include linear-gradient($red,$red-bright);
+
 	li {
-	float:left;
-	dislay:inline-block;
+		float:left;
+		display: inline-block;
+
 		a {
-	display:inline-block;
+			display:inline-block;
+			color: #fff;
+		}
+		a:hover {
+			background-color: $grey-dark;
 		}
 	}
-	
+	li+li {
+		border-left: 1px solid $red-light;
+	}
 }
+
+
+
+
 
