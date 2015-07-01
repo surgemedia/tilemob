@@ -1,6 +1,6 @@
 {
     "key": "group_559225d235aff",
-    "title": "PDF - Post Type",
+    "title": "New in Store - Post Type",
     "fields": [
         {
             "key": "field_559225d23a75e",
@@ -45,13 +45,6 @@
                 "operator": "==",
                 "value": "new_in_store"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "project"
-            }
         ]
     ],
     "menu_order": 1,
@@ -60,5 +53,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435715494
+    "modified": 1435646531
 }
