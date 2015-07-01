@@ -3,7 +3,33 @@
 	padding: 0;
 	display:block;
 }
-
+.header {
+	color: $grey-sober;
+	position: relative;
+	.translateY-37 {
+		@include translateY(37%);
+	}
+	.translateY-117 {
+		@include translateY(117%);
+	}
+	.translateY-169 {
+		@include translateY(169%);
+	}
+	.social-networks {
+		position: absolute;
+		right: 0;
+		padding-right: 15px;
+		@extend .list-reset;
+		display: inline-block;
+		list-style: none;
+		li {
+			float: left;
+		}
+	}
+	small {
+		  line-height: 30px;
+	}
+}
 
 #menu-primary-menu {
 		padding:0px;
@@ -18,9 +44,3 @@
 	
 }
 
-.social-networks {
-	ul {
-		@extend .list-reset
-	}
-
-}

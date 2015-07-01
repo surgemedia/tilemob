@@ -1,4 +1,6 @@
 @import "common/_variables";
+@import "common/mixin";
+@import "common/_global";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -18,7 +20,7 @@
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-@import "common/_global";
+
 @import "components/_buttons";
 @import "components/_comments";
 @import "components/_forms";

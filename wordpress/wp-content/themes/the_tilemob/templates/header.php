@@ -1,24 +1,38 @@
 <header class="banner" role="banner">
-<div class="container">
-  <p>Here is <?php echo get_field('logo','option'); ?></p>
-  <div class="social-networks col-lg-4 pull-right">
-  <ul class="">
-    <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-    <li><a href="http://www.facebook.com"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="http://www.facebook.com"><i class="fa fa-pinterest"></i></a></li>
-    <li><a href="http://www.facebook.com"><i class="fa fa-instagram"></i></a></li>
-    <li><a href="http://www.facebook.com"><i class="fa fa-houzz"></i></a></li>
-  </ul>
+<div class="container header">
+
+  <div class="row">
+    <div class="col-sm-6 col-lg-6">
+      <div class="col-sm-6 col-lg-6">
+        <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('logo','option'); ?>" alt="<?php bloginfo('name');?>"></a>
+      </div>
+      <div class="col-sm-6 col-lg-6 translateY-37">
+        <img src="<?php the_field('other_image','option'); ?>" alt="Since 1976">
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-6 translateY-117">
+      <div class="col-sm-6 col-lg-6">
+        <p><?php the_field('address','option'); ?></p>
+      </div>
+      <div class="col-sm-6 col-lg-6 translateY-169">
+        <p><?php the_field('phone_number','option'); ?></p>
+      </div>
+    </div>
+    <ul class="social-networks">
+        <li>The Mob Social Networks: </li>
+        <?php 
+        if(have_rows('social_networking','option')) :
+          while(have_rows('social_networking','option')) : the_row();
+        ?>
+          <li><a href="<?php the_sub_field('link','option'); ?>"><img src="<?php the_sub_field('icon','option'); ?>"></a></li>
+        <?php
+          endwhile;
+        endif;
+        ?>
+    </ul>
   </div>
-   <a class="brand col-lg-3" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-  <ul class="address-header col-lg-3">
-<li> BRISBANE TILES SHOWROOM</li>
-<li>4-6 Blackwood St (Cnr Samford Rd)</li>
-<li>Mitchelton Queensland Australia 4053</li>
-<li>Go to our Contact/Map page »</li>
-  </ul>
-  <span class="phone col-lg-2 pull-right">Ph. (07) 3355 5055</span>
-  </div>
+
+</div>
   <div class="container">
     <nav role="navigation">
       <?php

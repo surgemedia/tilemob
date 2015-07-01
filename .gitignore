@@ -17,7 +17,7 @@ wordpress/wp-content/themes/twentyseventeen
 wordpress/*/*/*/bower_components
 wordpress/*/*/*/node_modules
 wordpress/*/*/*/dist
-wordpress/*/uploads
+# wordpress/*/uploads
 
 
 # Include wp-config.php and other wordpress themes and plugins
