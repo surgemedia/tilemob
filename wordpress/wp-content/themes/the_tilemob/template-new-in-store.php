@@ -18,19 +18,19 @@
         $new_in_store_query = new WP_Query( $args );
         // The Loop
         if ( $new_in_store_query->have_posts() ) {
-    while ( $new_in_store_query->have_posts() ) { $new_in_store_query->the_post(); ?>
-    <div class="pdf-object col-lg-4">
-        <a href="<?php get_field('pdf')['url']; ?>">
-        <img src="<?php the_field('thumbnail') ?>" alt="">
-        <span><?php the_title() ?></span>
-        </a>
-    </div>
+            while ( $new_in_store_query->have_posts() ) { $new_in_store_query->the_post(); ?>
+                <div class="pdf-object col-lg-4">
+                    <a target="_blank" href="<?php echo get_field('pdf')['url']; ?>">
+                        <img src="<?php the_field('thumbnail') ?>" alt="">
+                        <span><?php the_title() ?></span>
+                    </a>
+                </div>
 
-    <?php }
+            <?php }
         } else {
-            // no posts found
+                // no posts found
         }
-        // Restore original Post Data
+            // Restore original Post Data
         wp_reset_postdata();
     ?>
 
