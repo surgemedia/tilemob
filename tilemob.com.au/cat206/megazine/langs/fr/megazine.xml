@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<lang id="fr">
-	<langstring name="LNG_LANGUAGE_NAME">Français</langstring>
-	<langstring name="LNG_LOADING">Chargement... $1%</langstring>
-	<langstring name="LNG_BOOKEDGE_PAGENUMBER">Alelr à la page $1</langstring>
-</lang>

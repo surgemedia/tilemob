@@ -1,2 +1,0 @@
-# tilemob
-Tile Mob Website

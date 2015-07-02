@@ -1,2 +1,0 @@
-<div id="footer_col1" class="footer_col1"><a href="http://www.dmwcreative.com.au" target="_blank" title="dmwcreative.com.au">CMS by DMW Creative</a> | <a href="http://www.dmwcreative.com.au" target="_blank" title="dmwcreative.com.au">www.dmwcreative.com.au</a> | <a href="mailto:info@dmwcreative.com.au" target="_blank" title="E-mail us">info@dmwcreative.com.au</a></div>
-<div id="footer_col2" class="footer_col2">&nbsp;</div>

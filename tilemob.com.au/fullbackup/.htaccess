@@ -1,4 +1,0 @@
-AuthName "Site Backup feature - Please log in"
-AuthType Basic
-AuthUserFile .htpasswd
-Require valid-user

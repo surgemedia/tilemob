@@ -1,2 +1,0 @@
-"This MZ3 Title was built with MZ3_tool3 PRO (v2.1.2.92,  May 21, 2013 (released version, FlashPlayer 11.7)) and  MegaZine3-std ("v2.1.2 rev 20130319")"  
-"Dieser MZ3 Titel wurde mit MZ3_tool3 PRO (v2.1.2.92,  May 21, 2013 (released version, FlashPlayer 11.7)) und MegaZine3-std ("v2.1.2 rev 20130319") erstellt"  

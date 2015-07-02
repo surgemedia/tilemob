@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Check domain matched but uri doesn't
+    RewriteCond %{HTTP_HOST} (^|\.) tilesbrisbane\.com$ [NC]
+    RewriteCond %{REQUEST_URI} %{REQUEST_URI} !^/index.html$
+	RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png|css|js)$
+    RewriteRule .* /index.html [L,R=302]
+
+    # Check domain matches and uri matches
+    #RewriteCond %{HTTP_HOST} (^|\.) domain\.com$ [NC]
+    #RewriteCond %{REQUEST_URI} ^/some/otherpage.php [NC]
+    #RewriteRule ^ https://www.example.com/some/other/new/page/ [R=301,L]
+</IfModule>
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !^/index.html$
+#RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png|css|js)$
+#RewriteRule .* /index.html [L,R=302]

@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<lang id="fr">
-	<langstring name="LNG_BOOKMARK_DELETE">Supprimer ce signet</langstring>
-	<langstring name="LNG_BOOKMARK_ADD">Ajouter un signet</langstring>
-	<langstring name="LNG_BOOKMARK_OK">OK</langstring>
-	<langstring name="LNG_BOOKMARK_CANCEL">Annuler </langstring>
-	<langstring name="LNG_BOOKMARK_DEFAULT_TITLE">Page $1</langstring>
-</lang>

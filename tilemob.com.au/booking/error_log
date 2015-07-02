@@ -1,1 +1,0 @@
-[17-Oct-2014 12:23:47 Australia/Melbourne] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/titi2698/CdbSecurityFolders/dbconnection.php on line 7
