@@ -37,3 +37,7 @@ wordpress/*/*/*/dist
 
 
 
+wordpress/wp-content/updraft/.DS_Store
+wordpress/wp-content/updraft/.htaccess
+wordpress/wp-content/updraft/index.html
+wordpress/wp-content/updraft/web.config

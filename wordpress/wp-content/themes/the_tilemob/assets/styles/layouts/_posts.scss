@@ -3,18 +3,24 @@
 		As seen on New in Store
 =====================================*/
 .pdf-object {
+	text-align: center;
 	a {
-		text-align: center;
-		img {
-			display: inline-block;
-			width:90%;
-		}
-		span {
-			background: $grey-light;
-			text-align: center;
-			padding: 1em;
-			width: 100%;
-		}
+	  text-align: center;
+	  text-decoration: none;
+	  img {
+		  display: inline-block;
+		  width: 65%;
+		  margin-bottom: 1em;
+	  }
+	  span {
+		  background: $grey-dark;
+		  text-align: center;
+		  padding: 1em;
+		  width: 65%;
+		  display: block;
+		  color: #fff;
+		  margin: auto;
+	  }
 	}
 }
 

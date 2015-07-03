@@ -22,7 +22,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         }
     ],
@@ -43,6 +43,5 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1435733540,
-    "local": "json"
+    "modified": 1435890494
 }
