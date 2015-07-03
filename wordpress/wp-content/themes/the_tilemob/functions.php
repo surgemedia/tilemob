@@ -21,6 +21,7 @@ $sage_includes = [
   'lib/function-debug.php',                // Custom functions
 
   //New Post Types 
+  'lib/post-type-careers.php',  // News Flash post-type Function
   'lib/post-type-news-flash.php',  // News Flash post-type Function
   'lib/post-type-new-in-store.php',  // News Flash post-type Function
   'lib/post-type-projects.php',  // News Flash post-type Function
