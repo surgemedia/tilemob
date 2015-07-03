@@ -7,5 +7,6 @@
     <div class="col-lg-6">
         <?php get_template_part('templates/two-col', 'h2'); ?>
         <?php the_field('second_content') ?>
+        
     </div>
 </div>
