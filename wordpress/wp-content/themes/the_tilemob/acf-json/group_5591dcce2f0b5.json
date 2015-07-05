@@ -99,6 +99,13 @@
                 "operator": "==",
                 "value": "template-new-in-store.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-projects.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -109,6 +116,5 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1435733531,
-    "local": "json"
+    "modified": 1435905975
 }
