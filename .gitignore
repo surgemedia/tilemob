@@ -2,13 +2,42 @@
 Database_Backup/
 
 # Ignore the wordpress directory and default themes 
-wordpress/*
+wordpress/*.php
+wordpress/*.html
+wordpress/wp-includes
+wordpress/wp-admin
+wordpress/wp-content/plugins
+wordpress/wp-content/languages
 wordpress/wp-content/themes/twentythirteen
 wordpress/wp-content/themes/twentyfourteen
 wordpress/wp-content/themes/twentyfifteen
 wordpress/wp-content/themes/twentysixteen
 wordpress/wp-content/themes/twentyseventeen
 
-# Include wp-config.php and 
-#!wordpress/wp-config.php
-#!wordpress/wp-content/*
+wordpress/*/*/*/bower_components
+wordpress/*/*/*/node_modules
+wordpress/*/*/*/dist
+# wordpress/*/uploads
+
+
+# Include wp-config.php and other wordpress themes and plugins
+!wordpress/wp-config.php
+!wordpress/wp-content
+!wordpress/wp-content/updraft/*
+!wordpress/wp-content/themes/the_tilemob
+
+
+
+
+
+
+
+
+
+
+
+
+wordpress/wp-content/updraft/.DS_Store
+wordpress/wp-content/updraft/.htaccess
+wordpress/wp-content/updraft/index.html
+wordpress/wp-content/updraft/web.config

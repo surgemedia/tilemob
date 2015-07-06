@@ -1,0 +1,14 @@
+@mixin translateY($value) {
+	transform: translateY($value);
+	-webkit-transform: translateY($value);
+	-moz-transform: translateY($value);
+	-ms-transform: translateY($value);
+}
+
+@mixin linear-gradient($from,$to) {
+	background: -moz-linear-gradient($from,$to); /* FF3.6+ */
+	background: -webkit-linear-gradient($from,$to); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($from,$to); /* Opera 11.10+ */
+	background: -ms-linear-gradient($from,$to); /* IE10+ */
+	background: linear-gradient($from,$to); /* W3C */
+}

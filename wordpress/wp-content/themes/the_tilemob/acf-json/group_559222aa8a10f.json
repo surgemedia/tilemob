@@ -1,0 +1,47 @@
+{
+    "key": "group_559222aa8a10f",
+    "title": "New in Store - Page",
+    "fields": [
+        {
+            "key": "field_5592260301a9d",
+            "label": "Featured PDF",
+            "name": "featured_pdf",
+            "prefix": "",
+            "type": "post_object",
+            "instructions": "the biggest PDF that shows in the front column",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "new_in_store"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-new-in-store.php"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "modified": 1435890494
+}

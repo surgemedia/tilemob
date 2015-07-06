@@ -1,0 +1,63 @@
+/*==========================================
+=            	Body Classes            =
+==========================================*/
+ 
+/* Body has grey_bg attached */
+body {
+	font-size: 12px;
+	color: $body-font;
+}
+
+
+/*==========================================
+=            Background Classes            =
+==========================================*/
+
+.white_bg {
+	background:#fff;
+	padding-bottom: 35px;
+	padding-top: 20px;
+}
+.red_bg {
+	background:$red;
+}
+.grey_light_bg {
+	background:$grey-light;
+}
+.grey_bg {
+	background:$grey;
+}
+/*==========================================
+=            Gutter Classes           		 =
+==========================================*/
+.gutter-left {
+
+	border-left:$gutter solid $grey;
+}
+.gutter-right {
+	border-right:$gutter solid $grey;
+
+}
+.gutter-top {
+	margin-top:$gutter;
+
+}
+.gutter-bottom {
+	margin-bottom:$gutter;
+
+}
+
+.gutter-both {
+	@extend .gutter-left;
+	@extend .gutter-right;
+}
+/*==========================================
+= Navigation Classes - Add this class to ul =
+==========================================*/
+.style-to-nav {
+	display: inline-block;
+  	list-style: none;
+  	li {
+  		float: left;
+  	}
+}

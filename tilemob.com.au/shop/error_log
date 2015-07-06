@@ -1,1 +1,0 @@
-[19-Jul-2014 16:07:37 Australia/Melbourne] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Unknown MySQL server host 'MYSQL-3.tilemob.com.au' (1) in /home/titi2698/public_html/tilemob.com.au/shop/includes/connection.php on line 7

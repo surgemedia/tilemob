@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<lang id="it">
-	<langstring name="LNG_INDEX">Indice</langstring>
-	<langstring name="LNG_INDEX_CLOSE">Chiudi</langstring>
-	<langstring name="LNG_INDEX_INFO">Clicca una pagina per visualizzarla.</langstring>
-	<langstring name="LNG_INDEX_PREV">Pagina precedente</langstring>
-	<langstring name="LNG_INDEX_NEXT">Pagina successiva</langstring>
-</lang>

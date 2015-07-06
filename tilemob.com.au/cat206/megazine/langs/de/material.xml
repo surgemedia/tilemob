@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<lang id="de">
-	<langstring name="LNG_MATERIAL_CLOSE">Schließen</langstring>
-	<langstring name="LNG_MATERIAL_INFO">Klicken Sie auf ein Material, um es herunterzuladen.</langstring>
-	<langstring name="LNG_MATERIAL_PREV">Vorige Materialien</langstring>
-	<langstring name="LNG_MATERIAL_NEXT">Nächste Materialien</langstring>
-</lang>

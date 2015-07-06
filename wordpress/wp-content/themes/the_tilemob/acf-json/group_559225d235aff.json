@@ -1,0 +1,58 @@
+{
+    "key": "group_559225d235aff",
+    "title": "New in Store - Post Type",
+    "fields": [
+        {
+            "key": "field_559225d23a75e",
+            "label": "PDF",
+            "name": "pdf",
+            "prefix": "",
+            "type": "file",
+            "instructions": "Please select the file you would like to upload",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all"
+        },
+        {
+            "key": "field_559225d23a780",
+            "label": "Thumbnail",
+            "name": "thumbnail",
+            "prefix": "",
+            "type": "image",
+            "instructions": "the thumbnail for that pdf",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "new_in_store"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1435733540,
+    "local": "json"
+}

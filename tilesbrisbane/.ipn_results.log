@@ -1,0 +1,539 @@
+[05/10/2013 4:38 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=114.70, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=23:38:04 May 09, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=3.63, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AB1geW4gkDtpYIGHyjX2xI9H-ErHAXcabTaiiYlJnr18pBsugk4dbGTK, payer_email=sacheesh_rc@ispg.in, txn_id=41A39810AH698481J, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.63, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=114.70, shipping=0.00, ipn_track_id=8e65436c7c6be, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 5:04 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=114.70, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=00:04:23 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=3.63, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AG-vQ9wiUKJsp15.v8NvVF.JskQwAk3dCnXIX7L3XbbOMbmTjW3WSMbO, payer_email=sacheesh_rc@ispg.in, txn_id=3X174338XJ4577107, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.63, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=114.70, shipping=0.00, ipn_track_id=5b0e7a3de43b6, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 5:10 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=62.10, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=00:10:50 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=2.10, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AsEo8hk9qrj84Gy-UAcTedV0RIrvAmuou8YXvPo0T4mB9TTLD0N7Hal2, payer_email=sacheesh_rc@ispg.in, txn_id=0YL25368PB505582Y, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=2.10, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=62.10, shipping=0.00, ipn_track_id=602304bfadd9f, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 5:24 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=57.35, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=00:24:27 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=1.96, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AzUFQc5x9oma8vpE7luLB8nMmdNqANiNYixgnp6ItFfV7k.uGTJKVEeI, payer_email=sacheesh_rc@ispg.in, txn_id=02G83357VG1479602, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=1.96, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=57.35, shipping=0.00, ipn_track_id=3b1abfd0dc2c0, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 7:23 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=635.40, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:23:12 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=18.73, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AjNh9etzptjBmGCpY3nROK1lEVsxAhL375CkfTRfH8c1CphE2ve3ig7W, payer_email=sacheesh_rc@ispg.in, txn_id=2UK75809FL3925842, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=18.73, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=635.40, shipping=0.00, ipn_track_id=faf6b59ce82d7, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 7:44 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=62.10, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:44:01 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=2.10, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=A6uBCMwnqen-B5IVWsLy4S8wDh1jAPILhnplDvtRrfnZBLGqMbOci5Gy, payer_email=sacheesh_rc@ispg.in, txn_id=71E12086U32933726, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=2.10, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=62.10, shipping=0.00, ipn_track_id=26bbfba312d32, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/10/2013 7:59 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=57.35, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:59:05 May 10, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=1.96, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Anay.oFwM.8JuY0btKczIv15U0W7Apvq8qWnxRUkBod90rfJd.IpWDsp, payer_email=sacheesh_rc@ispg.in, txn_id=74H03131S54058044, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=1.96, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=57.35, shipping=0.00, ipn_track_id=206a9adcd4c6b, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/14/2013 9:40 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=1122.40, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=04:40:08 May 14, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=32.85, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AtjiAPdz0NB7McTCBFHS-WfnNUrLAnhtTlrtG6AMQ8ZJ83KX1761i80J, payer_email=sacheesh_rc@ispg.in, txn_id=7GP6650456237521H, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=32.85, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=Shopping cart payment, payment_gross=1122.40, shipping=0.00, ipn_track_id=286263329085, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 4:03 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=172.05, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=23:03:50 May 23, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=5.29, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=1712592, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Ai1PaghZh5FmBLCDCTQpwG8jB264A97T6.Gj1pEDyBdsgdVWMX2dwOAR, payer_email=sacheesh_rc@ispg.in, txn_id=0H5032580M004300A, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=5.29, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=1712592, payment_gross=172.05, shipping=0.00, ipn_track_id=3c6c991442b31, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 4:10 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=114.70, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=23:09:55 May 23, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=3.63, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=3787711, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31ADz63-g5UBk.gD7o3XTr0nfKmNKq, payer_email=sacheesh_rc@ispg.in, txn_id=92W60808LR393154W, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.63, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=3787711, payment_gross=114.70, shipping=0.00, ipn_track_id=95f0f1903dabf, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 4:39 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=172.05, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=23:39:35 May 23, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=5.29, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=1051605, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Axzo4lkchSLN9Pg-B34gX5opRyBVAePgMI2u9RYOt16P2WL7ABDG6ekQ, payer_email=sacheesh_rc@ispg.in, txn_id=68C73482SJ728633F, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=5.29, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=1051605, payment_gross=172.05, shipping=0.00, ipn_track_id=adb491cb4664a, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 6:49 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=57.35, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=01:49:37 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=1.96, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=4155064, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Ab4qqvRiWXeFkUKhSZDFQt7JhTSBA0vQ8Q6aGmBOOp0u0Pm4IHirevsI, payer_email=sacheesh_rc@ispg.in, txn_id=70X79889NC361590R, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=1.96, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=4155064, payment_gross=57.35, shipping=0.00, ipn_track_id=5bd08a5f88f1, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 7:08 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=89.90, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:08:29 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=2.91, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=3860962, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AAfWJx.rcoOiPkrV4VkwKhyD4zXwArmZNYjvNsYU3fJ9FBBth9FITTwl, payer_email=sacheesh_rc@ispg.in, txn_id=3G509171GD921952T, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=2.91, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=3860962, payment_gross=89.90, shipping=0.00, ipn_track_id=b7f0ef94c599, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 7:15 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=114.70, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:15:30 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=3.63, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=2048123, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AvZ-homBxcvHjHbV1TqRFINZcaFH, payer_email=sacheesh_rc@ispg.in, txn_id=7M394610F5477202C, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.63, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=2048123, payment_gross=114.70, shipping=0.00, ipn_track_id=6965adf6ee2d7, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 7:52 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=50.00, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=02:52:19 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=1.75, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=4978047, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=A7LPABgOB9Jz4k9td3at9nSFtb89AP33Cjb9TztWKXGAd5uBgct2AqgT, payer_email=sacheesh_rc@ispg.in, txn_id=3G6180139G524733V, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=1.75, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=4978047, payment_gross=50.00, shipping=0.00, ipn_track_id=c05c64a2db953, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 8:08 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=573.50, protection_eligibility=Eligible, address_status=confirmed, payer_id=TNEHV2GM5WW72, tax=0.00, address_street=1 Main St, payment_date=03:08:29 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=jijo thomas, mc_fee=16.93, address_country_code=US, address_name=jijo thomas kuruvilla, notify_version=3.7, custom=2879091, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ah0C7CXMjDAkFB74b3HMXLPqegD4, payer_email=qamailtesting99@gmail.com, txn_id=32B007407N571481U, payment_type=instant, last_name=kuruvilla, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=16.93, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=2879091, payment_gross=573.50, shipping=0.00, ipn_track_id=778872e2955aa, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 8:17 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=573.50, protection_eligibility=Eligible, address_status=confirmed, payer_id=TNEHV2GM5WW72, tax=0.00, address_street=1 Main St, payment_date=03:17:03 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=jijo thomas, mc_fee=16.93, address_country_code=US, address_name=jijo thomas kuruvilla, notify_version=3.7, custom=4481474, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=A1Lx52RILFOaXfr88hz3LVKhMI0OAKieQo11ihHhy2pVGYi37cCOFDBw, payer_email=qamailtesting99@gmail.com, txn_id=94353788694154846, payment_type=instant, last_name=kuruvilla, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=16.93, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=4481474, payment_gross=573.50, shipping=0.00, ipn_track_id=2ed447d1de8b, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 10:07 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=180.00, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=05:07:23 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=5.52, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=3904342, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=ACUe-E7Hjxmeel8FjYAtjnx-yjHAA7-IzgB.wloBEvWefuDdMyNgrdl9, payer_email=sacheesh_rc@ispg.in, txn_id=0JB133716G217152B, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=5.52, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=3904342, payment_gross=180.00, shipping=0.00, ipn_track_id=8f6f1194bf202, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 10:15 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=78.80, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=05:15:01 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=2.59, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=7273263, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Az7urioMgkGLk4HPFaLFs-7S9A5CABBbkUfZ7KiHLTe8zUUm8t6HwijA, payer_email=sacheesh_rc@ispg.in, txn_id=332238014R131551N, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=2.59, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=7273263, payment_gross=78.80, shipping=0.00, ipn_track_id=9c02a1a5bcdcd, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/24/2013 10:48 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=180.00, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=05:48:05 May 24, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=5.52, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=3135037, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=A7CCfjdZGn.JWs3eck7y8C3Tl3TPAx.aqsQP4MlINahS5UuqB4Oq0ubl, payer_email=sacheesh_rc@ispg.in, txn_id=09578383A67154048, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=5.52, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=3135037, payment_gross=180.00, shipping=0.00, ipn_track_id=bc4473779ca2f, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[05/30/2013 5:31 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=208.20, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=00:31:47 May 30, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=6.34, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=5138275, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacADaK-rL3QkTSslQClmem74lYU9dW, payer_email=sacheesh_rc@ispg.in, txn_id=70H79492UB536635J, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=6.34, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=5138275, payment_gross=208.20, shipping=0.00, ipn_track_id=be286d9a25fdb, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[07/26/2013 9:15 PM] - FAIL: fsockopen error no. : 
+IPN POST Vars from Paypal:
+mc_gross=1533.31, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=04:14:47 Jul 26, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=44.77, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=4129684, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=Am--Cla7Oscg7BM7OlDJJVTgwmEHAz0InaoNNjz.yk2SscbB0i.AnlYG, payer_email=sacheesh_rc@ispg.in, txn_id=63177263TJ831353U, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=44.77, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=4129684, payment_gross=1533.31, shipping=0.00, ipn_track_id=b051b78c1fdd8, 
+IPN Response from Paypal Server:
+ 
+
+[07/26/2013 9:23 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=101.20, protection_eligibility=Eligible, address_status=confirmed, payer_id=HX362M9RPATB4, tax=0.00, address_street=1 Main St, payment_date=04:23:13 Jul 26, 2013 PDT, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=Sacheesh, mc_fee=3.23, address_country_code=US, address_name=Sacheesh Personal, notify_version=3.7, custom=1444868, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=United States, address_city=San Jose, quantity=1, verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-A90UgZRyY8ErQROEXimlincvEAnn, payer_email=sacheesh_rc@ispg.in, txn_id=1BU31193BU591302P, payment_type=instant, last_name=Personal, address_state=CA, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.23, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=1444868, payment_gross=101.20, shipping=0.00, ipn_track_id=a54be9597a53b, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[06/04/2014 3:01 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=71.28, protection_eligibility=Eligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=22:01:12 Jun 03, 2014 PDT, payment_status=Completed, charset=windows-1252, address_zip=W185744, first_name=brad, mc_fee=3.08, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=5726813, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=AGu.hbwMxRXoqDiyy-IJNOnULnvNAbR7iAi8l08wiL-h26aFRoajxC8E, payer_email=yuen.brad@bioem.co, txn_id=37820706BN0758733, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=3.08, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=5726813, payment_gross=71.28, shipping=0.00, ipn_track_id=c4c86aab5b22d, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[06/04/2014 3:03 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=123.92, protection_eligibility=Eligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=22:03:51 Jun 03, 2014 PDT, payment_status=Completed, charset=windows-1252, address_zip=W185744, first_name=brad, mc_fee=5.13, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=5726813, payer_status=verified, business=sacheesh_rc-facilitator@ispg.in, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=ArgX1JoEl.LNTJ5nkTmgzkfLaDiVADwO81Z28r4XLfeawyAJAf6.LD9g, payer_email=yuen.brad@bioem.co, txn_id=5RF12241GH932494A, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=sacheesh_rc-facilitator@ispg.in, payment_fee=5.13, receiver_id=FRL65C2M4TJUG, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=5726813, payment_gross=123.92, shipping=0.00, ipn_track_id=d56c89622447e, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[08/05/2014 11:55 AM] - SUCCESS!
+IPN POST Vars from Paypal:
+mc_gross=103.08, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=WRZVL7MR56ZWL, tax=0.00, address_street=24  pitcairn  sreet, payment_date=18:55:52 Aug 04, 2014 PDT, payment_status=Completed, charset=windows-1252, address_zip=2617, first_name=venessa, mc_fee=2.77, address_country_code=AU, address_name=venessa carey, notify_version=3.8, custom=2210897, payer_status=unverified, business=sean@tilemob.com.au, address_country=Australia, address_city=evatt, quantity=1, verify_sign=AVkS-tHU2h7x-Z4rkFdc48Ls6tx5A8AV4VG9GBp1puGTTVL8jqQiWfQp, payer_email=venessacarey@aapt.net.au, txn_id=4W012375L0992034B, payment_type=instant, last_name=carey, address_state=Australian Capital Territory, receiver_email=sean@tilemob.com.au, payment_fee=2.77, receiver_id=YPDPENWEM73WA, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=AU, receipt_id=5108-4735-9281-0385, handling_amount=0.00, transaction_subject=2210897, payment_gross=103.08, shipping=0.00, ipn_track_id=3d6ba82d4471e, 
+IPN Response from Paypal Server:
+ HTTP/1.0 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=14400
+Strict-Transport-Security: max-age=14400
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+Date: Tue, 05 Aug 2014 01:55:59 GMT
+Content-Length: 8
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=vDP_kRR-QfNub5H8PjKiX86mLA5Kh3FPcIpCLkwLXFGX7G0PXy3sMCPHjQrosO8UODMiJ0QSH9yd4MJ3Mnpr8vDTSR7KLj-pExr6F9oovwBG5zFEwPcY2DKxPx9L-nroCEpzAKU535jeh-mxH5ZHN9cOMRrYzSgyYr_Ftx7Yr6PSUwcbb4kHxXM1_VIp6q_n9BQKmTW_BDhA6aq0yLEDaDw28Gb4AIfedcqkm8C63SsK2AEKaMVIYyS6TFLnylubDHgmZ6TEGWXkMvQYbWAXh4BvhWYKD_unn6yAC9JofRtcuGTDdN5tgzoDOSAur1zsbgtBSZ25JjRvzRG4r6JnGoDuoQh1Ad-yW6AzRp17kK-f6ojkC8Q8udmqku5IBG77EncTFxV9SjBKqUbO9wmknpIsTdImF5c1wew5sm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 02-Aug-2024 01:55:59 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 04-Aug-2016 01:55:59 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.74.8.134.1407203758962563; path=/; expires=Thu, 28-Jul-44 01:55:58 GMT
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2923028563; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.74.8.52.1407203758949712; path=/; expires=Thu, 28-Jul-44 01:55:58 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Tue, 05-Aug-2014 02:25:59 GMT; path=/; secure
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+VERIFIED
+
+[08/25/2014 12:21 PM] - SUCCESS!
+IPN POST Vars from Paypal:
+mc_gross=53.16, protection_eligibility=Eligible, address_status=unconfirmed, payer_id=HQLREDSLWJCZ6, tax=0.00, address_street=24  Lake Weyba  Drive
+Unit 107, payment_date=19:21:00 Aug 24, 2014 PDT, payment_status=Completed, charset=windows-1252, address_zip=4566, first_name=Brian, mc_fee=1.58, address_country_code=AU, address_name=Brian Smith, notify_version=3.8, custom=9365621, payer_status=verified, business=sean@tilemob.com.au, address_country=Australia, address_city=Noosaville, quantity=1, verify_sign=A4ffosV9eZnI9PfOxrUT6ColxyFXAXzPtvIWCGjaW4AGjBTuA6jOHUmZ, payer_email=briwally@hotmail.com, txn_id=25K9075082925691B, payment_type=instant, last_name=Smith, address_state=Queensland, receiver_email=sean@tilemob.com.au, payment_fee=1.58, receiver_id=YPDPENWEM73WA, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=AU, handling_amount=0.00, transaction_subject=9365621, payment_gross=53.16, shipping=0.00, ipn_track_id=b44ba57691e26, 
+IPN Response from Paypal Server:
+ HTTP/1.0 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=14400
+Strict-Transport-Security: max-age=14400
+Content-Type: text/html; charset=UTF-8
+DC: slc-a-origin-www-1.paypal.com
+Date: Mon, 25 Aug 2014 02:21:12 GMT
+Content-Length: 8
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=3n81Z4EIRDgnAPdeGXMALsQvxNzexh0FUdljSd6pvYgYXx0hPRMiaQLflwPPSwHZd-nd5zgguJTKuzx5hu8lBvbCub-xOT56aj4f_pZ4LOuTCFpgyi4JPAuybXkLWn2b0GlHh7vnyDeG5kYyTqo7B7wioTPJDar6n-HaI1yo_VD-f9K_4OcUmqhdJfDts3srGEhkpouXn-bz8wgvqQjops-OLMo_rOhsFnqbOqRlW2gqisScou8OjxGVpGKCWgAJvWFuer3bX6qAVAoGXKQyvBYA0AFLvo3r6jITAHB8fhQOMVZPYBR2Kpsg6iXfyWMHbb0EDUSX2_4rYNBAEumoCes29g-rtvmBFVBuLk76UFVNhPqy_Fki3Ia4MYiXqXDCovWbDsmVDNh1cqanK9FmX5XryqA41IcTG1N7baRlIKYoiQoWDElxqZVr9gm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 22-Aug-2024 02:21:11 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 24-Aug-2016 02:21:11 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.73.8.137.1408933271589649; path=/; expires=Wed, 17-Aug-44 02:21:11 GMT
+Set-Cookie: X-PP-SILOVER=name%3DLIVE5.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2543712851; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.73.8.48.1408933271579328; path=/; expires=Wed, 17-Aug-44 02:21:11 GMT
+Set-Cookie: AKDC=slc-a-origin-www-1.paypal.com; expires=Mon, 25-Aug-2014 02:51:12 GMT; path=/; secure
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+VERIFIED
+
+[09/08/2014 10:03 AM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=53.16, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=17:03:12 Sep 07, 2014 PDT, payment_status=Pending, charset=windows-1252, address_zip=W185744, first_name=brad, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=4750495, payer_status=verified, business=ar_brad-facilitator@msn.com, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=AHRFRgVTnHIrBXR-ygenyRsEmz.5AD3CEJ-wKjsxhn4e41y.41TBC6Vq, payer_email=yuen.brad@bioem.co, txn_id=9A3474034W1575530, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=ar_brad-facilitator@msn.com, receiver_id=4B78F5T93LNK8, pending_reason=multi_currency, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=AUD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=4750495, payment_gross=, shipping=0.00, ipn_track_id=dc456e6e6ebdf, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[09/08/2014 10:08 AM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=60.00, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=17:08:26 Sep 07, 2014 PDT, payment_status=Pending, charset=windows-1252, address_zip=W185744, first_name=brad, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=4847244, payer_status=verified, business=ar_brad-facilitator@msn.com, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=AI36sk2Aln3iC.t.mla1wMizPRcQAeXXGPYWBXzHLMlUMK9m8i-Qr0vZ, payer_email=yuen.brad@bioem.co, txn_id=5EH47896YM297041K, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=ar_brad-facilitator@msn.com, receiver_id=4B78F5T93LNK8, pending_reason=multi_currency, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=AUD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=4847244, payment_gross=, shipping=0.00, ipn_track_id=a3e367adb478a, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[09/08/2014 10:17 AM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=60.00, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=17:16:54 Sep 07, 2014 PDT, payment_status=Pending, charset=windows-1252, address_zip=W185744, first_name=brad, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=4847244, payer_status=verified, business=ar_brad-facilitator@msn.com, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=ADmhMw5gqASpvy.X38.nDdwooKz7A0moN73M7br2P1fga9427tDNKINV, payer_email=yuen.brad@bioem.co, txn_id=3XC454730Y531835A, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=ar_brad-facilitator@msn.com, receiver_id=4B78F5T93LNK8, pending_reason=multi_currency, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=AUD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=4847244, payment_gross=, shipping=0.00, ipn_track_id=fae2fb0d609b9, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[09/08/2014 12:01 PM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=76.56, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=MEBK6JLY2MW32, tax=0.00, address_street=71566176 Sky E137 S, payment_date=19:01:49 Sep 07, 2014 PDT, payment_status=Pending, charset=windows-1252, address_zip=W185744, first_name=brad, mc_fee=3.29, address_country_code=HK, address_name=wong brad, notify_version=3.8, custom=4335768, payer_status=verified, business=ar_brad-facilitator@msn.com, address_country=Hong Kong, address_city=Posta, quantity=1, verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AZ2e2HbafZjVrfDOJxtfDNtUggKY, payer_email=yuen.brad@bioem.co, txn_id=21E05223MD665903C, payment_type=instant, last_name=wong, address_state=Libisia, receiver_email=ar_brad-facilitator@msn.com, payment_fee=3.29, receiver_id=4B78F5T93LNK8, pending_reason=paymentreview, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=USD, item_number=, residence_country=HK, test_ipn=1, handling_amount=0.00, transaction_subject=4335768, payment_gross=76.56, shipping=0.00, ipn_track_id=4eccf636e65f5, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Moved Temporarily
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Content-Length: 0
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+
+
+[09/20/2014 4:50 PM] - SUCCESS!
+IPN POST Vars from Paypal:
+mc_gross=238.56, protection_eligibility=Ineligible, address_status=unconfirmed, payer_id=87JSYYASFSYJU, tax=0.00, address_street=96  ST HELENS  RD, payment_date=23:49:50 Sep 19, 2014 PDT, payment_status=Completed, charset=windows-1252, address_zip=4053, first_name=Sean, mc_fee=6.03, address_country_code=AU, address_name=Sean SINNAMON, notify_version=3.8, custom=3989633, payer_status=unverified, business=sean@tilemob.com.au, address_country=Australia, address_city=MITCHELTON, quantity=1, verify_sign=ASYZo7BptxgliCasudch96iWGucZAGEMIBuD9ClPAqjUJAp1805iJCxZ, payer_email=blueheart100@yahoo.com.au, txn_id=1PY73504DN399032C, payment_type=instant, last_name=SINNAMON, address_state=Queensland, receiver_email=sean@tilemob.com.au, payment_fee=, receiver_id=YPDPENWEM73WA, txn_type=web_accept, item_name=Shopping cart payment, mc_currency=AUD, item_number=, residence_country=AU, receipt_id=5078-3281-9290-2030, handling_amount=0.00, transaction_subject=3989633, payment_gross=, shipping=0.00, ipn_track_id=11dd54e2ab83d, 
+IPN Response from Paypal Server:
+ HTTP/1.0 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=UTF-8
+DC: slc-a-origin-www-1.paypal.com
+Date: Sat, 20 Sep 2014 06:50:04 GMT
+Content-Length: 8
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=m0H4uPfV2N0aSPZJIP3spGG50vSOoZm2QU39uGKL_6TkQRTd9urnNWvwCHiD7wRFBgI85CkuxWmWkMnC1rc6kgCCnnQ1Uc04aoN886MWIK3wvNk_ciruDEXk8A9bPAdg7nc8liLjaIF9qxttcgKcF8wtgbVgiISkICNG2p64oBVbOJ1N_4b42Sw9Bw96WBoRYWg5Wz77j0-0EwBzINAVOu2_DwUC0uF5TYilEXocmVzodtbfCQKuds7vZe6VSOqqSFbk7yby1IpVcDggQCcspQkwGf1Z8eWdxO9lQWTT8_2syrI1L6TqoTYgxlQYyx26XWxFzWUvdc5zJVkZ0lm-_qilNMS05ss4dempFWd9d4QBIm-KMPvNXhh04KhHM_xMG-Bpf5OHdND3hb4DyDyXOENBO0jqQmv4VdCq3W; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Tue, 17-Sep-2024 06:50:04 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Mon, 19-Sep-2016 06:50:04 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.73.8.134.1411195804035389; path=/; expires=Mon, 12-Sep-44 06:50:04 GMT
+Set-Cookie: X-PP-SILOVER=name%3DLIVE5.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2619546964; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.73.8.43.1411195804020840; path=/; expires=Mon, 12-Sep-44 06:50:04 GMT
+Set-Cookie: AKDC=slc-a-origin-www-1.paypal.com; expires=Sat, 20-Sep-2014 07:20:04 GMT; path=/; secure
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+VERIFIED
+
+[09/22/2014 5:49 PM] - SUCCESS!
+IPN POST Vars from Paypal:
+mc_gross=-238.56, protection_eligibility=Ineligible, payer_id=87JSYYASFSYJU, address_street=96  ST HELENS  RD, payment_date=00:49:26 Sep 22, 2014 PDT, payment_status=Refunded, charset=windows-1252, address_zip=4053, first_name=Sean, mc_fee=-6.03, address_country_code=AU, address_name=Sean SINNAMON, notify_version=3.8, reason_code=refund, custom=3989633, business=sean@tilemob.com.au, address_country=Australia, address_city=MITCHELTON, verify_sign=AAvLBz469B8kovcvezbsbNdzegQHAh7MghqRydQlCe-NqUUM.hADudzp, payer_email=blueheart100@yahoo.com.au, parent_txn_id=1PY73504DN399032C, txn_id=63L04051RU343351B, payment_type=instant, last_name=SINNAMON, address_state=Queensland, receiver_email=sean@tilemob.com.au, payment_fee=, receiver_id=YPDPENWEM73WA, item_name=Shopping cart payment, mc_currency=AUD, item_number=, residence_country=AU, receipt_id=5078-3281-9290-2030, handling_amount=0.00, transaction_subject=3989633, payment_gross=, shipping=0.00, ipn_track_id=9b28ba32c4005, 
+IPN Response from Paypal Server:
+ HTTP/1.0 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=UTF-8
+DC: slc-a-origin-www-1.paypal.com
+Date: Mon, 22 Sep 2014 07:49:31 GMT
+Content-Length: 8
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=2Sxzw34vXvOIgp9utV1bLyOufLyRSFicyTTYhR8GM_qBqzUwT2zpR-H97B126_UA74_TM63xoVtEBtFCj7v36iZuOfPtAcM06jYxwid-KvzYxKiUfbCrbO8ntrjxaisNnpmbVzXGsCNkAHT6UtWU9JLQcPpKX5qDUnPiGAlsKYZq6SfTr8qHxIzY6Nplmz-7XhO3kBxh8opRaQaYHkG6bU-_fv9f4xfh0j_UpuZGJwBJkXzXHqcarNl5ZUdgOkRhzrpPP89RqcruClPf1ghyxPRJUTFBon-g9qRUjAN-ZAQcsxtAcoOhNsDrjf3csYSZ5NYSGkNxf8-eu1-Rrr_uDIKFsz5uqgL2sVBsfuckgEANDn13Zmvu_x_Q6fLu9_iXjbsbPNpeRrCN3xgmrkKvp38dqIxXiq6TdaAUoy7p-YkXCvfk9rBKREMUx3q; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 19-Sep-2024 07:49:31 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 21-Sep-2016 07:49:31 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.73.8.137.1411372171125775; path=/; expires=Wed, 14-Sep-44 07:49:31 GMT
+Set-Cookie: X-PP-SILOVER=name%3DLIVE5.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2345934676; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.73.8.38.1411372171114646; path=/; expires=Wed, 14-Sep-44 07:49:31 GMT
+Set-Cookie: AKDC=slc-a-origin-www-1.paypal.com; expires=Mon, 22-Sep-2014 08:19:31 GMT; path=/; secure
+X-Cache: MISS from havp.servers.netregistry.net
+X-Cache-Lookup: MISS from havp.servers.netregistry.net:8080
+Via: 1.0 havp.servers.netregistry.net:8080 (squid)
+Connection: close
+
+VERIFIED
+

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<lang id="es">
-    <langstring name="LNG_SETTINGS">Opciones</langstring>
-    <langstring name="LNG_SETTINGS_ACCEPT">Guardar preferencias</langstring>
-    <langstring name="LNG_SHADOWS">Sombras</langstring>
-    <langstring name="LNG_SHADOWS_LONG">Indica el uso de sombras y brillos en las páginas mientras se mueven. Puede afectar al rendimiento.</langstring>
-    <langstring name="LNG_REFLECTION">Reflejo</langstring>
-    <langstring name="LNG_REFLECTION_LONG">Indica la visualización del reflejo del libro bajo el mismo. Afecta al rendimiento.</langstring>
-</lang>

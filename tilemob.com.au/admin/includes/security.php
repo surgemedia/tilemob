@@ -1,3 +1,0 @@
-<?
-include('includes/checklogin.php');
-?>

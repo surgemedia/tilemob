@@ -1,6 +1,0 @@
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/terracotta in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 28
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/terracotta in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 39
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/t_10000.jpg in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 28
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/t_10000.jpg in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 39
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/10000.jpg in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 28
-[27-Mar-2007 22:41:01] PHP Warning:  filetype() [<a href='function.filetype'>function.filetype</a>]: Lstat failed for gallery/10000.jpg in /home/birthcre/public_html/tilemob_gallery/process_edit.php on line 39

@@ -1,0 +1,21 @@
+.page-header {
+	margin:0;
+	padding:0 10px;
+	border: 0;
+    h1,h2 {
+      font-size: 22px;
+      font-weight: normal;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: $red;
+    }
+    h1:before, h2:before {
+      content: "";
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 10px solid;
+      font-size: 0px;
+      vertical-align: middle;
+      margin-right: 5px; 
+    }
+}

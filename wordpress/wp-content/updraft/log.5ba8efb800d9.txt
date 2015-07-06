@@ -1,0 +1,4 @@
+0000.000 (1) Opened log file at time: Fri, 03 Jul 2015 01:56:09 +0000 on http://localhost:8888/tilemob/wordpress
+0000.002 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.10.3 WP: 4.2.2 PHP: 5.6.10 (Darwin Desktop-8s-imac.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64) MySQL: 5.5.42 Server: Apache/2.2.29 (Unix) mod_wsgi/3.4 Python/2.7.8 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zd DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.8 Perl/v5.20.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 16.5M | 16.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.003 (1) Free space on disk containing Updraft's temporary directory: 391583.4 Mb
+0000.005 (1) This backup task is either complete or began over 2 days ago: ending (1435888569.6, )
