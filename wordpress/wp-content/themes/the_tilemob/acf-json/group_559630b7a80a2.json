@@ -1,0 +1,57 @@
+{
+    "key": "group_559630b7a80a2",
+    "title": "Project - Post Type",
+    "fields": [
+        {
+            "key": "field_559630c6e3416",
+            "label": "PDF",
+            "name": "pdf",
+            "prefix": "",
+            "type": "file",
+            "instructions": "Please select the file you would like to upload",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all"
+        },
+        {
+            "key": "field_559630e6e3417",
+            "label": "Thumbnail",
+            "name": "thumbnail",
+            "prefix": "",
+            "type": "image",
+            "instructions": "the thumbnail for that pdf",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1435906318
+}

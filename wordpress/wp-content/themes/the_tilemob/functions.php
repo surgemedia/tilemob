@@ -61,3 +61,10 @@ if( function_exists('acf_add_options_page') ) {
   ));
   
 }
+//adding contact form to acf
+add_action('acf/register_fields', 'my_register_fields');
+
+function my_register_fields()
+{
+    include_once('acf-cf7/acf-cf7.php');
+}
