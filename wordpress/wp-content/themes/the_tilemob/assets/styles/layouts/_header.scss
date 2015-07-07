@@ -41,10 +41,12 @@
 		}
 	}
 	.phone {
-		font-size: 18px;
-		color: #fff;
 		text-align: right;
 		border-left: 1px solid $grey-light;
+		p {
+			font-size: 18px;
+			color: #fff;
+		}
 		span {
 			color: $red;
 		}

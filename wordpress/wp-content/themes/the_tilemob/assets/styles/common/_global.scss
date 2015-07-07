@@ -3,11 +3,12 @@
 ==========================================*/
  
 /* Body has grey_bg attached */
-body {
-	font-size: 12px;
-	color: $body-font;
+.padding-zero {
+	padding: 0 !important;
 }
-
+.mrg-top-zero {
+	margin-top: 0;
+}
 
 /*==========================================
 =            Background Classes            =
@@ -26,6 +27,9 @@ body {
 }
 .grey_bg {
 	background:$grey;
+}
+.grey_dark_bg {
+	background:$grey-dark;
 }
 /*==========================================
 =            Gutter Classes           		 =

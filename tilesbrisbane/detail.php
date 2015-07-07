@@ -201,13 +201,14 @@ include("includes/detail-db-call.php");
             <div class="content row">
 
                 <main class="main" role="main">
+                        <?php include('includes/shop-navigation.php'); ?>
                     <div class="clearfix white_bg">
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <?php include('includes/finder.php'); ?>
                             <?php include('includes/store-categories.php'); ?>
                             <?php include('includes/featured-products.php'); ?>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-9">
                             <div id="item_detail" class="item_detail">
                                 <!-- HEAD -->
                                 <div id="goback" class="goback"><a href="javascript:history.go(-1);" title="Back to previous page">« Back to previous page</a></div>
@@ -514,22 +515,25 @@ include("includes/detail-db-call.php");
                         <div class="clear"></div>
                     </div>
 
-                    <?php if($image1){?><a href="<?php echo $image1; ?>" title="<?php echo $item_Desc; ?>" class="lightbox"><?php }?><?php echo $image1_imgsrc; ?><?php if($image1){?></a><?php }?>
-                    <div id="enlarge_image" class="enlarge_image"><?php if($image1){?><a href="<?php echo $image1; ?>" title="<?php echo $item_Desc; ?>" class="lightbox">Enlarge image</a><?php }?></div>
-                    <div class="clear"></div>
-                    <ul class="thumb-list">
-                        <?php if(count($item_images)>=2){
-                                                foreach($item_images as $secImages) {
-                        ?>
-
-                        <li><a href="javascript:void(0);"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
-                        <?php }}?>
-                        <!--<li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
-                                                <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
-                                                <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
-                        <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>-->
-                    </ul>
                 </div>
+                <div id="image" class="image">
+                    <!-- image -->   
+                        <?php if($image1){?><a href="<?php echo $image1; ?>" title="<?php echo $item_Desc; ?>" class="lightbox"><?php }?><?php echo $image1_imgsrc; ?><?php if($image1){?></a><?php }?>
+                        <div id="enlarge_image" class="enlarge_image"><?php if($image1){?><a href="<?php echo $image1; ?>" title="<?php echo $item_Desc; ?>" class="lightbox">Enlarge image</a><?php }?></div>
+                        <div class="clear"></div>
+                        <ul class="thumb-list">
+                            <?php if(count($item_images)>=2){
+                                                    foreach($item_images as $secImages) {
+                            ?>
+
+                            <li><a href="javascript:void(0);"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
+                            <?php }}?>
+                            <!--<li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
+                                                    <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
+                                                    <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
+                            <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>-->
+                        </ul>
+                    </div>
             </div>
         </div>
         </main><!-- /.main -->

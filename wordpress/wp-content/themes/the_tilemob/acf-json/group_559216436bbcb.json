@@ -17,7 +17,7 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "full",
+            "preview_size": "thumbnail",
             "library": "all"
         }
     ],
@@ -36,6 +36,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435733459,
-    "local": "json"
+    "modified": 1436163153
 }

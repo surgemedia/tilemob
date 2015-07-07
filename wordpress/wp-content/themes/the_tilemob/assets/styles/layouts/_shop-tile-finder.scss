@@ -1,0 +1,247 @@
+.gallery {
+  position: relative;
+  display: block;
+  padding-top: 40px;
+  margin-top: 16px;
+  clear: both;
+  .pagenumbers {
+	  top: 0;
+	  right: 10px;
+	  position: absolute;
+	  display: block;
+	  font-size: 13px;
+	  font-weight: bold;
+	  line-height: 130%;
+	  text-align: left;
+	  color: $grey-dark;
+	  padding-left: 80px;
+	  .page_selected {
+		  position: relative;
+		  display: block;
+		  float: left;
+		  margin-left: 2px;
+		  margin-right: 2px;
+		  text-align: center;
+		  a {
+			  position: relative;
+			  display: block;
+			  padding-top: 1px;
+			  padding-bottom: 1px;
+			  padding-left: 2px;
+			  padding-right: 2px;
+			  margin-top: 1px;
+			  text-decoration: none;
+			  color: $grey-dark;
+		  }
+	  }
+	  .page {
+		  position: relative;
+		  display: block;
+		  float: left;
+		  margin-left: 2px;
+		  margin-right: 2px;
+		  text-align: center;
+		  a {
+			  position: relative;
+			  display: block;
+			  padding-top: 1px;
+			  padding-bottom: 1px;
+			  padding-left: 2px;
+			  padding-right: 2px;
+			  margin-top: 1px;
+			  text-decoration: none;
+			  color: $red;
+		  }
+	  }
+	  .next,.prev {
+		  position: relative;
+		  display: block;
+		  float: left;
+		  margin-left: 2px;
+		  margin-right: 2px;
+		  text-align: center;
+	  }
+  }
+  .thumb {
+	  position: relative;
+	  display: block;
+	  float: left;
+	  width: 145px;
+	  padding-bottom: 3px;
+	  margin-bottom: 45px;
+	  margin-right: 15px;
+	  background: #FFFFFF;
+	  height: 280px;
+	  .thumbnail {
+		  position: relative;
+		  display: block;
+		  width: 145px;
+		  height: 145px;
+		  margin-bottom: 10px;
+		  text-align: center;
+		  background: #EEEEEE;
+		  overflow: hidden;
+		  clear: both;
+		  padding: 0;
+  		  border: 0;
+		  a {
+			  float: left;
+			  width: 100%;
+			  height: 145px;
+			  position: relative;
+			  border: 1px solid #d9d9d9;
+			  img {
+				  width: 100%;
+				  margin: auto;
+				  position: absolute;
+				  top: 0;
+				  left: 0;
+				  bottom: 0;
+				  right: 0;
+			  }
+		  }
+	  }
+	  .size {
+		  position: relative;
+		  display: block;
+		  margin-bottom: 3px;
+		  float: left;
+		  width: auto;
+		  font-size: 12px;
+		  font-weight: bold;
+		  line-height: 130%;
+		  text-align: left;
+		  color: $grey-dark;
+		  clear: left;
+	  }
+	  .code {
+		  position: relative;
+		  display: block;
+		  float: right;
+		  width: auto;
+		  font-size: 10px;
+		  font-weight: 100;
+		  line-height: 17px;
+		  text-align: right;
+		  color: #888888;
+		  clear: right;
+	  }
+	  .name {
+		  position: relative;
+		  display: block;
+		  width: auto;
+		  margin-top: 2px;
+		  margin-bottom: 2px;
+		  font-size: 15px;
+		  font-weight: bold;
+		  line-height: 125%;
+		  text-align: left;
+		  color: $grey-dark;
+		  clear: both;
+		  min-height: 54px;
+		  a {
+			  text-decoration: none;
+			  color: $red;
+		  }
+	  }
+	  .price_info {
+		  position: relative;
+		  display: block;
+		  width: auto;
+		  margin-bottom: 10px;
+		  clear: both;
+		  .price_rrp {
+			  position: relative;
+			  display: block;
+			  width: auto;
+			  float: left;
+			  font-size: 11px;
+			  font-weight: normal;
+			  line-height: 130%;
+			  text-align: left;
+			  text-decoration: line-through;
+			  color: #888888;
+			  display: none;
+		  }
+		  .price_save {
+			  position: relative;
+			  display: block;
+			  width: auto;
+			  float: right;
+			  font-size: 11px;
+			  font-weight: normal;
+			  line-height: 130%;
+			  text-align: left;
+			  color: $red;
+			  display: none;
+		  }
+	  }
+	  .price_buy {
+		  position: relative;
+		  display: block;
+		  width: auto;
+		  margin-bottom: 4px;
+		  font-size: 15px;
+		  font-weight: bold;
+		  line-height: 125%;
+		  text-align: left;
+		  color: $grey-dark;
+		  clear: both;
+	  }
+	  .button {
+		  position: relative;
+		  display: block;
+		  margin-top: 10px;
+		  clear: both;
+		  a {
+			  position: relative;
+			  display: block;
+			  width: auto;
+			  padding-top: 4px;
+			  padding-bottom: 4px;
+			  padding-left: 3px;
+			  padding-right: 3px;
+			  font-size: 12px;
+			  font-weight: bold;
+			  line-height: 100%;
+			  text-align: center;
+			  text-decoration: none;
+			  color: #FFFFFF;
+			  border-radius: 3px;
+			  -moz-border-radius: 3px;
+			  -webkit-border-radius: 3px;
+			  behavior: url(includes/PIE.htc);
+			  background: $red;
+		  }
+	  }
+	  .feedback {
+		  position: absolute;
+		  bottom: 7px;
+		  right: 0;
+		  display: none;
+		  font-size: 11px;
+		  font-weight: 100;
+		  line-height: 100%;
+		  color: #888888;
+	  }
+  }
+}
+.gallery_top {
+  top: 2px;
+  left: 0;
+  position: absolute;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 130%;
+  text-align: left;
+  color: $grey-dark;
+}
+.price_info {
+	.price_rrp {
+	  display: none !important;
+	}
+	.price_save {
+	  display: none !important;
+	}
+}

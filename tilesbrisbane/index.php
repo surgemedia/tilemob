@@ -32,13 +32,15 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
             <div class="content row">
               
                     <main class="main" role="main">
+                         <?php include('includes/shop-navigation.php'); ?>
                      <div class="clearfix white_bg">
-                     <div class="col-lg-4">
+                     
+                     <div class="col-lg-3">
                      	 <?php include('includes/finder.php'); ?>
                         <?php include('includes/store-categories.php'); ?>
                         <?php include('includes/featured-products.php'); ?>
                      </div>
-                     <div class="col-lg-8">
+                     <div class="col-lg-9">
                         <?php include('includes/slider.php') ?>
                         <?php include('includes/product-slider.php') ?>
                         </div>

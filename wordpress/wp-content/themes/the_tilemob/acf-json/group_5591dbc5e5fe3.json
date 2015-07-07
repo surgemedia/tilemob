@@ -57,7 +57,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "large",
                     "library": "all"
                 },
@@ -123,6 +123,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435733501,
-    "local": "json"
+    "modified": 1436222940
 }

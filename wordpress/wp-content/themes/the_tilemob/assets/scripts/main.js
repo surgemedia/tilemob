@@ -73,5 +73,8 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+  
 
+  // Scripts from Shop tilesbrisbane website
+  // $('#finder_more_options').toggle();
 })(jQuery); // Fully reference jQuery after this point.
