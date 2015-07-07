@@ -40,7 +40,7 @@ if($_POST['submit'] && !empty($_POST['my_username']) && !empty($_POST['my_passwo
 					WHERE admin_id = '$admin_id'") or die(mysql_error());
 					
 			$login_success = 1;
-			header('Location: http://tilesbrisbane.com.au/admin/products.php?s2=Welcome back'); 
+			header('Location: http://localhost:8888/tilemob/tilesbrisbane/admin/products.php?s2=Welcome back'); 
 		} else {
 			$login_success = 0;
 		}
