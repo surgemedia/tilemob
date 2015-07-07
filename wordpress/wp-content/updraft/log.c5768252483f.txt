@@ -1,0 +1,38 @@
+0000.097 () Opened log file at time: Fri, 03 Jul 2015 06:44:09 +0000 on http://localhost:8888/tilemob/wordpress
+0000.099 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.10.3 WP: 4.2.2 PHP: 5.6.10 (Darwin Desktop-8s-imac.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64) MySQL: 5.5.42 Server: Apache/2.2.29 (Unix) mod_wsgi/3.4 Python/2.7.8 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zd DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.8 Perl/v5.20.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 21.6M | 21.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.099 () Free space on disk containing Updraft's temporary directory: 390818.9 Mb
+0000.099 () Restore job started. Entities to restore: db
+0000.304 () Entity: db
+0000.305 () restore_backup(backup_file=backup_2015-07-03-0559_The_Tile_Mob_c4a595204524-db.gz, type=db, info=a:0:{}, last_one=1)
+0000.305 () Unpacking backup...
+0000.329 () Database successfully unpacked
+0000.330 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.330 () Using direct MySQL access; value of use_mysqli is: 1
+0000.343 () Max packet size: 32 Mb
+0000.343 () Entering maintenance mode
+0000.343 () Enabling Maintenance mode&#8230;
+0000.388 () Backup created by: 1.10.3
+0000.388 () <strong>Backup of:</strong> http://192.168.0.39:8888/tilemob/wordpress
+0000.410 () Content URL: http://192.168.0.39:8888/tilemob/wordpress/wp-content
+0000.410 () Old table prefix: wp_
+0000.410 () Site information: multisite=0
+0000.411 () New table prefix: wp_
+0000.484 () Restoring table (InnoDB): wp_options
+0000.971 () Restoring prior UD configuration (table: wp_options; keys: 82)
+0001.140 () Restoring table (InnoDB): wp_users
+0001.430 () Restoring table (InnoDB): wp_usermeta
+0001.671 () Restoring table (InnoDB): wp_commentmeta
+0001.870 () Restoring table (InnoDB): wp_comments
+0002.016 () Restoring table (InnoDB): wp_links
+0002.193 () Restoring table (InnoDB): wp_postmeta
+0002.840 () Restoring table (InnoDB): wp_posts
+0003.086 () Restoring table (InnoDB): wp_term_relationships
+0003.243 () Restoring table (InnoDB): wp_term_taxonomy
+0003.442 () Restoring table (InnoDB): wp_terms
+0003.598 () Restoring table (MyISAM): wp_revisr
+0003.752 () Leaving maintenance mode
+0003.752 () Disabling Maintenance mode&#8230;
+0003.752 () Finished: lines processed: 42 in 3.42 seconds
+0003.752 () Cleaning up rubbish...
+0003.759 () Restore successful!
+0003.760 () Restore successful
