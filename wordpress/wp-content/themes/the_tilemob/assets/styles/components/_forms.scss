@@ -1,0 +1,52 @@
+.enquiry-form {
+	.row-cell {
+	  width: 50%;
+	  float: left;
+	  p {
+		  font-weight: bold; 
+		  vertical-align: top;
+	  }
+	  sup {
+	  	color: $red;
+	  	font-size: 1.1em;
+	    top: 0.5em;
+		margin: 0.2em;
+		vertical-align: top;
+	  }
+	  input, textarea {
+	  	font-weight: normal;
+	  	padding: 0.5em;
+	  	outline: none;
+	  }
+	  
+	  input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea:active, input:visited, textarea:visited {
+	  	border-color: $red;
+	  }
+	}
+	.text-right {
+		span {
+		  margin-left: 2em;
+		}
+		input, textarea {
+			width: 55%;
+		}
+		textarea {
+		  	height: 5em;
+		}
+	}
+	.text-left {
+		span {
+		  display: inline-block;
+  		  margin-top: 0.2em;
+		}
+		input, textarea {
+			width: 140%;
+		}
+		textarea {
+		  	height: 15em;
+		}
+		input[type="submit"] {
+	  		display: none;
+	  	}
+	}
+}

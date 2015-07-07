@@ -21,6 +21,7 @@ $sage_includes = [
   'lib/function-debug.php',                // Custom functions
 
   //New Post Types 
+  'lib/post-type-careers.php',  // News Flash post-type Function
   'lib/post-type-news-flash.php',  // News Flash post-type Function
   'lib/post-type-new-in-store.php',  // News Flash post-type Function
   'lib/post-type-projects.php',  // News Flash post-type Function
@@ -59,4 +60,11 @@ if( function_exists('acf_add_options_page') ) {
     'parent_slug' => 'theme-general-settings',
   ));
   
+}
+//adding contact form to acf
+add_action('acf/register_fields', 'my_register_fields');
+
+function my_register_fields()
+{
+    include_once('acf-cf7/acf-cf7.php');
 }
