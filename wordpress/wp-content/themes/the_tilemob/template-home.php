@@ -23,6 +23,12 @@
             </ol> -->
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
+                <?php if(have_rows('slider_icons')): ?>
+                    <a href="<?php echo get_field('slider_icons')[2]['url'] ?>" class="view-shop"><img  src="<?php echo get_field('slider_icons')[2]['image'] ?>" ></a>
+                    <a href="<?php echo get_field('slider_icons')[1]['url'] ?>" class="view-specifiers"><img  src="<?php echo get_field('slider_icons')[1]['image'] ?>" ></a>
+                    <a href="<?php echo get_field('slider_icons')[0]['url'] ?>" class="view-performance"><img  src="<?php echo get_field('slider_icons')[0]['image'] ?>" ></a>
+                    <div class="showroom_navbar"><a href="booking" title="Book a consultation in our Brisbane Tile Showroom">Book a <em>showroom consultation</em></a></div>
+                <?php endif; ?>  
                 <?php if(have_rows('slider')): ?>
                     <?php $count = 1; ?>
                     <?php while(have_rows('slider')) : the_row();?>

@@ -534,6 +534,291 @@ include("includes/detail-db-call.php");
                             <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>-->
                         </ul>
                     </div>
+
+                    <!-- Product variations -->
+                <div id="product_variations" class="product_variations">
+                    <h1>Product Variations</h1>
+                    <div id="related_products" class="related_products" style="display:block;">
+                    <h2>Related products to <?php echo $item_Desc; ?></h2>
+                    <div class="list">
+                    <?php 
+                    $related_string = '';
+//                                        $sql = "SELECT sw.*,MATCH(sw.Desc) AGAINST ('\"$item_Desc\"' IN BOOLEAN MODE) AS relevance FROM shop_webitems as sw WHERE sw.RelatedTo='$item_RelatedTo' AND sw.Colour='$item_Colour' AND sw.Surface='$item_Surface' AND sw.item_id!='$item_id' AND sw.WebExport='YES' AND sw.is_active='1' GROUP BY sw.Size ORDER BY relevance DESC LIMIT 0, 24";
+                                         $sql = "SELECT sw.*,MATCH(sw.Desc) AGAINST ('\"$item_Desc\"' IN BOOLEAN MODE) AS relevance FROM shop_webitems as sw WHERE sw.RelatedTo='$item_RelatedTo' AND sw.Colour='$item_Colour' AND sw.Surface='$item_Surface' AND sw.item_id!='$item_id' AND sw.WebExport='YES' AND sw.is_active='1' ORDER BY relevance DESC LIMIT 0, 24";
+                                        $result_related = mysql_query($sql);
+//                                        while($row_related=mysql_fetch_array($result_related)) {
+//                                         echo "Here <pre/>";   print_r($row_related);
+//                                        }
+                                       
+                                        //echo $result_related;
+                    $total_related=mysql_num_rows($result_related);
+                                        //echo $total_related;
+                                      
+                    
+                    if($total_related>0) {
+                        while($row_related=mysql_fetch_array($result_related)) {
+//                                                  echo "<pre/>";  print_r($row_related);
+                                                $item_size = $row_related['Size'];
+                        $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$item_size' AND is_active='1'");
+                        if($row_size_check = mysql_fetch_array($result_size_check)) {
+                            $item_display_size = $row_size_check['Description'];
+                        } else { $item_display_size=''; }
+                            $this_id = $row_related['item_id'];
+                                                        $relatedProducts[] = $row_related['item_id'];
+                            $item_name = $row_related['Desc'];
+                                                        /////////////////// Newly added //////////////////////////
+                            $item_pcsm2 = floatval($row_related['PcsM2']);
+                        $item_unit = $row_related['Unit'];
+                        if($item_pcsm2>0 && $item_pcsm2!=''){ //sell in m2
+                            $item_webpricem2 = $row_related['WebPriceM2'];
+                            $item_retailpricem2 = $row_related['RetailPriceM2'];
+                            if(!empty($item_webpricem2)) {
+                                $item_buy = floatval($item_webpricem2);
+                            } else { //if web price value does not exist, use 20% off from retail price
+                                $item_web_discount_amount = floatval($item_retailpricem2)*0.2; //20% of retail price
+                                $item_buy = floatval($item_retailpricem2)-$item_web_discount_amount;
+                            }
+                                                    
+                            $item_rrp = floatval($item_retailpricem2);
+                            $item_unit='m&sup2;';
+                        } 
+                                                /////////////////////////////////////////////Newly added for pcs price caluculation///////////////////////////////////
+                
+//                if($item_pcsm2==0&&$item_unit=='PCS'){ 
+//                        if(!empty($item_webpricem2)) {
+//                                $item_buy = floatval($item_webpricem2);
+//          } else { //if web price value does not exist, use 20% off from retail price
+//                                  $item_web_discount_amount = floatval($item_RetailPricePce)*0.2; //20% of retail price
+//              $item_buy = floatval($item_RetailPricePce)-$item_web_discount_amount;
+//          }
+//                        $item_retailpricem2 = $row_related['RetailPriceM2'];
+//          $item_rrp = floatval($item_retailpricem2);
+//          $item_unit='pcs';
+//      }
+                                                if($item_pcsm2==0 ||  $item_pcsm2 =='')
+                                                { 
+                                                    $item_WebPricePce = $row_related['WebPricePce'];
+                                                    $item_RetailPricePce = $row_related['RetailPricePce'];
+                                                    if(!empty($item_WebPricePce)) 
+                                                    {
+                                                       $item_buy = floatval($item_WebPricePce);
+                                                    } 
+                                                    else 
+                                                    { //if web price value does not exist, use 20% off from retail price
+                                                        $item_web_discount_amount = floatval($item_RetailPricePce)*0.2; //20% of retail price
+                                                        $item_buy = floatval($item_RetailPricePce)-$item_web_discount_amount;
+                                                    }
+//                                                    $item_retailpricem2 = $row_related['RetailPriceM2'];
+                                                    $item_rrp = floatval($item_RetailPricePce);
+                                                    $item_unit='pcs';
+                                                }
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        $item_save = $item_rrp-$item_buy;
+                        if($item_save<0){$item_buy=0.00;}
+                        $item_images = unserialize($row_related['images']);
+                        $images_dir = 'images/items/';
+                        $image1 = $image1_imgsrc = '';
+                        $image1 = $images_dir.$item_images[0];
+                            if(is_file($image1)) {
+                                $image1_imgsrc = '<img src="'.$image1.'" alt="'.$item_name.'" border="0" />';
+                            } else {
+                                $image1_imgsrc = '<img src="images/blank.gif" alt="'.$item_name.'" border="0" />';
+                            }
+                            
+                                                //*****Flag Images****
+                                      
+                                        if($row_related['Country']=='SPAIN')
+                                        {
+                                            $img_s='<img src="images/Spain.png" title="Spain"/>';
+                                        }
+                                        else if($row_related['Country']=='ITALY')
+                                        {
+                                            $img_s='<img src="images/Italy.png" title="Italy"/>';
+                                        }
+                                        
+                                        //*****Flag Images****         
+                                                      $related_string .= '<div class="thumb">
+    <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
+    <div class="thumb-details">
+    <div class="size">'.$item_display_size.'</div>
+    <div class="code">'.$row_related['Code'].'</div>
+    <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
+    <div class="price_info">
+    <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
+    <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
+    <div class="price_save">SAVE $'.number_format($item_save,2).''.$item_unit.'</div>
+             <div><a href="#" >'.$img_s.'</a></div>
+    <div class="clear"></div>
+    </div>                          
+<div class="clear"></div>
+</div>  
+</div>';
+
+
+
+                        }
+                    }
+                    echo $related_string;
+                    ?>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                                        
+                    <div id="related_products" class="related_products" style="display:block;">
+                    <h2>Other products you might like</h2>
+                    <div class="list">
+                    <?php 
+                    //related by use
+                    $related_string = '';
+                                        // echo "SELECT DISTINCT * FROM shop_webitems WHERE `RelatedTo`='$item_RelatedTo' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' GROUP BY Colour,Surface,size ORDER BY Size DESC LIMIT 0, 24";
+                                        // $sql = "SELECT * FROM shop_webitems WHERE `RelatedTo`='$item_RelatedTo' AND Colour='$item_Colour' AND Surface='$item_Surface' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' GROUP BY Size ORDER BY Size DESC LIMIT 0, 24";
+                                        // $sql = "SELECT DISTINCT * FROM shop_webitems WHERE `RelatedTo`='$item_RelatedTo' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' GROUP BY Colour,Surface,size ORDER BY Size DESC LIMIT 0, 24"
+                    //$result_related = mysql_query($sql);
+                                        //echo $item_RelatedTo;
+                                        //$sql = "SELECT sw.* FROM shop_webitems as sw WHERE sw.RelatedTo='$item_RelatedTo' AND sw.Colour!='$item_Colour' OR sw.Surface!='$item_Surface' AND sw.item_id!='$item_id' AND sw.WebExport='YES' AND sw.is_active='1' GROUP BY sw.Size LIMIT 0, 24";
+                                        //print_r($relatedProducts);
+                                        if(count($relatedProducts))
+                                        {
+                                            $relatedProducts = implode(',',$relatedProducts);
+                                        }
+                                        //$sql = "SELECT * FROM shop_webitems WHERE RelatedTo='$item_RelatedTo' AND  item_id NOT IN($relatedProducts) ORDER BY Size DESC LIMIT 0, 24";
+                                        $sql = "SELECT * FROM shop_webitems WHERE RelatedTo='$item_RelatedTo' AND item_id !='$item_id' ";
+                                        if($relatedProducts!="")
+                                        {
+                                            $sql .= "AND  item_id NOT IN($relatedProducts) ORDER BY Size DESC LIMIT 0, 24";
+                                        }
+                                        //echo $sql;
+                                        $result_related = mysql_query($sql);
+                    $total_related=mysql_num_rows($result_related);
+                                       
+                    /*if($total_related==0) {
+                        $result_related = mysql_query("SELECT * FROM shop_webitems WHERE `Use`='$item_Use' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' ORDER BY RAND() LIMIT 0, 24");
+                        $total_related=mysql_num_rows($result_related);
+                    }*/
+                    if($total_related>0) 
+                                        {
+                                            while($row_related=mysql_fetch_array($result_related)) 
+                                            {
+//                                               echo "<pre/>"; print_r($row_related);
+                                                $this_id = $row_related['item_id'];
+                        $item_name = $row_related['Desc'];
+                        $item_pcsm2 = floatval($row_related['PcsM2']);
+                        $item_unit = $row_related['Unit'];
+                                                 //****by*****
+                                                $item_size=$row_related['Size'];
+                                                //**********added By********
+                                                $result_size_check1 = mysql_query("SELECT * FROM shop_size WHERE Code='$item_size' AND is_active='1'");
+                        if($row_size_check1 = mysql_fetch_array($result_size_check1)) 
+                                                {
+                                                    $item_display_size1 = $row_size_check1['Description'];
+                        } 
+                                                else 
+                                                { 
+                                                    $item_display_size1=''; 
+                                                    
+                                                }
+                                                  //*****Flag Images****
+                                      
+                                        if($row_related['Country']=='SPAIN')
+                                        {
+                                            $img_s='<img src="images/Spain.png" title="Spain"/>';
+                                        }
+                                        else if($row_related['Country']=='ITALY')
+                                        {
+                                            $img_s='<img src="images/Italy.png" title="Italy"/>';
+                                        }
+                                        //*****Flag Images****       
+                                                //**********by*******
+                        if($item_pcsm2>0&&$item_unit=='M2')
+                                                { //sell in m2
+                                                    $item_webpricem2 = $row_related['WebPriceM2'];
+                                                    $item_retailpricem2 = $row_related['RetailPriceM2'];
+                                                    if(!empty($item_webpricem2)) 
+                                                    {
+                                                        $item_buy = floatval($item_webpricem2);
+                                                    } 
+                                                    else 
+                                                    { //if web price value does not exist, use 20% off from retail price
+                                                        $item_web_discount_amount = floatval($item_retailpricem2)*0.2; //20% of retail price
+                            $item_buy = floatval($item_retailpricem2)-$item_web_discount_amount;
+                                                    }
+                                                    
+                                                    $item_rrp = floatval($item_retailpricem2);
+                                                    $item_unit='m&sup2;';
+                        } 
+                                                /////////////////////////////////////////////Newly added for pcs price caluculation///////////////////////////////////
+                
+                                                if($item_pcsm2==0&&$item_unit!='M2')
+                                                { 
+                                                    $item_WebPricePce = $row_related['WebPricePce'];
+                                                    $item_RetailPricePce = $row_related['RetailPricePce'];
+                                                    if(!empty($item_webpricem2)) 
+                                                    {
+                                                       $item_buy = floatval($item_WebPricePce);
+                                                    } 
+                                                    else 
+                                                    { //if web price value does not exist, use 20% off from retail price
+                                                        $item_web_discount_amount = floatval($item_RetailPricePce)*0.2; //20% of retail price
+                                                        $item_buy = floatval($item_RetailPricePce)-$item_web_discount_amount;
+                                                    }
+                                                    $item_retailpricem2 = $row_related['RetailPriceM2'];
+                                                    $item_rrp = floatval($item_RetailPricePce);
+                                                    $item_unit='pcs';
+                                                }
+                                                
+                                                
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        $item_save = $item_rrp-$item_buy;
+                        if($item_save<0)
+                                                {
+                                                    $item_buy=0.00;
+                                                
+                                                }
+                        $item_images = unserialize($row_related['images']);
+                        $images_dir = 'images/items/';
+                        $image1 = $image1_imgsrc = '';
+                        $image1 = $images_dir.$item_images[0];
+                        if(is_file($image1)) 
+                                                {
+                                                    $image1_imgsrc = '<img src="'.$image1.'" alt="'.$item_name.'" border="0" />';
+                        } 
+                                                else 
+                                                {
+                                                    $image1_imgsrc = '<img src="images/blank.gif" alt="'.$item_name.'" border="0" />';
+                        }
+                            /*$related_string .= '
+                            <div id="thumb'.$this_id.'" class="thumb">
+                                <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
+                                <div class="clear"></div>
+                            </div>';*/
+                                                $related_string .= 
+                                                         '<div class="thumb">
+                                                                <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
+                                                                <div class="thumb-details">
+                                                                    <div class="size">'.$item_display_size1.'</div>
+                                                                    <div class="code">'.$row_related['Code'].'</div>
+                                                                    <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
+                                                                        <div class="price_info">
+                                                                            <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
+                                                                            <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
+                                                                            <div class="price_save">SAVE $'.number_format($item_save,2).''.$item_unit.'</div>
+                                                                                <div><a href="#" >'.$img_s.'</a></div>
+                                                                            <div class="clear"></div>
+                                                                        </div>                          
+                                                                        <div class="clear"></div>
+                                                                </div>
+                                                        </div>';
+                        }
+                    }
+                    echo $related_string;
+                    ?>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                    <div class="clear"></div>
+                </div>
+
+                
             </div>
         </div>
         </main><!-- /.main -->

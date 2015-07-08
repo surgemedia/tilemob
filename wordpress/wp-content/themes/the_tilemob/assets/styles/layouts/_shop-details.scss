@@ -339,7 +339,7 @@
 		    display: block;
 		    float: left;
 		    width: 183px;
-		    min-height: 300px;
+		    height: 325px;
 		    margin-right: 20px;
 		    margin-bottom: 20px;
 		    border: 1px solid #DDDDDD;
@@ -356,6 +356,8 @@
 			    overflow: hidden;
 			    clear: both;
 			    margin-bottom: 5px;
+			    border: 0;
+  				padding: 0;
 			    a {
 				    position: relative;
 				    display: block;
@@ -363,6 +365,15 @@
 				    height: 100%;
 				    text-decoration: none;
 				    position: relative;
+				    img {
+					    bottom: 0;
+					    left: 0;
+					    margin: auto;
+					    position: absolute;
+					    right: 0;
+					    top: 0;
+					    width: 100%;
+					}
 				}
 			}
 			.thumb-details {
