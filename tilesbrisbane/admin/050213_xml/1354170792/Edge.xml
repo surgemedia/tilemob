@@ -1,0 +1,18 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>CUSHION</Code>
+    <Description>CUSHIONED (PRESSED) EDGE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HANDCUT</Code>
+    <Description>HANDCUT EDGE (STONE)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RECTIFIED</Code>
+    <Description>RECTIFIED EDGE</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SAWN</Code>
+    <Description>SAWN EDGE (STONE)</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>

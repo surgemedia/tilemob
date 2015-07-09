@@ -1,0 +1,22 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>PEI 1</Code>
+    <Description>PEI 1 (No foot traffic -- walls only)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PEI 2</Code>
+    <Description>PEI 2 (Light Traffic -- Eg Bathroom Floor &amp; Wall)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PEI 3</Code>
+    <Description>PEI 3 (Light to Moderate Foot Traffic &amp; all Walls)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PEI 4</Code>
+    <Description>PEI 4 (Moderate to Heavy Floor Traffic)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PEI 5</Code>
+    <Description>PEI 5 (Heavy to Extra Heavy Floor Traffic)</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>

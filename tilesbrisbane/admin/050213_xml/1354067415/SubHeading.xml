@@ -1,0 +1,14 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>METALLIC</Code>
+    <Description>METALLIC LOOK</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIMBER</Code>
+    <Description>TIMBER LOOK</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TRAVERTINE</Code>
+    <Description>TRAVERTINE LOOK</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>
