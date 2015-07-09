@@ -1,0 +1,62 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>BR-A</Code>
+    <Description>CLASS "A" WET/BAREFOOT RAMP</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BR-B</Code>
+    <Description>CLASS "B" WET/BAREFOOT RAMP</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BR-C</Code>
+    <Description>CLASS "C" WET/BAREFOOT RAMP</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R09</Code>
+    <Description>R9 (3-10 DEGREE ANGLE TEST)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R10</Code>
+    <Description>R10 (10-19 DEGREE ANGLE TEST)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R11</Code>
+    <Description>R11 (19-27 DEGREE ANGLE TEST)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R11B</Code>
+    <Description>R11 (19-27 DEGREE ANGLE TEST) BAREFOOT</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R12</Code>
+    <Description>R12 (27-35 DEGREE ANGLE TEST)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R12V4</Code>
+    <Description>R12 (27-35 DEGREE ANGLE TEST) VOLUME DISPLACMENT</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>R13</Code>
+    <Description>R13 (35+ DEGREE ANGLE TEST)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WP-V</Code>
+    <Description>CLASS "V" WET PENDULUM (VERY LOW SLIP RISK WET)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WP-W</Code>
+    <Description>CLASS "W" WET PENDULUM (LOW SLIP RISK WET)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WP-X</Code>
+    <Description>CLASS "X" WET PENDULUM (MODERATE SLIP RISK WET)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WP-Y</Code>
+    <Description>CLASS "Y" WET PENDULUM (HIGH SLIP RISK WET)</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WP-Z</Code>
+    <Description>CLASS "Z" WET PENDULUM (VERY HIGH SLIP RISK WET)</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>
