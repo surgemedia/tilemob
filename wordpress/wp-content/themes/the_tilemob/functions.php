@@ -25,6 +25,7 @@ $sage_includes = [
   'lib/post-type-news-flash.php',  // News Flash post-type Function
   'lib/post-type-new-in-store.php',  // News Flash post-type Function
   'lib/post-type-projects.php',  // News Flash post-type Function
+  'lib/option-page-product-manager.php',  //Admin Section Function
 
 ];
 
