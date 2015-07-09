@@ -1,0 +1,84 @@
+.textfield1 {
+  position: relative;
+  display: block;
+  width: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 100%;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #AAAAAA;
+  border-left: 1px solid #AAAAAA;
+  border-right: 1px solid #999999;
+  background: #FFFFFF;
+}
+.select1 {
+  position: relative;
+  display: block;
+  padding: 3px;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000000;
+}
+.slider {
+  width: 206px;
+}
+.blackheading {
+  position: relative;
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 100%;
+  color: #000000;
+  clear: both;
+  span {
+    font-weight: normal;
+  }
+}
+.btn-red {
+  background: $red;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 100%;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.tooltip {
+  display: none;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: -92px;
+  left: 0;
+  background: #000;
+}
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 13px;
+}
