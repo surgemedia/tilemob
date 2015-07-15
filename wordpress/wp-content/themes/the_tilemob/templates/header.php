@@ -6,12 +6,12 @@
       <div class="col-sm-6 col-lg-6">
         <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('logo','option'); ?>" alt="<?php bloginfo('name');?>"></a>
       </div>
-      <div class="col-sm-6 col-lg-6 translateY-37">
+      <div class="col-sm-6 col-lg-6 sinceLogo">
         <img src="<?php the_field('other_image','option'); ?>" alt="Since 1976">
       </div>
     </div>
-    <div class="col-sm-6 col-lg-6 translateY-106">
-      <div class="col-sm-8 col-lg-8 address">
+    <div class="col-sm-6 col-lg-6 contact-details">
+      <div class="col-sm-8 col-md-7 col-lg-8 address">
         <?php 
           if(have_rows('address','option')):
             while(have_rows('address','option')) : the_row();
@@ -25,8 +25,21 @@
           endif;
         ?>
       </div>
-      <div class="col-sm-4 col-lg-4 translateY-106 phone">
+      <div class="col-sm-4 col-md-5 col-lg-4 phone">
         <p><span>Ph. </span><?php the_field('phone_number','option'); ?></p>
+        <div id="headlinks" class="headlinks">
+          <ul class="style-to-nav">
+            <!--<li style="border:0;"><a href="my-account.php" title="My account">My account</a></li>-->
+            <?php 
+            $_shop_total_cart = $_COOKIE["_shop_total_cart"];
+            if($_shop_total_cart>0) {
+              echo '<li><a href="/tilesbrisbane/my-cart.php" title="My cart">My cart ( <span id="header_cart_items">'.$_shop_total_cart.'</span> items)</a></li>';
+            } else { echo '<li><a href="/tilesbrisbane/my-cart.php" title="My cart">My cart (<span id="header_cart_items">0</span> items)</a></li>'; }
+            ?>    
+            <li><a href="/tilesbrisbane/checkout.php" title="Checkout" style="border:0;">Checkout >></a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
       </div>
     </div>
     <ul class="social-networks">
