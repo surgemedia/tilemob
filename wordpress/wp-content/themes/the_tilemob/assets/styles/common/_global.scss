@@ -9,14 +9,12 @@
 .mrg-top-zero {
 	margin-top: 0;
 }
-.translateY-37 {
-		@include translateY(37%);
+.set-padding {
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.translateY-106 {
-		@include translateY(106%);
-}
-.translateY-400 {
-		@include translateY(400%);
+img {
+    max-width: 100%;
 }
 /*==========================================
 =            Background Classes            =
@@ -49,6 +47,9 @@
 .gutter-right {
 	border-right:$gutter solid $grey;
 
+}
+.set-gutter-right {
+	@extend .gutter-right;
 }
 .gutter-top {
 	margin-top:$gutter;

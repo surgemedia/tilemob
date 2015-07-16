@@ -10,6 +10,7 @@
 	.social-networks {
 		position: absolute;
 		right: 0;
+		top: 0;
 		padding-right: 15px;
 		@extend .list-reset;
 		display: inline-block;
@@ -21,34 +22,41 @@
 	small {
 		  line-height: 30px;
 	}
-	.address {
-		text-align: right;
-		@media (min-width: $screen-lg-min) {
-			@extend .translateY-106;
-		}
-		p,h4 {
-			color: $grey-font;
-			font-size: 12px;
-			margin: 0;
-			padding: 0;
-			line-height: 20px;
-		}
-		h4 {
-			color: #fff;
+	.sinceLogo {
+		@media (min-width: $screen-md-min) {
+			@include translateY(37%);
 		}
 	}
-	.phone {
-		text-align: right;
-		border-left: 1px solid $grey-light;
-		@media (min-width: $screen-lg-min) {
-			@extend .translateY-400;
+	.contact-details {
+		@media (min-width: $screen-md-min) {
+			@include translateY(90%);
 		}
-		p {
-			font-size: 18px;
-			color: #fff;
+		.address {
+			text-align: right;
+			p,h4 {
+				color: $grey-font;
+				font-size: 12px;
+				margin: 0;
+				padding: 0;
+				line-height: 20px;
+			}
+			h4 {
+				color: #fff;
+			}
 		}
-		span {
-			color: $red;
+		.phone {
+			text-align: right;
+			border-left: 1px solid $grey-light;
+			@media (min-width: $screen-lg-min) {
+				@extend .translateY-400;
+			}
+			p {
+				font-size: 18px;
+				color: #fff;
+			}
+			span {
+				color: $red;
+			}
 		}
 	}
 }
@@ -75,7 +83,21 @@
 		border-left: 1px solid $red-light;
 	}
 }
-
+.headlinks {
+	ul {
+	    padding: 0;
+	    li {
+		    background-color: #636363;
+		    padding: .2em 1em;
+		    margin-bottom: .2em;
+		    border-radius: 5px;
+		    a {
+			    text-decoration: none;
+			    color: #fff;
+			}
+		}
+	}
+}
 
 
 

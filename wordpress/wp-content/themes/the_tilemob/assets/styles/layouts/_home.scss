@@ -6,8 +6,10 @@
 	h2 {
 		text-transform: uppercase;
 		font-weight: bold;
-	    padding: 0 15px 5px 15px;
-   	    border-bottom: 1px solid #FFF;
+	  padding: 0 15px 5px 15px;
+   	border-bottom: 1px solid #FFF;
+    width: 100%;
+    display: inline-block;
 	}
 	.subtitle {
 		font-size: 16px;
@@ -28,9 +30,11 @@
 	img {
 		width: 100%;
 	}
-	.carousel-inner {
-		height: 675px;
-	}
+  @media (min-width: $screen-md-min) {
+  	.carousel-inner {
+  		height: 675px;
+  	}
+  }
 }
 .carousel-fade {
   .carousel-inner {

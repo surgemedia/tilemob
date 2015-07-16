@@ -44,6 +44,7 @@
 	    float: left;
 	    width: 480px;
 	    clear: left;
+	    max-width: 100%;
 	    .pricing {
 		    position: relative;
 		    display: block;
@@ -182,6 +183,9 @@
 				    line-height: 100%;
 				    text-decoration: none;
 			    }
+			    @media (max-width: $screen-sm-max) {
+		    		width: 100%; 
+		    	}
 		    }
 		    .tab_inactive {
 			    background: #FFFFFF url(/tilesbrisbane/images/tab-inactive.jpg) top left repeat-x;
@@ -269,6 +273,9 @@
 		    max-height: 800px;
 		    margin-bottom: 5px;
 		    background: #EEEEEE;
+		    @media (max-width: $screen-sm-max) {
+		    	max-width: 75%;
+		    }
 		}
 		.enlarge_image {
 		    position: relative;
