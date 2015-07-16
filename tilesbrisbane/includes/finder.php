@@ -112,7 +112,7 @@
 				?>
 			</select>
             <div>
-            <div class="field_title">Set max price</div>
+            <div class="field_title">Set max price ( in m<sup>2</sup> or pcs )</div>
             <div class="slider" style="margin-left:0px;"></div>
             <input type="text" data-slider="true" id="txtPriceRange" data-slider-range="0,500" data-slider-step="10">
             <input type="hidden" name="pricerange" id="pricerange" class="output" />
