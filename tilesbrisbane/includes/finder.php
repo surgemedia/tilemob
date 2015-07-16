@@ -1,7 +1,7 @@
 <?php
    $priceR  =  ($_GET['pr']!="")? $_GET['pr'] : 0;
 ?>
-<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery-1.8.2.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="scripts/simple-slider.js"></script>
 <link href="styles/simple-slider.css" rel="stylesheet" type="text/css" />
@@ -112,7 +112,7 @@
 				?>
 			</select>
             <div>
-            <div class="field_title">Set max price</div>
+            <div class="field_title">Set max price ( in m<sup>2</sup> or pcs )</div>
             <div class="slider" style="margin-left:0px;"></div>
             <input type="text" data-slider="true" id="txtPriceRange" data-slider-range="0,500" data-slider-step="10">
             <input type="hidden" name="pricerange" id="pricerange" class="output" />

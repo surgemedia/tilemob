@@ -18,8 +18,10 @@ wordpress/wp-content/themes/twentyseventeen
 wordpress/*/*/*/bower_components
 wordpress/*/*/*/node_modules
 wordpress/*/*/*/dist
+wordpress/wp-content/updraft
 # wordpress/*/uploads
 
+tilemob.com.au
 
 # Include wp-config.php and other wordpress themes and plugins
 !wordpress/wp-config.php

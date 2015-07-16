@@ -44,6 +44,7 @@
 	    float: left;
 	    width: 480px;
 	    clear: left;
+	    max-width: 100%;
 	    .pricing {
 		    position: relative;
 		    display: block;
@@ -81,7 +82,7 @@
 				    position: relative;
 				    display: block;
 				    padding-left: 10px;
-				    background: url(/tilemob/tilesbrisbane/images/qty-arrow.gif) 0px 7px no-repeat;
+				    background: url(/tilesbrisbane/images/qty-arrow.gif) 0px 7px no-repeat;
 				    clear: both;
 				    .label {
 					    position: relative;
@@ -140,9 +141,10 @@
 			    margin-top: 1px;
 			    padding-top: 27px;
 			    border: 0;
-			    background: url(/tilemob/tilesbrisbane/images/big-addtocart.jpg) top left no-repeat;
+			    background: url(/tilesbrisbane/images/big-addtocart.jpg) top left no-repeat;
 			    overflow: hidden;
 			    clear: right;
+			    color: #fff;
 			}
 			#flag {
 			    float: right;
@@ -181,9 +183,12 @@
 				    line-height: 100%;
 				    text-decoration: none;
 			    }
+			    @media (max-width: $screen-sm-max) {
+		    		width: 100%; 
+		    	}
 		    }
 		    .tab_inactive {
-			    background: #FFFFFF url(/tilemob/tilesbrisbane/images/tab-inactive.jpg) top left repeat-x;
+			    background: #FFFFFF url(/tilesbrisbane/images/tab-inactive.jpg) top left repeat-x;
 			    a {
 				    color: $red;
 			    }
@@ -268,6 +273,9 @@
 		    max-height: 800px;
 		    margin-bottom: 5px;
 		    background: #EEEEEE;
+		    @media (max-width: $screen-sm-max) {
+		    	max-width: 75%;
+		    }
 		}
 		.enlarge_image {
 		    position: relative;
@@ -339,7 +347,7 @@
 		    display: block;
 		    float: left;
 		    width: 183px;
-		    min-height: 300px;
+		    height: 335px;
 		    margin-right: 20px;
 		    margin-bottom: 20px;
 		    border: 1px solid #DDDDDD;
@@ -356,6 +364,8 @@
 			    overflow: hidden;
 			    clear: both;
 			    margin-bottom: 5px;
+			    border: 0;
+  				padding: 0;
 			    a {
 				    position: relative;
 				    display: block;
@@ -363,6 +373,15 @@
 				    height: 100%;
 				    text-decoration: none;
 				    position: relative;
+				    img {
+					    bottom: 0;
+					    left: 0;
+					    margin: auto;
+					    position: absolute;
+					    right: 0;
+					    top: 0;
+					    width: 100%;
+					}
 				}
 			}
 			.thumb-details {

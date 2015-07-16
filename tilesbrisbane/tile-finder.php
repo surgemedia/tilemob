@@ -32,14 +32,15 @@ include('includes/requests.php');
             <div class="content row">
               
                     <main class="main" role="main">
+                        <?php include('includes/shop-navigation.php'); ?>
                      <div class="clearfix white_bg">
-                     <div class="col-lg-4">
+                     <div class="col-lg-3">
                      	 <?php include('includes/finder.php'); ?>
                         <?php include('includes/store-categories.php'); ?>
                         <?php include('includes/featured-products.php'); ?>
                         
                      </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-9">
                           
             <?php
             $gallery_string = $query = '';
@@ -48,6 +49,7 @@ include('includes/requests.php');
             //create search query
             if(!empty($_GET['ke'])){
                 $search_keywords = trim($_GET['ke']);
+                $search_keywords = strtolower($search_keywords);
                 if($search_keywords=="bathroom" || $search_keywords=="Bathroom" )
                 {
                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).',Wall Tile*\' IN BOOLEAN MODE) AND (Heading ="WALL" OR Heading="DECORATIVE") AND';
@@ -70,14 +72,14 @@ include('includes/requests.php');
                                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).',Wall Tile*\' IN BOOLEAN MODE) AND (`Use`="FLOOR&WALL" OR `Use`="INT&EXT") AND';
                     
                                 }
-                               else if($search_keywords == "Pool" || $search_keywords=="Pool")
+                               else if($search_keywords == "Pool" || $search_keywords=="pool")
                                 {
                                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`,`Heading`,`Use`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Heading`="POOL" OR `Use`="POOL") AND';
                     
                                 }
                                 else{
                                     //$query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND ';
-                                    $query .= "`Code` LIKE '%$search_keywords%' OR `Desc` LIKE '%$search_keywords%'  OR `CategoryDescription` LIKE '%$search_keywords%' OR `SupplierName` LIKE '%$search_keywords%' OR `Notepad2` LIKE '%$search_keywords%' AND ";
+                                    $query .= "(`Code` LIKE '%$search_keywords%' OR `Desc` LIKE '%$search_keywords%'  OR `CategoryDescription` LIKE '%$search_keywords%' OR `SupplierName` LIKE '%$search_keywords%' OR `Notepad2` LIKE '%$search_keywords%') AND ";
                                                                      
                 }
                 $search_strings[] = '"'.$search_keywords.'"';

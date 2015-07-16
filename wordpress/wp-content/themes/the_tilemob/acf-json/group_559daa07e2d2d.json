@@ -1,0 +1,85 @@
+{
+    "key": "group_559daa07e2d2d",
+    "title": "Booking - Page Template",
+    "fields": [
+        {
+            "key": "field_559f024b14a6a",
+            "label": "Heading Image",
+            "name": "heading_image",
+            "prefix": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_559f01c1af071",
+            "label": "Form Heading",
+            "name": "form_heading",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_559daa15ba922",
+            "label": "Page Form",
+            "name": "page_form",
+            "prefix": "",
+            "type": "cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 1,
+            "multiple": 0,
+            "disable": [
+                0
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-booking-page.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "modified": 1436484341
+}

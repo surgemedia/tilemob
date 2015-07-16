@@ -1,5 +1,5 @@
 <?php
-$db = mysql_connect("localhost","titi2698_live","KLhsdf235U21");
+$db = mysql_connect("localhost","tilesbsu_liveusr","KLhsdf235U21");
 	if (!$db)
 	{
 		echo "Database connection error! Please try again.";

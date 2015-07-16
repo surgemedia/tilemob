@@ -21,7 +21,12 @@ function setup() {
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
-
+  register_nav_menus([
+    'shop_navigation' => __('Shop Navigation', 'sage')
+  ]);
+  register_nav_menus([
+    'footer_navigation' => __('Footer Navigation', 'sage')
+  ]);
   // Add post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size

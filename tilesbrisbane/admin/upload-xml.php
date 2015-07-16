@@ -1,8 +1,9 @@
 <?php
 session_start();
 include('includes/prerun.php');
-include('../../dbconnect.php'); //Database connections
-include('includes/checklogin.php'); //Check login 
+include('../includes/connection.php');
+include('../includes/global_variables.php');
+// include('includes/checklogin.php'); //Check login 
 
 $xml_dir = 'xml/';
 $images_dir = '../images/items/';
@@ -15,11 +16,11 @@ if(move_uploaded_file($_FILES['xmlzip']['tmp_name'], $xml_zipsrc)) {
 		$xml_files = $image_files = array();
 		while(($zip_entry=zip_read($zip))!==false){
 			$filename = basename(zip_entry_name($zip_entry));
-			echo 'found: '.$filename.'<br/>';
+			// echo 'found: '.$filename.'<br/>';
 			if(!is_dir($xml_dir.$strtotime_now)){
 				@mkdir($xml_dir.$strtotime_now, 0777, true);
 			}
-			echo $xml_tempdir.$filename.'<br/>';
+			// echo $xml_tempdir.$filename.'<br/>';
 			file_put_contents($xml_tempdir.$filename, zip_entry_read($zip_entry, zip_entry_filesize($zip_entry)));
 			$file_extension = strtolower(substr($filename, strrpos($filename, '.')+1));
 			if($file_extension=='xml') {
@@ -42,7 +43,7 @@ if(move_uploaded_file($_FILES['xmlzip']['tmp_name'], $xml_zipsrc)) {
 			foreach($data_correspondence as $xml_file_name => $sql_table_name) {
 				if(is_file($xml_tempdir.$xml_file_name)) {			
 					$parseXML_feedback = parseXML($xml_tempdir.$xml_file_name, $sql_table_name);
-					$xml_transfer_details .= 'Found '.$xml_file_name.' for '.$sql_table_name.', now parsing XML for SQL:<br/> '.$parseXML_feedback.'<br/>';
+					$xml_transfer_details .= 'Found '.$xml_file_name.' for '.$sql_table_name.', now Converting XML for SQL:<br/> '.$parseXML_feedback.'<br/>';
 				}
 			}
 			//echo $xml_transfer_details;
@@ -118,7 +119,7 @@ function parseXML($xml_file, $sql_table) {
 		}
 	}
 	return $output;
-	echo $xml_string;
+	// echo "<pre>".$xml_string."</pre>";
 }
 $data_correspondence = array(
 			'WebItemsExport.xml'=>'shop_webitems','Colour.xml'=>'shop_colour',
@@ -135,7 +136,7 @@ $data_correspondence = array(
 					$xml_transfer_details .= 'Found '.$xml_file_name.' for '.$sql_table_name.', now parsing XML for SQL:<br/> '.$parseXML_feedback.'<br/>';
 				}
 			}
-			echo $xml_transfer_details;
+			 echo "<pre>".$xml_transfer_details."</pre>";
 		}
 
 function parseXML_images($xml_file, $sql_table) {
@@ -179,9 +180,6 @@ function parseXML_images($xml_file, $sql_table) {
 			}			
 		}		
 	}
-	
-	//echo $output;
-	//echo $xml_string;
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -222,7 +220,7 @@ function deleteContent(content_id) {
 			//s1: notice | s2: success | s3: error 
 			$string .= '<div class="status'.$s.'">'.$status.'</div>';
 			$string .= '<div class="clear"></div>';
-			echo $string;
+			echo "<pre>".$string."</pre>";
 		}
 		?>
 		<div id="content" class="content">
@@ -235,7 +233,7 @@ function deleteContent(content_id) {
 			</div>
 			<?php
 			if(!empty($xml_transfer_details)){
-				echo '<div id="runfeedback" class="runfeedback"><h1>Data transfer successful.</h1>'.$xml_transfer_details.'<div class="clear"></div></div>';
+				echo '<div id="runfeedback" class="runfeedback"><h1>Data transfer successful.</h1><pre>'.$xml_transfer_details.'</pre><div class="clear"></div></div>';
 			}
 			?>
 			</form>
