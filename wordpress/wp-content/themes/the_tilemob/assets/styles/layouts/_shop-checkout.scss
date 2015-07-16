@@ -1,0 +1,33 @@
+table.form-listing {
+	input[type="radio"] {
+		display: inline-block;
+	}
+}
+#cart_table {
+	.thumb {
+	    margin: 0.2em;
+	}
+}
+.cart {
+	.cart_total {
+	  position: relative;
+	  display: block;
+	  padding-top: 7px;
+	  padding-bottom: 8px;
+	  padding-left: 6px;
+	  padding-right: 6px;
+	  margin-top: 10px;
+	  margin-bottom: 5px;
+	  text-align: right;
+	  color: #FFFFFF;
+	  background: $red;;
+	  clear: both;
+	  .price {
+	  	float: right;
+  		margin-right: 1em; 
+	  }
+	}
+}
+.btn-red {
+	  margin-right: 0.2em;
+}
