@@ -49,6 +49,7 @@ include('includes/requests.php');
             //create search query
             if(!empty($_GET['ke'])){
                 $search_keywords = trim($_GET['ke']);
+                $search_keywords = strtolower($search_keywords);
                 if($search_keywords=="bathroom" || $search_keywords=="Bathroom" )
                 {
                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).',Wall Tile*\' IN BOOLEAN MODE) AND (Heading ="WALL" OR Heading="DECORATIVE") AND';
@@ -78,7 +79,7 @@ include('includes/requests.php');
                                 }
                                 else{
                                     //$query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND ';
-                                    $query .= "`Code` LIKE '%$search_keywords%' OR `Desc` LIKE '%$search_keywords%'  OR `CategoryDescription` LIKE '%$search_keywords%' OR `SupplierName` LIKE '%$search_keywords%' OR `Notepad2` LIKE '%$search_keywords%' AND ";
+                                    $query .= "(`Code` LIKE '%$search_keywords%' OR `Desc` LIKE '%$search_keywords%'  OR `CategoryDescription` LIKE '%$search_keywords%' OR `SupplierName` LIKE '%$search_keywords%' OR `Notepad2` LIKE '%$search_keywords%') AND ";
                                                                      
                 }
                 $search_strings[] = '"'.$search_keywords.'"';
@@ -228,7 +229,7 @@ include('includes/requests.php');
             
             ?>
             
-            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span></div>
+            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span><span>keyword is <?php echo $search_keywords ?> and query is SELECT * FROM shop_webitems WHERE <?php echo $query ?> WebExport='YES' AND is_active='1' </span></div>
             <div id="gallery" class="gallery">
                 <?php
                 //gallery

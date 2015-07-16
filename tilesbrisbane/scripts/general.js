@@ -13,6 +13,9 @@ function resetTileFinderForm() {
 	document.getElementById('thickness').selectedIndex = 0;
 	document.getElementById('edge').selectedIndex = 0;
 	document.getElementById('sliprating').selectedIndex = 0;
+	document.getElementById("pricerange").value = 0
+	document.getElementsByClassName('output')[0].innerHTML = "0.00"
+	$('.dragger').css('left','0')
 }
 
 function moreTileFinderOptions(show) {
