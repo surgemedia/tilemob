@@ -232,7 +232,7 @@ include('includes/requests.php');
             
             ?>
             
-            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span><span>keyword is <?php echo $search_keywords ?> and query is SELECT * FROM shop_webitems WHERE <?php echo $query ?> WebExport='YES' AND is_active='1' </span></div>
+            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span></div>
             <div id="gallery" class="gallery">
                 <?php
                 //gallery
