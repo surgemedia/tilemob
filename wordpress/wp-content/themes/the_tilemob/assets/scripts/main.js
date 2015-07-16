@@ -73,5 +73,41 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+  
 
+  // Scripts for booking form
+  $('#retrieve_form').submit(function(){
+      var booking_id = parseInt(""+document.forms['retrieve_form'].booking_id.value,10);  
+      var last_booking_id = parseInt("<?=$last_booking_id?>",10);
+      var alertMessage = 'Sorry, your booking number is invalid, if you had previously \nmade a booking, please find your booking reference number \nin your email entitled: \n"TileMob.com.au - Your In-Showroom Consultation Booking"';
+      if(document.forms['retrieve_form'].booking_id.value == "" && document.forms['retrieve_form'].booking_email.value == ""){
+        alert(alertMessage);
+        return false;
+      } else if(booking_id.length < 4 || booking_id > last_booking_id || booking_id == 0) {
+        alert(alertMessage);
+        return false;
+      } else {
+        return true;
+      }
+  });
+  var ConsultationBookingForm = {
+    projectType: function(){
+                    var value = $('#option_question2').val();
+                    if(value.indexOf('Residential') >= 0) {
+                      $('#residential_row').show();
+                      $('#commercial_row').hide();
+                    }
+                    else if(value.indexOf('Commercial')>=0){
+                      $('#residential_row').hide();
+                      $('#commercial_row').show();
+                    }
+                    else {
+                      $('#residential_row').hide();
+                      $('#commercial_row').hide();
+                    }
+                }
+  }
+  $('#option_question2').change(function(){
+      ConsultationBookingForm.projectType();
+  });
 })(jQuery); // Fully reference jQuery after this point.

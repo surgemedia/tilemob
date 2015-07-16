@@ -25,8 +25,10 @@ $sage_includes = [
   'lib/post-type-news-flash.php',  // News Flash post-type Function
   'lib/post-type-new-in-store.php',  // News Flash post-type Function
   'lib/post-type-projects.php',  // News Flash post-type Function
-  'lib/option-page-product-manager.php',  // News Flash post-type Function
+  'lib/option-page-product-manager.php',  //Admin Section Function
 
+  //Short Codes
+  'lib/short-code-address.php',  // Display Address in booking form
 
 ];
 
@@ -63,10 +65,10 @@ if( function_exists('acf_add_options_page') ) {
   ));
   
 }
-//adding contact form to acf
-add_action('acf/register_fields', 'my_register_fields');
+add_filter( 'wpcf7_form_elements', 'mycustom_wpcf7_form_elements' );
 
-function my_register_fields()
-{
-    include_once('acf-cf7/acf-cf7.php');
+function mycustom_wpcf7_form_elements( $form ) {
+  $form = do_shortcode( $form );
+
+  return $form;
 }

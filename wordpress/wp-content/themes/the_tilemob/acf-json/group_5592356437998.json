@@ -221,6 +221,42 @@
                     "library": "all"
                 }
             ]
+        },
+        {
+            "key": "field_559f0396ad818",
+            "label": "Logo2",
+            "name": "logo2",
+            "prefix": "",
+            "type": "image",
+            "instructions": "This logo is used on white background",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_559f27ad5205a",
+            "label": "Logo3",
+            "name": "logo3",
+            "prefix": "",
+            "type": "image",
+            "instructions": "This logo is used on grey background",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
         }
     ],
     "location": [
@@ -238,5 +274,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435712226
+    "modified": 1436493789
 }

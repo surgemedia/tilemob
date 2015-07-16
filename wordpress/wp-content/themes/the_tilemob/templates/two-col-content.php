@@ -24,9 +24,9 @@
 					while ( $query->have_posts() ) {
 						$query->the_post();
 						// do something
-						
+						debug(get_post);
 				?>
-					<li><a target="_blank" href="#">
+					<li><a target="_blank" href="">
                             
                             <?php the_title() ?>
                         </a></li>

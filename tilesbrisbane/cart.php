@@ -18,7 +18,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
         ?>
         <?php get_template_part('templates/head'); ?>
     </head>
-    <body class='grey_bg' ?>>
+    <body class='grey_bg'>
         <!--[if lt IE 9]>
                     <div class="alert alert-warning">
             <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -31,6 +31,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
         <div class="wrap container" role="document">
             <div class="content row">
                 <main class="main" role="main">
+                        <?php include('includes/shop-navigation.php'); ?>
                     <div class="clearfix white_bg">
                         <div class="col-lg-4">
                             <?php include('includes/finder.php'); ?>
@@ -115,8 +116,8 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             				$cart_string .= '
                                         <tr>
                                         <td align="center" valign="middle"><div class="thumb"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_image1_imgsrc.'<!--</a>--></div></td>
-                                        <td align="left" valign="middle"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_item_name.'<!--</a>--> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>
-                                        <td align="center" valign="middle">
+                                        <td align="" valign="middle"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_item_name.'<!--</a>--> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>
+                                        <td align="" valign="middle">
                                            <div class="qty">
                                        <!--<div id="qty_value_'.$row_cart_id.'" class="text"><input type="text" id="qty_field_'.$row_cart_id.'" name="qty_field_'.$row_cart_id.'" value="'.$cart_qty.'" class="textfield1" onkeyup="updateCartQty(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');"><div class="clear"></div></div>-->
                                            <div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'<div class="clear"></div></div>
@@ -128,8 +129,8 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                             <div class="clear"></div>
                                            </div>
                                          </td>
-                                         <td align="right" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
-                                         <td align="right" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_item_subtotal,2).'</div></td>
+                                         <td align="" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
+                                         <td align="" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_item_subtotal,2).'</div></td>
                                          </tr>';
                         }
                     }

@@ -13,6 +13,9 @@ function resetTileFinderForm() {
 	document.getElementById('thickness').selectedIndex = 0;
 	document.getElementById('edge').selectedIndex = 0;
 	document.getElementById('sliprating').selectedIndex = 0;
+	document.getElementById("pricerange").value = 0
+	document.getElementsByClassName('output')[0].innerHTML = "0.00"
+	$('.dragger').css('left','0')
 }
 
 function moreTileFinderOptions(show) {
@@ -137,6 +140,9 @@ function removeFromCart(user_id, user_session, id) {
 		if (ajaxRequest.readyState==4 && ajaxRequest.status==200) {
 			if(ajaxRequest.responseText!='') { //Ajax response found
 				document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
+				var cartValue = document.cookie.split('_shop_total_cart=')[1].split(';')[0];
+				cartValue -= 1;
+				document.cookie = "_shop_total_cart="+cartValue+"; path=/";
 				//alert(ajaxRequest.responseText);
 			}
 		}
@@ -193,6 +199,9 @@ function addToCartPdtDetails(user_id,shop_order_id, user_session, item_code, ite
 			if(ajaxRequest.responseText!='') { //Ajax response found
 				document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
                                 console.log(ajaxRequest.responseText);
+                                document.cookie="_shop_total_cart="+eval(ajaxRequest.responseText)+"; path=/";
+                                
+
 				//alert(ajaxRequest.responseText);
                                 //return false;
                                 //window.location="http://180.235.128.82/~titi2698/cart.php";

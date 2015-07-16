@@ -1,0 +1,108 @@
+.side-news {
+	padding: 0; 
+	* {
+		color: #fff;
+	}
+	h2 {
+		text-transform: uppercase;
+		font-weight: bold;
+	  padding: 0 15px 5px 15px;
+   	border-bottom: 1px solid #FFF;
+    width: 100%;
+    display: inline-block;
+	}
+	.subtitle {
+		font-size: 16px;
+		display: block;
+	}
+	p {
+
+	}
+	a {
+		display: block;
+		padding: 0 15px 11px 15px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+.carousel {
+	img {
+		width: 100%;
+	}
+  @media (min-width: $screen-md-min) {
+  	.carousel-inner {
+  		height: 675px;
+  	}
+  }
+}
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+      transition-timing-function: ease;
+  	  transition-delay: 0.3s;
+    }
+
+    .active {
+      opacity: 1;
+      transition-property: opacity;
+      transition-timing-function: ease-out;
+  	  transition-delay: 0.3s;
+    }
+
+  }
+ }
+ a.view-shop {
+  position: absolute;
+  z-index: 9999;
+  bottom: 0;
+}
+a.view-specifiers {
+  position: absolute;
+  z-index: 9999;
+  bottom: 11em;
+  right: 0;
+}
+a.view-performance {
+  position: absolute;
+  z-index: 9999;
+  bottom: 4em;
+  right: 0;
+}
+.showroom_navbar {
+  z-index: 9998;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 14px;
+  padding-right: 13px;
+  padding-bottom: 14px;
+  text-align: right;
+  background-color: grey;
+  color: $skin;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  @include linear-gradient(#A0A0A0,#787878);
+  a {
+	  display: block;
+	  float: right;
+	  width: auto;
+	  padding-right: 14px;
+	  color: $skin;
+	  text-decoration: none;
+	}
+  a:after {
+  	content: "";
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 7px solid;
+      font-size: 0px;
+      vertical-align: middle;
+      margin-left: 5px;
+      color: $skin;
+  }
+}

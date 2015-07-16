@@ -5,10 +5,10 @@
 </footer> -->
 <footer class="clearfix">
     <div class="row footer-nav">
-        <div class="col-sm-2 col-lg-2">
+        <div class="col-sm-3 col-lg-3">
             <p><?php the_field('copyrights','option');?></p>
         </div>
-        <div class="col-sm-7 col-lg-7">
+        <div class="col-sm-6 col-lg-6">
             <ul class="style-to-nav">
                 <?php 
                     if(have_rows('footer_navigation','option')):
