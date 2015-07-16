@@ -8,6 +8,7 @@ wordpress/wp-includes
 wordpress/wp-admin
 wordpress/wp-content/plugins
 wordpress/wp-content/languages
+wordpress/wp-content/updraft
 wordpress/wp-content/themes/twentythirteen
 wordpress/wp-content/themes/twentyfourteen
 wordpress/wp-content/themes/twentyfifteen
