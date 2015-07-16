@@ -177,7 +177,10 @@ include('includes/requests.php');
             if(!empty($_GET['pr'])){
                 $search_pricerange = trim($_GET['pr']);
                 //$query .= '`SlipRating`=\''.mysql_real_escape_string($search_sliprating).'\' AND ';
-                $query .= '(RetailPriceM2 <= '.$search_pricerange.') AND';
+                // $query .= '(RetailPriceM2 <= '.$search_pricerange.') AND';
+                $query .= "((RetailPriceM2 <= ".$search_pricerange.") AND  (case when PcsM2='0' then 0 when PcsM2='' then 0 else 1 end) OR 
+         (RetailPricePce <= ".$search_pricerange.") AND (case when PcsM2='0' then 1 when PcsM2='' then 1 else 0 end)) AND";
+
                 
                     $search_strings[] = "Max Price $".$search_pricerange;
                 
@@ -229,7 +232,7 @@ include('includes/requests.php');
             
             ?>
             
-            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span></div>
+            <div id="blackheading" class="blackheading">Search results › <span><?php echo trim($search_query_string); ?></span><span>keyword is <?php echo $search_keywords ?> and query is SELECT * FROM shop_webitems WHERE <?php echo $query ?> WebExport='YES' AND is_active='1' </span></div>
             <div id="gallery" class="gallery">
                 <?php
                 //gallery
