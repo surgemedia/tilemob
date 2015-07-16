@@ -1,4 +1,4 @@
-.enquiry-form {
+.enquiry-form-inner {
 	.row-cell {
 	  width: 50%;
 	  float: left;
@@ -41,6 +41,30 @@
 	  		display: none;
 	  	}
 	}
+}
+@media (max-width: $screen-sm-max) {
+    .enquiry-form-inner {
+        padding: 0;
+        border-left: 0;
+        div {
+	        padding: 0;
+	    }
+	    .row {
+	        padding: 0;
+	        border-left: 0;
+	        .row-cell {
+		        width: 100%;
+		        padding: 0;
+		        text-align: left;
+		        span {
+			        margin-left: 0
+			    }
+			    input,textarea {
+			        width: 100%
+			    }
+		    }
+	    }
+    }
 }
 input, textarea {
 	  	font-weight: normal;
@@ -190,4 +214,23 @@ input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea
 			margin: 0;
 		}
 	}
+}
+@media (max-width: $screen-sm-max) {
+    .booking-form {
+        padding: 0 15px;
+        .row-cell {
+	        width: 100%;
+	    }
+	    .form-content {
+	    	p {
+		        text-align: left;
+		    }
+		    span {
+		        margin-left: 0;
+		    }
+		    input, select, textarea {
+		        width: 100%;
+		    }
+	    }
+    }
 }

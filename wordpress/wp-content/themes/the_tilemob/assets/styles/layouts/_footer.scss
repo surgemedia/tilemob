@@ -59,8 +59,10 @@ footer {
 		* {
 			color: $grey-footer-font;
 		}
-		div+div {
-			border-left: 1px solid $grey-footer-border;
+		@media (min-width: $screen-md-min) {
+			div+div {
+				border-left: 1px solid $grey-footer-border;
+			}
 		}
 	}
 }
