@@ -81,7 +81,7 @@
 				    position: relative;
 				    display: block;
 				    padding-left: 10px;
-				    background: url(/tilemob/tilesbrisbane/images/qty-arrow.gif) 0px 7px no-repeat;
+				    background: url(/tilesbrisbane/images/qty-arrow.gif) 0px 7px no-repeat;
 				    clear: both;
 				    .label {
 					    position: relative;
@@ -140,9 +140,10 @@
 			    margin-top: 1px;
 			    padding-top: 27px;
 			    border: 0;
-			    background: url(/tilemob/tilesbrisbane/images/big-addtocart.jpg) top left no-repeat;
+			    background: url(/tilesbrisbane/images/big-addtocart.jpg) top left no-repeat;
 			    overflow: hidden;
 			    clear: right;
+			    color: #fff;
 			}
 			#flag {
 			    float: right;
@@ -183,7 +184,7 @@
 			    }
 		    }
 		    .tab_inactive {
-			    background: #FFFFFF url(/tilemob/tilesbrisbane/images/tab-inactive.jpg) top left repeat-x;
+			    background: #FFFFFF url(/tilesbrisbane/images/tab-inactive.jpg) top left repeat-x;
 			    a {
 				    color: $red;
 			    }
@@ -339,7 +340,7 @@
 		    display: block;
 		    float: left;
 		    width: 183px;
-		    height: 325px;
+		    height: 335px;
 		    margin-right: 20px;
 		    margin-bottom: 20px;
 		    border: 1px solid #DDDDDD;

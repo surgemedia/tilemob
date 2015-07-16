@@ -7,12 +7,6 @@
 	color: $grey-sober;
 	position: relative;
 	min-height: 180px;
-	.translateY-37 {
-		@include translateY(37%);
-	}
-	.translateY-106 {
-		@include translateY(106%);
-	}
 	.social-networks {
 		position: absolute;
 		right: 0;
@@ -29,6 +23,9 @@
 	}
 	.address {
 		text-align: right;
+		@media (min-width: $screen-lg-min) {
+			@extend .translateY-106;
+		}
 		p,h4 {
 			color: $grey-font;
 			font-size: 12px;
@@ -43,6 +40,9 @@
 	.phone {
 		text-align: right;
 		border-left: 1px solid $grey-light;
+		@media (min-width: $screen-lg-min) {
+			@extend .translateY-400;
+		}
 		p {
 			font-size: 18px;
 			color: #fff;

@@ -203,12 +203,12 @@ include("includes/detail-db-call.php");
                 <main class="main" role="main">
                         <?php include('includes/shop-navigation.php'); ?>
                     <div class="clearfix white_bg">
-                        <div class="col-lg-3">
+                        <div class="col-xs-12 col-lg-3">
                             <?php include('includes/finder.php'); ?>
                             <?php include('includes/store-categories.php'); ?>
                             <?php include('includes/featured-products.php'); ?>
                         </div>
-                        <div class="col-lg-9">
+                        <div class="col-xs-12 col-lg-9">
                             <div id="item_detail" class="item_detail">
                                 <!-- HEAD -->
                                 <div id="goback" class="goback"><a href="javascript:history.go(-1);" title="Back to previous page">« Back to previous page</a></div>
@@ -317,204 +317,205 @@ include("includes/detail-db-call.php");
                                                                                 $ContentDisplay = "style='display:block'";
                                                                                 $activeTab = 'tab';
                                 } ?>
+                                <div class="col-xs-12 padding-zero">
                                 <!-- TABS -->
-                                <div id="tabs" class="tabs">
-                                    <div id="tab1" class="tab tbs" <?php echo $display; ?> ><a href="javascript:void(0);" onclick="goToProductTab(1);" title="OVERVIEW">OVERVIEW</a></div>
-                                    <div id="tab2" class="<?php echo $activeTab; ?> tbs"><a href="javascript:void(0);" onclick="goToProductTab(2);" title="SPECS">SPECS</a></div>
-                                    <div id="tab3" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(3);" title="ASK A QUESTION">ASK A QUESTION</a></div>
-                                    <div id="tab4" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(4);" title="BIG QUANTITY DEALS">BIG QTY DEALS</a></div>
+                                    <div id="tabs" class="tabs">
+                                        <div id="tab1" class="tab tbs" <?php echo $display; ?> ><a href="javascript:void(0);" onclick="goToProductTab(1);" title="OVERVIEW">OVERVIEW</a></div>
+                                        <div id="tab2" class="<?php echo $activeTab; ?> tbs"><a href="javascript:void(0);" onclick="goToProductTab(2);" title="SPECS">SPECS</a></div>
+                                        <div id="tab3" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(3);" title="ASK A QUESTION">ASK A QUESTION</a></div>
+                                        <div id="tab4" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(4);" title="BIG QUANTITY DEALS">BIG QTY DEALS</a></div>
 
-                                    <div class="clear"></div>
-                                </div>
-                                <!-- OVERVIEW -->
-                                <div id="page1" class="page">
-                                    <div id="description" class="description">
-                                        <?php echo nl2br($item_Notepad2); ?>
                                         <div class="clear"></div>
                                     </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!-- SPECS -->
-                                <div id="page2" class="page"  <?php echo $ContentDisplay; ?> style="display:none;">
-                                    <table id="details_table" width="100%" class="details_table">
-                                        <tr>
-                                            <td colspan="4"><h3><?php echo $item_Heading_name; ?></h3></td>
-                                        </tr>
-                                        <?php if($item_Code){?>
-                                        <tr>
-                                            <td width="100"><span>Code</span></td>
-                                            <td colspan="3"><?php echo $item_Code; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_Size_name){?>
-                                        <tr>
-                                            <td><span>Size</span></td>
-                                            <td colspan="3"><?php echo $item_Size_name; ?></td>
-                                        </tr>
-                                        <?php } ?>
-                                        <?php if($item_Thickness_name){?>
-                                        <tr>
-                                            <td><span>Thickness</span></td>
-                                            <td colspan="3"><?php echo $item_Thickness_name; ?></td>
-                                        </tr>
-                                        <?php } ?>
-                                        <?php if($item_Colour_name){?>
-                                        <tr>
-                                            <td><span>Colour</span></td>
-                                            <td colspan="3"><?php echo $item_Colour_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <!--<tr>
-                                                                            <td style="padding-top:15px;"><span>Price</span></td>
-                                                                                                        <td colspan="3" style="padding-top:15px;">
-                                                <div class="price_buy">$<?php echo number_format($item_buy,2).'/'.$item_Unit; ?></div>
-                                                <div class="item_qty">
-                                                    Your Order Quantity:
-                                                    <input type="text" id="add_qty" name="add_qty" value="1" class="textfield1" onchange="checkAddQtyValue('<?php echo $item_buy; ?>','<?php echo $item_M2Box; ?>',this.value);"> <?php echo $item_Unit; ?>
-                                                    <div class="clear"></div>
-                                                </div>
-                                                <div id="addtocart_button_<?php echo $item_id; ?>" class="button"><a href="javascript:void(0);" title="add to cart" onclick="addToCart('<?php echo $_shop_user_id_encoded ?>','<?php echo $_shop_user_session; ?>','<?php echo $item_Code; ?>', document.getElementById('add_qty').value,'<?php echo $item_id; ?>');">add to cart</a></div>
-                                                <div id="addtocart_feedback_<?php echo $item_id; ?>" class="feedback">Item added to cart</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><span>Normally</span></td>
-                                            <td colspan="3">
-                                                <div class="price_rrp">$<?php echo number_format($item_rrp,2).'/'.$item_Unit; ?></div>
-                                                <div class="price_save">SAVE $<?php echo number_format($item_save,2); ?></div>
-                                            </td>
-                                        </tr>-->
-                                        <?php if($item_Surface_name){?>
-                                        <tr>
-                                            <td><span>Finish</span></td>
-                                            <td colspan="3"><?php echo $item_Surface_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_Material_name){?>
-                                        <tr>
-                                            <td><span>Material</span></td>
-                                            <td colspan="3"><?php echo $item_Material_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_SlipRating_name != ""){?>
-                                        <tr>
-                                            <td><span>Slip-Rating</span></td>
-                                            <td colspan="3"><?php echo $item_SlipRating_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_Use_name){?>
-                                        <tr>
-                                            <td><span>Category/Use</span></td>
-                                            <td colspan="3"><?php echo $item_Use_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_RelatedTo_name){?>
-                                        <tr>
-                                            <td><span>Collection</span></td>
-                                            <td colspan="3"><?php echo $item_RelatedTo_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_Pattern_name){?>
-                                        <tr>
-                                            <td><span>Pattern</span></td>
-                                            <td colspan="3"><?php echo $item_Pattern_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php
-                                                                    if(!empty($item_Pantone_name)) {
-                                                                        echo '
-                                                                        <tr>
-                                                                                <td><span>Pantone</span></td>
-                                                                                <td colspan="3">'.$item_Pantone_name.'</td>
-                                                                        </tr>';
-                                                                    }
-                                        ?>
-                                        <?php if($item_Edge_name){?>
-                                        <tr>
-                                            <td><span>Edge Finish</span></td>
-                                            <td colspan="3"><?php echo $item_Edge_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_Weight_name){?>
-                                        <!--                            <tr>
-                                                                            <td><span>Weight</span></td>
-                                            <td colspan="3"><?php echo $item_Weight_name; ?></td>
-                                        </tr>-->
-                                        <?php }?>
-                                        <?php // if($item_PcsBox!="" && $item_PcsBox!=0){
-                                                                                            if($item_PcsM2!="" && $item_PcsM2!=0){
-                                                                                            
-                                        ?>
-                                        <tr>
-                                            <td><span>Box Size</span></td>
-                                            <td><?php echo $item_PcsBox; ?>
-                                                <?php
-                                                                                
-                                                                                    echo '
-                                                                                    pcs / '.$item_M2Box.' '.$item_Unit_m2.' ('.$item_PcsBox.' pcs per '.$item_Unit_m2.')';
+                                    <!-- OVERVIEW -->
+                                    <div id="page1" class="page">
+                                        <div id="description" class="description">
+                                            <?php echo nl2br($item_Notepad2); ?>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- SPECS -->
+                                    <div id="page2" class="page"  <?php echo $ContentDisplay; ?> style="display:none;">
+                                        <table id="details_table" width="100%" class="details_table">
+                                            <tr>
+                                                <td colspan="4"><h3><?php echo $item_Heading_name; ?></h3></td>
+                                            </tr>
+                                            <?php if($item_Code){?>
+                                            <tr>
+                                                <td width="100"><span>Code</span></td>
+                                                <td colspan="3"><?php echo $item_Code; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_Size_name){?>
+                                            <tr>
+                                                <td><span>Size</span></td>
+                                                <td colspan="3"><?php echo $item_Size_name; ?></td>
+                                            </tr>
+                                            <?php } ?>
+                                            <?php if($item_Thickness_name){?>
+                                            <tr>
+                                                <td><span>Thickness</span></td>
+                                                <td colspan="3"><?php echo $item_Thickness_name; ?></td>
+                                            </tr>
+                                            <?php } ?>
+                                            <?php if($item_Colour_name){?>
+                                            <tr>
+                                                <td><span>Colour</span></td>
+                                                <td colspan="3"><?php echo $item_Colour_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <!--<tr>
+                                                                                <td style="padding-top:15px;"><span>Price</span></td>
+                                                                                                            <td colspan="3" style="padding-top:15px;">
+                                                    <div class="price_buy">$<?php echo number_format($item_buy,2).'/'.$item_Unit; ?></div>
+                                                    <div class="item_qty">
+                                                        Your Order Quantity:
+                                                        <input type="text" id="add_qty" name="add_qty" value="1" class="textfield1" onchange="checkAddQtyValue('<?php echo $item_buy; ?>','<?php echo $item_M2Box; ?>',this.value);"> <?php echo $item_Unit; ?>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div id="addtocart_button_<?php echo $item_id; ?>" class="button"><a href="javascript:void(0);" title="add to cart" onclick="addToCart('<?php echo $_shop_user_id_encoded ?>','<?php echo $_shop_user_session; ?>','<?php echo $item_Code; ?>', document.getElementById('add_qty').value,'<?php echo $item_id; ?>');">add to cart</a></div>
+                                                    <div id="addtocart_feedback_<?php echo $item_id; ?>" class="feedback">Item added to cart</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Normally</span></td>
+                                                <td colspan="3">
+                                                    <div class="price_rrp">$<?php echo number_format($item_rrp,2).'/'.$item_Unit; ?></div>
+                                                    <div class="price_save">SAVE $<?php echo number_format($item_save,2); ?></div>
+                                                </td>
+                                            </tr>-->
+                                            <?php if($item_Surface_name){?>
+                                            <tr>
+                                                <td><span>Finish</span></td>
+                                                <td colspan="3"><?php echo $item_Surface_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_Material_name){?>
+                                            <tr>
+                                                <td><span>Material</span></td>
+                                                <td colspan="3"><?php echo $item_Material_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_SlipRating_name != ""){?>
+                                            <tr>
+                                                <td><span>Slip-Rating</span></td>
+                                                <td colspan="3"><?php echo $item_SlipRating_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_Use_name){?>
+                                            <tr>
+                                                <td><span>Category/Use</span></td>
+                                                <td colspan="3"><?php echo $item_Use_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_RelatedTo_name){?>
+                                            <tr>
+                                                <td><span>Collection</span></td>
+                                                <td colspan="3"><?php echo $item_RelatedTo_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_Pattern_name){?>
+                                            <tr>
+                                                <td><span>Pattern</span></td>
+                                                <td colspan="3"><?php echo $item_Pattern_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php
+                                                                        if(!empty($item_Pantone_name)) {
+                                                                            echo '
+                                                                            <tr>
+                                                                                    <td><span>Pantone</span></td>
+                                                                                    <td colspan="3">'.$item_Pantone_name.'</td>
+                                                                            </tr>';
+                                                                        }
+                                            ?>
+                                            <?php if($item_Edge_name){?>
+                                            <tr>
+                                                <td><span>Edge Finish</span></td>
+                                                <td colspan="3"><?php echo $item_Edge_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_Weight_name){?>
+                                            <!--                            <tr>
+                                                                                <td><span>Weight</span></td>
+                                                <td colspan="3"><?php echo $item_Weight_name; ?></td>
+                                            </tr>-->
+                                            <?php }?>
+                                            <?php // if($item_PcsBox!="" && $item_PcsBox!=0){
+                                                                                                if($item_PcsM2!="" && $item_PcsM2!=0){
+                                                                                                
+                                            ?>
+                                            <tr>
+                                                <td><span>Box Size</span></td>
+                                                <td><?php echo $item_PcsBox; ?>
+                                                    <?php
                                                                                     
-                                                                                
-                                            ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php if($item_M2Pallet){?>
-                                        <tr>
-                                            <td><span>Pallet Size</span></td>
-                                            <td colspan="3"><?php echo $item_M2Pallet.'m&sup2; ('.$item_BoxesPallet.' Boxes)'; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <?php { ?>
-                                        <tr>
-                                            <td><span>Ships From</span></td>
-                                            <td colspan="3"><?php echo $item_Location_name; ?></td>
-                                        </tr>
-                                        <?php }?>
-                                        <tr>
-                                            <td ><span>Lead Time to Despatch Order:</span> </td>
-                                            <td colspan="3"><?php echo $item_lead; ?> Days (approx.)</td>
-                                        </tr>
-                                    </table>
+                                                                                        echo '
+                                                                                        pcs / '.$item_M2Box.' '.$item_Unit_m2.' ('.$item_PcsBox.' pcs per '.$item_Unit_m2.')';
+                                                                                        
+                                                                                    
+                                                ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php if($item_M2Pallet){?>
+                                            <tr>
+                                                <td><span>Pallet Size</span></td>
+                                                <td colspan="3"><?php echo $item_M2Pallet.'m&sup2; ('.$item_BoxesPallet.' Boxes)'; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <?php { ?>
+                                            <tr>
+                                                <td><span>Ships From</span></td>
+                                                <td colspan="3"><?php echo $item_Location_name; ?></td>
+                                            </tr>
+                                            <?php }?>
+                                            <tr>
+                                                <td ><span>Lead Time to Despatch Order:</span> </td>
+                                                <td colspan="3"><?php echo $item_lead; ?> Days (approx.)</td>
+                                            </tr>
+                                        </table>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- ASK A QUESTION -->
+                                    <div id="page3" class="page" style="display:none;">
+                                        <form action ="" method ="post" enctype="multipart/form-data" onsubmit="return checkFields();">
+                                            <table class="form-listing">
+                                                <tr><td width="30%" >Name:</td><td width="70%"><input type="text" name="name" id="name" class="textfield1"></input></td></tr>
+                                                <tr><td>Phone:</td><td><input type="text" name="phone" id="phone" class="textfield1"></input></td></tr>
+                                                <tr><td>Email:</td><td><input type="text" name="email" id="email" class="textfield1"></input></td></tr>
+                                                <tr><td>Enquiry:</td><td><textarea name="enquiry" id="enquiry" class="textfield1"></textarea></td></tr>
+                                                <tr><td>Spam protection:</td><td>Please verify that you are human by entering this code into the field before submitting: <span class="asterisk">*</span>
+                                                <img src="randomImage.php" border="0" align="absmiddle"/><br /><input type="text" name="security" id="security" class="textfield1" style="width:100px;margin-top:3px;"/>
+                                            </td></tr>
+                                            <input type ="hidden" name="pdtId" id="pdtId" value="<?=$id?>"></input>
+                                            <tr><td>&nbsp;</td><td><input type="submit" name="submit" id="submit" value="Send"></input></td></tr>
+                                        </table>
+                                    </form>
                                     <div class="clear"></div>
-                                </div>
-                                <!-- ASK A QUESTION -->
-                                <div id="page3" class="page" style="display:none;">
-                                    <form action ="" method ="post" enctype="multipart/form-data" onsubmit="return checkFields();">
-                                        <table class="form-listing">
-                                            <tr><td width="30%" >Name:</td><td width="70%"><input type="text" name="name" id="name" class="textfield1"></input></td></tr>
-                                            <tr><td>Phone:</td><td><input type="text" name="phone" id="phone" class="textfield1"></input></td></tr>
-                                            <tr><td>Email:</td><td><input type="text" name="email" id="email" class="textfield1"></input></td></tr>
-                                            <tr><td>Enquiry:</td><td><textarea name="enquiry" id="enquiry" class="textfield1"></textarea></td></tr>
-                                            <tr><td>Spam protection:</td><td>Please verify that you are human by entering this code into the field before submitting: <span class="asterisk">*</span>
-                                            <img src="randomImage.php" border="0" align="absmiddle"/><br /><input type="text" name="security" id="security" class="textfield1" style="width:100px;margin-top:3px;"/>
-                                        </td></tr>
-                                        <input type ="hidden" name="pdtId" id="pdtId" value="<?=$id?>"></input>
-                                        <tr><td>&nbsp;</td><td><input type="submit" name="submit" id="submit" value="Send"></input></td></tr>
-                                    </table>
-                                </form>
-                                <div class="clear"></div>
-                            </div>
-                            <!--- DEAL QTY -->
-                            <div id="page4" class="page" style="display:none;">
-                                <form action ="" method ="post" enctype="multipart/form-data" onsubmit="return validate();">
-                                    <table class="form-listing">
-                                        <tr ><td width="30%">ProductDetails:</td><td width="70%"><textarea class="textfield1" disabled><?=$productDesc?></textarea>
-                                        <input type="hidden" id="desc" name="desc" value="<?=$productDesc?>">
-                                    </td></tr>
-                                    <tr><td>Quantity:</td><td><input type="text" name="qty" id="qty" class="textfield1"></input></td></tr>
-                                    <tr><td>Name:</td><td><input type="text" name="name" id="name1" class="textfield1"></input></td></tr>
-                                    <tr><td>Phone:</td><td><input type="text" name="phone" id="phone1" class="textfield1"></input></td></tr>
-                                    <tr><td>Email:</td><td><input type="text" name="email" id="email1" class="textfield1"></input></td></tr>
-                                    <tr><td>Spam protection:</td><td>Please verify that you are human by entering this code into the field before submitting: <span class="asterisk">*</span>
-                                    <img src="randomImage.php" border="0" align="absmiddle"/><br /><input type="text" name="security" id="security" class="textfield1" style="width:100px;margin-top:3px;"/>
-                                </td></tr>
-                                <input type ="hidden" name="pdtId" id="pdtId" value="<?=$id?>"></input>
-                                <tr><td>&nbsp;</td><td><input type="submit" name="submit" id="submit" value="Submit"></input></td></tr>
-                            </table>
-                        </form>
-                        <h4>Need a large quantity of this item? Fill out this enquiry form and ask us for a deal! We’ll tailor a price just for you and respond ASAP.  You can also call us on 0419 774 758.</h4>
-                        <div class="clear"></div>
-                    </div>
-
+                                    </div>
+                                    <!--- DEAL QTY -->
+                                    <div id="page4" class="page" style="display:none;">
+                                        <form action ="" method ="post" enctype="multipart/form-data" onsubmit="return validate();">
+                                            <table class="form-listing">
+                                                <tr ><td width="30%">ProductDetails:</td><td width="70%"><textarea class="textfield1" disabled><?=$productDesc?></textarea>
+                                                <input type="hidden" id="desc" name="desc" value="<?=$productDesc?>">
+                                                </td></tr>
+                                                <tr><td>Quantity:</td><td><input type="text" name="qty" id="qty" class="textfield1"></input></td></tr>
+                                                <tr><td>Name:</td><td><input type="text" name="name" id="name1" class="textfield1"></input></td></tr>
+                                                <tr><td>Phone:</td><td><input type="text" name="phone" id="phone1" class="textfield1"></input></td></tr>
+                                                <tr><td>Email:</td><td><input type="text" name="email" id="email1" class="textfield1"></input></td></tr>
+                                                <tr><td>Spam protection:</td><td>Please verify that you are human by entering this code into the field before submitting: <span class="asterisk">*</span>
+                                                <img src="randomImage.php" border="0" align="absmiddle"/><br /><input type="text" name="security" id="security" class="textfield1" style="width:100px;margin-top:3px;"/>
+                                                </td></tr>
+                                                <input type ="hidden" name="pdtId" id="pdtId" value="<?=$id?>"></input>
+                                                <tr><td>&nbsp;</td><td><input type="submit" name="submit" id="submit" value="Submit"></input></td></tr>
+                                            </table>
+                                        </form>
+                                        <h4>Need a large quantity of this item? Fill out this enquiry form and ask us for a deal! We’ll tailor a price just for you and respond ASAP.  You can also call us on 0419 774 758.</h4>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>        
                 </div>
                 <div id="image" class="image">
                     <!-- image -->   

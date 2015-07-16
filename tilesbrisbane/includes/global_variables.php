@@ -39,6 +39,16 @@ $_shop_lastname = $_SESSION['_shop_lastname'] = 'Chong';
 $_shop_email = $_SESSION['_shop_email'] = 'richard@dmwcreative.com.au';
 
 $_shop_total_cart = 0;
+//////////Order Id ///////////////////////
+if(!isset($_COOKIE['_shop_total_cart'])) {
+    $cooke1 = setcookie('_shop_total_cart', 0,time()+3600*24,'/');    
+}
+else
+{
+     $cooke1 =  $_COOKIE["_shop_total_cart"];
+}
+
+//////////////////////////////////////////
 $temp_result_cart = mysql_query("SELECT * FROM shop_cart WHERE user_id='$_shop_user_id' AND qty>0 AND is_active='1'");
 while($temp_row_cart = mysql_fetch_array($temp_result_cart)) {
 	$temp_cart_item_code = $temp_row_cart['item_code'];
@@ -54,4 +64,5 @@ while($temp_row_cart = mysql_fetch_array($temp_result_cart)) {
              $_shop_total_cart =   $row_cart_sum['total_qty'];
         }
 }
+
 ?>

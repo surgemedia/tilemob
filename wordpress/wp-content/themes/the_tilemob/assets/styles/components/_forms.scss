@@ -13,15 +13,7 @@
 		margin: 0.2em;
 		vertical-align: top;
 	  }
-	  input, textarea {
-	  	font-weight: normal;
-	  	padding: 0.5em;
-	  	outline: none;
-	  }
 	  
-	  input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea:active, input:visited, textarea:visited {
-	  	border-color: $red;
-	  }
 	}
 	.text-right {
 		span {
@@ -48,5 +40,154 @@
 		input[type="submit"] {
 	  		display: none;
 	  	}
+	}
+}
+input, textarea {
+	  	font-weight: normal;
+	  	padding: 0.5em;
+	  	outline: none;
+}
+	  
+input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea:active, input:visited, textarea:visited {
+	  	border-color: $red;
+}
+.retrieve-form-fields {
+	border-left: 0 !important;
+    padding: 0 !important;
+	p {
+	    width: 45%;
+	    float: left;
+	    margin-right: 1em;
+	    input {
+	    	width: 100%;
+	    }
+	}
+	input[type="submit"] {
+		width: auto;
+	}
+	.text-right {
+		float: none;
+  		width: auto;
+	}
+}
+.booking-form {
+	padding: 1em 10em;
+	.row:nth-child(1) {
+	  border-top: 1px solid $grey-lighter;
+	  padding-top: 3em;
+	}
+	h4 {
+		color: $red;
+	}
+	h4:before {
+		content: "";
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 7px solid;
+        font-size: 0px;
+        vertical-align: middle;
+        margin-right: 5px;
+	}
+	
+	form {
+        .row {
+		    border-bottom: 1px solid #fff;
+		    > div {
+		    	padding: 0;
+		    	border-right: 1px solid #fff;
+		    }
+		}
+	    div {
+		    background-color: $grey-lighter;
+		}
+	}
+	.form-content {
+		padding: 1em;
+		sup {
+		    color: #EF3E34;
+		    font-size: 1.1em;
+		    top: .5em;
+		    margin: .2em;
+		    vertical-align: top;
+		}
+		p {
+		    font-weight: 700;
+		    vertical-align: top;
+		}
+		textarea {
+			height: 5em;
+		}
+		.comments {
+			textarea {
+				height: 8em;
+				width: 90%;
+			}
+			span {
+				margin: 0;
+			}
+		}
+		span {
+		    margin-left: 2em;
+		}
+		input, textarea, select {
+			width: 55%;
+		}
+		input[type="checkbox"] {
+			width: auto;
+		}
+		.booking-time {
+			select {
+				width: auto;
+			}
+			> span {
+				display: inline-block;
+				width: 55%;
+  				text-align: left;
+  				span {
+  					margin: 0;
+  				}
+			}
+		}
+		#residential_row, #commercial_row {
+		    float: right;
+		    border: 1px solid $grey-light;
+		    padding: 0.5em; 
+		    text-align: left;
+		    width: 100%;
+		    display: none;
+		}
+		#commercial_row {
+		    text-align: center;
+		}
+		.tiles {
+			span {
+				margin: 0;
+				display: inline-block;
+			}
+			.wpcf7-list-item {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+	.row-cell {
+	    width: 50%;
+	    float: left;
+	}
+	.address { 
+		p {
+			margin: 0;
+			padding: 0;
+		    line-height: 20px;
+		}
+	    .black-span {
+		    display: inline-block;
+		    background-color: #000;
+		    color: #fff;
+		    padding: 0.1em 0.5em;
+		}
+		span {
+			margin: 0;
+		}
 	}
 }

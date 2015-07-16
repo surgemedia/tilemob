@@ -6,5 +6,5 @@
                               endif;
                           ?>
                         </nav>
-                        <img class="col-lg-12"  src="images/02.jpg">
+                        <img class="col-xs-12"  src="images/02.jpg">
 </div>

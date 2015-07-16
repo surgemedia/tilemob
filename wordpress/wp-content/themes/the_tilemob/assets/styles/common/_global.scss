@@ -9,7 +9,15 @@
 .mrg-top-zero {
 	margin-top: 0;
 }
-
+.translateY-37 {
+		@include translateY(37%);
+}
+.translateY-106 {
+		@include translateY(106%);
+}
+.translateY-400 {
+		@include translateY(400%);
+}
 /*==========================================
 =            Background Classes            =
 ==========================================*/

@@ -18,7 +18,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
         ?>
         <?php get_template_part('templates/head'); ?>
     </head>
-    <body class='grey_bg' ?>>
+    <body class='grey_bg'>
         <!--[if lt IE 9]>
                     <div class="alert alert-warning">
             <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -31,6 +31,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
         <div class="wrap container" role="document">
             <div class="content row">
                 <main class="main" role="main">
+                        <?php include('includes/shop-navigation.php'); ?>
                     <div class="clearfix white_bg">
                         <div class="col-lg-4">
                             <?php include('includes/finder.php'); ?>

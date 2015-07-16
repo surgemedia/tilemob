@@ -17,5 +17,5 @@
           endif;
       ?>
     </nav>
-    <img class="col-lg-12"  src="<?php the_field('banner') ?>">
+    <img class="col-xs-12"  src="<?php the_field('banner') ?>">
 </div>

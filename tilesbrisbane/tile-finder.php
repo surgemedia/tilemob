@@ -71,7 +71,7 @@ include('includes/requests.php');
                                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).',Wall Tile*\' IN BOOLEAN MODE) AND (`Use`="FLOOR&WALL" OR `Use`="INT&EXT") AND';
                     
                                 }
-                               else if($search_keywords == "Pool" || $search_keywords=="Pool")
+                               else if($search_keywords == "Pool" || $search_keywords=="pool")
                                 {
                                     $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`,`Heading`,`Use`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Heading`="POOL" OR `Use`="POOL") AND';
                     

@@ -5,7 +5,7 @@ function careers() {
 	$labels = array(
 		'name'                => _x( 'Careers', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'Career', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Career', 'text_domain' ),
+		'menu_name'           => __( 'Careers', 'text_domain' ),
 		'name_admin_bar'      => __( 'Career', 'text_domain' ),
 		'parent_item_colon'   => __( 'Career', 'text_domain' ),
 		'all_items'           => __( 'All Careers', 'text_domain' ),
