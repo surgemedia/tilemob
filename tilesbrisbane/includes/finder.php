@@ -112,7 +112,7 @@
 				?>
 			</select>
             <div>
-            <div class="field_title">Set max price ( in m<sup>2</sup> or pcs )</div>
+            <div class="field_title">Set max price</div>
             <div class="slider" style="margin-left:0px;"></div>
             <input type="text" data-slider="true" id="txtPriceRange" data-slider-range="0,500" data-slider-step="10">
             <input type="hidden" name="pricerange" id="pricerange" class="output" />
@@ -300,7 +300,10 @@
   </script>
  <script type="text/javascript">
  $(document).ready(function(){
-	 
+	 $("#txtPriceRange-slider").on('click',function(){
+	 	var price = $("span.output").text();
+		$("#pricerange").val(price);
+	 });
 	 var pr = $("#priceR").val();
 	 
 	/* var pr = GetQueryStringParams('pr');
