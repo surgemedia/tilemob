@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Media from FTP\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Katsushi Kawamori <dodesyoswift312@gmail.com>\n"
+"Language-Team:  <dodesyoswift312@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"Language: ja\n"
+
+msgid "Search & Register"
+msgstr "検索＆登録"
+
+msgid "Exclude file"
+msgstr "除外ファイル"
+
+msgid "Register to media library from files that have been uploaded by FTP."
+msgstr "FTPでアップロードされたファイルからメディアライブラリに登録します。"
+
+msgid "These files was registered to the media library."
+msgstr "これらのファイルは、メディアライブラリに登録されました。"
+
+msgid "There is no file that is not registered in the media library."
+msgstr "メディアライブラリに登録されていないファイルはありません。"
+
+msgid ""
+"These files is a file that is not registered in the media library. And can "
+"be registered."
+msgstr ""
+"これらのファイルは、メディアライブラリに登録されていないファイルです。そして"
+"登録が可能です。"
+
+msgid ""
+"Can not register to directory for unwritable, because generating a thumbnail "
+"in the case of image files. Must be writable(757 or 777) of attributes of "
+"the directory that contains the files required for registration."
+msgstr ""
+"画像ファイルの場合、サムネイルを生成するので、書き込み不可のディレクトリに登"
+"録することはできません。登録に必要なファイルを含むディレクトリの属性が書き込"
+"み可能（757または777）である必要があります。"
+
+msgid ""
+"Can not register to directory for unwritable, because to delete the previous "
+"file by converting in MD5 format from multi-byte file names. Must be "
+"writable(757 or 777) of attributes of the directory that contains the files "
+"required for registration."
+msgstr ""
+"マルチバイトのファイル名から、MD5形式で変換することによって、以前のファイルを"
+"削除するため、書き込み不可のディレクトリに登録することはできません。登録に必"
+"要なファイルを含むディレクトリの属性が書き込み可能（757または777）である必要"
+"があります。"
+
+msgid "Regular expression is possible."
+msgstr "正規表現が可能です。"
+
+msgid "Update to use of the current date/time."
+msgstr "現在の日時で更新"
+
+msgid ""
+"Get the date/time of the file, and updated based on it. Change it if "
+"necessary."
+msgstr "ファイルの日時を取得し、それに基づいて更新。必要に応じて変更。"
+
+msgid "Get by priority if there is date and time of the Exif information."
+msgstr "Exif情報の日時がある場合に優先的に取得する。"
+
+msgid "Schedule"
+msgstr "スケジュール"
+
+msgid "Set the schedule."
+msgstr "スケジュールを設定します。"
+
+msgid "Will take some time until the [Next Schedule] is reflected."
+msgstr "「次のスケジュール」が反映されるまでしばらく時間がかかります。"
+
+msgid "Next Schedule:"
+msgstr "次のスケジュール:"
+
+msgid "Apply Schedule"
+msgstr "スケジュールを適用"
+
+msgid "hourly"
+msgstr "１時間毎"
+
+msgid "twice daily"
+msgstr "１日２回"
+
+msgid "daily"
+msgstr "１日１回"
+
+msgid ""
+"Please make a donation if you like my work or would like to further the "
+"development of this plugin."
+msgstr ""
+"私はプラグインの開発とサポートを継続させるために寄付を必要としています。"
+
+msgid "The number of seconds a script is allowed to run."
+msgstr "スクリプトが実行可能な秒数。"
+
+msgid "The max_execution_time value defined in the php.ini."
+msgstr "php.iniで定義されたmax_execution_timeの値。"
+
+msgid "The execution of the command line."
+msgstr "コマンドラインでの実行"
+
+msgid "command line argument list"
+msgstr "コマンドライン引数リスト"
+
+msgid "Command-line"
+msgstr "コマンドライン"
+
+msgid "Search directory"
+msgstr "検索ディレクトリ"
+
+msgid "Date time settings"
+msgstr "日時の設定"
+
+msgid "If the argument is empty, use the set value of the management screen."
+msgstr "引数が空の場合は、管理画面の設定値が使用されます。"
+
+msgid "Example:"
+msgstr "例:"
+
+msgid "Command-line works the at plug-in deactivate."
+msgstr "コマンドラインは、プラグインが停止している場合でも動作します。"
+
+msgid "All types"
+msgstr "全てのタイプ"
+
+msgid "All extensions"
+msgstr "全ての拡張子"
+
+msgid "File extension"
+msgstr "ファイル拡張子"
+
+msgid ""
+"Please [mediafromftpcmd.php] rewrite the following manner.(the line 55 from "
+"line 48)"
+msgstr ""
+"【mediafromftpcmd.php]を、以下のように書き換えてください。（48行から55行）"
+
+msgid "Execution time"
+msgstr "実行時間"
+
+msgid "Reviews"
+msgstr "レビュー"
+
+msgid "Please check with the server administrator."
+msgstr "サーバー管理者に確認してください。"
+
+msgid "Register the command-line to the server cron."
+msgstr "サーバのcronへコマンドラインを登録"
+
+msgid "Run every 10 minutes."
+msgstr "10分毎に実行します。"
+
+msgid "command line switch"
+msgstr "コマンドラインスイッチ"
+
+msgid "Hides the display of the log."
+msgstr "ログを表示しない。"
+
+msgid "Thumbnails Cache"
+msgstr "サムネイルのキャッシュ"
+
+msgid "No Thumbnails Cache"
+msgstr "サムネイルのキャッシュはありません"
+
+msgid "Remove Thumbnails Cache"
+msgstr "サムネイルのキャッシュを削除"
+
+msgid ""
+"Remove the cache of thumbnail used in the search screen. Please try out if "
+"trouble occurs in the search screen. It might become normal."
+msgstr ""
+"検索画面で使用されるサムネイルのキャッシュを削除します。トラブルが検索画面に"
+"発生した場合に試してみてください。正常になることがあります。"

@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Media from FTP\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Katsushi Kawamori <dodesyoswift312@gmail.com>\n"
+"Language-Team:  <dodesyoswift312@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+
+msgid "Search & Register"
+msgstr ""
+
+msgid "Exclude file"
+msgstr ""
+
+msgid "Register to media library from files that have been uploaded by FTP."
+msgstr ""
+
+msgid "These files was registered to the media library."
+msgstr ""
+
+msgid "There is no file that is not registered in the media library."
+msgstr ""
+
+msgid ""
+"These files is a file that is not registered in the media library. "
+"And can be registered."
+msgstr ""
+
+msgid ""
+"Can not register to directory for unwritable, because generating a thumbnail "
+"in the case of image files. Must be writable(757 or 777) of attributes of "
+"the directory that contains the files required for registration."
+msgstr ""
+
+msgid ""
+"Can not register to directory for unwritable, because to delete the previous "
+"file by converting in MD5 format from multi-byte file names. Must be "
+"writable(757 or 777) of attributes of the directory that contains the files "
+"required for registration."
+msgstr ""
+
+msgid "Regular expression is possible."
+msgstr ""
+
+msgid "Update to use of the current date/time."
+msgstr ""
+
+msgid ""
+"Get the date/time of the file, and updated based on it. Change it if "
+"necessary."
+msgstr ""
+
+msgid "Get by priority if there is date and time of the Exif information."
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Set the schedule."
+msgstr ""
+
+msgid "Will take some time until the [Next Schedule] is reflected."
+msgstr ""
+
+msgid "Next Schedule:"
+msgstr ""
+
+msgid "Apply Schedule"
+msgstr ""
+
+msgid "hourly"
+msgstr ""
+
+msgid "twice daily"
+msgstr ""
+
+msgid "daily"
+msgstr ""
+
+msgid "Please make a donation if you like my work or would like to further the development of this plugin."
+msgstr ""
+
+msgid "The number of seconds a script is allowed to run."
+msgstr ""
+
+msgid "The max_execution_time value defined in the php.ini."
+msgstr ""
+
+msgid "The execution of the command line."
+msgstr ""
+
+msgid "command line argument list"
+msgstr ""
+
+msgid "Command-line"
+msgstr ""
+
+msgid "Search directory"
+msgstr ""
+
+msgid "Date time settings"
+msgstr ""
+
+msgid "If the argument is empty, use the set value of the management screen."
+msgstr ""
+
+msgid "Example:"
+msgstr ""
+
+msgid "Command-line works the at plug-in deactivate."
+msgstr ""
+
+msgid "All types"
+msgstr ""
+
+msgid "All extensions"
+msgstr ""
+
+msgid "File extension"
+msgstr ""
+
+msgid "Please [mediafromftpcmd.php] rewrite the following manner.(the line 55 from line 48)"
+msgstr ""
+
+msgid "Execution time"
+msgstr ""
+
+msgid "Reviews"
+msgstr ""
+
+msgid "Please check with the server administrator."
+msgstr ""
+
+msgid "Register the command-line to the server cron."
+msgstr ""
+
+msgid "Run every 10 minutes."
+msgstr ""
+
+msgid "command line switch"
+msgstr ""
+
+msgid "Hides the display of the log."
+msgstr ""
+
+msgid "Thumbnails Cache"
+msgstr ""
+
+msgid "No Thumbnails Cache"
+msgstr ""
+
+msgid "Remove Thumbnails Cache"
+msgstr ""
+
+msgid "Remove the cache of thumbnail used in the search screen. Please try out if trouble occurs in the search screen. It might become normal."
+msgstr ""
