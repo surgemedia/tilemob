@@ -14,7 +14,7 @@
             'post_type'              => array( 'project' ),
             'pagination'             => false,
             'order'                  => 'DESC',
-            'orderby'                => 'date',
+            'orderby'                => 'modified',
             'p'                      => $featured_id,
             
         );
@@ -48,7 +48,7 @@
             'post_type'              => array( 'project' ),
             'pagination'             => false,
             'order'                  => 'DESC',
-            'orderby'                => 'date',
+            'orderby'                => 'modified',
             'post__not_in' => array($featured_id),
             
         );
