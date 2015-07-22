@@ -15,6 +15,7 @@ include("includes/detail-db-call.php");
     <head>
         <meta name="google-site-verification" content="aQXedls-hbPpeEDjYSu_ZRZC-Z_5Ty9KYbUeocNoxGE" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>The Tile Mob | Shop</title>
         <?php
                         include('includes/attach_styles.php'); //Cascading Style Sheets
                         include('includes/attach_scripts.php'); //Javascripts and scripts

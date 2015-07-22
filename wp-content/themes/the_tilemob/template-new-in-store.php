@@ -14,7 +14,7 @@
             'post_type'              => array( 'new_in_store' ),
             'pagination'             => false,
             'order'                  => 'DESC',
-            'orderby'                => 'date',
+            'orderby'                => 'modified',
             'p'                      => $featured_id,
 
 
@@ -50,7 +50,7 @@
             'post_type'              => array( 'new_in_store' ),
             'pagination'             => false,
             'order'                  => 'DESC',
-            'orderby'                => 'date',
+            'orderby'                => 'modified',
             'post__not_in' => array($featured_id),
             'posts_per_page' => -1,
             
