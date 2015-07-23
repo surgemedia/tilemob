@@ -217,7 +217,7 @@ include("includes/detail-db-call.php");
                                 <div id="details" class="details">
                                     <!-- PRICING, QTY and button -->
                                     <div id="pricing" class="pricing">
-                                        <div id="price" class="price">$<?php echo number_format($item_buy,2).'<span>per '.$item_Unit.'</span>'; ?>
+                                        <div id="price" class="price hide">$<?php echo number_format($item_buy,2).'<span>per '.$item_Unit.'</span>'; ?>
                                             <input type="hidden" name="defaultprice" id="defaultprice" value="<?=number_format($item_buy,2)?>"></input>
                                             <!--  <div class="price_buy">Buy $<?=number_format($item_buy,2)?><?=$item_unit?></div>
                                             <div class="price_rrp">RRP $<?=number_format($item_rrp,2)?><?=$item_unit?></div>
@@ -249,7 +249,7 @@ include("includes/detail-db-call.php");
                                             <?php if($item_PcsBox > 0){?>This order comes in <br/><b><span id="vboxes"></span> boxes</b> (<?=$item_PcsBox?> pcs per box) <br/>Total price = <b>$<span id="totlprice"></span></b><?php }?>
                                             <div class="clear"></div>
                                         </div>-->
-                                        <div id="item_calculation" class="item_calculation">
+                                        <div id="item_calculation" class="item_calculation hide">
                                             Total price = <b>$<span id="totlprice"></span></b>
                                             <div class="clear"></div>
                                         </div>
@@ -257,7 +257,7 @@ include("includes/detail-db-call.php");
                                                                                             }
                                                                                             else {
                                         ?>
-                                        <div id="item_calculation" class="item_calculation">
+                                        <div id="item_calculation" class="item_calculation hide">
                                             <?php if($item_M2Box!=0){?> This order comes in <br/><b><span id="vboxes"></span> boxes</b> (<?=$item_M2Box?> m2 per box)<br/><?php if($item_Unit_m2=="M2"){?>Total m2=<span id="totalm2"> </span><?php }?><br/>Total price = <b>$<span id="totlprice"></span></b><?php } ?><?php if($item_M2Box==0){?>Total price = <b>$<span id="totlprice"><?=number_format($item_buy,2)?></span></b><?php }?>
                                             <div class="clear"></div>
                                         </div>
@@ -302,12 +302,12 @@ include("includes/detail-db-call.php");
 
                                 ?>
                                 <div class="clear"></div>
-                                <div class="price_info">
+                                <div class="price_info hide">
                                     <div class="price_rrp">RRP $<?=number_format($item_rrp,2)?><?=$item_Unit?></div>
                                     <div class="price_save">SAVE $<?=number_format($item_save,2)?> per <?=$item_Unit?></div>
                                 </div>
                                 <div class="clear"></div>
-                                <a href="javascript:void(0);" onclick="goToProductTab(4);" class="btnBQD"> <input type="button" value="BIG QUANTITY DEALS" id="lrgqtydeals" class="btn-red"><span class="tooltip">Need a large quantity of this item? Click this button and ask us for a deal!  We’ll tailor a price just for you and respond ASAP.<span class="arrow"></span></span></a>
+                                <a href="javascript:void(0);" onclick="goToProductTab(4);" class="btnBQD"> <input type="button" value="BIG QUANTITY DEALS" id="lrgqtydeals" class="btn-red"><span class="tooltip hide">Need a large quantity of this item? Click this button and ask us for a deal!  We’ll tailor a price just for you and respond ASAP.<span class="arrow"></span></span></a>
                                 <?php if($item_Notepad2<>""){
                                                                         
                                                                                 $display   =   "style='display:block'";
@@ -645,7 +645,7 @@ include("includes/detail-db-call.php");
     <div class="size">'.$item_display_size.'</div>
     <div class="code">'.$row_related['Code'].'</div>
     <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
-    <div class="price_info">
+    <div class="price_info hide">
     <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
     <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
     <div class="price_save">SAVE $'.number_format($item_save,2).''.$item_unit.'</div>
@@ -800,7 +800,7 @@ include("includes/detail-db-call.php");
                                                                     <div class="size">'.$item_display_size1.'</div>
                                                                     <div class="code">'.$row_related['Code'].'</div>
                                                                     <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
-                                                                        <div class="price_info">
+                                                                        <div class="price_info hide">
                                                                             <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
                                                                             <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
                                                                             <div class="price_save">SAVE $'.number_format($item_save,2).''.$item_unit.'</div>

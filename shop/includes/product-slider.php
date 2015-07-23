@@ -46,7 +46,7 @@
 						<div> <img src="<?=(is_file($image1))?$image1:'images/blank.gif'?>" alt="" class="browseProductImage" border="0" title=""> </div>
 						</a>
                          
-						<p class="productName"> <a href="detail.php?id=<?=$item_id?>" title="<?=$item_name?>" class="productName"><?=$row_webitems['Desc']?><span><?=$item_display_size?> <div class="price_buy">$<?=number_format($item_buy,2).' per '.$item_unit?></div>
+						<p class="productName"> <a href="detail.php?id=<?=$item_id?>" title="<?=$item_name?>" class="productName"><?=$row_webitems['Desc']?><span><?=$item_display_size?> <div class="price_buy hide">$<?=number_format($item_buy,2).' per '.$item_unit?></div>
 								
                                                                 
                                                                </span></a> <a href="detail.php?id=<?=$item_id?>" title="<?=$item_name?>" class="enquiry">more info</a> </p>

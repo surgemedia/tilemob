@@ -54,8 +54,8 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                                 <th width="90">Thumbnail</th>
                                                 <th align="left" valign="middle">Item</th>
                                                 <th width="60" align="center" valign="middle">QTY</th>
-                                                <th width="100" align="right" valign="middle">Price</th>
-                                                <th width="100" align="right" valign="middle">Total</th>
+                                                <!--<th width="100" align="right" valign="middle">Price</th>-->
+                                                <!--<th width="100" align="right" valign="middle">Total</th>-->
                                               </tr>';
                                     while($row_cart = mysql_fetch_array($result_cart)) {
                                         // echo "<pre/>";   print_r($row_cart);
@@ -129,15 +129,15 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                             <div class="clear"></div>
                                            </div>
                                          </td>
-                                         <td align="" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
-                                         <td align="" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_item_subtotal,2).'</div></td>
+                                         <!--<td align="" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>-->
+                                         <!--<td align="" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_item_subtotal,2).'</div></td>-->
                                          </tr>';
                         }
                     }
                     $cart_string .= '
                                       </table>
                                       <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your cart. To proceed with checkout, click Checkout now.</div>
-                                      <div id="cart_total" class="cart_total"><div class="price">$'.number_format($cart_final_total,2).'</div><div class="label">TOTAL</div><div class="clear"></div></div>
+                                      <!--<div id="cart_total" class="cart_total"><div class="price">$'.number_format($cart_final_total,2).'</div><div class="label">TOTAL</div><div class="clear"></div></div>-->
                                       <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Checkout now</a></div>';
                 } else {
                                  $cart_string .= '<div class="bodytext">You have not added any items to your cart yet.</div>';
