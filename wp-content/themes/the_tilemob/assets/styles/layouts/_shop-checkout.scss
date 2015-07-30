@@ -4,6 +4,8 @@ table.form-listing {
 	}
 }
 #cart_table {
+	display: table;
+	table-layout: fixed;  
 	.thumb {
 	    margin: 0.2em;
 	}

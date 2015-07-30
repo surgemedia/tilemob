@@ -1,5 +1,5 @@
 <div id="store_categories" class="store_categories">
-	<h1>Store Categories</h1>
+	<h1>Categories</h1>
 	<ul>		
 <?php
 		$listmaterial = mysql_query("SELECT * FROM shop_material");

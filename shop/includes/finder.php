@@ -89,7 +89,7 @@
 </script>
 <div id="finder" class="finder">	
 	<div id="finder_form" class="finder_form">
-		<h1>I'm looking for tiles</h1>
+		<a href="/shop"><h1>I'm looking for tiles</h1></a>
 		<form id="searchform" name="searchform" method="post" onsubmit="">
 		<div class="field_title">Keywords</div>
 		<input type="text" id="keywords" name="keywords" value="<?php echo trim(urldecode($_GET['ke'])); ?>" class="textfield1">		
@@ -111,7 +111,7 @@
 				echo $options_string;
 				?>
 			</select>
-            <div>
+            <div class="hide">
             <div class="field_title">Set max price (per m<sup>2</sup> or pcs)</div>
             <div class="slider" style="margin-left:0px;"></div>
             <input type="text" data-slider="true" id="txtPriceRange" data-slider-range="0,500" data-slider-step="10">
@@ -131,7 +131,9 @@
 					$size_code = $row_size['Code'];
 					$selected_size = trim(urldecode($_GET['si']));
 					if($size_code==$selected_size){$option_selected=' SELECTED';}else{$option_selected='';}
-					$options_string .= '<option value="'.$size_code.'"'.$option_selected.'>'.$row_size['Description'].'</option>';
+					if($row_size['Description'] != '' && $size_code !='') {
+						$options_string .= '<option value="'.$size_code.'"'.$option_selected.'>'.$row_size['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>

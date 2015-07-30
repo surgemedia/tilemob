@@ -37,6 +37,7 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
             <div class="content row">
               
                     <main class="main" role="main">
+                            <?php include('includes/shop-navigation.php'); ?>
                      <div class="clearfix white_bg">
                      <div class="col-lg-4">
             <?php include('includes/finder.php'); ?>

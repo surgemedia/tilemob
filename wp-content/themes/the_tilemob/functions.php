@@ -29,6 +29,7 @@ $sage_includes = [
 
   //Short Codes
   'lib/short-code-address.php',  // Display Address in booking form
+  'lib/short-code-button-link.php',  // Display a link button to navigate to Shop
 
 ];
 

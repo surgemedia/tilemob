@@ -324,7 +324,7 @@ include("includes/detail-db-call.php");
                                         <div id="tab1" class="tab tbs" <?php echo $display; ?> ><a href="javascript:void(0);" onclick="goToProductTab(1);" title="OVERVIEW">OVERVIEW</a></div>
                                         <div id="tab2" class="<?php echo $activeTab; ?> tbs"><a href="javascript:void(0);" onclick="goToProductTab(2);" title="SPECS">SPECS</a></div>
                                         <div id="tab3" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(3);" title="ASK A QUESTION">ASK A QUESTION</a></div>
-                                        <div id="tab4" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(4);" title="BIG QUANTITY DEALS">BIG QTY DEALS</a></div>
+                                        <!-- <div id="tab4" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(4);" title="BIG QUANTITY DEALS">BIG QTY DEALS</a></div> -->
 
                                         <div class="clear"></div>
                                     </div>
@@ -528,7 +528,7 @@ include("includes/detail-db-call.php");
                                                     foreach($item_images as $secImages) {
                             ?>
 
-                            <li><a href="javascript:void(0);"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
+                            <li><a href="javascript:void(0);" class="lightbox"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
                             <?php }}?>
                             <!--<li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
                                                     <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>

@@ -2,7 +2,8 @@
 <div class="container header">
 
   <div class="row">
-    <div class="col-sm-6 col-lg-6">
+
+    <div class="col-sm-6 col-lg-5">
       <div class="col-sm-6 col-lg-6">
         <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('logo','option'); ?>" alt="<?php bloginfo('name');?>"></a>
       </div>
@@ -10,7 +11,8 @@
         <img src="<?php the_field('other_image','option'); ?>" alt="Since 1976">
       </div>
     </div>
-    <div class="col-sm-6 col-lg-6 contact-details">
+    <div class="col-sm-6 col-lg-7 contact-details">
+      <h1 class="site-header-title">The Ultimate Tile Source</h1>
       <div class="col-sm-8 col-md-7 col-lg-8 address">
         <?php 
           if(have_rows('address','option')):
@@ -31,12 +33,12 @@
           <ul class="style-to-nav">
             <!--<li style="border:0;"><a href="my-account.php" title="My account">My account</a></li>-->
             <?php 
-            $_shop_total_cart = $_COOKIE["_shop_total_cart"];
-            if($_shop_total_cart>0) {
-              echo '<li><a href="/shop/my-cart.php" title="My cart">My cart ( <span id="header_cart_items">'.$_shop_total_cart.'</span> items)</a></li>';
-            } else { echo '<li><a href="/shop/my-cart.php" title="My cart">My cart (<span id="header_cart_items">0</span> items)</a></li>'; }
+            // $_shop_total_cart = $_COOKIE["_shop_total_cart"];
+            // if($_shop_total_cart>0) {
+              // echo '<li><a href="/shop/my-cart.php" title="My cart">My cart ( <span id="header_cart_items">'.$_shop_total_cart.'</span> items)</a></li>';
+            // } else { echo '<li><a href="/shop/my-cart.php" title="My cart">My cart (<span id="header_cart_items">0</span> items)</a></li>'; }
             ?>    
-            <li><a href="/shop/checkOut.php" title="Checkout" style="border:0;">Checkout >></a></li>
+            <!-- <li><a href="/shop/checkOut.php" title="Checkout" style="border:0;">My Wishlist >></a></li> -->
           </ul>
           <div class="clear"></div>
         </div>
