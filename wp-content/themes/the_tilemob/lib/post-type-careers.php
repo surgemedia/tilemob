@@ -1,13 +1,13 @@
 <?php 
 // Register Custom Post Type
-function careers() {
+function our_careers() {
 
 	$labels = array(
-		'name'                => _x( 'Careers', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Career', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Careers', 'text_domain' ),
-		'name_admin_bar'      => __( 'Career', 'text_domain' ),
-		'parent_item_colon'   => __( 'Career', 'text_domain' ),
+		'name'                => _x( 'Our Careers', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Our Career', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Our Careers', 'text_domain' ),
+		'name_admin_bar'      => __( 'Our Career', 'text_domain' ),
+		'parent_item_colon'   => __( 'Our Career', 'text_domain' ),
 		'all_items'           => __( 'All Careers', 'text_domain' ),
 		'add_new_item'        => __( 'Add New Career', 'text_domain' ),
 		'add_new'             => __( 'Add New Career', 'text_domain' ),
@@ -20,11 +20,10 @@ function careers() {
 		'not_found_in_trash'  => __( 'Career Not found in Trash', 'text_domain' ),
 	);
 	$args = array(
-		'label'               => __( 'post_type', 'text_domain' ),
+		'label'               => __( 'our_careers', 'text_domain' ),
 		'description'         => __( 'Post Type Description', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'supports'            => array( 'title', ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -37,11 +36,11 @@ function careers() {
 		'has_archive'         => true,		
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability_type'     => 'post',
 	);
-	register_post_type( 'careers', $args );
+	register_post_type( 'our_careers', $args );
 
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'careers', 0 );
+add_action( 'init', 'our_careers', 0 );

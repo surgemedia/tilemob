@@ -196,17 +196,17 @@ function addToCartPdtDetails(user_id,shop_order_id, user_session, item_code, ite
 	var ajaxRequest = startAjax();	
 	ajaxRequest.onreadystatechange = function() {
 		if (ajaxRequest.readyState==4 && ajaxRequest.status==200) {
-			// if(ajaxRequest.responseText!='') { //Ajax response found
-				// document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
-                                // console.log(ajaxRequest.responseText);
-                                // document.cookie="_shop_total_cart="+eval(ajaxRequest.responseText)+"; path=/";
+			if(ajaxRequest.responseText!='') { //Ajax response found
+				document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
+                                console.log(ajaxRequest.responseText);
+                                document.cookie="_shop_total_cart="+eval(ajaxRequest.responseText)+"; path=/";
                                 
 
 				//alert(ajaxRequest.responseText);
                                 //return false;
                                 //window.location="http://180.235.128.82/~titi2698/cart.php";
                                 window.location="cart.php";
-			// }
+			}
 		}
 	}
 	ajaxRequest.open('GET', request_string, true);

@@ -39,7 +39,7 @@ if((!empty($_GET['user_id'])||!empty($_GET['user_session']))&&!empty($_GET['shop
                         $sql = "SELECT count(*) as total_qty FROM shop_cart WHERE user_id='$user_id' AND is_active='1'";
 			$result_cart_sum = mysql_query($sql);
 			if($row_cart_sum = mysql_fetch_array($result_cart_sum)) {
-				// echo 'document.getElementById(\'header_cart_items\').innerHTML=\''.$row_cart_sum['total_qty'].'\';';
+				echo 'document.getElementById(\'header_cart_items\').innerHTML=\''.$row_cart_sum['total_qty'].'\';';
                                                                
 			}
 		}

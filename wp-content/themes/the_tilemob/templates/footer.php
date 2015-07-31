@@ -14,7 +14,7 @@
                     if(have_rows('footer_navigation','option')):
                         while(have_rows('footer_navigation','option')): the_row();
                         ?>
-                            <li><a href="<?php the_sub_field('nav_link','option');?>" target="_blank"><?php the_sub_field('nav_link_text','option');?></a></li>
+                            <li><a href="<?php the_sub_field('nav_link','option');?>" ><?php the_sub_field('nav_link_text','option');?></a></li>
                         <?php
                         endwhile;
                     endif;

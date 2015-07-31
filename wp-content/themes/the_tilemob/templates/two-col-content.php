@@ -7,43 +7,42 @@
     <div class="col-lg-6">
         <?php get_template_part('templates/two-col', 'h2'); ?>
         <?php the_field('second_content') ?>
-
 		<?php if (get_the_title()=="Careers")
+		
 			{
+		?>
+			<ul>
+		<?php
 				// WP_Query arguments
 				$args = array (
-					'post_type'              => array( 'careers' ),
+					'post_type'              => array( 'our_careers' ),
 				);
-				
+
 				// The Query
 				$query = new WP_Query( $args );
-				
 				// The Loop
 				if ( $query->have_posts() ) {
-					echo "<ul>";
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						// do something
-						debug(get_post);
-				?>
-					<li><a target="_blank" href="">
-                            
-                            <?php the_title() ?>
-                        </a></li>
-
-				<?php
+		?>
+					<li><a href="<?php the_permalink(); ?>">
+		<?php
+						the_title();
+						// debug(get_post());
+		?>
+					</a></li>
+		<?php
 
 					}
-				echo "</ul>";
 				} else {
-					echo  "no posts found";
+					// no posts found
 				}
-				
+
 				// Restore original Post Data
 				wp_reset_postdata();
 			}
-
-		 ?>
+		
+		?>
 		
     </div>
 </div>

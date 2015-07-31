@@ -135,16 +135,20 @@
 	        .big_addtocart {
 		        position: relative;
 			    display: block;
-			    width: 101px;
-			    height: 1px;
+			    width: 130px;
+			    // height: 1px;
 			    float: right;
 			    margin-top: 1px;
-			    padding-top: 27px;
+			    // padding-top: 27px;
 			    border: 0;
-			    background: url(/shop/images/big-addtocart.jpg) top left no-repeat;
+			    // background: url(/shop/images/big-addtocart.jpg) top left no-repeat;
 			    overflow: hidden;
 			    clear: right;
 			    color: #fff;
+			    background-color: #e61115;
+    			font-size: 14px;
+    			font-weight: bold;
+    			font-style: italic;
 			}
 			#flag {
 			    float: right;

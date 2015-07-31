@@ -65,7 +65,7 @@
                 <h1 class="mrg-top-zero"><?php the_title(); ?></h1>
                 <h2 class="subheading">
                 <!-- Subheading  acf -->
-                <?php the_field('subheading'); ?> >
+                <?php the_field('subheading'); ?> 
                 </h2>
                 <p><?php the_content(); ?></p>
             </div>

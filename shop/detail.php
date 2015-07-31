@@ -268,7 +268,7 @@ include("includes/detail-db-call.php");
                                     </div>
                                     <input type="hidden" name="totprice" id="totprice"></input>
                                     <input type="hidden" name="totm2" id="totm2"></input>
-                                    <input type="submit" id="additemtocart" name="additemtocart" value="Add to cart" class="big_addtocart">
+                                    <input type="submit" id="additemtocart" name="additemtocart" value="Add to Collection" class="big_addtocart">
                                     <?php
                                                             //flag images
                                                             

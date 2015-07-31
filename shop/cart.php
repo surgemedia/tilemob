@@ -48,7 +48,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                   $result_cart = mysql_query("SELECT * FROM shop_cart WHERE user_id='$_shop_user_id' AND qty>0 AND is_active='1'");
                                   if($_shop_total_cart>0) {
                                       $cart_string .= '
-                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Checkout now</a></div>
+                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection for a Quote</a></div>
                                       <table id="cart_table" width="100%" class="cart_table">
                                               <tr>
                                                 <th width="90">Thumbnail</th>
@@ -136,9 +136,9 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                     }
                     $cart_string .= '
                                       </table>
-                                      <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your cart. To proceed with checkout, click Checkout now.</div>
+                                      <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your wishlist. To proceed with quote, click Submit my collection for a Quote.</div>
                                       <!--<div id="cart_total" class="cart_total"><div class="price">$'.number_format($cart_final_total,2).'</div><div class="label">TOTAL</div><div class="clear"></div></div>-->
-                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Checkout now</a></div>';
+                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection for a Quote</a></div>';
                 } else {
                                  $cart_string .= '<div class="bodytext">You have not added any items to your cart yet.</div>';
                 }

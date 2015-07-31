@@ -36,7 +36,7 @@
             "label": "Location",
             "name": "location",
             "prefix": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -47,9 +47,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
             "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
             "readonly": 0,
             "disabled": 0
         },
@@ -58,7 +58,7 @@
             "label": "Description",
             "name": "description",
             "prefix": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -68,19 +68,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop",
-            "readonly": 0,
-            "disabled": 0
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         },
         {
             "key": "field_55961e07111aa",
-            "label": "Description",
-            "name": "description",
+            "label": "General Description",
+            "name": "general_description",
             "prefix": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -90,19 +87,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop",
-            "readonly": 0,
-            "disabled": 0
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         },
         {
             "key": "field_55961e24111ab",
             "label": "Duties",
             "name": "duties",
             "prefix": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -112,19 +106,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop",
-            "readonly": 0,
-            "disabled": 0
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         },
         {
             "key": "field_55961e33111ac",
             "label": "Qualifications",
             "name": "qualifications",
             "prefix": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -134,12 +125,9 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop",
-            "readonly": 0,
-            "disabled": 0
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         },
         {
             "key": "field_55961e44111ad",
@@ -166,7 +154,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "careers"
+                "value": "our_careers"
             }
         ]
     ],
@@ -176,5 +164,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435901985
+    "modified": 1438300294
 }

@@ -1,0 +1,59 @@
+{
+    "key": "group_55bac23581b2b",
+    "title": "General Contents",
+    "fields": [
+        {
+            "key": "field_55bac25045d4d",
+            "label": "Career Post Image",
+            "name": "career_post_image",
+            "prefix": "",
+            "type": "image",
+            "instructions": "Image to display below every career description in Careers Post Page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_55bac29e45d4e",
+            "label": "Career Post Text",
+            "name": "career_post_text",
+            "prefix": "",
+            "type": "wysiwyg",
+            "instructions": "Text to display below every career description in Careers Post Page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1438302909
+}

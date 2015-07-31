@@ -33,9 +33,9 @@ include('includes/requests.php');
               
                     <main class="main" role="main">
                      <div class="clearfix white_bg">
-                     <div class="thankyou">
+                     <div class="col-xs-12 thankyou">
                         <h2>Thank you</h2> 
-                        <p>Your payment has been successfully completed.</p>
+                        <p>Your Request for quote has been successfully completed.</p>
                         <a href="index.php" class="btn-red">Go to Home</a>
                     </div>
                     </div>
@@ -49,4 +49,8 @@ include('includes/requests.php');
                     </div><!-- /.wrap -->
 
                 </body>
+                <script type="text/javascript">
+                    document.cookie="_shop_total_cart=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+                    document.getElementById('header_cart_items').innerText=0;
+                </script>
             </html>

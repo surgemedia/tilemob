@@ -25,7 +25,7 @@ if($_shop_total_cart>0) {
 	} 
        
 /////////////////////////////////////////////////////////////////////
-if($_POST['submit'] == "Submit for Quote")
+if($_POST['submit'] == "Place Order")
 {
    $firstName = $_POST['firstname'];
    $lastname  = $_POST['lastname'];
@@ -44,7 +44,7 @@ if($_POST['submit'] == "Submit for Quote")
 
  
 //$p->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';     // paypal url
-// $p->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';   // testing paypal url
+$p->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';   // testing paypal url
  
 $this_script = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
  
@@ -53,32 +53,32 @@ $this_script = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
  
 switch ($_GET['action']) {
  
-   // case 'process':      // Process and order...
+   case 'process':      // Process and order...
  
-   //    $p->add_field('business', "sean@tilemob.com.au");
-   //    $p->add_field('return', $this_script.'?action=success');
-   //    $p->add_field('cancel_return', $this_script.'?action=cancel');
-   //    $p->add_field('notify_url', $this_script.'?action=ipn');
-   //    $p->add_field('custom', $_shop_order_id);//if any custom id needs to pass
-	  // $p->add_field('item_name', 'Shopping cart payment');
-   //    $p->add_field('amount', $amount);
-   //    $p->add_field('currency_code', 'AUD');
-   //    $p->submit_paypal_post(); // submit the fields to paypal
-   //    //$p->dump_fields();      // for debugging, output a table of all the fields
-   //    break;
+      $p->add_field('business', "sean@tilemob.com.au");
+      $p->add_field('return', $this_script.'?action=success');
+      $p->add_field('cancel_return', $this_script.'?action=cancel');
+      $p->add_field('notify_url', $this_script.'?action=ipn');
+      $p->add_field('custom', $_shop_order_id);//if any custom id needs to pass
+	  $p->add_field('item_name', 'Shopping cart payment');
+      $p->add_field('amount', $amount);
+      $p->add_field('currency_code', 'AUD');
+      $p->submit_paypal_post(); // submit the fields to paypal
+      //$p->dump_fields();      // for debugging, output a table of all the fields
+      break;
  
-      case 'process':      // Order was successful...
+      case 'success':      // Order was successful...
   // print_r($_REQUEST);
    
           $_shop_order_id = $_REQUEST['_shop_order_id'];
           $orderId        = $_REQUEST['custom'];
           $_shop_user_id  = $_REQUEST['_shop_user_id'];
-          // $payment_status = ($_REQUEST['payment_status']=="Completed")?"active":"";
-          // if($_shop_order_id)
-          // {
+          $payment_status = ($_REQUEST['payment_status']=="Completed")?"active":"";
+          if($_shop_order_id)
+          {
               
-          //     mysql_query("UPDATE order_details SET payment_order_id ='$_shop_order_id',payment_status ='active' WHERE order_id ='$_shop_order_id'");
-          // }
+              mysql_query("UPDATE order_details SET payment_order_id ='$_shop_order_id',payment_status ='active' WHERE order_id ='$_shop_order_id'");
+          }
           
           
           /////////////////////////Send Order details/////////////////////////////////

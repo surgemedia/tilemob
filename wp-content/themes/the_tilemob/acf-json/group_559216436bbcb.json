@@ -28,6 +28,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "our_careers"
+            }
         ]
     ],
     "menu_order": 0,
@@ -36,5 +43,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1436163153
+    "modified": 1438304111
 }

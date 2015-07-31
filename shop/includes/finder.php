@@ -276,8 +276,8 @@
 			</select>			
 			<div class="clear"></div>
 		</div>
-		<input type="button" id="restfields" name="restfields" value="Reset form" onclick="resetTileFinderForm();" class="button1-left">
-		<input type="submit" id="findtiles" name="findtiles" value="Find tiles" class="button1-right">
+		<input type="button" id="restfields" name="restfields" value="Clear Form" onclick="resetTileFinderForm();" class="button1-left">
+		<input type="submit" id="findtiles" name="findtiles" value="Find Tiles" class="button1-right">
 		</form>
 		<div class="clear"></div>
 		<div id="morelink" class="morelink"><a href="javascript:void(0);" title="More search options" onclick="moreTileFinderOptions();"><span id="finder_more_link_text">› More search options</span></a></div>		

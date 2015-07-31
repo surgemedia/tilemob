@@ -197,11 +197,11 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                     }
                     $cart_string .= '
                                       </table>
-                                      <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your cart. To proceed with checkout, click Checkout now.</div>
+                                      <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your cart. To proceed with quote, click Submit for Quote</div>
                                       <!--<div id="cart_total" class="cart_total"><label class="price">$'.number_format($cart_final_total,2).'</label><div class="label">TOTAL</div><div class="clear"></div></div>-->
-                                      <input type="hidden" name="currency_code" value="AUD"><input type="hidden" id="total" name="total" value="'.number_format($cart_final_total,2).'"><input class="btn-red" type="submit" value="Place Order" name="submit" id="placeorder"><a href="cart.php"><input type="button" value="Revise Order" class="btn-red" name="submit" id="placeorder"></a>';
+                                      <input type="hidden" name="currency_code" value="AUD"><input type="hidden" id="total" name="total" value="'.number_format($cart_final_total,2).'"><input class="btn-red" type="submit" value="Submit for Quote" name="submit" id="placeorder"><a href="cart.php"><input type="button" value="Revise Collection" class="btn-red" name="submit" id="placeorder"></a>';
                 } else {
-                                 $cart_string .= '<div class="bodytext">You have not added any items to your cart yet.</div>';
+                                 $cart_string .= '<div class="bodytext">You have not added any items to your collection yet.</div>';
                 }
                 echo $cart_string;
                 ?>			

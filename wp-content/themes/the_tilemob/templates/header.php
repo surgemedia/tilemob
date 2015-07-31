@@ -31,14 +31,14 @@
         <p><span>Ph. </span><?php the_field('phone_number','option'); ?></p>
         <div id="headlinks" class="headlinks">
           <ul class="style-to-nav">
-            <!--<li style="border:0;"><a href="my-account.php" title="My account">My account</a></li>-->
+            <!-- <li style="border:0;"><a href="my-account.php" title="My account">My account</a></li> -->
             <?php 
-            // $_shop_total_cart = $_COOKIE["_shop_total_cart"];
-            // if($_shop_total_cart>0) {
-              // echo '<li><a href="/shop/my-cart.php" title="My cart">My cart ( <span id="header_cart_items">'.$_shop_total_cart.'</span> items)</a></li>';
-            // } else { echo '<li><a href="/shop/my-cart.php" title="My cart">My cart (<span id="header_cart_items">0</span> items)</a></li>'; }
+            $_shop_total_cart = $_COOKIE["_shop_total_cart"];
+            if($_shop_total_cart>0) {
+              echo '<li><a href="/shop/my-cart.php" title="View My Collection">View My Collection ( <span id="header_cart_items">'.$_shop_total_cart.'</span> items)</a></li>';
+            } else { echo '<li><a href="/shop/my-cart.php" title="My cart">View My Collection (<span id="header_cart_items">0</span> items)</a></li>'; }
             ?>    
-            <!-- <li><a href="/shop/checkOut.php" title="Checkout" style="border:0;">My Wishlist >></a></li> -->
+            <li><a href="/shop/checkOut.php" title="Checkout" style="border:0;">Submit My Collection >></a></li>
           </ul>
           <div class="clear"></div>
         </div>
