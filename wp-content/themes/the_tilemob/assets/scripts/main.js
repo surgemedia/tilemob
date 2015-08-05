@@ -110,4 +110,15 @@
   $('#option_question2').change(function(){
       ConsultationBookingForm.projectType();
   });
+  $('#clear-form').click(function(){
+      $('input[type="text"],textarea,input[type="date"],input[type="email"],input[type="tel"]').each(function() {
+          $(this).val('');
+      });
+      $('select').each(function(){
+          $(this).val('------ Make a Selection ------');
+      });
+      $('input[type="checkbox"]').each(function(){
+          $(this).prop('checked',false);
+      });
+  });
 })(jQuery); // Fully reference jQuery after this point.

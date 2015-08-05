@@ -307,7 +307,7 @@ include("includes/detail-db-call.php");
                                     <div class="price_save">SAVE $<?=number_format($item_save,2)?> per <?=$item_Unit?></div>
                                 </div>
                                 <div class="clear"></div>
-                                <a href="javascript:void(0);" onclick="goToProductTab(4);" class="btnBQD"> <input type="button" value="BIG QUANTITY DEALS" id="lrgqtydeals" class="btn-red"><span class="tooltip hide">Need a large quantity of this item? Click this button and ask us for a deal!  We’ll tailor a price just for you and respond ASAP.<span class="arrow"></span></span></a>
+                                <!-- <a href="javascript:void(0);" onclick="goToProductTab(4);" class="btnBQD"> <input type="button" value="BIG QUANTITY DEALS" id="lrgqtydeals" class="btn-red"><span class="tooltip hide">Need a large quantity of this item? Click this button and ask us for a deal!  We’ll tailor a price just for you and respond ASAP.<span class="arrow"></span></span></a> -->
                                 <?php if($item_Notepad2<>""){
                                                                         
                                                                                 $display   =   "style='display:block'";
@@ -528,7 +528,7 @@ include("includes/detail-db-call.php");
                                                     foreach($item_images as $secImages) {
                             ?>
 
-                            <li><a href="javascript:void(0);" class="lightbox"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
+                            <li><a href="images/items/watermarked/<?=$secImages?>" title="<?php echo $item_Desc; ?>" class="lightbox"><img src="images/items/watermarked/<?=$secImages?>" class="imggallery"/></a></li>
                             <?php }}?>
                             <!--<li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>
                                                     <li><a href="#"><img src="images/items/TMW1524.JPG"/></a></li>

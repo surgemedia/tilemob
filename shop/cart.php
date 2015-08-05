@@ -41,7 +41,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                         <!-- Main -->
                         <div class="col-lg-8">
                             <div id="cart" class="cart">
-                                <h1>Your cart contains <?php echo $_shop_total_cart; ?> items</h1>
+                                <h1>Your collection contains <?php echo $_shop_total_cart; ?> items</h1>
                                 <?php
                                   $cart_string = '';
                                   $cart_final_total = 0;
@@ -140,7 +140,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                       <!--<div id="cart_total" class="cart_total"><div class="price">$'.number_format($cart_final_total,2).'</div><div class="label">TOTAL</div><div class="clear"></div></div>-->
                                       <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection for a Quote</a></div>';
                 } else {
-                                 $cart_string .= '<div class="bodytext">You have not added any items to your cart yet.</div>';
+                                 $cart_string .= '<div class="bodytext">You have not added any items to your collection yet.</div>';
                 }
                 echo $cart_string;
                 ?>

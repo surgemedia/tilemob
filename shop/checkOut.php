@@ -46,7 +46,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
 								<div id="body_right" class="body_right">
 						                    <div id="cart" class="cart">
 						                    <h2 style="color:RED;"><?php echo $succ_mag;?></h2>
-											<h1>	Shipping Options:  </h1>				
+											<h1>	Customer Information  </h1>				
 						                                <table class="form-listing">
 						                                    <tr>
 						                                        <td width="10%">Pick Up:</td>
@@ -60,7 +60,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
 										<div class="clear"></div>
 									</div>
 									<div id="cart" class="cart">
-										<h1>	Billing Information  </h1>				
+										<h1>	<!--Customer Information-->  </h1>				
 						                                <table class="form-listing">
 						                                    <tr>
 						                                        <td width="10%">First Name:</td>
