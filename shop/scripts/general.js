@@ -15,7 +15,8 @@ function resetTileFinderForm() {
 	document.getElementById('sliprating').selectedIndex = 0;
 	document.getElementById("pricerange").value = 0
 	document.getElementsByClassName('output')[0].innerHTML = "0.00"
-	$('.dragger').css('left','0')
+	$('.dragger').css('left','0');
+	location.href='/shop'
 }
 
 function moreTileFinderOptions(show) {

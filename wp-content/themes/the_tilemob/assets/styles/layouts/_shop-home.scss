@@ -120,19 +120,20 @@
 .store_categories {
   position: relative;
   display: block;
-  padding-top: 30px;
+  // padding-top: 30px;
   padding-bottom: 5px;
   margin-bottom: 15px;
   border: 1px solid #DDDDDD;
   background: #FFFFFF;
   clear: both;
   h1 {
-	  position: absolute;
+	  // position: absolute;
 	  top: 0;
 	  left: 0;
 	  display: block;
 	  width: 228px;
-	  padding-top: 1px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
 	  padding-left: 10px;
 	  padding-right: 10px;
 	  font-family: VTCSuperMarketSaleRegular, Arial, Helvetica, sans-serif;
@@ -148,6 +149,9 @@
 	  font-style: italic;
   }
   ul {
+  	@media (max-width: $screen-sm-max) {
+  		overflow: hidden;
+  	}
 	  padding: 0;
 	  margin: 0;
 	  list-style: none;
@@ -170,6 +174,9 @@
 			  text-decoration: none;
 			  line-height: 12px;
 			  color: $grey-dark;
+			  @media (max-width: $screen-sm-max) {
+			  	padding: 15px 10px; 
+			  }
 		  }
 		  ul {
 			  z-index: 300;
@@ -186,7 +193,25 @@
 				  a {
 					  width: 220px;
 				  }
+				  @media (max-width: $screen-sm-max) {
+					  ul {
+					      display: none;
+					  }
+				  }
 			  }
+			  @media (max-width: $screen-sm-max) {
+			  	  li:hover {
+			  	  	  ul {
+			  	  	  	  display: block;
+			  	  	  }
+			  	  }
+			  }
+		  }
+	  }
+	  @media (max-width: $screen-sm-max) {
+		  li:hover ul {
+		      position: relative;
+		      left: 30px;
 		  }
 	  }
   }

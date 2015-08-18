@@ -1,6 +1,6 @@
-<div id="store_categories" class="store_categories">
+<div id="store_categories" class="store_categories slide_feature">
 	<h1>FEATURED PRODUCTS</h1>
-	<ul>		
+	<ul id="featured_content">		
 	   <?php
                 $string = '';
 		$result_shop_submenu_categories = mysql_query("SELECT * FROM shop_sub_heading WHERE is_active='1' ORDER BY recordListingID ASC");

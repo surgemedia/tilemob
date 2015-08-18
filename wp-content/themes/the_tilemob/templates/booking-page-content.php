@@ -7,10 +7,10 @@
     </div>
 
 	<div class="two-col">
-	    <div class="col-lg-6">
+	    <div class="col-xs-12 col-lg-6">
 	    	<?php the_field('first_content') ?>
 	    </div>
-	    <div class="col-lg-6">
+	    <div class="col-xs-12 col-lg-6">
 	        <?php the_field('second_content') ?>
 	    </div>
 	</div>

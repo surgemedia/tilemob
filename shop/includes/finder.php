@@ -224,7 +224,9 @@
 					$pattern_code = $row_pattern['Code'];
 					$selected_pattern = trim(urldecode($_GET['pa']));
 					if($pattern_code==$selected_pattern){$option_selected=' SELECTED';}else{$option_selected='';}
-					$options_string .= '<option value="'.$pattern_code.'"'.$option_selected.'>'.$row_pattern['Description'].'</option>';
+					if($row_pattern['Description'] != '' && $pattern_code !='') {
+						$options_string .= '<option value="'.$pattern_code.'"'.$option_selected.'>'.$row_pattern['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>

@@ -17,6 +17,9 @@
 	  li {
 	  	padding: 10px;
 	  	cursor: pointer;
+	  	@media (max-width: $screen-sm-max) {
+			  	padding: 10px 5px; 
+		}
 	  }
 	  a {
 	  	display: block;

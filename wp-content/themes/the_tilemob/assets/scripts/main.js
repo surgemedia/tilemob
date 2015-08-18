@@ -1,3 +1,51 @@
+/*
+  By Osvaldas Valutis, www.osvaldas.info
+  Available for use under the MIT License
+*/
+
+
+
+;(function( $, window, document, undefined )
+{
+  $.fn.doubleTapToGo = function( params )
+  {
+    if( !( 'ontouchstart' in window ) &&
+      !navigator.msMaxTouchPoints &&
+      !navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
+
+    this.each( function()
+    {
+      var curItem = false;
+
+      $( this ).on( 'click', function( e )
+      {
+        var item = $( this );
+        if( item[ 0 ] != curItem[ 0 ] )
+        {
+          e.preventDefault();
+          curItem = item;
+        }
+      });
+
+      $( document ).on( 'click touchstart MSPointerDown', function( e )
+      {
+        var resetItem = true,
+          parents   = $( e.target ).parents();
+
+        for( var i = 0; i < parents.length; i++ )
+          if( parents[ i ] == curItem[ 0 ] )
+            resetItem = false;
+
+        if( resetItem )
+          curItem = false;
+      });
+    });
+    return this;
+  };
+})( jQuery, window, document );
+
+
+
 /* ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
@@ -74,7 +122,14 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
   
-
+  //on page load in mobile close tile finder blocks 
+  function checkIfMobile() {
+      if( (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("android")>=0) || (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("ipad")<0) ) {
+          $('#store_categories_content').slideUp("slow");
+          $('#featured_content').slideUp("slow");
+      }
+  }
+  checkIfMobile();
   // Scripts for booking form
   $('#retrieve_form').submit(function(){
       var booking_id = parseInt(""+document.forms['retrieve_form'].booking_id.value,10);  
@@ -121,4 +176,32 @@
           $(this).prop('checked',false);
       });
   });
+
+
+  //prevent page from navigating on single top on mobile devices
+
+  $( '#store_categories li:has(ul)' ).doubleTapToGo();
+
+  // make storage categories as accordion in mobile view
+  $('.slide_store h1').click(function(event) {
+      if( (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("android")>=0) || (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("ipad")<0) ) {
+          $('#store_categories_content').toggle("slow");
+      }
+  });
+  $('.slide_feature h1').click(function(event) {
+      if( (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("android")>=0) || (navigator.appVersion.toLowerCase().indexOf("mobile")>=0 && navigator.appVersion.toLowerCase().indexOf("ipad")<0) ) {
+          $('#featured_content').toggle("slow");
+      }
+      // $('#featured_content').slideToggle( "slow" );
+  });
+  
 })(jQuery); // Fully reference jQuery after this point.
+
+
+
+
+
+
+
+
+

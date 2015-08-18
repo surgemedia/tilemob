@@ -7,7 +7,11 @@
 	color: $grey-sober;
 	position: relative;
 	min-height: 180px;
-	
+	.brand {
+		img {
+		    margin-top: 1em;
+		}
+	}
 	.social-networks {
 		position: absolute;
 		right: 0;
@@ -16,8 +20,17 @@
 		@extend .list-reset;
 		display: inline-block;
 		list-style: none;
+		@media (max-width: $screen-sm-min) {
+			position: relative;
+		    width: 100%;
+		    padding: 0; 
+		}
 		li {
 			float: left;
+			@media (max-width: $screen-sm-min) {
+				width: 20%;
+    			text-align: center;
+			}
 		}
 	}
 	small {
@@ -48,6 +61,10 @@
 		}
 		.address {
 			text-align: right;
+			@media (max-width: $screen-sm-min) {
+				padding-right: 0; 
+				text-align: center;
+			}
 			p,h4 {
 				color: $grey-font;
 				font-size: 12px;
@@ -66,12 +83,38 @@
 				@extend .translateY-400;
 			}
 			@media (max-width: $screen-sm-min) {
-				text-align: right;
+				text-align: center;
     			border: 0;
+    			padding-left: 0; 
+    			padding-right: 0; 
+    			.headlinks { 
+	 
+					ul {
+					    width: 100%;
+					    margin-bottom: 0;
+					    li {
+						    width: 100%;
+						    padding: 1em 0;
+						    margin-top: 9px;
+						    border-radius: 0;
+						}
+						a {
+						    display: block;
+						    text-align: center;
+						}
+					}
+				
+				}
 			}
 			p {
 				font-size: 18px;
+				@media (max-width: $screen-sm-min) {
+					font-size: 30px;
+				}
 				color: #fff;
+				a {
+					color: #fff;
+				}
 			}
 			span {
 				color: $red;
@@ -89,10 +132,15 @@
 	li {
 		float:left;
 		display: inline-block;
-
+		@media (max-width: $screen-xs-max) {
+			width: 100%; 
+		}
 		a {
 			display:inline-block;
 			color: #fff;
+			@media (max-width: $screen-xs-max) {
+				width: 100%; 
+			}
 		}
 		a:hover {
 			background-color: $grey-dark;
@@ -100,6 +148,11 @@
 	}
 	li+li {
 		border-left: 1px solid $red-light;
+		border-top: 0; 
+		@media (max-width: $screen-xs-max) {
+			border-top: 1px solid $red-light;
+			border-bottom: 0; 
+		}
 	}
 }
 .headlinks {
@@ -117,7 +170,39 @@
 		}
 	}
 }
-
-
-
-
+.navbar {
+	margin-bottom: 0;
+	.mob-nav {
+		margin-left: 0;
+    	margin-right: 0;
+    	background: $red;
+		@include linear-gradient($red,$red-bright);
+	}
+} 
+.navbar-toggle {
+    background-color: $red;
+    opacity: 0.9;
+    .icon-bar {
+		background-color: #fff;  
+	}
+}
+.navbar-collapse {
+	padding: 0; 
+}
+.headlinks.hidden-sm { 
+	 
+		ul {
+		    width: 100%;
+		    li {
+			    width: 100%;
+			    padding: 7px 1em;
+			    margin-top: 9px;
+			    background-color: transparent;
+			}
+			a {
+			    display: block;
+			    text-align: center;
+			}
+		}
+	
+}

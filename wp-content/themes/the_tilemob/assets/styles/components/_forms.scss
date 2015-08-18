@@ -18,6 +18,11 @@
 	.text-right {
 		span {
 		  margin-left: 2em;
+		  vertical-align: top;
+		}
+		i {
+			vertical-align: top;
+			font-style: normal;
 		}
 		input, textarea {
 			width: 55%;
@@ -80,6 +85,9 @@ input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea
     padding: 0 !important;
 	p {
 	    width: 45%;
+	    @media (max-width: $screen-sm-min) {
+	    	width: 100%;
+	    }
 	    float: left;
 	    margin-right: 1em;
 	    input {
@@ -133,6 +141,10 @@ input:hover, textarea:hover, input:focus, textarea:focus, input:active, textarea
 		    top: .5em;
 		    margin: .2em;
 		    vertical-align: top;
+		}
+		i {
+			vertical-align: top;
+			font-style: normal;
 		}
 		p {
 		    font-weight: 700;

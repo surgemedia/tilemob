@@ -1,7 +1,7 @@
-<div id="store_categories" class="store_categories">
+<div id="store_categories" class="store_categories slide_store">
 	<h1>Categories</h1>
-	<ul>		
-<?php
+	<ul id="store_categories_content">	
+	<?php
 		$listmaterial = mysql_query("SELECT * FROM shop_material");
 		$listmaterialnum = mysql_num_rows($listmaterial);
 		for($lm1=1; $lm1<=$listmaterialnum; $lm1++){

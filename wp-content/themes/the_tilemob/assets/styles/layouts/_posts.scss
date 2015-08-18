@@ -19,9 +19,11 @@
 		  -o-transition: all 0.2s ease;
 		  transition: all 0.2s ease;
 	  }
-	  img:hover {
-		  transform: scale(2);
-		}
+	  @media (min-width: $screen-lg-min) {
+		  img:hover {
+			  transform: scale(2);
+			}
+	  }
 	  span {
 		  background: $grey-dark;
 		  text-align: center;

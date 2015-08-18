@@ -26,9 +26,9 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <?php if(have_rows('slider_icons')): ?>
-                            <a href="<?php echo get_field('slider_icons')[2]['url'] ?>" class="view-shop hidden-xs hidden-sm"><img  src="<?php echo get_field('slider_icons')[2]['image'] ?>" ></a>
-                            <a href="<?php echo get_field('slider_icons')[1]['url'] ?>" class="view-specifiers hidden-xs hidden-sm"><img  src="<?php echo get_field('slider_icons')[1]['image'] ?>" ></a>
-                            <a href="<?php echo get_field('slider_icons')[0]['url'] ?>" class="view-performance hidden-xs hidden-sm"><img  src="<?php echo get_field('slider_icons')[0]['image'] ?>" ></a>
+                            <a href="<?php echo get_field('slider_icons')[2]['url'] ?>" class="view-shop hidden-xs hidden-sm"><img  width="215" height="215" src="<?php echo get_field('slider_icons')[2]['image'] ?>" ></a>
+                            <a href="<?php echo get_field('slider_icons')[1]['url'] ?>" class="view-specifiers hidden-xs hidden-sm"><img  width="241" height="203" src="<?php echo get_field('slider_icons')[1]['image'] ?>" ></a>
+                            <a href="<?php echo get_field('slider_icons')[0]['url'] ?>" class="view-performance hidden-xs hidden-sm"><img width="205" height="84" src="<?php echo get_field('slider_icons')[0]['image'] ?>" ></a>
                             <div class="showroom_navbar"><a href="booking" title="Book a consultation in our Brisbane Tile Showroom">Book a <em>showroom consultation</em></a></div>
                         <?php endif; ?>  
                         <?php if(have_rows('slider')): ?>
@@ -44,7 +44,7 @@
                                     }
                                 ?>
                                 <div class="item <?php echo $active?>">
-                                    <img  src="<?php the_sub_field('image') ?>">
+                                    <img  width="635" height="625" src="<?php the_sub_field('image') ?>">
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
