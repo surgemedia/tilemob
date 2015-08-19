@@ -41,7 +41,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                         <!-- Main -->
                         <div class="col-lg-8">
                             <div id="cart" class="cart">
-                                <h1>Your collection contains <?php echo $_shop_total_cart; ?> items</h1>
+                                <h1>Your collection contains <?php echo $_shop_total_cart; ?> items<p class="sales-hotline">Sales Hotline: <?php the_field('sales_hotline','option') ?></p></h1>
                                 <?php
                                   $cart_string = '';
                                   $cart_final_total = 0;
@@ -115,7 +115,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             				$cart_final_total += $cart_item_subtotal;
                             				$cart_string .= '
                                         <tr>
-                                        <td align="center" valign="middle"><div class="thumb"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_image1_imgsrc.'<!--</a>--></div></td>
+                                        <td align="center" valign="middle"><div class="thumb"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_image1_imgsrc.'<!--</a>--></div></td>
                                         <td align="" valign="middle"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_item_name.'<!--</a>--> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>
                                         <td align="" valign="middle">
                                            <div class="qty">

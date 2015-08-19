@@ -285,6 +285,7 @@ include("includes/detail-db-call.php");
                                     ?>
                                     <div id="flag"><a href="#" ><?php echo $img_s ?></a></div>
                                     <div class="clear"></div>
+                                    <p class="sales-hotline">Sales Hotline: <?php the_field('sales_hotline','option') ?></p>
                                 </div>
                                 <?php
                                                                         if($show_error_code){

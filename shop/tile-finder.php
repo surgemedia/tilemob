@@ -241,7 +241,7 @@ include('includes/requests.php');
                     $gallery_string .= '<div class="gallery_top">'.$total_results.' results.<div class="clear"></div></div>';
                     $gallery_string .= $pagenumbers.'<div class="clear"></div>';
                     $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPricePce+TradePricePce) as pricesum FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1' ORDER BY pricesum ASC LIMIT $start_row,$results_per_page") or die(mysql_error());
-                    //echo "SELECT *, WebPricePce, TradePricePce, (WebPricePce+TradePricePce) as pricesum FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1' ORDER BY pricesum ASC LIMIT $start_row,$results_per_page";
+                    // echo "SELECT *, WebPricePce, TradePricePce, (WebPricePce+TradePricePce) as pricesum FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1' ORDER BY pricesum ASC LIMIT $start_row,$results_per_page";
                     //exit;
                     
                     while($row_webitems = mysql_fetch_array($result_webitems)) {
@@ -329,11 +329,14 @@ include('includes/requests.php');
                                       
                                         if($row_webitems['Country']=='SPAIN')
                                         {
-                                            $img_s='<img src="images/Spain.png" title="Spain"/>';
+                                            $img_s='<img src="images/Spain.png" title="Spain" alt="'.$row_webitems['Country'].'"/>';
                                         }
                                         else if($row_webitems['Country']=='ITALY')
                                         {
-                                            $img_s='<img src="images/Italy.png" title="Italy"/>';
+                                            $img_s='<img src="images/Italy.png" title="Italy" alt="'.$row_webitems['Country'].'"/>';
+                                        }
+                                        else {
+                                            $img_s='';
                                         }
                                        
                                         //*****Flag Images****

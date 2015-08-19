@@ -1,6 +1,6 @@
 {
     "key": "group_55bac23581b2b",
-    "title": "General Contents",
+    "title": "General Contents - Theme Settings",
     "fields": [
         {
             "key": "field_55bac25045d4d",
@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 40,
                 "class": "",
                 "id": ""
             },
@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": 60,
                 "class": "",
                 "id": ""
             },
@@ -38,6 +38,28 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_55d2ca789d78c",
+            "label": "Sales Hotline",
+            "name": "sales_hotline",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -55,5 +77,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1438302909
+    "modified": 1439877803
 }
