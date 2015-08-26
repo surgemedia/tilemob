@@ -64,7 +64,8 @@ include('includes/requests.php');
                 }
                               else if($search_keywords == "Outdoor" || $search_keywords=="outdoor")
                                 {
-                                    $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Use`="EXTFLOOR" OR `Use`="INT&EXT") AND';
+                                    // $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Use`="EXTFLOOR" OR `Use`="INT&EXT") AND';
+                                    $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Use`="EXTFLOOR") AND';
                     
                                 }
                                else if($search_keywords == "Internal" || $search_keywords=="internal")
@@ -206,7 +207,7 @@ include('includes/requests.php');
                     $search_query_string .= $search_strings[0];
                 }
 //              echo $query.'<br/>';
-//              echo "SELECT * FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1'".'<br/>'; exit;
+              // echo "SELECT * FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1'".'<br/>'; 
                 $result_webitems = mysql_query("SELECT * FROM shop_webitems WHERE $query WebExport='YES' AND is_active='1'") or die(mysql_error());
                 
                 $total_results = mysql_num_rows($result_webitems);

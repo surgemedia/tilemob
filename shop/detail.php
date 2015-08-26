@@ -487,7 +487,7 @@ include("includes/detail-db-call.php");
                                                 <tr><td>Phone:</td><td><input type="text" name="phone" id="phone" class="textfield1"></input></td></tr>
                                                 <tr><td>Email:</td><td><input type="text" name="email" id="email" class="textfield1"></input></td></tr>
                                                 <tr><td>Enquiry:</td><td><textarea name="enquiry" id="enquiry" class="textfield1"></textarea></td></tr>
-                                                <tr><td>Spam protection:</td><td>Please verify that you are human by entering this code into the field before submitting: <span class="asterisk">*</span>
+                                                <tr><td>Spam protection:</td><td>Please enter verification code before sending: <span class="asterisk">*</span>
                                                 <img src="randomImage.php" border="0" align="absmiddle"/><br /><input type="text" name="security" id="security" class="textfield1" style="width:100px;margin-top:3px;"/>
                                             </td></tr>
                                             <input type ="hidden" name="pdtId" id="pdtId" value="<?=$id?>"></input>
@@ -548,6 +548,7 @@ include("includes/detail-db-call.php");
                     $related_string = '';
 //                                        $sql = "SELECT sw.*,MATCH(sw.Desc) AGAINST ('\"$item_Desc\"' IN BOOLEAN MODE) AS relevance FROM shop_webitems as sw WHERE sw.RelatedTo='$item_RelatedTo' AND sw.Colour='$item_Colour' AND sw.Surface='$item_Surface' AND sw.item_id!='$item_id' AND sw.WebExport='YES' AND sw.is_active='1' GROUP BY sw.Size ORDER BY relevance DESC LIMIT 0, 24";
                                          $sql = "SELECT sw.*,MATCH(sw.Desc) AGAINST ('\"$item_Desc\"' IN BOOLEAN MODE) AS relevance FROM shop_webitems as sw WHERE sw.RelatedTo='$item_RelatedTo' AND sw.Colour='$item_Colour' AND sw.Surface='$item_Surface' AND sw.item_id!='$item_id' AND sw.WebExport='YES' AND sw.is_active='1' ORDER BY relevance DESC LIMIT 0, 24";
+
                                         $result_related = mysql_query($sql);
 //                                        while($row_related=mysql_fetch_array($result_related)) {
 //                                         echo "Here <pre/>";   print_r($row_related);
@@ -560,7 +561,7 @@ include("includes/detail-db-call.php");
                     
                     if($total_related>0) {
                         while($row_related=mysql_fetch_array($result_related)) {
-//                                                  echo "<pre/>";  print_r($row_related);
+                                                 // echo "<pre/>";  print_r($row_related);
                                                 $item_size = $row_related['Size'];
                         $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$item_size' AND is_active='1'");
                         if($row_size_check = mysql_fetch_array($result_size_check)) {
@@ -646,6 +647,7 @@ include("includes/detail-db-call.php");
     <div class="size">'.$item_display_size.'</div>
     <div class="code">'.$row_related['Code'].'</div>
     <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
+    <div><a href="#" >'.$img_s.'</a></div>
     <div class="price_info hide">
     <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
     <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
@@ -801,11 +803,12 @@ include("includes/detail-db-call.php");
                                                                     <div class="size">'.$item_display_size1.'</div>
                                                                     <div class="code">'.$row_related['Code'].'</div>
                                                                     <div class="name"><a href="detail.php?id='.$this_id.'" title="More info">'.$row_related['Desc'].'</a></div>
+                                                                    <div><a href="#" >'.$img_s.'</a></div>
                                                                         <div class="price_info hide">
                                                                             <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
                                                                             <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
                                                                             <div class="price_save">SAVE $'.number_format($item_save,2).''.$item_unit.'</div>
-                                                                                <div><a href="#" >'.$img_s.'</a></div>
+                                                                                <!--<div><a href="#" >'.$img_s.'</a></div>-->
                                                                             <div class="clear"></div>
                                                                         </div>                          
                                                                         <div class="clear"></div>

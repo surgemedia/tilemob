@@ -16,7 +16,7 @@ function resetTileFinderForm() {
 	document.getElementById("pricerange").value = 0
 	document.getElementsByClassName('output')[0].innerHTML = "0.00"
 	$('.dragger').css('left','0');
-	location.href='/shop'
+	location.href='/shop?f=search';
 }
 
 function moreTileFinderOptions(show) {
@@ -140,10 +140,12 @@ function removeFromCart(user_id, user_session, id) {
 	ajaxRequest.onreadystatechange = function() {
 		if (ajaxRequest.readyState==4 && ajaxRequest.status==200) {
 			if(ajaxRequest.responseText!='') { //Ajax response found
-				document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
 				var cartValue = document.cookie.split('_shop_total_cart=')[1].split(';')[0];
 				cartValue -= 1;
 				document.cookie = "_shop_total_cart="+cartValue+"; path=/";
+				$('#header_cart_items').html(cartValue);
+				document.writeln = eval(ajaxRequest.responseText); //convert response text to javascript
+
 				//alert(ajaxRequest.responseText);
 			}
 		}
@@ -213,3 +215,6 @@ function addToCartPdtDetails(user_id,shop_order_id, user_session, item_code, ite
 	ajaxRequest.open('GET', request_string, true);
 	ajaxRequest.send(null);
 }
+
+
+

@@ -56,7 +56,7 @@
             ?>    
             <li class="hidden-xs hidden-md"><a href="/shop/checkOut.php" title="Checkout" style="border:0;">Submit My Collection >></a></li>
           </ul>
-          <div class="clear"></div>
+          <div class="clear" for="<?php echo $_shop_total_cart ?>"></div>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
 </div>
   <div class="container">
     <nav role="navigation" class="navbar">
-        <div class="navbar-header">
+        <div class="navbar-header hidden-sm hidden-md hidden-lg">
             <div class="row mob-nav">
                 <div id="headlinks" class="col-xs-9 headlinks hidden-sm hidden-md hidden-lg">
                     <ul class="style-to-nav">

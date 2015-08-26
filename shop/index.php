@@ -53,6 +53,17 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                         wp_footer();
                     ?>
                     </div><!-- /.wrap -->
-
+                    <?php
+                        $flag = htmlspecialchars($_GET["f"]);
+                        // echo "the flag is ".$flag." !!";
+                        if($flag=='search') {
+                            // echo "entered";
+                    ?>
+                        <script type="text/javascript">
+                        moreTileFinderOptions();
+                        </script>
+                    <?php
+                        }
+                    ?>
                 </body>
             </html>

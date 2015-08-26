@@ -70,6 +70,38 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
 						                                        <td>Last Name:</td>
 						                                        <td><input type="text" id="lastname" name="lastname" class="textfield1"></input></td>
 						                                    </tr>
+                                                <tr>
+                                                    <td>You are:</td>
+                                                    <td><select name="you-are" id="you-are" class="textfield1"><option value="------ Make a Selection ------">------ Make a Selection ------</option><option value="Home-Owner">Home-Owner</option><option value="Architect/Designer">Architect/Designer</option><option value="Builder/Tradesperson">Builder/Tradesperson</option><option value="Developer">Developer</option></select></td>
+                                                </tr>
+                                                <tr class="project-type">
+                                                    <td>Project Type:</td>
+                                                    <td>
+                                                        <select class="textfield1" id="option_question2" name="option_question2" ><option value="------ Make a Selection ------">------ Make a Selection ------</option><option value="Residential (new construction)">Residential (new construction)</option><option value="Commercial (new construction)">Commercial (new construction)</option><option value="Residential (renovation)">Residential (renovation)</option><option value="Commercial (renovation)">Commercial (renovation)</option></select>
+                                                        <p id="residential_row">
+                                                          <strong>I will be selecting tiles for the following areas:</strong><br>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Kitchen Wall">&nbsp;<span >Kitchen Wall</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Bathroom Wall &amp; Floor">&nbsp;<span >Bathroom Wall &amp; Floor</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Ensuite/Wall &amp; Floor">&nbsp;<span >Ensuite/Wall &amp; Floor</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Pool Tiles">&nbsp;<span >Pool Tiles</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="WC / Powder Room">&nbsp;<span >WC / Powder Room</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Laundry Wall &amp; Floor">&nbsp;<span>Laundry Wall &amp; Floor</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Living Area/Main Area Floors">&nbsp;<span >Living Area/Main Area Floors</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="External Floors/Driveway">&nbsp;<span >External Floors/Driveway</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="Other">&nbsp;<span >Other</span>
+                                                              <input type="checkbox" id="tiles" name="tiles[]" value="All Areas/Select All">&nbsp;<span >All Areas/Select All</span>
+                                                        </p>
+                                                        <p id="commercial_row">
+                                                          <strong>I will be selecting tiles for the following areas:</strong><br>
+                                                          <input type="text" class="textfield1" name="commercial-text" id="commercial-text" value="" size="40" >
+                                                        </p>
+                                                    </td>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <td>Project Commence:</td>
+                                                    <td><select name="project-commence" id="project-commence" class="textfield1"><option value="------ Make a Selection ------">------ Make a Selection ------</option><option value="Less than 1 month">Less than 1 month</option><option value="1-3 months">1-3 months</option><option value="More than 3 months">More than 3 months</option></select></td>
+                                                </tr>
 						                                    <tr>
 						                                        <td>Email:</td>
 						                                        <td><input type="text" id="email" name="email" class="textfield1"></input></td>
@@ -129,7 +161,15 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             		   $cart_item_id = $row_cart_webitems['item_id'];
                             		   $cart_item_name = $row_cart_webitems['Desc'];
                             		   $cart_item_pcsm2 = floatval($row_cart_webitems['PcsM2']);
-                            		   $cart_item_unit = $row_cart_webitems['Unit'];                       
+                            		   $cart_item_unit = $row_cart_webitems['Unit'];  
+                                   $cart_item_size = $row_cart_webitems['Size'];
+
+                                   // Get size from shop_size table
+                                   $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$cart_item_size' AND is_active='1'");
+                                    if($row_size_check = mysql_fetch_array($result_size_check)) {
+                                        $item_display_size = '<span>Size: '.$row_size_check['Description'].'</span>';
+                                    } else { $item_display_size=''; }
+
                             		   if($cart_item_pcsm2>0){ //sell in m2
                                 		 /*$cart_item_buy = floatval($row_cart_webitems['WebPriceM2']);
                                 		 if($cart_item_buy<=0){$cart_item_buy=floatval($row_cart_webitems['TradePriceM2']);}
@@ -176,8 +216,8 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             				$cart_final_total += $cart_item_subtotal;
                             				$cart_string .= '
                                         <tr>
-                                        <td align="center" valign="middle"><div class="thumb"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_image1_imgsrc.'<!--</a>--></div></td>
-                                        <td align="" valign="middle"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_item_name.'<!--</a>--> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>
+                                        <td align="center" valign="middle"><div class="thumb"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_image1_imgsrc.'</a></div></td>
+                                        <td align="" valign="middle"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)<br><span>Code: '.$cart_item_code.'</span><br>'.$item_display_size.'</td>
                                         <td align="" valign="middle">
                                            <div class="qty">
                                        <!--<div id="qty_value_'.$row_cart_id.'" class="text"><input type="text" id="qty_field_'.$row_cart_id.'" name="qty_field_'.$row_cart_id.'" value="'.$cart_qty.'" class="textfield1" onkeyup="updateCartQty(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');"><div class="clear"></div></div>-->
@@ -199,7 +239,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                       </table>
                                       <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your cart. To proceed with quote, click Submit for Quote</div>
                                       <!--<div id="cart_total" class="cart_total"><label class="price">$'.number_format($cart_final_total,2).'</label><div class="label">TOTAL</div><div class="clear"></div></div>-->
-                                      <input type="hidden" name="currency_code" value="AUD"><input type="hidden" id="total" name="total" value="'.number_format($cart_final_total,2).'"><input class="btn-red" type="submit" value="Submit for Quote" name="submit" id="placeorder"><a href="cart.php"><input type="button" value="Revise Collection" class="btn-red" name="submit" id="placeorder"></a>';
+                                      <input type="hidden" name="currency_code" value="AUD"><input type="hidden" id="total" name="total" value="'.number_format($cart_final_total,2).'"><input class="btn green" type="submit" value="Submit for Quote" name="submit" id="placeorder"><a href="cart.php"><input type="button" value="Revise Collection" class="btn green" name="submit" id="placeorder"></a>';
                 } else {
                                  $cart_string .= '<div class="bodytext">You have not added any items to your collection yet.</div>';
                 }
@@ -238,6 +278,21 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
 			        if(document.getElementById('lastname').value == '') {
 					emptyfields += "\n   Your lastname *";
 				}
+            if(document.getElementById('you-are').value == '------ Make a Selection ------') {
+          emptyfields += "\n   Your are *";
+        } 
+            if(document.getElementById('option_question2').value == '------ Make a Selection ------') {
+          emptyfields += "\n   Project Type *";
+        }
+            if(document.getElementById('option_question2').value.indexOf('Residential')>=0 && $('#residential_row input[type="checkbox"]:checked').length<=0) {
+                emptyfields += "\n   Residential Tiles Areas *";
+        }
+            if(document.getElementById('option_question2').value.indexOf('Commercial')>=0 && document.getElementById('commercial-text').value == '' ) {
+                emptyfields += "\n   Commercial Tiles Areas *";
+        }
+            if(document.getElementById('project-commence').value == '------ Make a Selection ------') {
+          emptyfields += "\n   Project Commence *";
+        }   
 			        if(document.getElementById('email').value == '') {
 					emptyfields += "\n   Your e-mail *";
 				}

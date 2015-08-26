@@ -68,7 +68,15 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             		   $cart_item_id = $row_cart_webitems['item_id'];
                             		   $cart_item_name = $row_cart_webitems['Desc'];
                             		   $cart_item_pcsm2 = floatval($row_cart_webitems['PcsM2']);
-                            		   $cart_item_unit = $row_cart_webitems['Unit'];                       
+                                   $cart_item_unit = $row_cart_webitems['Unit'];                       
+                            		   $cart_item_size = $row_cart_webitems['Size'];
+
+                                   // Get size from shop_size table
+                                   $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$cart_item_size' AND is_active='1'");
+                                    if($row_size_check = mysql_fetch_array($result_size_check)) {
+                                        $item_display_size = '<span>Size: '.$row_size_check['Description'].'</span>';
+                                    } else { $item_display_size=''; }
+
                             		   if($cart_item_pcsm2>0){ //sell in m2
                                 		 /*$cart_item_buy = floatval($row_cart_webitems['WebPriceM2']);
                                 		 if($cart_item_buy<=0){$cart_item_buy=floatval($row_cart_webitems['TradePriceM2']);}
@@ -115,8 +123,8 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                             				$cart_final_total += $cart_item_subtotal;
                             				$cart_string .= '
                                         <tr>
-                                        <td align="center" valign="middle"><div class="thumb"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_image1_imgsrc.'<!--</a>--></div></td>
-                                        <td align="" valign="middle"><!--<a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">-->'.$cart_item_name.'<!--</a>--> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>
+                                        <td align="center" valign="middle"><div class="thumb"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_image1_imgsrc.'</a></div></td>
+                                        <td align="" valign="middle"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> (<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)<br><span>Code: '.$cart_item_code.'</span><br>'.$item_display_size.'</td>
                                         <td align="" valign="middle">
                                            <div class="qty">
                                        <!--<div id="qty_value_'.$row_cart_id.'" class="text"><input type="text" id="qty_field_'.$row_cart_id.'" name="qty_field_'.$row_cart_id.'" value="'.$cart_qty.'" class="textfield1" onkeyup="updateCartQty(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');"><div class="clear"></div></div>-->
@@ -138,7 +146,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                       </table>
                                       <div id="cart_checkout_note" class="cart_checkout_note">This page shows contents of your wishlist. To proceed with quote, click Submit my collection for a Quote.</div>
                                       <!--<div id="cart_total" class="cart_total"><div class="price">$'.number_format($cart_final_total,2).'</div><div class="label">TOTAL</div><div class="clear"></div></div>-->
-                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection for a Quote</a></div>';
+                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now" class="btn green">Submit my collection for a Quote</a></div>';
                 } else {
                                  $cart_string .= '<div class="bodytext">You have not added any items to your collection yet.</div>';
                 }

@@ -27,8 +27,21 @@ if($_shop_total_cart>0) {
 /////////////////////////////////////////////////////////////////////
 if($_POST['submit'] == "Submit for Quote")
 {
+	// echo implode(",", $_POST['tiles']);
    $firstName = $_POST['firstname'];
    $lastname  = $_POST['lastname'];
+   $you_are    = $_POST['you-are'];
+   $option_question2  = $_POST['option_question2'];
+   		if(strpos($option_question2, 'Commercial') !== false) {
+   			$option_question2 = $option_question2." - ".$_POST['commercial-text'];
+   		}
+   		if(strpos($option_question2, 'Residential') !== false) {
+   			$residential_tiles = $_POST['tiles'];
+   			foreach ($residential_tiles as $tile){
+				$option_question2 = $option_question2." - ".$tile;
+			}
+   		}
+   $project_commence  = $_POST['project-commence'];
    $email     = $_POST['email'];
    $phoneno   = $_POST['phoneno'];
    $address   = $_POST['address'];
@@ -36,8 +49,9 @@ if($_POST['submit'] == "Submit for Quote")
    $state     = $_POST['state'];
    $zipcode   = $_POST['zipcode'];
    $shipping  = $_POST['shipping'];
-   mysql_query("INSERT INTO billing_info (order_id, first_name, last_name, email, phone, address, city, state,zip,shipping_option) 
-				VALUES ('$_shop_order_id', '$firstName', '$lastname', '$email', '$phoneno', '$address', '$city', '$state','$zipcode','$shipping')");
+   
+   mysql_query("INSERT INTO billing_info (order_id, first_name, last_name, you_are, project_type, project_commence, email, phone, address, city, state,zip,shipping_option) 
+				VALUES ('$_shop_order_id', '$firstName', '$lastname', '$you_are', '$option_question2', '$project_commence', '$email', '$phoneno', '$address', '$city', '$state','$zipcode','$shipping')");
   // echo "INSERT INTO billing_info (order_id, order_date)	VALUES ('$_shop_user_id',now())";
    mysql_query("INSERT INTO order_details (order_id, order_date,order_status) VALUES ('$_shop_order_id',now(),'active')");
 }

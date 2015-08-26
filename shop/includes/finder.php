@@ -282,7 +282,7 @@
 		<input type="submit" id="findtiles" name="findtiles" value="Find Tiles" class="button1-right">
 		</form>
 		<div class="clear"></div>
-		<div id="morelink" class="morelink"><a href="javascript:void(0);" title="More search options" onclick="moreTileFinderOptions();"><span id="finder_more_link_text">› More search options</span></a></div>		
+		<div id="morelink" class="morelink">  <a class="wow shake" data-wow-duration="10s" data-wow-offset="10" data-wow-iteration="infinite" href="javascript:void(0);" title="More search options" onclick="moreTileFinderOptions();"><span id="finder_more_link_text">› More search options</span></a> </div>		
 	</div>
 	<div class="clear"></div>
 </div>

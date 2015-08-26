@@ -194,6 +194,35 @@
       }
       // $('#featured_content').slideToggle( "slow" );
   });
+
+  //change active tab color
+
+  var Navigation = {
+    activate: function(e){
+        // console.log('activate function called');
+        $(e).find('li').each(function(){
+            var href = $(this).find('a').attr('href').split(document.domain+"/")[1],
+                splitHref = location.href.split(document.domain+"/")[1];
+                //splitHref = $(this).find('a').attr('href').split('.aspx')[0]+"/";
+            
+            if(!href) {
+              href=$(this).find('a').attr('href').slice(1);
+            }
+            // console.log('this href is '+href+' and splitHref is '+splitHref+'---');
+            if(splitHref && href) {
+              
+                if(splitHref.length>0 && splitHref.indexOf(href)>=0 ) {
+                    $(this).addClass("active");
+                }
+                else {
+                    $(this).removeClass("active");
+                }
+              
+            }
+        });
+    }
+  }
+  Navigation.activate('#menu-primary-menu');
   
 })(jQuery); // Fully reference jQuery after this point.
 

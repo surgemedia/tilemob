@@ -29,7 +29,29 @@ table.form-listing {
   		margin-right: 1em; 
 	  }
 	}
+	.cart_checkout_note {
+	    padding: 10px 0;
+	}
 }
 .btn-red {
 	  margin-right: 0.2em;
+}
+.btn.green {
+	background-color: #6DBE00;
+	color: #fff;
+	border-radius: 0;
+	margin-right: 5px;
+}
+.project-type {
+	vertical-align: top;
+	input[type="checkbox"] {
+	    display: inline-block;
+	}
+	#commercial_row,#residential_row {
+		display: none;
+		padding: 10px;
+	    border: 1px solid;
+	    margin-top: 5px;
+	    width: 80%; 
+	}
 }

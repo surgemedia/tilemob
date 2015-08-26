@@ -1,3 +1,9 @@
+@keyframes more-option-animation {
+	0% { text-align: left}
+	50% { text-align: right;}
+	100% { text-align: left;}
+}
+
 .finder {
   position: relative;
   display: block;
@@ -50,6 +56,7 @@
 		  display: none;
 		  margin-top: 10px;
 		  clear: both;
+		  
 	  }
 	  .select1  {
 		  width: 97%;
@@ -113,8 +120,12 @@
 			  font-weight: bold;
 			  text-decoration: none;
 			  color: $grey-dark;
+			  transition: all .3s ease;
+			  
+		  	  // animation:         more-option-animation 5s infinite; /* IE 10+, Fx 29+ */
 		  }
-	  }
+		  
+	}
   }
 }
 .store_categories {

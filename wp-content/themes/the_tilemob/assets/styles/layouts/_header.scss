@@ -125,7 +125,7 @@
 
 #menu-primary-menu {
 	padding:0px;
-	margin: 0 0 10px 0;
+	margin: 1px 0 10px 0;
 	background: $red;
 	@include linear-gradient($red,$red-bright);
 
@@ -156,6 +156,11 @@
 	}
 	li:first-child {
 	    clear: left;
+	}
+	li.active {
+		a {
+			background-color: $grey-dark;
+		}
 	}
 }
 .headlinks {
