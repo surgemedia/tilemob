@@ -1,4 +1,5 @@
 <?php
+// echo "gloabal variable called";
 ////////////// Newly added ///////////////
 $x      = 6; // Amount of digits
 $min    = pow(10,$x);
@@ -7,7 +8,8 @@ $value  = rand($min, $max);
 $value1 = rand($min, $max);
 
 if(!isset($_COOKIE['_shop_user_id'])) {
-    $cooke = setcookie('_shop_user_id', $value,time()+3600*24);    
+    // $cooke = setcookie('_shop_user_id', $value,time()+3600*24,'/'); 
+    $cooke = setcookie('_shop_user_id', $value,0,'/'); 
 }
 else
 {
@@ -17,7 +19,8 @@ $_shop_user_id = $cooke;
 
 //////////Order Id ///////////////////////
 if(!isset($_COOKIE['_shop_order_id'])) {
-    $cooke1 = setcookie('_shop_order_id', $value1,time()+3600*24);    
+    // $cooke1 = setcookie('_shop_order_id', $value1,time()+3600*24,'/');    
+    $cooke1 = setcookie('_shop_order_id', $value1,0,'/');    
 }
 else
 {
@@ -41,7 +44,8 @@ $_shop_email = $_SESSION['_shop_email'] = 'richard@dmwcreative.com.au';
 $_shop_total_cart = 0;
 //////////Order Id ///////////////////////
 if(!isset($_COOKIE['_shop_total_cart'])) {
-    $cooke1 = setcookie('_shop_total_cart', 0,time()+3600*24,'/');    
+    // $cooke1 = setcookie('_shop_total_cart', 0,time()+3600*24,'/');    
+    $cooke1 = setcookie('_shop_total_cart', 0,0,'/');    
 }
 else
 {
@@ -62,6 +66,8 @@ while($temp_row_cart = mysql_fetch_array($temp_result_cart)) {
         $result_cart_sum = mysql_query($sql);
         if($row_cart_sum = mysql_fetch_array($result_cart_sum)) {
              $_shop_total_cart =   $row_cart_sum['total_qty'];
+             // setcookie('_shop_total_cart', $_shop_total_cart,time()+3600*24,'/');
+             // echo "entered sql"
         }
 }
 
