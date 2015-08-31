@@ -95,26 +95,28 @@ include("includes/detail-db-call.php");
             })
         </script>
         <script type="text/javascript">
+            
             function keyuptime(){
-            var qty =document.getElementById("item_order_qty").value;
-                var productId = $("#productId").val();
-                    var unit      = $("#unit").val();
-                var item_M2Box = $("#item_M2Box").val();
-                var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box+'&unit='+unit;
-                ajxCall(datastring);
-                
-            //       $("#item_order_qty").focusout(function(){
-                //        var qty = $(this).val();
-                    //        var productId = $("#productId").val();
-                //        var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box;
-                //        ajxCall(datastring);
-            //       })
-                $("#item_order_qty").change(function(){
-                var qty = $(this).val();
+                var qty =document.getElementById("item_order_qty").value;
                     var productId = $("#productId").val();
-                var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box+'&unit='+unit;
-                ajxCall(datastring);
-            })
+                        var unit      = $("#unit").val();
+                    var item_M2Box = $("#item_M2Box").val();
+                    var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box+'&unit='+unit;
+                    ajxCall(datastring);
+                    
+                //       $("#item_order_qty").focusout(function(){
+                    //        var qty = $(this).val();
+                        //        var productId = $("#productId").val();
+                    //        var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box;
+                    //        ajxCall(datastring);
+                //       })
+                    $("#item_order_qty").change(function(){
+                        var qty = $(this).val();
+                            var productId = $("#productId").val();
+                        var datastring = 'productId='+productId+'&qty='+qty+'&item_M2Box'+item_M2Box+'&unit='+unit;
+                        ajxCall(datastring);
+                    })
+            }
             
             function ajxCall(datastring)
             {
@@ -139,9 +141,35 @@ include("includes/detail-db-call.php");
                 })
             }
             ///////////////////// Add to cart /////////////////////////
-            $("#additemtocart").click(function(event){
-                    event.preventDefault();
-                    var shop_user_id_encoded = $("#shop_user_id_encoded").val();
+            // $("#additemtocart").click(function(event){
+            //         // event.preventDefault();
+            //         // keyuptime();
+            //         var shop_user_id_encoded = $("#shop_user_id_encoded").val();
+            //             var shop_user_session    = $("#shop_user_session").val();
+            //                 var shop_order_id        = $("#shop_order_id").val();
+            //                     var item_Code            = $("#item_Code").val();
+            //                     var pdtunit              = $("#pdtunit").val();
+            //             // var item_order_qty       = $("#item_order_qty").val();
+            //             var item_order_qty       = $("#totm2").val();
+            //                     var item_id              = $("#item_id").val();
+            //                 //  var totprice             = $("#totprice").val();
+            //         if(pdtunit == "M2")
+            //             {
+            //                     var totprice             = $("#totprice").val();
+            //             }
+            //             if(pdtunit == "pcs")
+            //             {
+            //                     var totprice             = $("#totprice").val();
+            //             }
+            //         var addToCart = addToCartPdtDetails(shop_user_id_encoded,shop_order_id,shop_user_session,item_Code,item_order_qty,item_id,totprice);
+                    
+                
+            // })
+            
+            function callAjax() {
+                console.log("clicked");
+                keyuptime();
+                var shop_user_id_encoded = $("#shop_user_id_encoded").val();
                         var shop_user_session    = $("#shop_user_session").val();
                             var shop_order_id        = $("#shop_order_id").val();
                                 var item_Code            = $("#item_Code").val();
@@ -160,8 +188,7 @@ include("includes/detail-db-call.php");
                         }
                     var addToCart = addToCartPdtDetails(shop_user_id_encoded,shop_order_id,shop_user_session,item_Code,item_order_qty,item_id,totprice);
                     
-                
-            })
+            }
             ////////////////////////////////Image gallery //////////////////////////////
             $(".imggallery").click(function(){
                 var src = $(this).attr("src");
@@ -170,7 +197,7 @@ include("includes/detail-db-call.php");
                 $(".galleryImg").attr("src",src);
                 $(".lightbox").attr("href",src);
             })
-            }
+            
         </script>
         <style type="text/css">
         .price_rrp {
@@ -228,6 +255,7 @@ include("includes/detail-db-call.php");
                                             <div id="item_qty" class="item_qty">
                                                 <div id="label" class="label">Your order quantity:</div>
                                                 <div id="field" class="field"><input type="text" id="item_order_qty" name="item_order_qty" value="0" class="textfield" onkeyup="keyuptime()">
+                                                <!-- <div id="field" class="field"><input type="text" id="item_order_qty" name="item_order_qty" value="0" class="textfield" > -->
                                                 <input type="hidden" id="shop_user_id_encoded" name="shop_user_id_encoded" value=" <?=$_shop_user_id_encoded?>"></input>
                                                 <input type="hidden" id="shop_order_id" name="shop_order_id" value=" <?=$_shop_order_id?>"></input>
                                                 <input type="hidden" id="shop_user_session" name="shop_user_session" value="<?=$_shop_user_session?>"></input>
@@ -268,7 +296,7 @@ include("includes/detail-db-call.php");
                                     </div>
                                     <input type="hidden" name="totprice" id="totprice"></input>
                                     <input type="hidden" name="totm2" id="totm2"></input>
-                                    <input type="submit" id="additemtocart" name="additemtocart" value="Add to Collection" class="big_addtocart">
+                                    <input type="submit" id="additemtocart" name="additemtocart" value="Add to Collection" class="big_addtocart" onclick="callAjax()" >
                                     <?php
                                                             //flag images
                                                             

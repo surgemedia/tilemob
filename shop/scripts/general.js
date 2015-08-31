@@ -78,6 +78,7 @@ function addToCart(user_id, user_session, item_code, item_quantity, button_id,pr
 	}
 	ajaxRequest.open('GET', request_string, true);
 	ajaxRequest.send(null);
+	
 }
 
 function updateCartQty(user_id, user_session, id) {
@@ -194,8 +195,8 @@ function startAjax() {
 }
 
 function addToCartPdtDetails(user_id,shop_order_id, user_session, item_code, item_quantity, button_id,totprice) {
-	var request_string = 'ajax/addToCartPdtDetails.php?user_id='+user_id+'&shop_order_id='+shop_order_id+'&user_session='+user_session+'&item_code='+item_code+'&item_quantity='+item_quantity+'&button_id='+button_id+'&totprice='+totprice;
-	//alert(request_string);
+	 var request_string = 'ajax/addToCartPdtDetails.php?user_id='+user_id+'&shop_order_id='+shop_order_id+'&user_session='+user_session+'&item_code='+item_code+'&item_quantity='+item_quantity+'&button_id='+button_id+'&totprice='+totprice;
+	// // alert(request_string);
 	var ajaxRequest = startAjax();	
 	ajaxRequest.onreadystatechange = function() {
 		if (ajaxRequest.readyState==4 && ajaxRequest.status==200) {
@@ -214,6 +215,17 @@ function addToCartPdtDetails(user_id,shop_order_id, user_session, item_code, ite
 	}
 	ajaxRequest.open('GET', request_string, true);
 	ajaxRequest.send(null);
+
+
+	// var request = $.ajax({
+ //          url: request_string
+ //    });
+ //    request.done(function(msg){
+ //    	console.log(msg);
+ //    });
+ //    request.fail(function( jqXHR, textStatus ) {
+ //            alert( "Request failed: " + textStatus );
+ //     });
 }
 
 

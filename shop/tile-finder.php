@@ -65,7 +65,7 @@ include('includes/requests.php');
                               else if($search_keywords == "Outdoor" || $search_keywords=="outdoor")
                                 {
                                     // $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Use`="EXTFLOOR" OR `Use`="INT&EXT") AND';
-                                    $query .= 'MATCH(`Code`,`Desc`,`CategoryDescription`,`SupplierName`,`Notepad2`) AGAINST(\''.mysql_real_escape_string($search_keywords).'\' IN BOOLEAN MODE) AND (`Use`="EXTFLOOR") AND';
+                                    $query .= '(`Use`="EXTFLOOR") AND';
                     
                                 }
                                else if($search_keywords == "Internal" || $search_keywords=="internal")

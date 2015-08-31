@@ -7,6 +7,15 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Annifont';
+	src: url('../fonts/Annifont.eot');
+	src: url('../fonts/Annifont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Annifont.woff') format('woff'),
+		url('../fonts/Annifont.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /*==========================================
 =            	Body Classes            =

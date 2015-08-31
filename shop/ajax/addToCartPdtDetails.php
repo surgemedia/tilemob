@@ -27,15 +27,20 @@ if((!empty($_GET['user_id'])||!empty($_GET['user_session']))&&!empty($_GET['shop
                                 //$current_qty = intval($row_cart['qty']);
 				$current_qty = $row_cart['qty'];
 				$new_qty = $current_qty+$item_quantity;
+				// $new_qty = 13;
                                 $sql="UPDATE shop_cart SET qty='$new_qty' WHERE cart_id='$my_cart_id'";
 				mysql_query($sql);
 				// $enterLoop = "entered";
+				// echo 'console.log("updated the table")';
 			} else { //new
 				//$item_price = 0;
 				$new_qty = $item_quantity;
+				// $new_qty = 13;
 				mysql_query("INSERT INTO shop_cart (cart_id, user_id, guest_session, item_code, qty, price, lastupdated, is_active,order_id) 
 				VALUES ('', '$user_id', '$guest_session', '$item_code', '$new_qty', '$item_price', NOW(), '1','$orderId')");
 				// $enterLoop = "dint entered";
+				// echo 'console.log("inserted the table")';
+
 			}
 			//$sql = "SELECT sum(qty) as total_qty FROM shop_cart WHERE user_id='$user_id' AND is_active='1'";
                         $sql = "SELECT count(*) as total_qty FROM shop_cart WHERE user_id='$user_id' AND is_active='1'";
