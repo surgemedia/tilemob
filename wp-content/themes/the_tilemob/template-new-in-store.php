@@ -28,8 +28,8 @@
             while ( $new_in_store_query->have_posts() ) { $new_in_store_query->the_post(); 
     ?>
     
-                <div class="col-lg-6">
-                    <div class="pdf-object">
+                <div class="col-sm-6">
+                    <div class="pdf-object featured">
                         <a target="_blank" href="<?php echo get_field('pdf')['url']; ?>">
                             <img src="<?php the_field('thumbnail') ?>" alt="">
                             <span><?php the_title() ?></span>
@@ -63,7 +63,7 @@
             while ( $new_in_store_query->have_posts() ) { $new_in_store_query->the_post(); 
     ?>
     
-                <div class="col-lg-3">
+                <div class="col-sm-3">
                     <div class="pdf-object">
                         <a target="_blank" href="<?php echo get_field('pdf')['url']; ?>">
                             <img src="<?php the_field('thumbnail') ?>" alt="">
