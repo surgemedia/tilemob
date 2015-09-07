@@ -1,6 +1,7 @@
 <?php 
 //echo $_shop_user_id;
 session_start();
+require( '../wp-load.php' );
 include('includes/prerun.php');
 include('includes/connection.php');
 include('includes/global_variables.php');
@@ -84,100 +85,86 @@ switch ($_GET['action']) {
       case 'process':      // Order was successful...
   // print_r($_REQUEST);
    
-          $_shop_order_id = $_REQUEST['_shop_order_id'];
-          $orderId        = $_REQUEST['custom'];
-          $_shop_user_id  = $_REQUEST['_shop_user_id'];
-          // $payment_status = ($_REQUEST['payment_status']=="Completed")?"active":"";
-          // if($_shop_order_id)
-          // {
-              
-          //     mysql_query("UPDATE order_details SET payment_order_id ='$_shop_order_id',payment_status ='active' WHERE order_id ='$_shop_order_id'");
-          // }
-          
-          
-          /////////////////////////Send Order details/////////////////////////////////
-          if($orderId){
-          $billing_string = '';
-          $result_billing_info = mysql_query("SELECT * FROM billing_info WHERE order_id ='$_shop_order_id'");
-          $billing_string .=  '<u>Billing Information</u>'."<br/>\n";
-          while($row = mysql_fetch_array($result_billing_info))
-          {
-              $orderNo         = $row['order_id'];
-              $name            = $row['first_name'].'.'.$row['last_name'];
-              $customerMail    = $row['email'];
-              $shipping_option = $row['shipping_option'];
-              $billing_string .= $row['first_name'].'.'.$row['last_name'] ."<br/>\n";
-              $billing_string .= $row['email'] ."<br/>\n";
-              $billing_string .= $row['phone'] ."<br/>\n";
-              $billing_string .= $row['address'] ."<br/>\n";
-              $billing_string .= $row['city'] ."<br/>\n";
-              $billing_string .= $row['state'] ."<br/>\n";
-              $billing_string .= $row['zip'] ."<br/>\n";
-                                       
-          }
-						
-          $cart_string = '';
-				$cart_final_total = 0;
-				$result_cart = mysql_query("SELECT * FROM shop_cart WHERE order_id='$_shop_order_id' AND qty>0 AND is_active='1'");
-				if($_shop_total_cart>0) {
-					$cart_string .= '
+          // $_shop_order_id = $_GLOBALS['_shop_order_id'];
+          // $orderId        = $_REQUEST['custom'];
+          // $_shop_user_id  = $_GLOBALS['_shop_user_id'];
+	          $billing_string = '';
+	          $result_billing_info = mysql_query("SELECT * FROM billing_info WHERE order_id ='$_shop_order_id'");
+	          $billing_string .=  '<u>Billing Information</u>'."<br/>\n";
+	          while($row = mysql_fetch_array($result_billing_info))
+	          {
+	              $orderNo         = $row['order_id'];
+	              $name            = $row['first_name'].'.'.$row['last_name'];
+	              $customerMail    = $row['email'];
+	              $shipping_option = $row['shipping_option'];
+	              $billing_string .= $row['first_name'].'.'.$row['last_name'] ."<br/>\n";
+	              $billing_string .= $row['email'] ."<br/>\n";
+	              $billing_string .= $row['phone'] ."<br/>\n";
+	              $billing_string .= $row['address'] ."<br/>\n";
+	              $billing_string .= $row['city'] ."<br/>\n";
+	              $billing_string .= $row['state'] ."<br/>\n";
+	              $billing_string .= $row['zip'] ."<br/>\n";
+	                                       
+	          }
+
+	          $cart_string = '';
+			  $cart_final_total = 0;
+			  $result_cart = mysql_query("SELECT * FROM shop_cart WHERE order_id='$_shop_order_id' AND qty>0 AND is_active='1'");
+			  if($_shop_total_cart>0) {
+			  	  $cart_string .= '
 					<table id="cart_table" width="50%" class="cart_table">
 						<tr>
 							<th align="left" valign="middle">Item</th>
 							<th align="center" valign="middle">QTY</th>
-							<th  align="right" valign="middle">Price</th>
-							<th  align="right" valign="middle">Total</th>
+							<!--<th  align="right" valign="middle">Price</th>
+							<th  align="right" valign="middle">Total</th>-->
 						</tr>';
-					while($row_cart = mysql_fetch_array($result_cart)) {
-						$row_cart_id = $row_cart['cart_id'];
-						$cart_item_code = $row_cart['item_code'];
-						$cart_qty = $row_cart['qty'];
-                                                $cart_price = $row_cart['price'];
-						$result_cart_webitems = mysql_query("SELECT * FROM shop_webitems WHERE Code='$cart_item_code' AND is_active='1'");
-						if($row_cart_webitems = mysql_fetch_array($result_cart_webitems)) {
-                                                  //echo "<pre/>";  print_r($row_cart_webitems);
-							$cart_item_id = $row_cart_webitems['item_id'];
-							$cart_item_name = $row_cart_webitems['Desc'];
-							$cart_item_pcsm2 = floatval($row_cart_webitems['PcsM2']);
-							$cart_item_unit = $row_cart_webitems['Unit'];						
-							if($cart_item_pcsm2>0){ //sell in m2
+
+				  while($row_cart = mysql_fetch_array($result_cart)) {
+				  	  $row_cart_id = $row_cart['cart_id'];
+					  $cart_item_code = $row_cart['item_code'];
+					  $cart_qty = $row_cart['qty'];
+                      $cart_price = $row_cart['price'];
+                      $result_cart_webitems = mysql_query("SELECT * FROM shop_webitems WHERE Code='$cart_item_code' AND is_active='1'");
+                      if($row_cart_webitems = mysql_fetch_array($result_cart_webitems)) {
+                      	  $cart_item_id = $row_cart_webitems['item_id'];
+						  $cart_item_name = $row_cart_webitems['Desc'];
+					  	  $cart_item_pcsm2 = floatval($row_cart_webitems['PcsM2']);
+						  $cart_item_unit = $row_cart_webitems['Unit'];
+						  if($cart_item_pcsm2>0) { //sell in m2
 								$item_WebPriceM2    = floatval($row_cart_webitems['WebPriceM2']);
-                                                                $item_RetailPriceM2 = floatval($row_cart_webitems['RetailPriceM2']);
-                                                                if(!empty($item_WebPriceM2)) {
-                                                                 $cart_item_buy = floatval($item_WebPriceM2);
-			                                           } else { //if web price value does not exist, use 20% off from retail price
-                           	                                 $item_web_discount_amount = floatval($item_RetailPriceM2)*0.2; //20% of retail price
-				                                 $cart_item_buy  = floatval($item_RetailPriceM2)-$item_web_discount_amount;
-			                                         }
-			                                         $cart_item_rrp = floatval($item_RetailPriceM2);                                                    
+                                $item_RetailPriceM2 = floatval($row_cart_webitems['RetailPriceM2']);
+                                if(!empty($item_WebPriceM2)) {
+                                    $cart_item_buy = floatval($item_WebPriceM2);
+			                    } 
+			                    else { //if web price value does not exist, use 20% off from retail price
+                           	        $item_web_discount_amount = floatval($item_RetailPriceM2)*0.2; //20% of retail price
+				                    $cart_item_buy  = floatval($item_RetailPriceM2)-$item_web_discount_amount;
+			                    }
+			                    $cart_item_rrp = floatval($item_RetailPriceM2);                                                    
 								$cart_item_unit='m&sup2;';
-							}
-                                                        
-                                                        /////////////////////////////////////////////Newly added for pcs price caluculation///////////////////////////////////
-                
-                                                            // if($cart_item_pcsm2==0 && $cart_item_unit=='PCS'){ 
-                                                        if($cart_item_pcsm2==0 || $cart_item_pcsm2 ==''){ 
-                                                                $item_WebPriceM2    = floatval($row_cart_webitems['WebPriceM2']);
-                                                                $item_RetailPricePce = floatval($row_cart_webitems['RetailPricePce']);
-                                                               if(!empty($item_WebPriceM2)) {
-                                                                $item_buy = floatval($item_WebPriceM2);
-                                                                } else { //if web price value does not exist, use 20% off from retail price
-                                                                $item_web_discount_amount = floatval($item_RetailPricePce)*0.2; //20% of retail price
-                                                                $item_buy = floatval($item_RetailPricePce)-$item_web_discount_amount;
-                                                                }
-                                                                $item_rrp = floatval($item_RetailPriceM2);
-                                                                $item_Unit='pcs';
-                                                             }
-                                                         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                        
-                                                        
-                                                        
-                                                        
-							$cart_item_save = $cart_item_rrp-$cart_item_buy;
-							if($cart_item_save<0){$cart_item_buy=0.00;}						
-							$cart_item_subtotal = $cart_item_buy*$cart_qty;
-							 $cart_final_total += $cart_price;
-							$cart_string .= '
+						  }
+						  /////////////////////////////////////////////Newly added for pcs price caluculation///////////////////////////////////
+                		  if($cart_item_pcsm2==0 || $cart_item_pcsm2 =='') { 
+                                $item_WebPriceM2    = floatval($row_cart_webitems['WebPriceM2']);
+                                $item_RetailPricePce = floatval($row_cart_webitems['RetailPricePce']);
+                                if(!empty($item_WebPriceM2)) {
+                                    $item_buy = floatval($item_WebPriceM2);
+                                } 
+                                else { //if web price value does not exist, use 20% off from retail price
+                                    $item_web_discount_amount = floatval($item_RetailPricePce)*0.2; //20% of retail price
+                                    $item_buy = floatval($item_RetailPricePce)-$item_web_discount_amount;
+                                }
+                                $item_rrp = floatval($item_RetailPriceM2);
+                                $item_Unit='pcs';
+                          }
+                          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                          $cart_item_save = $cart_item_rrp-$cart_item_buy;
+						  if($cart_item_save<0){$cart_item_buy=0.00;}						
+						  $cart_item_subtotal = $cart_item_buy*$cart_qty;
+						  $cart_final_total += $cart_price;
+						  $cart_string .= '
 							<tr>
 								<td align="left" valign="middle"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
 								<td align="center" valign="middle">
@@ -191,117 +178,102 @@ switch ($_GET['action']) {
 										<div class="clear"></div>
 									</div>
 								</td>
-								<td align="right" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
-								<td align="right" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_price,2).'</div></td>
+								<!--<td align="right" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
+								<td align="right" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_price,2).'</div></td>-->
 							</tr>';
-						}
-					}
-					$cart_string .= '
-                                        <tr><td>TOTAL :</td><td>$'.number_format($cart_final_total,2).'</td></tr>
+						  
+                      }
+				  }
+				  $cart_string .= '
+                                        <!--<tr><td>TOTAL :</td><td>$'.number_format($cart_final_total,2).'</td></tr>-->
 					</table>';
-				} 
-				$message = $responder = '';
-                $subject .= 'TILESBRISBANE.COM: Your Order';
-				$message .= '
+			  }
+			  $message = $responder = '';
+              $subject .= 'TILESBRISBANE.COM: Your Quote Request';
+			  $message .= '
+				  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+				  <html xmlns="http://www.w3.org/1999/xhtml">
+				  <head>
+				  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				  <title>Quote Request . Don\'t reply this message!</title>
+				  </head>
+				  
+				  <body>
+				  ';
+			  $message .= 'Quote Details'."<br/>\n";
+			  $message .= 'TILESBRISBANE.COM'."<br/>\n";
+              $message .= 'Hi '. $name. ',Thank you for requesting quote with Tiles Brisbane. Your Quote No is :' .$orderNo. ".<br/>\n";
+			  $message .= '************************************************************************'."<br/>\n";
+              $message .= $billing_string."<br/>\n";
+              $message .= 'Shipping Option :'.$shipping_option."<br/>\n";
+              $message .= '************************************************************************'."<br/>\n";
+              $message .= '<u>Quote Content</u>'."<br/>\n";
+			  $message .= $cart_string."\n";
+			  $message .= '************************************************************************'."<br/>\n";
+              $message .= "<br/>\n";
+              $message .= "<br/>\n";
+              $message .="Sincerely,\n The Tilemob"; 
+              $message .="</body>
+			  	  </html>";
+
+			  $store_message = $message."<br/>\n";
+			  $sendto_customer =  $email;
+			  $strtotime = strtotime('now');
+
+			  ini_set('sendmail_from', $email);
+			  $mail_headers .= "MIME-Version: 1.0\r\n";
+			  $mail_headers .= "Content-type: text/html; charset=utf-8\r\n";			
+			  $mail_headers .= "From: TILESBRISBANE.COM <sean@tilesbrisbane.com.au>\r\n"; 
+
+
+          // echo "variable are ".$sendto_customer."---".$subject."---".$message."---".$mail_headers;
+
+			  wp_mail($sendto_customer, $subject, $message, $mail_headers);
+			  // echo "$status ".$status."---";
+
+			  /////////////////////////////// Notification admin//////////////////////////////////
+              $subject  = "TILESBRISBANE.COM: New Quote Received";
+              $message1 = $responder1 = '';
+			  $message1 .= '
 				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 				<html xmlns="http://www.w3.org/1999/xhtml">
 				<head>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<title>Order Invoice. Don\'t reply this message!</title>
+				<title>Quote Request. Don\'t reply this message!</title>
 				</head>
 				
 				<body>
 				';
-				$message .= 'Order Details'."<br/>\n";
-				$message .= 'TILESBRISBANE.COM'."<br/>\n";
-                $message .= 'Hi '. $name. ',Thank you for shope with Tiles Brisbane. Your Order No is :' .$orderNo. ".<br/>\n";
-				$message .= '************************************************************************'."<br/>\n";
-                $message .= $billing_string."<br/>\n";
-                $message .= 'Shipping Option :'.$shipping_option."<br/>\n";
-                $message .= '************************************************************************'."<br/>\n";
-                $message .= '<u>Order Content</u>'."<br/>\n";
-				$message .= $cart_string."\n";
-				$message .= '************************************************************************'."<br/>\n";
-                $message .= "<br/>\n";
-                $message .= "<br/>\n";
-                $message .="Sincerely,"; 
-                $message .="</body>
-				</html>"; 
-		//$message .= 'End of message.'."\n";
-		
-		$store_message = $message."<br/>\n";
-		
-		//$sendto_admin = 'richard@dmwcreative.com.au';
-                $sendto_customer =  $email;
-		// $sendto_admin = 'sacheesh_rc@ispg.in';
-		$strtotime = strtotime('now');
-		
-		
-		ini_set('sendmail_from', $email);
-		$mail_headers .= "MIME-Version: 1.0\r\n";
-		$mail_headers .= "Content-type: text/html; charset=utf-8\r\n";			
-		$mail_headers .= "From: TILESBRISBANE.COM <sales@tilesbrisbane.com.au>\r\n";
-				
-		if(mail($sendto_customer, $subject, $message, $mail_headers)){
-			echo 'CAN SENT';
-		}else{
-			echo 'CANNOT SENT';
-		}
-			
-		
-   
-                /////////////////////////////// Notification admin//////////////////////////////////
-                $subject  = "TILESBRISBANE.COM: New Order Received";
-                $message1 = $responder1 = '';
-				$message1 .= '
-				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-				<html xmlns="http://www.w3.org/1999/xhtml">
-				<head>
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<title>Order Invoice. Don\'t reply this message!</title>
-				</head>
-				
-				<body>
-				';
-		$message1 .= 'There is a new order placed on TILESBRISBANE.COM'."<br/>\n";
-		//$message1 .= 'TILESBRISBANE.COM'."<br/>\n";
-                $message1 .= '<u>Order Details</u>'. ".<br/>\n";
-                $message1 .= 'Order No :' .$orderNo. ".<br/>\n";
-		$message1 .= '************************************************************************'."<br/>\n";
-                $message1 .= $billing_string."<br/>\n";
-                $message1 .= 'Shipping Option :'.$shipping_option."<br/>\n";
-                $message1 .= '************************************************************************'."<br/>\n";
-                $message1 .= '<u>Order Content</u>'."<br/>\n";
-		$message1 .= $cart_string."\n";
-		
-		$message1 .= '************************************************************************'."<br/>\n";
-                $message1 .= "<br/>\n";
-                $message1 .="</body>
-				</html>"; 
-		//$message .= 'End of message.'."\n";
-		
-		$store_message1 = $message1."<br/>\n";
-		
-		//$sendto_admin = 'richard@dmwcreative.com.au';
-                $sendto_admin =   'sean@tilemob.com.au';//'sales@tilemob.com.au';
-		// $sendto_admin = 'sacheesh_rc@ispg.in';
-		$strtotime = strtotime('now');
-		
-		ini_set('sendmail_from', $email);
-		$mail_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-		$mail_headers .= "From: TILESBRISBANE.COM\r\nReply-To: ".$email."";	
-				
-		if(mail($sendto_admin, $subject, $message1, $mail_headers)){
-			echo 'CAN SENT';
-		}else{
-			echo 'CANNOT SENT';
-		}
-          }
-          setcookie("_shop_user_id", "", time()-3600);
-          setcookie("_shop_order_id", "", time()-3600);
-         /////////////////////////////////////////////////////////////////////////////
-        header("location:thankyou.php");
-          
+		      $message1 .= 'There is a new quote request on TILESBRISBANE.COM'."<br/>\n";
+		      $message1 .= '<u>Quote Details</u>'. ".<br/>\n";
+              $message1 .= 'Quote No :' .$orderNo. ".<br/>\n";
+		      $message1 .= '************************************************************************'."<br/>\n";
+              $message1 .= $billing_string."<br/>\n";
+              $message1 .= 'Shipping Option :'.$shipping_option."<br/>\n";
+              $message1 .= '************************************************************************'."<br/>\n";
+              $message1 .= '<u>Quote Content</u>'."<br/>\n";
+			  $message1 .= $cart_string."\n";
+			  $message1 .= '************************************************************************'."<br/>\n";
+              $message1 .= "<br/>\n";
+              $message1 .="</body>
+				  </html>";
+			  $store_message1 = $message1."<br/>\n";
+			  $sendto_admin =   array('sean@tilemob.com.au','thetilemob@gmail.com');
+			  $strtotime = strtotime('now');
+
+			  ini_set('sendmail_from', $email);
+		      $mail_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			  $mail_headers .= "From: TILESBRISBANE.COM\r\nReply-To: ".$email."";
+
+			  // echo "variable are ".$sendto_admin."---".$subject."---".$message1."---".$mail_headers;
+			  wp_mail($sendto_admin, $subject, $message1, $mail_headers);
+			  // echo "$status ".$status;
+
+			  $billing_string = '';
+			  setcookie("_shop_user_id", "", time()-3600,'/');
+          	  setcookie("_shop_order_id", "", time()-3600,'/');
+
+          	  header("location:thankyou.php");
  
       break;
  
