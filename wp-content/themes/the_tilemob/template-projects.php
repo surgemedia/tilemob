@@ -27,7 +27,7 @@
     ?>
     
                 <div class="col-sm-6">
-                    <div class="pdf-object">
+                    <div class="pdf-object featured">
                         <a target="_blank" href="<?php echo get_field('pdf')['url']; ?>">
                             <img src="<?php the_field('thumbnail') ?>" alt="">
                             <span><?php the_title() ?></span>

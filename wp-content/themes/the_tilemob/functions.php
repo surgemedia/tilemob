@@ -73,3 +73,4 @@ function mycustom_wpcf7_form_elements( $form ) {
 
   return $form;
 }
+

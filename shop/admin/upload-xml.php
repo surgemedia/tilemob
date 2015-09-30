@@ -46,7 +46,7 @@ if(move_uploaded_file($_FILES['xmlzip']['tmp_name'], $xml_zipsrc)) {
 					$xml_transfer_details .= 'Found '.$xml_file_name.' for '.$sql_table_name.', now Converting XML for SQL:<br/> '.$parseXML_feedback.'<br/>';
 				}
 			}
-			//echo $xml_transfer_details;
+			// echo $xml_transfer_details;
 		}
 		//copy images
 		if(!empty($image_files)) {
@@ -86,10 +86,12 @@ function parseXML($xml_file, $sql_table) {
 	if($items_array_count>0) {
 		for($i=0; $i<$items_array_count; $i++) { //xml data rows
 			$query_updates = $query_columns = $query_values = '';
+			$isActiveValue = '';
 			foreach($sql_columns as $key => $column) { //match to each sql column
 				//$output .= $column.': '.$items_array[$i][$column].', ';
 				$item_column_value = $items_array[$i][$column];
-				if(!empty($item_column_value)) {
+				// echo "item_column_value = ".$item_column_value."; empty of item_column_value = ".empty($item_column_value)."<br>";
+				if(empty($item_column_value)) {
 					$column_value = $item_column_value;
 					$query_columns .= '`'.$column.'`, ';
 					$safe_column_value = mysql_real_escape_string(trim($column_value));
@@ -100,24 +102,43 @@ function parseXML($xml_file, $sql_table) {
 				} else {
 					$column_value = '';
 				}
+				// echo "query_columns = ".$query_columns."; query_updates = ".$query_updates."; $query_values = ".$query_values.";<br>";
 			}
+			//start of Update $query_updates is_active 
+			$pos = strpos($query_updates, '`WebExport`=');
+			$split = substr($query_updates,$pos);
+			$pos = strpos($split,', ');
+			$split = substr($split,0,$pos);
+			if($split=="`WebExport`='YES'")
+			{
+			   $query_updates = str_replace("`is_active`=''","`is_active`='1'",$query_updates);
+			   $query_values = substr_replace($query_values,"'1',",strlen($query_values)-4);
+			}
+			//end of Update $query_updates is_active
 			$query_columns = substr(trim($query_columns), 0, -1);
 			$query_values = substr(trim($query_values), 0, -1);
 			$query_updates = substr(trim($query_updates), 0, -1);
+
+			$debug_query_output = "query_columns = ".$query_columns."; query_updates = ".$query_updates."; query_values = ".$query_values.";<br>";
+
 			$item_code = $items_array[$i]['Code']; //all tables have Code column			
 			//check if data exists in sql
 			$result_check_exists = mysql_query("SELECT * FROM $sql_table WHERE Code='$item_code' AND is_active='1'");
 			if(mysql_num_rows($result_check_exists)>0) {
 				//update existing
 				mysql_query("UPDATE $sql_table SET $query_updates WHERE Code='$item_code' AND is_active='1'");
-				$output .= '<pre>UPDATE '.$sql_table.' SET '.$query_updates.' WHERE Code=\''.$item_code.'\' AND is_active=\'1\'</pre>';				
+				$output .= '<pre>UPDATE '.$sql_table.' SET '.$query_updates.' WHERE Code=\''.$item_code.'\' AND is_active=\'1\'</pre>';	
+				// echo "uupdate is ".$query_updates."<br>";			
 			} else {
 				//insert nonexisting
 				mysql_query("INSERT INTO $sql_table ($query_columns) VALUES ($query_values)") or die(mysql_error());
 				$output .= '<pre>INSERT INTO '.$sql_table.' ('.$query_columns.' ) VALUES ('.$query_values.')</pre>';
+				// echo "query column ".$query_columns."query_values ".$query_values."<br>";			
+				
 			}
 		}
 	}
+	// echo "<pre>output is ".$output."<br></pre>";
 	return $output;
 	// echo "<pre>".$xml_string."</pre>";
 }
@@ -136,7 +157,7 @@ $data_correspondence = array(
 					$xml_transfer_details .= 'Found '.$xml_file_name.' for '.$sql_table_name.', now parsing XML for SQL:<br/> '.$parseXML_feedback.'<br/>';
 				}
 			}
-			 echo "<pre>".$xml_transfer_details."</pre>";
+			 // echo "<pre>".$xml_transfer_details."</pre>";
 		}
 
 function parseXML_images($xml_file, $sql_table) {
@@ -175,7 +196,7 @@ function parseXML_images($xml_file, $sql_table) {
 					}					
 				}
 				$images_array_serialized = serialize($images_array);
-			//echo $code.'<br/>'.$temp_string.'<br/>'.$images_array_serialized.'<br/>';				
+			// echo $code.'<br/>'.$temp_string.'<br/>'.$images_array_serialized.'<br/>';				
 				mysql_query("UPDATE shop_webitems SET images='$images_array_serialized' WHERE Code='$code' AND is_active='1'") or die(mysql_error());
 			}			
 		}		
@@ -220,6 +241,7 @@ function deleteContent(content_id) {
 			//s1: notice | s2: success | s3: error 
 			$string .= '<div class="status'.$s.'">'.$status.'</div>';
 			$string .= '<div class="clear"></div>';
+			echo "<pre>".$debug_query_output."</pre>";
 			echo "<pre>".$string."</pre>";
 		}
 		?>

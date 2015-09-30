@@ -166,7 +166,7 @@ switch ($_GET['action']) {
 						  $cart_final_total += $cart_price;
 						  $cart_string .= '
 							<tr>
-								<td align="left" valign="middle"><a href="detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
+								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
 								<td align="center" valign="middle">
 									<div class="qty">
 										<div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'</div>
@@ -189,7 +189,7 @@ switch ($_GET['action']) {
 					</table>';
 			  }
 			  $message = $responder = '';
-              $subject .= 'TILESBRISBANE.COM: Your Quote Request';
+              $subject .= 'TILEMOB.COM.AU: Your Quote Request';
 			  $message .= '
 				  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 				  <html xmlns="http://www.w3.org/1999/xhtml">
@@ -201,8 +201,8 @@ switch ($_GET['action']) {
 				  <body>
 				  ';
 			  $message .= 'Quote Details'."<br/>\n";
-			  $message .= 'TILESBRISBANE.COM'."<br/>\n";
-              $message .= 'Hi '. $name. ',Thank you for requesting quote with Tiles Brisbane. Your Quote No is :' .$orderNo. ".<br/>\n";
+			  $message .= 'TILEMOB.COM.AU'."<br/>\n";
+              $message .= 'Hi '. $name. ',Thank you for requesting quote with The Tilemob. Your Quote No is :' .$orderNo. ".<br/>\n";
 			  $message .= '************************************************************************'."<br/>\n";
               $message .= $billing_string."<br/>\n";
               $message .= 'Shipping Option :'.$shipping_option."<br/>\n";
@@ -223,7 +223,7 @@ switch ($_GET['action']) {
 			  ini_set('sendmail_from', $email);
 			  $mail_headers .= "MIME-Version: 1.0\r\n";
 			  $mail_headers .= "Content-type: text/html; charset=utf-8\r\n";			
-			  $mail_headers .= "From: TILESBRISBANE.COM <sean@tilesbrisbane.com.au>\r\n"; 
+			  $mail_headers .= "From: TILEMOB.COM.AU <sales@tilemob.com.au>\r\n"; 
 
 
           // echo "variable are ".$sendto_customer."---".$subject."---".$message."---".$mail_headers;
@@ -232,7 +232,7 @@ switch ($_GET['action']) {
 			  // echo "$status ".$status."---";
 
 			  /////////////////////////////// Notification admin//////////////////////////////////
-              $subject  = "TILESBRISBANE.COM: New Quote Received";
+              $subject  = "www.tilemob.com.au New Quote Request Received";
               $message1 = $responder1 = '';
 			  $message1 .= '
 				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -244,7 +244,7 @@ switch ($_GET['action']) {
 				
 				<body>
 				';
-		      $message1 .= 'There is a new quote request on TILESBRISBANE.COM'."<br/>\n";
+		      $message1 .= 'There is a new quote request from www.tilemob.com.au'."<br/>\n";
 		      $message1 .= '<u>Quote Details</u>'. ".<br/>\n";
               $message1 .= 'Quote No :' .$orderNo. ".<br/>\n";
 		      $message1 .= '************************************************************************'."<br/>\n";
@@ -258,12 +258,14 @@ switch ($_GET['action']) {
               $message1 .="</body>
 				  </html>";
 			  $store_message1 = $message1."<br/>\n";
-			  $sendto_admin =   array('sean@tilemob.com.au','thetilemob@gmail.com');
+			  // $sendto_admin =   array('vani@surgemedia.com.au');
+			  // $sendto_admin =   array('sales@tilemob.com.au','thetilemob@gmail.com');
+			  $sendto_admin =   array('sales@tilemob.com.au');
 			  $strtotime = strtotime('now');
 
 			  ini_set('sendmail_from', $email);
 		      $mail_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-			  $mail_headers .= "From: TILESBRISBANE.COM\r\nReply-To: ".$email."";
+			  $mail_headers .= "From: TILEMOB.COM.AU\r\nReply-To: ".$email."";
 
 			  // echo "variable are ".$sendto_admin."---".$subject."---".$message1."---".$mail_headers;
 			  wp_mail($sendto_admin, $subject, $message1, $mail_headers);

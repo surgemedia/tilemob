@@ -10,7 +10,9 @@ License: GPLv3 or later
 ***/
 
 function add_roles_on_plugin_activation() {
-       add_role( 'client', 'Client', array( 'read' => true, 'level_10' => true ) );
+	   remove_role( 'client' );
+	   $role = get_role('administrator')->capabilities;
+       add_role( 'client', 'Client', $role );
    }
    register_activation_hook( __FILE__, 'add_roles_on_plugin_activation' );
 ?>

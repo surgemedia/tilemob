@@ -591,7 +591,9 @@ include("includes/detail-db-call.php");
                         while($row_related=mysql_fetch_array($result_related)) {
                                                  // echo "<pre/>";  print_r($row_related);
                                                 $item_size = $row_related['Size'];
-                        $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$item_size' AND is_active='1'");
+                        $result_size_check = mysql_query("SELECT * FROM shop_size WHERE Code='$item_size' AND is_active='1'"
+
+                            );
                         if($row_size_check = mysql_fetch_array($result_size_check)) {
                             $item_display_size = $row_size_check['Description'];
                         } else { $item_display_size=''; }
@@ -715,7 +717,7 @@ include("includes/detail-db-call.php");
                                             $relatedProducts = implode(',',$relatedProducts);
                                         }
                                         //$sql = "SELECT * FROM shop_webitems WHERE RelatedTo='$item_RelatedTo' AND  item_id NOT IN($relatedProducts) ORDER BY Size DESC LIMIT 0, 24";
-                                        $sql = "SELECT * FROM shop_webitems WHERE RelatedTo='$item_RelatedTo' AND item_id !='$item_id' ";
+                                        $sql = "SELECT * FROM shop_webitems WHERE RelatedTo='$item_RelatedTo' AND item_id !='$item_id' AND is_active='1'";
                                         if($relatedProducts!="")
                                         {
                                             $sql .= "AND  item_id NOT IN($relatedProducts) ORDER BY Size DESC LIMIT 0, 24";
@@ -728,11 +730,13 @@ include("includes/detail-db-call.php");
                         $result_related = mysql_query("SELECT * FROM shop_webitems WHERE `Use`='$item_Use' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' ORDER BY RAND() LIMIT 0, 24");
                         $total_related=mysql_num_rows($result_related);
                     }*/
+                    $other_related_shown = array();
                     if($total_related>0) 
                                         {
                                             while($row_related=mysql_fetch_array($result_related)) 
                                             {
 //                                               echo "<pre/>"; print_r($row_related);
+                                                array_push($other_related_shown, $row_related['Code']); 
                                                 $this_id = $row_related['item_id'];
                         $item_name = $row_related['Desc'];
                         $item_pcsm2 = floatval($row_related['PcsM2']);
@@ -823,7 +827,7 @@ include("includes/detail-db-call.php");
                             <div id="thumb'.$this_id.'" class="thumb">
                                 <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
                                 <div class="clear"></div>
-                            </div>';*/
+                            </div>';*/          if(!in_array( $row_related['Code'], $other_related_shown){
                                                 $related_string .= 
                                                          '<div class="thumb">
                                                                 <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
@@ -842,9 +846,10 @@ include("includes/detail-db-call.php");
                                                                         <div class="clear"></div>
                                                                 </div>
                                                         </div>';
+                                                    }
                         }
                     }
-                    echo $related_string;
+                    //echo $related_string;
                     ?>
                     </div>
                     <div class="clear"></div>
