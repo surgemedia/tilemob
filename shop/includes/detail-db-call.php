@@ -142,7 +142,7 @@ if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']))
 	//if (!$resp->is_valid) { //check that captcha code is correct
 	
 		$message .= 'WEBSITE ENQUIRY FORM'."\n";
-		$message .= 'TILESBRISBANE.COM'."\n";
+		$message .= 'TILEMOB.COM.AU'."\n";
 		$message .= '******************************************************************'."\n";
 		$message .= 'NAME: '.$name."\n";
 		$message .= 'E-MAIL ADDRESS: '.$email."\n";	
@@ -210,7 +210,7 @@ if($_POST['submit'] ==  "Submit") {
 	$message = $responder = '';
 	
 		$message .= 'BIG QTY DEALS'."\n";
-		$message .= 'TILESBRISBANE.COM'."\n";
+		$message .= 'TILEMOB.COM.AU'."\n";
 		$message .= '******************************************************************'."\n";
 		$message .= 'Description: '.$desc."\n";
 		$message .= 'Qty: '.$qty."\n";	

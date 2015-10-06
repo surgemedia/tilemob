@@ -91,8 +91,7 @@ function parseXML($xml_file, $sql_table) {
 				//$output .= $column.': '.$items_array[$i][$column].', ';
 				$item_column_value = $items_array[$i][$column];
 				// echo "item_column_value = ".$item_column_value."; empty of item_column_value = ".empty($item_column_value)."<br>";
-				// if(!empty($item_column_value)) {
-				if(strlen($item_column_value)) {
+				if(empty($item_column_value)) {
 					$column_value = $item_column_value;
 					$query_columns .= '`'.$column.'`, ';
 					$safe_column_value = mysql_real_escape_string(trim($column_value));
@@ -105,7 +104,17 @@ function parseXML($xml_file, $sql_table) {
 				}
 				// echo "query_columns = ".$query_columns."; query_updates = ".$query_updates."; $query_values = ".$query_values.";<br>";
 			}
-
+			//start of Update $query_updates is_active 
+			$pos = strpos($query_updates, '`WebExport`=');
+			$split = substr($query_updates,$pos);
+			$pos = strpos($split,', ');
+			$split = substr($split,0,$pos);
+			if($split=="`WebExport`='YES'")
+			{
+			   $query_updates = str_replace("`is_active`=''","`is_active`='1'",$query_updates);
+			   $query_values = substr_replace($query_values,"'1',",strlen($query_values)-4);
+			}
+			//end of Update $query_updates is_active
 			$query_columns = substr(trim($query_columns), 0, -1);
 			$query_values = substr(trim($query_values), 0, -1);
 			$query_updates = substr(trim($query_updates), 0, -1);
@@ -119,7 +128,7 @@ function parseXML($xml_file, $sql_table) {
 				//update existing
 				mysql_query("UPDATE $sql_table SET $query_updates WHERE Code='$item_code' AND is_active='1'");
 				$output .= '<pre>UPDATE '.$sql_table.' SET '.$query_updates.' WHERE Code=\''.$item_code.'\' AND is_active=\'1\'</pre>';	
-				// echo "uupdate is ".$query_updates."<br>";			
+				echo "uupdate is ".$query_updates."<br>";			
 			} else {
 				//insert nonexisting
 				mysql_query("INSERT INTO $sql_table ($query_columns) VALUES ($query_values)") or die(mysql_error());

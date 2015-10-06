@@ -583,6 +583,7 @@ include("includes/detail-db-call.php");
 //                                        }
                                        
                                         //echo $result_related;
+                                        // echo $sql;
                     $total_related=mysql_num_rows($result_related);
                                         //echo $total_related;
                                       
@@ -722,9 +723,11 @@ include("includes/detail-db-call.php");
                                         {
                                             $sql .= "AND  item_id NOT IN($relatedProducts) ORDER BY Size DESC LIMIT 0, 24";
                                         }
-                                        //echo $sql;
+                                        // echo $sql.'<br>';
                                         $result_related = mysql_query($sql);
+                                        // echo $result_related.'<br>';
                     $total_related=mysql_num_rows($result_related);
+                                        // echo $total_related.'<br>';
                                        
                     /*if($total_related==0) {
                         $result_related = mysql_query("SELECT * FROM shop_webitems WHERE `Use`='$item_Use' AND item_id!='$item_id' AND WebExport='YES' AND is_active='1' ORDER BY RAND() LIMIT 0, 24");
@@ -735,7 +738,7 @@ include("includes/detail-db-call.php");
                                         {
                                             while($row_related=mysql_fetch_array($result_related)) 
                                             {
-//                                               echo "<pre/>"; print_r($row_related);
+                                              // echo "<pre/>"; print_r($row_related);
                                                 array_push($other_related_shown, $row_related['Code']); 
                                                 $this_id = $row_related['item_id'];
                         $item_name = $row_related['Desc'];
@@ -754,6 +757,7 @@ include("includes/detail-db-call.php");
                                                     $item_display_size1=''; 
                                                     
                                                 }
+                                                // echo "item_display_size1 ".$item_display_size1."<br>";
                                                   //*****Flag Images****
                                       
                                         if($row_related['Country']=='SPAIN')
@@ -827,7 +831,7 @@ include("includes/detail-db-call.php");
                             <div id="thumb'.$this_id.'" class="thumb">
                                 <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
                                 <div class="clear"></div>
-                            </div>';*/          if(!in_array( $row_related['Code'], $other_related_shown){
+                            </div>';*/          if(in_array( $row_related['Code'], $other_related_shown)){
                                                 $related_string .= 
                                                          '<div class="thumb">
                                                                 <div class="thumbnail"><a href="detail.php?id='.$this_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
@@ -849,7 +853,7 @@ include("includes/detail-db-call.php");
                                                     }
                         }
                     }
-                    //echo $related_string;
+                    echo $related_string;
                     ?>
                     </div>
                     <div class="clear"></div>
