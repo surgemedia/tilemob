@@ -6,6 +6,6 @@ function register_my_custom_menu_page(){
 }
 
 function my_custom_menu_page(){
-	echo "<iframe height='1000px' width='100%' src='/shop/admin/upload-xml.php'></iframe>";
+	echo "<iframe height='1000px' width='100%' src='http://shopupload.tilemob.com.au/shop/admin/upload-xml.php'></iframe>";
 }
  ?>
