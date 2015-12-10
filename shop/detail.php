@@ -350,15 +350,15 @@ include("includes/detail-db-call.php");
                                 <div class="col-xs-12 padding-zero">
                                 <!-- TABS -->
                                     <div id="tabs" class="tabs">
-                                        <div id="tab1" class="tab tbs" <?php echo $display; ?> ><a href="javascript:void(0);" onclick="goToProductTab(1);" title="OVERVIEW">OVERVIEW</a></div>
-                                        <div id="tab2" class="<?php echo $activeTab; ?> tbs"><a href="javascript:void(0);" onclick="goToProductTab(2);" title="SPECS">SPECS</a></div>
+                                        <div id="tab1" class="tab_inactive tbs" <?php echo $display; ?> ><a href="javascript:void(0);" onclick="goToProductTab(1);" title="OVERVIEW">OVERVIEW</a></div>
+                                        <div id="tab2" class="tab tbs"><a href="javascript:void(0);" onclick="goToProductTab(2);" title="SPECS">SPECS</a></div>
                                         <div id="tab3" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(3);" title="ASK A QUESTION">ASK A QUESTION</a></div>
                                         <!-- <div id="tab4" class="tab_inactive tbs"><a href="javascript:void(0);" onclick="goToProductTab(4);" title="BIG QUANTITY DEALS">BIG QTY DEALS</a></div> -->
 
                                         <div class="clear"></div>
                                     </div>
                                     <!-- OVERVIEW -->
-                                    <div id="page1" class="page">
+                                    <div id="page1" class="page" <?php echo $ContentDisplay; ?> style="display:none;">
                                         <div id="description" class="description">
                                             <?php echo nl2br($item_Notepad2); ?>
                                             <div class="clear"></div>
@@ -366,7 +366,7 @@ include("includes/detail-db-call.php");
                                         <div class="clear"></div>
                                     </div>
                                     <!-- SPECS -->
-                                    <div id="page2" class="page"  <?php echo $ContentDisplay; ?> style="display:none;">
+                                    <div id="page2" class="page"   >
                                         <table id="details_table" width="100%" class="details_table">
                                             <tr>
                                                 <td colspan="4"><h3><?php echo $item_Heading_name; ?></h3></td>
@@ -568,6 +568,7 @@ include("includes/detail-db-call.php");
 
                     <!-- Product variations -->
                 <div id="product_variations" class="product_variations">
+                <br>
                     <h1>Product Variations</h1>
                     <div id="related_products" class="related_products" style="display:block;">
                     <h2>Related products to <?php echo $item_Desc; ?></h2>
@@ -687,6 +688,8 @@ include("includes/detail-db-call.php");
     <div class="clear"></div>
     </div>                          
 <div class="clear"></div>
+ <a class="view-details button" href="detail.php?id='.$this_id.'" title="'.$item_name.'">View details</a>
+
 </div>  
 </div>';
 
@@ -848,6 +851,8 @@ include("includes/detail-db-call.php");
                                                                             <div class="clear"></div>
                                                                         </div>                          
                                                                         <div class="clear"></div>
+                                                                <a class="view-details button" href="detail.php?id='.$this_id.'" title="'.$item_name.'">View details</a>
+
                                                                 </div>
                                                         </div>';
                                                     }
