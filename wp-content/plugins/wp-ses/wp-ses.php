@@ -48,7 +48,7 @@ if (is_admin()) {
     register_activation_hook(__FILE__, 'wpses_install');
     register_deactivation_hook(__FILE__, 'wpses_uninstall');
 }
-require_once (WP_PLUGIN_DIR . '/wp-ses/ses.class.0.8.4.php');
+require_once ('ses.class.0.8.4.php');
 
 function wpses_init() {
     load_plugin_textdomain('wpses', false, basename(dirname(__FILE__)));
