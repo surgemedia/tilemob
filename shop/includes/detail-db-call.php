@@ -76,8 +76,8 @@ if(!empty($_GET['id'])) {
 		if($row_edge=mysql_fetch_array($result_edge)){$item_Edge_name=$row_edge['Description'];}
 		$result_material = mysql_query("SELECT * FROM shop_material WHERE Code='$item_Material' AND is_active='1'");
 		if($row_material=mysql_fetch_array($result_material)){$item_Material_name=$row_material['Description'];}
-		$result_pantone = mysql_query("SELECT * FROM shop_pantone WHERE Code='$item_Pantone' AND is_active='1'");
-		if($row_pantone=mysql_fetch_array($result_pantone)){$item_Pantone_name=$row_pantone['Description'];}else{$item_Pantone_name='';}
+		$result_pantone = mysql_query("SELECT * FROM shop_pantone WHERE Code='$item_Pantone'");
+		if($row_pantone=mysql_fetch_array($result_pantone)){$item_Pantone_name=$row_pantone['Description'];}else{$item_Pantone_name=$item_Pantone;}
 		$result_pattern = mysql_query("SELECT * FROM shop_pattern WHERE Code='$item_Pattern' AND is_active='1'");
 		if($row_pattern=mysql_fetch_array($result_pattern)){$item_Pattern_name=$row_pattern['Description'];}
 		$result_location = mysql_query("SELECT * FROM shop_location WHERE Code='$item_Location' AND is_active='1'");

@@ -302,11 +302,11 @@ include("includes/detail-db-call.php");
                                                             
                                                             if($item_Country == 'SPAIN')
                                                                             {
-                                                                            $img_s='<img src="images/Spain.png" title="Spain"/>';
+                                                                            $img_s='<img src="/wp-content/uploads/2016/01/Spain.png" title="Spain"/>';
                                                                             }
                                                                             else if($item_Country == 'ITALY')
                                                                             {
-                                                                                $img_s='<img src="images/Italy.png" title="Italy"/>';
+                                                                                $img_s='<img src="/wp-content/uploads/2016/01/Italy.png" title="Italy"/>';
                                                                             }
                                                             
                                                                 
@@ -451,15 +451,12 @@ include("includes/detail-db-call.php");
                                                 <td colspan="3"><?php echo $item_Pattern_name; ?></td>
                                             </tr>
                                             <?php }?>
-                                            <?php
-                                                                        if(!empty($item_Pantone_name)) {
-                                                                            echo '
-                                                                            <tr>
-                                                                                    <td><span>Pantone</span></td>
-                                                                                    <td colspan="3">'.$item_Pantone_name.'</td>
-                                                                            </tr>';
-                                                                        }
-                                            ?>
+                                            <?php if($item_Pantone_name) { ?>
+                                                 <tr>
+                                                         <td><span>Pantone</span></td>
+                                                         <td colspan="3"><?php echo $item_Pantone_name; ?></td>
+                                                 </tr>
+                                            <?php }?>
                                             <?php if($item_Edge_name){?>
                                             <tr>
                                                 <td><span>Edge Finish</span></td>
