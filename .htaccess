@@ -1,5 +1,111 @@
+# Protect System Files - Security > Settings > System Tweaks > System Files
+	<files .htaccess>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.html>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.txt>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files install.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files wp-config.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Protect System Files - Security > Settings > System Tweaks > System Files
+		RewriteRule ^wp-admin/includes/ - [F]
+		RewriteRule !^wp-includes/ - [S=3]
+		RewriteCond %{SCRIPT_FILENAME} !^(.*)wp-includes/ms-files.php
+		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
+		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
+		RewriteRule ^wp-includes/theme-compat/ - [F]
+
+		# Disable PHP in Uploads - Security > Settings > System Tweaks > Uploads
+		RewriteRule ^wp\-content/uploads/.*\.(?:php[1-6]?|pht|phtml?)$ - [NC,F]
+
+		# Filter Non-English Characters - Security > Settings > System Tweaks > Non-English Characters
+		RewriteCond %{QUERY_STRING} ^.*(%0|%A|%B|%C|%D|%E|%F).* [NC]
+		RewriteRule ^.* - [F]
+
+		# Reduce Comment Spam - Security > Settings > System Tweaks > Comment Spam
+		RewriteCond %{REQUEST_METHOD} POST
+		RewriteCond %{REQUEST_URI} /wp-comments-post\.php$
+		RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+		RewriteCond %{HTTP_REFERER} !^https?://(([^/]+\.)?tilemob\.com\.au|jetpack\.wordpress\.com/jetpack-comment)(/|$) [NC]
+		RewriteRule ^.* - [F]
+	</IfModule>
+# END iThemes Security - Do not modify or remove this line
+
+
+# Enable the hide backend feature - Security > Settings > Hide Login Area > Hide Backend
+RewriteRule ^(/)?tilemob-login/?$ /wp-login.php [QSA,L]
+
 Redirect 301 /tm_catalogue /
 
+# BEGIN W3TC Browser Cache
+<IfModule mod_deflate.c>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+# END W3TC Browser Cache
+# BEGIN W3TC Page Cache core
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteRule .* - [E=W3TC_ENC:_gzip]
+    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+    RewriteCond %{REQUEST_METHOD} !=POST
+    RewriteCond %{QUERY_STRING} =""
+    RewriteCond %{REQUEST_URI} \/$
+    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+</IfModule>
+# END W3TC Page Cache core
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -8,8 +114,6 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-RewriteRule ^tm_catalogue$ /index.php [R=301,L]
-
 </IfModule>
 
 # END WordPress
@@ -63,3 +167,4 @@ ExpiresDefault "access plus 2 days"
 </IfModule>
 
 # Leverage Browser Cache End #
+

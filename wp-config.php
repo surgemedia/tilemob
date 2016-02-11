@@ -54,6 +54,8 @@ define('SECURE_AUTH_SALT', 'y C[gx3b@7>bq5P2[ YFX~Sc@.}?,dA#oc^Pgg|S|X0j_4u{Qo-?
 define('LOGGED_IN_SALT',   ']|TcBM>/F$a::SaG-?(z-&8XH)c2T~>A5>p,5 5YhSza^-7}k.q83em*c|7=J?gE');
 define('NONCE_SALT',       '97;$%u>J4-TPRL.mnCrpu++#!u8@nQLlB|8K/fwcA+H=2+|uX.+[QgyWDTl+Cb3/');
 
+define( 'WP_HOME', 'http://localhost/tilemob/' );
+define( 'WP_SITEURL', 'http://localhost/tilemob/' );
 /**#@-*/
 
 /**

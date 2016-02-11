@@ -64,11 +64,9 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
                 $current_page = $_GET['p'];
                 $too_much = "...";
                 $pagenumber_limiter = 3;
-                $too_much_count = 0;
                 // $next_pages = if($_GET['p']+3 < $total_pages){ return $_GET['p']+3;};
                 // $prev_pages = if($_GET['p']-3 > 0){ return $_GET['p']-3;} else { return 0;};
 
-                
                  if($total_pages>1) {
                     $pagenumbers .= '<div class="pagenumbers">';
                     if($page>1){$pagenumbers.='<div class="prev"><a href="storeCategories.php?'.$_parse_url['query'].'&p='.($page-1).'" title="Prev">Prev</a></div>';}
@@ -86,13 +84,19 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
                         if($i == $current_page + $pagenumber_limiter AND $current_page + $pagenumber_limiter < $total_pages){
                              $pagenumbers .= '<div class="page"><a href="javascript:void(0)">'.$too_much.'</a></div>'; 
                         }
-
+                        // if($i != $total_pages AND $current_page != $total_pages ){
+                        //      $pagenumbers .= '<div class="'.$page_class.'"><a href="storeCategories.php?'.$_parse_url['query'].'&p='.$i.'" title="'.$i.'">'.$i.'</a></div>'; 
+                        // }
                     }
                     if($page < $total_pages AND $current_page + $pagenumber_limiter < $total_pages){$pagenumbers.='<div class="page"><a href="storeCategories.php?'.$_parse_url['query'].'&p='.($total_pages).'" title="'.$total_pages.'">'.$total_pages.'</a></div>';}
 
                     if($page < $total_pages){$pagenumbers.='<div class="next"><a href="storeCategories.php?'.$_parse_url['query'].'&p='.($page+1).'" title="Next">Next</a></div>';}
                     $pagenumbers .= '<div class="clear"></div></div>';
                 }
+                
+
+
+
 
             
             ?>

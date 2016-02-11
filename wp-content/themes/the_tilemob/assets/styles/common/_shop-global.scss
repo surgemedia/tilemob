@@ -89,3 +89,26 @@
     font-size: 20px;
     font-weight: bold; 
 }
+.thumb {
+    .view-details  {
+        position: relative;
+        display: block;
+        width: auto;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #FFF;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        background: $red;
+    }
+}
+
+
