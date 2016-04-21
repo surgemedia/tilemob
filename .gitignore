@@ -2,32 +2,32 @@
 Database_Backup/
 
 # Ignore the wordpress directory and default themes 
-wordpress/*.php
-wordpress/*.html
-wordpress/wp-includes
-wordpress/wp-admin
-wordpress/wp-content/plugins
-wordpress/wp-content/languages
-wordpress/wp-content/updraft
-wordpress/wp-content/themes/twentythirteen
-wordpress/wp-content/themes/twentyfourteen
-wordpress/wp-content/themes/twentyfifteen
-wordpress/wp-content/themes/twentysixteen
-wordpress/wp-content/themes/twentyseventeen
+*.php
+*.html
+wp-includes
+wp-admin
+wp-content/plugins
+wp-content/languages
+wp-content/updraft
+wp-content/themes/twentythirteen
+wp-content/themes/twentyfourteen
+wp-content/themes/twentyfifteen
+wp-content/themes/twentysixteen
+wp-content/themes/twentyseventeen
 
-wordpress/*/*/*/bower_components
-wordpress/*/*/*/node_modules
-wordpress/*/*/*/dist
-wordpress/wp-content/updraft
+bower_components
+*/*/*/node_modules
+*/*/*/dist
+wp-content/updraft
 # wordpress/*/uploads
 
 tilemob.com.au
 
 # Include wp-config.php and other wordpress themes and plugins
-!wordpress/wp-config.php
-!wordpress/wp-content
-!wordpress/wp-content/updraft/*
-!wordpress/wp-content/themes/the_tilemob
+!wp-config.php
+!wp-content
+!wp-content/updraft/*
+!wp-content/themes/the_tilemob
 
 
 
@@ -40,7 +40,7 @@ tilemob.com.au
 
 
 
-wordpress/wp-content/updraft/.DS_Store
-wordpress/wp-content/updraft/.htaccess
-wordpress/wp-content/updraft/index.html
-wordpress/wp-content/updraft/web.config
+wp-content/updraft/.DS_Store
+wp-content/updraft/.htaccess
+wp-content/updraft/index.html
+wp-content/updraft/web.config
