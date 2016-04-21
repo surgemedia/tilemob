@@ -9,7 +9,7 @@
             "prefix": "",
             "type": "file",
             "instructions": "Please select the file you would like to upload",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": 50,
@@ -48,11 +48,12 @@
         ]
     ],
     "menu_order": 1,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
-    "modified": 1435733540,
-    "local": "json"
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "modified": 1444174515
 }
