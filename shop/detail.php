@@ -500,10 +500,18 @@ include("includes/detail-db-call.php");
                                                 <td colspan="3"><?php echo $item_Location_name; ?></td>
                                             </tr>
                                             <?php }?>
-                                            <tr>
-                                                <td ><span>Lead Time to Despatch Order:</span> </td>
+                                             <tr>
+                                            <?php if (99<=$item_lead){?>
+                                                <td colspan="4">Allow approx. 8-12 weeks lead time from date of order. Lead time is subject to overseas stock availability and a minimum order quantity may apply.</td>
+
+                                            <?php }else{ ?>
+                                            <td >
+                                                                                    
+                                                <span>Lead Time to Despatch Order:</span>
+                                                </td>
                                                 <td colspan="3"><?php echo $item_lead; ?> Days (approx.)</td>
-                                            </tr>
+                                            <?php   }   ?>
+                                             </tr>
                                         </table>
                                         <div class="clear"></div>
                                     </div>

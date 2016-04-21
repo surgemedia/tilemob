@@ -304,11 +304,14 @@ $query3 .= "GROUP BY sw.SlipRating";
 $result_sliprating = mysql_query($query3);
 $options_sliprating = '<option value="">No preference</option>';
 while($row_sliprating = mysql_fetch_array($result_sliprating)) {
-$sliprating_code = $row_sliprating['Code'];
-$selected_sliprating = $sliprating;
-if($sliprating_code==$selected_sliprating){$option_selected=' SELECTED';}else{$option_selected='';}
-//$options_string .= '<option value="'.$sliprating_code.'"'.$option_selected.'>'.$row_sliprating['Description'].'</option>';*/
-$options_sliprating .= '<option value="'.$sliprating_code.'"'.$option_selected.'>'.$row_sliprating['Description'].'</option>';
+    $sliprating_code = $row_sliprating['Code'];
+    
+    if (str_replace(" ","",$sliprating_code)!=""){
+        $selected_sliprating = $sliprating;
+        if($sliprating_code==$selected_sliprating){$option_selected=' SELECTED';}else{$option_selected='';}
+        //$options_string .= '<option value="'.$sliprating_code.'"'.$option_selected.'>'.$row_sliprating['Description'].'</option>';*/
+        $options_sliprating .= '<option value="'.$sliprating_code.'"'.$option_selected.'>'.$row_sliprating['Description'].'</option>';
+    }
 }
 
 $result['sliprating']= urldecode($options_sliprating);

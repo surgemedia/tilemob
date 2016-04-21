@@ -6,6 +6,7 @@ Database_Backup/
 *.html
 wp-includes
 wp-admin
+wp-content/*
 wp-content/plugins
 wp-content/languages
 wp-content/updraft
@@ -16,8 +17,9 @@ wp-content/themes/twentysixteen
 wp-content/themes/twentyseventeen
 
 bower_components
-*/*/*/node_modules
-*/*/*/dist
+node_modules
+dist
+
 wp-content/updraft
 # wordpress/*/uploads
 

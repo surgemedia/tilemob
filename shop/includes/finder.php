@@ -177,9 +177,11 @@
 				$result_sliprating = mysql_query("SELECT * FROM shop_sliprating WHERE is_active='1'");
 				while($row_sliprating = mysql_fetch_array($result_sliprating)) {
 					$sliprating_code = $row_sliprating['Code'];
+					if (str_replace(" ","",$sliprating_code)!=""){
 					$selected_sliprating = trim(urldecode($_GET['sl']));
 					if($sliprating_code==$selected_sliprating){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$sliprating_code.'"'.$option_selected.'>'.$row_sliprating['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -192,9 +194,11 @@
 				$result_peirating = mysql_query("SELECT * FROM shop_peirating WHERE is_active='1'");
 				while($row_peirating = mysql_fetch_array($result_peirating)) {
 					$peirating_code = $row_peirating['Code'];
+					if (str_replace(" ","",$peirating_code)!=""){
 					$selected_peirating = trim(urldecode($_GET['pe']));
 					if($peirating_code==$selected_peirating){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$peirating_code.'"'.$option_selected.'>'.$row_peirating['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -207,9 +211,11 @@
 				$result_type = mysql_query("SELECT * FROM shop_type WHERE is_active='1'");
 				while($row_type = mysql_fetch_array($result_type)) {
 					$type_code = $row_type['Code'];
+					if (str_replace(" ","",$type_code)!=""){
 					$selected_type = trim(urldecode($_GET['ty']));
 					if($type_code==$selected_type){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$type_code.'"'.$option_selected.'>'.$row_type['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -239,9 +245,11 @@
 				$result_material = mysql_query("SELECT * FROM shop_material WHERE is_active='1'");
 				while($row_material = mysql_fetch_array($result_material)) {
 					$material_code = $row_material['Code'];
+					if (str_replace(" ","",$material_code)!=""){
 					$selected_material = trim(urldecode($_GET['ma']));
 					if($material_code==$selected_material){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$material_code.'"'.$option_selected.'>'.$row_material['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -254,9 +262,11 @@
 				$result_thickness = mysql_query("SELECT * FROM shop_thickness WHERE is_active='1'");
 				while($row_thickness = mysql_fetch_array($result_thickness)) {
 					$thickness_code = $row_thickness['Code'];
+					if (str_replace(" ","",$thickness_code)!=""){
 					$selected_thickness = trim(urldecode($_GET['th']));
 					if($thickness_code==$selected_thickness){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$thickness_code.'"'.$option_selected.'>'.$row_thickness['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -269,9 +279,11 @@
 				$result_edge = mysql_query("SELECT * FROM shop_edge WHERE is_active='1'");
 				while($row_edge = mysql_fetch_array($result_edge)) {
 					$edge_code = $row_edge['Code'];
+					if (str_replace(" ","",$edge_code)!=""){
 					$selected_edge = trim(urldecode($_GET['ed']));
 					if($edge_code==$selected_edge){$option_selected=' SELECTED';}else{$option_selected='';}
 					$options_string .= '<option value="'.$edge_code.'"'.$option_selected.'>'.$row_edge['Description'].'</option>';
+					}
 				}
 				echo $options_string;
 				?>
@@ -282,7 +294,7 @@
 		<input type="submit" id="findtiles" name="findtiles" value="Find Tiles" class="button1-right">
 		</form>
 		<div class="clear"></div>
-		<div id="morelink" class="morelink">  <a class="wow shake" data-wow-duration="10s" data-wow-offset="10" data-wow-iteration="infinite" href="javascript:void(0);" title="More search options" onclick="moreTileFinderOptions();"><span id="finder_more_link_text">› More search options</span></a> </div>		
+		<div id="morelink" class="morelink">  <a class="wow shake" data-wow-duration="10s" data-wow-offset="10" data-wow-iteration="infinite" href="javascript:void(0);" title="More search options" onclick="moreTileFinderOptions();"><span id="finder_more_link_text">&#8250; More search options</span></a> </div>		
 	</div>
 	<div class="clear"></div>
 </div>
