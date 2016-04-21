@@ -56,7 +56,7 @@
             ?>    
             <li class="hidden-xs hidden-md"><a href="/shop/checkOut.php" title="Checkout" style="border:0;">Submit My Collection >></a></li>
           </ul>
-          <div class="clear" for="<?php echo $_shop_total_cart ?>"></div>
+          <div class="clear"></div>
         </div>
       </div>
     </div>
