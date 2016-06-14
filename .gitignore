@@ -1,12 +1,12 @@
 # Ignore the backup_database directory:
 Database_Backup/
 
-# Ignore the wordpress directory and default themes 
+# Ignore the wordpress directory and default themes
 *.php
 *.html
 wp-includes
 wp-admin
-wp-content/*
+#wp-content/*
 wp-content/plugins
 wp-content/languages
 wp-content/updraft

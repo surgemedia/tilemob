@@ -188,10 +188,10 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
                                         //*****Flag Images****
                         $gallery_string .= 
                         '<div class="thumb">
-                            <div class="thumbnail"><a href="detail.php?id='.$item_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
+                            <div class="thumbnail"><a href="detail.php?id='.$item_code.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
                             <div class="size">'.$item_display_size.'</div>
                             <div class="code">'.$row_webitems['Code'].'</div>
-                            <div class="name"><a href="detail.php?id='.$item_id.'" title="More info">'.$row_webitems['Desc'].'</a></div>
+                            <div class="name"><a href="detail.php?id='.$item_code.'" title="More info">'.$row_webitems['Desc'].'</a></div>
                             <div class="price_info hide">
                                 <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
                                 <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
