@@ -1,9 +1,9 @@
 === UpdraftPlus Backup and Restoration ===
-Contributors: Backup with UpdraftPlus, DavidAnderson
-Tags: backup, backups, restore, amazon backup, s3 backup, dropbox backup, google drive backup, rackspace cloud files, rackspace backup, dreamhost, dreamobjects backup, ftp backup, webdav backup, google cloud storage, onedrive, microsoft one drive, back up, multisite, restoration, sftp backup, ftps, scp backup, migrate, duplicate, copy, mysql backup, database backup, db backups, website backup, wordpress backup, full backup, openstack backup, sicherung
+Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne
+Tags: backup, backups, restore, amazon backup, s3 backup, dropbox backup, google drive backup, rackspace cloud files, rackspace backup, dreamhost, dreamobjects backup, ftp backup, webdav backup, google cloud storage, onedrive, microsoft one drive, microsoft azure, azure, back up, multisite, restoration, sftp backup, ftps, scp backup, migrate, duplicate, copy, mysql backup, database backup, db backups, website backup, wordpress backup, full backup, openstack backup, sicherung
 Requires at least: 3.2
-Tested up to: 4.2
-Stable tag: 1.10.3
+Tested up to: 4.5
+Stable tag: 1.12.2
 Author URI: https://updraftplus.com
 Donate link: http://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -12,16 +12,16 @@ Backup and restoration made easy. Complete backups; manual or scheduled (backup 
 
 == Description ==
 
-<a href="https://updraftplus.com">UpdraftPlus</a> simplifies backups (and restoration). Backup into the cloud (Amazon S3 (or compatible), Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Microsoft OneDrive, SFTP, SCP, WebDAV, OpenStack Swift and email) and restore with a single click. Backups of files and database can have separate schedules.
+<a href="https://updraftplus.com">UpdraftPlus</a> simplifies backups (and restoration). Backup into the cloud (Amazon S3 (or compatible), Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Openstack Swift, UpdraftPlus Vault and email) and restore with a single click. Backups of files and database can have separate schedules. The paid version also backs up to Microsoft OneDrive, Microsoft Azure, Copy.Com, Google Cloud Storage, SFTP, SCP, and WebDAV.
 
-<strong>Top-quality:</strong> UpdraftPlus is the <a href="http://rankwp.com/plugins/updraftplus">highest-ranking backup plugin on wordpress.org</a> (ranks in the top 40 out of 30,000 WordPress plugins for quality on rankwp.com - last checked Sep 2014).
+<strong>Top-quality:</strong> UpdraftPlus is the highest-ranking backup plugin on wordpress.org, with <strong>over 700,000 currently active installs</strong>. Widely tested and reliable, this is the world's #1 most popular and mostly highly rated scheduled backup plugin. Millions of backups completed!
 
-<strong>Hundreds of thousands of users:</strong> widely tested and reliable (over 2.4 million downloads). The #1 most installed scheduled backup plugin, according to wordpress.org. Millions of backups completed!
+[vimeo https://vimeo.com/154870690]
 
-* Supports WordPress backups to Amazon S3 (or compatible), Dropbox, Rackspace Cloud Files, Google Drive, Google Cloud Storage, DreamHost DreamObjects, FTP, OpenStack (Swift) and email. Also (via a paid add-on) backup to Microsoft OneDrive, Copy.Com, FTP over SSL, SFTP, SCP, and WebDAV (and compatible services, e.g. Yandex, Cubby). Examples of S3-compatible providers: Cloudian, Connectria, Constant, Eucalyptus, Nifty, Nimbula, Cloudn.
+* Supports WordPress backups to UpdraftPlus Vault, Amazon S3 (or compatible), Dropbox, Rackspace Cloud Files, Google Drive, Google Cloud Storage, DreamHost DreamObjects, FTP, OpenStack (Swift) and email. Also (via a paid add-on) backup to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, Copy.Com, FTP over SSL, SFTP, SCP, and WebDAV (and compatible services, e.g. Yandex, Cubby, OwnCloud). Examples of S3-compatible providers: Cloudian, Connectria, Constant, Eucalyptus, Nifty, Nimbula, Cloudn.
 * Quick restore (both file and database backups)
 * Backup automatically on a repeating schedule
-* Site duplicator/migrator: can copy sites, and (with add-on) move them to new locations
+* Site duplicator/migrator: can copy sites, and (with add-on) duplicate them at new locations
 * Restores and migrates backup sets from other backup plugins (Premium) (currently supported: BackWPUp, BackupWordPress, Simple Backup, WordPress Backup To Dropbox)
 * Files and database backups can have separate schedules
 * Failed uploads are automatically resumed/retried
@@ -32,18 +32,18 @@ Backup and restoration made easy. Complete backups; manual or scheduled (backup 
 * Database backups can be encrypted for security (Premium)
 * Debug mode - full logging of the backup
 * Internationalised (translations welcome - see below)
-* <a href="https://updraftplus.com">Premium version and support available - https://updraftplus.com</a>
-* Supported on all current PHP versions (5.2 - 5.6)
+* <a href="https://updraftplus.com">Premium version and support available (including free remote backup storage) - https://updraftplus.com</a>
+* Supported on all current PHP versions (5.2 - 7.0)
 
 From our <a href="https://www.youtube.com/user/UpdraftPlus/videos">YouTube channel</a>, here's how to install:
 
 https://www.youtube.com/watch?v=7ReY7Z19h2I&rel=0
 
-= Don't Risk Your Backups On Anything Less =
+= Don't risk your backups on anything less =
 
 Your WordPress backups are worth the same as your entire investment in your website. The day may come when you get hacked, or your hosting company does, or they go bust - without good backups, you lose everything. Do you really want to entrust all your work to a backup plugin with only a few thousand downloads, or that has no professional backup or support? Believe us - writing a reliable backup plugin that works consistently across the huge range of WordPress deployments is hard.
 
-= UpdraftPlus Addons And Premium =
+= UpdraftPlus Premium =
 
 UpdraftPlus Backup/Restore is not crippled in any way - it is fully functional for backing up and restoring your site. What we do have is various extra features (including site cloning), and guaranteed support, available <a href="https://updraftplus.com/">from our website, updraftplus.com</a>. See <a href="https://updraftplus.com/comparison-updraftplus-free-updraftplus-premium/">a comparison of the free/Premium versions, here</a>.
 
@@ -61,7 +61,7 @@ If you are in the market for other WordPress premium plugins (especially WooComm
 
 Are you able to translate UpdraftPlus into another language? Are you ready to help speakers of your language? UpdraftPlus Backup/Restore itself is ready and waiting - the only work needed is the translating. The translation process is easy, and web-based - go here for instructions: <a href="https://updraftplus.com/translate/">https://updraftplus.com/translate/</a>. (Or if you're an expert WordPress translator already, then just pick out the .pot file from the wp-content/plugins/updraftplus/languages/ directory - if you scan for translatable strings manually, then you need to get these functions: _x(), __(), _e(), _ex(), log_e()).
 
-Many thanks to the existing translators - lissted at: https://updraftplus.com/translate/
+Many thanks to the existing translators - listed at: https://updraftplus.com/translate/
 
 = Other support =
 
@@ -87,7 +87,7 @@ Next, please make sure you read this FAQ through - it may already have the answe
 
 If it does not, then contact us (<a href="http://wordpress.org/support/plugin/updraftplus">the forum is the best way</a>)! This is a complex backup plugin and the only way we can ensure it's robust is to get bug reports and fix the problems that crop up. Please make sure you are using the latest version of the plugin, and that you include the version in your bug report - if you are not using the latest, then the first thing you will be asked to do is upgrade.
 
-Please include the log if you can find it (there are links to download logs on the UpdraftPlus settings page; or you may be emailed it; failing that, it is in the directory wp-content/updraft, so FTP in and look for it there). If you cannot find the log, then I may not be able to help so much, but you can try - include as much information as you can when reporting (PHP version, your blog's site, the error you saw and how you got to the page that caused it, any other relevant plugins you have installed, etcetera). http://pastebin.com is a good place to post the log.
+Please include the backup log if you can find it (there are links to download logs on the UpdraftPlus settings page; or you may be emailed it; failing that, it is in the directory wp-content/updraft, so FTP in and look for it there). If you cannot find the log, then I may not be able to help so much, but you can try - include as much information as you can when reporting (PHP version, your blog's site, the error you saw and how you got to the page that caused it, any other relevant plugins you have installed, etcetera). http://pastebin.com is a good place to post the log.
 
 If you know where to find your PHP error logs (often a file called error_log, possibly in your wp-admin directory (check via FTP)), then that's even better (don't send multi-megabytes; just send the few lines that appear when you run a backup, if any).
 
@@ -118,7 +118,265 @@ Thanks for asking; yes, we've got a few. Check out this profile page - https://p
 
 The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the best place to learn in more detail about any important changes.
 
-N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.10.3 of the free version correspond to changes made in 2.10.3.x of the paid version.
+N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.11.29 of the free version correspond to changes made in 2.11.29.x of the paid version.
+
+= 1.12.2 - 30/Mar/2016 =
+
+* TWEAK: When testing Amazon S3 bucket accessibility, slightly improve one of the corner-case checks
+* TWEAK: When creating an encryption key for direct Migration, or UpdraftCentral, allow the user to choose their key size (this helps with PHP installs lacking both OpenSSL and GMP, in which case key creation can be really slow)
+* TWEAK: Detect another case and deal with an HTTP 413 response when sending chunked data on a direct site-to-site migration
+
+= 1.12.1 - 24/Mar/2016 =
+
+* TWEAK: Update the bundled remote communications library - needed for some UpdraftCentral users
+
+= 1.12.0 - 23/Mar/2016 =
+
+* FEATURE: Compatible with the forthcoming (very soon!) UpdraftCentral remote control panel
+* COMPATIBILITY: Tested + supported on the upcoming WordPress 4.5
+* FIX: On some setups, if no remote storage was configured (not recommended), then old backups were not being pruned
+* FIX: Make FTP active mode (very rarely seen) work correctly again
+* TWEAK: Added a hint to FTP users who appear to be firewalled on only the data channel when attempting to use encrypted FTP
+* TWEAK: Improve detection of the WordPress scheduler duplicating periodic events when the server is overloaded
+* TWEAK: Simplify main tab layout upon first use
+* TWEAK: Add some previously unbundled licence files
+* TWEAK: Prevent a couple of PHP notices being logged when running a manual search/replace
+* TWEAK: Add a filter to allow more over-riding of pruning
+
+= 1.11.29 - 27/Feb/2016 =
+
+* FIX: When saving settings on multisite, some connections to remote storage could drop and need to be re-made
+* FIX: Fix an inoperative button in the Clone dialog box
+* FIX: Fix an error upon automatic backups (Premium) in 2.11.28
+* TWEAK: Updated readme to reflect > 700,000 active sites
+* TWEAK: When cloning a site and mod_rewrite is not available, give a warning pre-restore
+* TWEAK: Options saving on multisite is now much more efficient (in terms of database requests required)
+* TWEAK: Improve the scheduling algorithm in the case of hosts that allow very long runs times, and a network outage on the cloud storage
+* TWEAK: When connecting to updraftplus.com to claim a licence (paid versions), use the newer JSON-based protocol
+* TWEAK: Many and various internal improvements to structure of the admin page HTML, CSS and JS
+* TWEAK: The boxes for adding extra addresses for reporting, and extra DBs, now fade in
+
+= 1.11.27 - 17/Feb/2016 =
+
+* FEATURE: Automatic backups can take place before updates commissioned via WordPress.Com/JetPack remote site management (requires a not-yet-released version of JetPack - all current releases are insufficient, so please don't file reports about this yet)
+* FIX: Fixed a further logic error in the advanced backup retention options, potentially relevant if you had more than one extra rule, affecting the oldest backups
+* TWEAK: Resolve issue on some sites with in-dashboard downloads being interfered with by other site components
+* TWEAK: Auto-backups now hook to a newly-added more suitable action, on WP 4.4+ (https://core.trac.wordpress.org/ticket/30441)
+* TWEAK: Make WebDAV library not use a language construct that's not supported by HHVM
+* TWEAK: Change options in the "Backup Now" dialog as main settings are changed
+* TWEAK: Show the file options in the "Backup Now" dialog if/when alerting the user that they've chosen inconsistent options
+* TWEAK: When pruning old backups, save the history to the database at least every 10 seconds, to help with sites with slow network communications and short PHP timeouts
+
+= 1.11.26 - 13/Feb/2016 =
+
+* TWEAK: Prevent HTTP 500 download errors on some very large file/hosting setups
+* TWEAK: A tiny number of users had a badly laid-out settings screen until they refreshed their browser cache. This release prevents that.
+
+= 1.11.24 - 10/Feb/2016 =
+
+* FIX: Fixed further logic errors in the advanced backup retention options, potentially relevant if you had more than one extra rule
+* TWEAK: Saving of settings is now done over AJAX (i.e. without a page reload)
+* TWEAK: In-dashboard downloads now process the HTTP Range: header, allowing resumption of failed  downloads via the browser
+* TWEAK: Tweak 'Existing Backups' table CSS, to allow more entities per row
+* TWEAK: Warn copy.com users of Barracuda ending the service - https://techlib.barracuda.com/CudaDrive/EOL
+* TWEAK: Rename the 'hidden' CSS class, to prevent clashes with other plugins/themes which load their CSS code onto UD's page (which they shouldn't be doing)
+* TWEAK: Fix newsletter sign-up link
+* TWEAK: Log and triple-click summary now mentions the total size of the backup (i.e. total of the compressed backup set)
+* TWEAK: Try to detect a very rare case of recoverable database read failure, and schedule a re-try
+* TWEAK: Suppress unnecessary warning message when Dropbox account info checking fails
+* TWEAK: Attempt to restart a large OneDrive upload in a particular case seen when OneDrive's end seems to get into confusion about state
+* TWEAK: Various bits of internal re-factoring to support future improvements
+
+= 1.11.23 - 26/Jan/2016 =
+
+* FIX: When migrating a sub-folder based multisite into a non-root install with different relative path to the source multisite (I can't think of any good reasons to do this), the search/replace could leave sub-sites unreachable without manual correction
+* FIX: Logic errors in the advanced backup retention options could lead to the oldest backups being deleted prematurely, and some backups not being deleted when they were overdue for deletion
+* FIX: Amazon S3 bucket creation wizard (in the S3 enhanced add-on) was not honouring the chosen region for new buckets
+* FIX: Upon restoration over an existing site, inactive plugins could remain post-restore (bug introduced in 1.11.20)
+* TWEAK: Various internal re-organisations, to improve modularity/re-use of the code
+* TWEAK: Internal CSS re-organisation to make future layout changes easier
+* TWEAK: The "stop" link in the backup progress indicator now halts the backup asap, instead of at the next scheduled resumption
+* TWEAK: Clarify the course of action needed if you attempt a Dropbox backup without Curl
+* TWEAK: Add support for the new Asia Pacific (Seoul) region to Amazon S3
+* TWEAK: Make the automatic backup option box appear on the updates page for users who can update plugins or themes (not just core - previously it was assumed that these would always go together in the real world, but some managed hosts are now removing the core update capability from the default admin user, whilst leaving the others)
+* TWEAK: Change default zip split size to 400Mb on new installs
+* TWEAK: Clean up use of composer, to conform to proper usage standards, and update to current version (to avoid causing a problem for plugins using PSR-4 autoloaders)
+* TWEAK: Provide direct links to cart when choosing UpdraftPlus Vault storage
+* TWEAK: Add debug.log to the default exclusions in wp-content (when people leave debug logging on and forget, it can get huge)
+* TWEAK: On multisite, make sure that the site/blogs tables are placed early in the backup (assists with quickly scanning backup info)
+* TWEAK: Update to phpseclib 1.0.1
+* TWEAK: Prevent a PHP notice when using SCP
+* TWEAK: Add new termmeta table to the default list of core tables (which is usually automatically detected)
+
+= 1.11.21 - 28/Dec/2015 =
+
+* TWEAK: If there's a problem connecting to UpdraftPlus Vault, in some situations the information on the cause was not easily readable
+* TWEAK: Slightly more logging on failed OneDrive operations, to aid problem-solving
+* TWEAK: Add wysija_email_user_stat to the list of potentially huge non-critical tables (which can get skipped in an emergency)
+* FIX: Package Pear/Exception.php, so that servers without it already can use Microsoft Azure blob storage
+* FIX: Prevent PHP fatal error on admin area in some restore scenarios
+
+= 1.11.20 - 21/Dec/2015 =
+
+* FEATURE: WordPress multisite backup administrators can now selectively restore data from a chosen site, instead of restoring the entire WordPress install - https://updraftplus.com/selectively-restoring-on-wordpress-multisite/ (requires WP 3.5+, UpdraftPlus Premium)
+* FEATURE: Import a WordPress single-site backup into WordPress multisite, as a new site (requires WP 3.5+, UpdraftPlus Premium) - https://updraftplus.com/information-on-importing-a-single-site-wordpress-backup-into-a-wordpress-network-i-e-multisite/
+* FIX: Properly encode folder paths with Copy.Com, allowing some previously prevented folder names to work
+* FIX: In-dashboard decryption using some decryption keys with URL-encodable characters failed
+* FIX: Prevent PHP fatal error on settings page on a buggy old PHP version (5.2.10) when Google Cloud storage add-on not present
+* FIX: When using multiple remote storage providers, a race condition could lead to some old backups not being deleted on the storage not uploaded to last
+* FIX: Views are now placed after tables in the database backup
+* FIX: In-page uploader widget was not working on sub-domain based multisites in some dashboard access scenarios
+* FIX: Package Net/URL2 (PEAR), so that servers without it already can use Microsoft Azure blob storage
+* TWEAK: Upgrade Microsoft OneDrive API usage to latest version
+* TWEAK: Automatic backups are now hooked into the themes page in the network admin on WP multisite installs
+* TWEAK: Dashboard messages were not being clearly shown when trying to use UpdraftPlus Vault without PHP Curl available
+* TWEAK: Protect against other plugins loading incompatible Google SDKs when Google Cloud is being used
+* TWEAK: When trying to use S3, DreamObjects or UpdraftPlus Vault without PHP Curl available, make the cause of the problem more obvious
+* TWEAK: When sending data to remote site, keep re-trying on receipt of an HTTP 413 (request entity too large) down to 64Kb (instead of previous 128Kb) - a webserver was seen in the wild configured at this level
+* TWEAK: Detect the WordPress scheduler invoking a scheduled backup multiple times, in some cases where the existing semaphore lock wasn't helping (because the backup already finished, or the WP scheduler invoked multiple instances of the same event minutes apart - apparently possible when very heavily overloaded)
+* TWEAK: Detect an inconsistent semaphore locking state, and fix it (apparently only possible upon unexpected server crash)
+* TWEAK: Provide a button to cancel (not just continue) an interrupted restore
+* TWEAK: Work around buggy Ubuntu PHP versions - https://bugs.launchpad.net/ubuntu/+source/php5/+bug/1315888
+* TWEAK: Make sure that backup options get passed on with continuation data, when resuming an interrupted restore
+* TWEAK: Catch a few untranslated strings (in the decryptor widget for encrypted backups)
+* TWEAK: Log more information if a connection to UpdraftPlus Vault fails
+* TWEAK: The internal info shown when triple-clicking a backup set's date had messed-up formatting
+
+= 1.11.18 - 25/Nov/2015 =
+
+* FEATURE: On hosts with low timeouts that kill restore operations half-way though, provide an obvious button on the dashboard to immediately resume; see: https://updraftplus.com/resuming-interrupted-restores/
+* FEATURE: Usability improvements and ability to select file components in the 'Backup Now' dialog - https://updraftplus.com/improvements-to-the-backup-now-dialog-box/
+* FEATURE: Full support for Microsoft Azure blob storage (UpdraftPlus Premium)
+* FEATURE: Allow all files beginning with a defined prefix to be excluded from the backup by inputting (for example) prefix:someprefix_,prefix:someotherprefix- in your exclusion settings - see: https://updraftplus.com/faqs/how-can-i-exclude-particular-filesdirectories-from-the-backup/
+* FEATURE: UpdraftPlus Premium can now restore backups created by "Dropbox Backup" by WPAdm
+* COMPATIBILITY: Tested/supported on the forthcoming WordPress 4.4
+* TWEAK: Faster zip file creation on PHP 7 with ZipArchive - https://updraftplus.com/faster-zip-file-creation-with-the-php-7-zip-engine/
+* TWEAK: Improve settings tab: remove headings, tweak a few wordings, move "remote storage" section further up
+* TWEAK: Introduce UPDRAFTPLUS_SET_TIME_LIMIT internal constant
+* TWEAK: Quote the table name passed to MySQL in DESCRIBE statement
+* TWEAK: Prevent a PHP notice being logged during initial updates connection, and another when restoring third-party databases
+* TWEAK: Style previously unstyled button in some auto-backup scenarios
+* FIX: A few settings were not being deleted by the "Wipe Settings" button.
+* FIX: Importer would not correctly handle third-party backups where the files and zip were both in zip format, separately, and where they were restored together
+* FIX: With multi-archive backup sets, files in the top level of a backup of WP core or 'others' were not restored by an in-dashboard restore if they over-wrote an existing non-identical file if they were not in the first archive
+
+= 1.11.17 - 13/Nov/2015 =
+
+* FIX: Resolve a conflict with "Simple Calendar" (formerly "Google Calendar Events") since their re-written 3.0 release, when using Google Drive storage
+
+= 1.11.15 - 28/Oct/2015 =
+
+* FEATURE: Google Cloud Storage support (UpdraftPlus Premium)
+* FIX: Automatic backups of WordPress core prior to WP core upgrade in recent versions were including non-WP core files
+* FIX: OwnCloud 8.1's WebDAV server responds differently, breaking UD's communications: restore the ability to back up to OwnCloud WebDAV
+* TWEAK: Allow use of the Meta key for selecting multiple backup sets (as well as Control)
+* TWEAK: When sending backup data directly site-to-site (when migrating), handle the (very rare) case where a remote server complains of the chunk size after accepting previous chunks of the same size
+* TWEAK: Add message to final log line when sending backup set directly to a remote site, reminding the user of what to do next.
+* TWEAK: Tweak zip-splitting algorithm, to prevent delayed split on resumption when final file in the last-created zip is gigantic
+* TWEAK: By default, exclude directories that appear to be the UpdraftPlus internal directory of a site stored in a sub-directory when backing up WordPress core
+* TWEAK: In the debugging output, show more clearly when Curl is not installed
+* TWEAK: Remove trailing slashes from what WP returns as the uploads/plugins directories, in case the user has specified a manual directory over-ride and erroneously added a trailing slash
+* TWEAK: Replace all remaining http:// links to updraftplus.com with https://
+* TWEAK: Raise some of the Google Drive network timeouts
+* TWEAK: Suppress an internal PHP notice when pruning backups in some circumstances
+* TRANSLATIONS: Various updated translations
+
+= 1.11.12 - 29/Sep/2015 =
+
+* FEATURE: More sophisticated rules for retention/deletion (UpdraftPlus Premium) - https://updraftplus.com/more-sophisticated-backup-retention/
+* FEATURE: Delete multiple backups at once - https://updraftplus.com/deleting-multiple-backups/
+* FEATURE: When choosing a monthly backup, you can now choose the starting date (e.g. choose 17th, not just choose the next week-day, e.g. next Monday)
+* FEATURE: You can exclude files with any particular extension by using the constant UPDRAFTPLUS_EXCLUDE_EXTENSIONS (comma-separate different extensions), or by inputting (for example) ext:.zip,ext:.mp4 in your exclusion settings.
+* FEATURE: Tested and supported on the forthcoming PHP 7.0
+* FIX: SFTP uploads could hang after finishing, if more than one attempt was needed to upload the file
+* FIX: Stop causing JavaScript errors on WordPress 3.2 on the plugins page
+* TWEAK: UI improvement when choosing multiple storage options - https://updraftplus.com/a-prettier-way-to-choose-remote-storage-options/
+* TWEAK: The storage selection drop-down (free version) now has icons to make it easier on the eye
+* TWEAK: Use UpdraftPlus Vault logo
+* TWEAK: Replace target="_new" with target="_blank" when opening new browser ports, to be more standards-compliant
+* TWEAK: Tweak the auto-split algorithm again to catch another case where it would have been better to split in a low-resource situation
+* TWEAK: When checking the backup integrity, allow for a multisite to not have a root options table; check sitemeta instead (unlikely, but theoretically possible)
+* TWEAK: Raise default Google Drive network timeout from 15 seconds - it's too possible to hit this on a slow uplink (e.g. congested ADSL)
+* TWEAK: Upgrade the bundled Google SDK to the most recent release (1.1.4)
+* TWEAK: Add previously-untranslated string
+* TWEAK: Suppress a PHP notice relating to a constant that needed quoting
+* TWEAK: Turn off reporting of PHP deprecation conditions if using phpseclib on PHP 7 (can break communications - phpseclib uses PHP4-style constructors)
+* TRANSLATIONS: Various updated translations
+
+= 1.11.9 - 04/Sep/2015 =
+
+* FIX: Dropbox introduced an un-documented, un-announced change to their server, which caused new site authentications in UpdraftPlus to no longer work. Now fixed with this release.
+* FIX: If backing up multiple extra directories under "more files", if large directories required a resumption, then inclusion of the files multiple times in the backup was possible.
+* TWEAK: Tweak the auto-split algorithm to not avoid firing in a particular case (that relies on a sequence of unlikely I/O events, seen on GoDaddy) if there's no resumption scheduled
+* TWEAK: Add mysql.sql to the (changeable) default configuration for excludes from wp-content - on WP Engine this is an unreadable file that they create that thus produces a backup warning
+* TWEAK: Add a dashboard warning (+ link to documentation) if UD appears to be incompletely installed
+* TWEAK: Add UPDRAFTPLUS_WEBDAV_NEVER_CHUNK constant for WebDAV servers that return the wrong error code when chunking fails
+* TWEAK: Introduce a UPDRAFTPLUS_REMOTESEND_DEFAULT_CHUNK_BYTES constant allowing the over-riding of the remote-send (Migrator) starting chunk size in wp-config.php (expert users)
+* TWEAK: Add CSS classes to dashboard updates notices, so that people can hide them more easily if they wish
+* TWEAK: If gzopen() is disabled, then test binzip without trying to use PclZip to verify the results
+* TWEAK: Add work-around for PHP bug https://bugs.php.net/bug.php?id=62852
+
+= 1.11.6 - 22/Aug/2015 =
+
+* FIX: SFTP was not working in 1.11.4 for some servers (related to phpseclib library update and sources of random data)
+* FIX: 1.11.5 release had wrong version number in header for paying users; corrected with fresh release
+
+= 1.11.4 - 19/Aug/2015 =
+
+* FIX: Perform previously missing tweak on the database after restoring a multisite backup to an install with a different table prefix, which inhibited the ability to create new users on the main site in a network.
+* TWEAK: Remove an inefficiency when examining files to prune from Google Drive, reducing the amount of time needed.
+* TWEAK: Show a warning if UpdraftPlus's directory in wp-content/plugins has been manually renamed to include a space, which WordPress does not support
+* TWEAK: Skip search/replacing of the 'guid' column in the posts table when migrating (improves performance - and prevents possible re-appearances of blog articles in peoples' feed readers if double-migrating)
+* TWEAK: Upgraded the bundled phpseclib Math, Net and File libraries to current versions (1.0 branch)
+* TWEAK: Prevent PHP notice in log file when deleting FTP backup from dashboard
+* TRANSLATIONS: Updated translations, including Greek
+
+= 1.11.3 - 13/Aug/2015 =
+
+* FIX: Fix access to S3 for PHP 5.2 users using buckets in the US-WEST-1 region
+* FIX: Fix access to UpdraftPlus Vault for some PHP 5.2 users
+
+= 1.11.2 - 11/Aug/2015 =
+
+* TWEAK: Handle the results when someone with no UpdraftPlus Vault quota attempts to connect more gracefully
+
+= 1.11.1 - 10/Aug/2015 =
+
+* FEATURE: UpdraftPlus Vault storage - simple to set up storage from your trusted provider: https://updraftplus.com/landing/vault - with 1Gb of free storage for UpdraftPlus Premium customers ( https://updraftplus.com/shop/updraftplus-premium/ ) - and more storage available for anyone to purchase. All other storage options (Dropbox, Google Drive, etc.) remain available, of course!
+* FEATURE: S3 enhanced wizard now allows the user to optionally deny the new Amazon Web Services IAM user download and/or delete permissions, for an even more secure setup (at the cost of some convenience - you will need to download/restore/delete S3 backups outside of UpdraftPlus).
+* FEATURE: Amazon S3 in UpdraftPlus Premium now supports optional server-side encryption
+* FEATURE: An "UpdraftPlus" menu now appears on the WP admin bar, allowing quick access.
+* COMPATIBILITY: Tested and compatible with WordPress 4.3
+* SPEED: For users' whose backups are created with a zip binary (the default engine, where available), CPU usage + zip creation times have been significantly reduced
+* SPEED: For users cloning a website with a large number of users and a changed table prefix, a long and slow series of SQL operations has been replaced with a single fast one
+* FIX: The chunk-uploading algorithm for Copy.Com could unnecessarily upload the same chunks multiple times. We have not had any reports, but we believe it's also theoretically possible that a Copy.Com upload could have been corrupted by the same issue, so recommend updating for all Copy.Com users.
+* FIX: Fix issue with site cloning whereby on sites with very large numbers of entries in the postmeta table that needed search/replacing, some could be omitted (in the case seen, the table had >600,000 entries)
+* FIX: Saving the settings immediately after authenticating with Copy.Com resulted in being redirected to WP's page for all settings.
+* FIX: If PHP was killed by the webserver during the process of pruning old backups, then this would not be retried until the next backup, thus potentially leaving more backups than desired around in remote storage in the meanwhile.
+* FIX: Log files sometimes failed to mention the MySQL version
+* TRANSLATIONS: Various updated translations - thanks to our translators
+* TWEAK: When choosing multiple remote storage options (Premium), these are now stacked via tabs, instead of vertically as before
+* TWEAK: More help for enormous sites on badly resourced web hosting: part of the enumeration of uploads needing backing up is now cached, allowing more to be time when time limits are short
+* TWEAK: Secret credentials (e.g. S3 secret key) in the admin area are now starred (as explained in our long-standing FAQ, this does nothing to protect against malicious WordPress co-admins on your site - https://updraftplus.com/faqs/in-the-administration-section-it-shows-my-amazon-ftp-etc-passwords-without-using-stars-is-this-safe/ - but at least we won't get asked about it so many times!).
+* TWEAK: Provide more direct help to the user if they are hosting with Strato and get the 'File Size Limit Exceeded' zip message
+* TWEAK: When migrating data directly to a remote site, if the remote site returns a 413 HTTP code ("Request Entity Too Large"), re-try using a smaller chunk size
+* TWEAK: Log when about to begin encryption of a database file (allowing the progress to be monitored more easily if there's a problem)
+* TWEAK: Detect a further case of an incompatible database (that is from a remote source and uses MySQL features not present on the destination server) and warn before attempting to import.
+* TWEAK: Make the error message shown if trying to restore an incompatible database (that is from a remote source and uses MySQL features not present on the destination server) clearer.
+* TWEAK: If the user uses "Backup Now" before saving their settings, warn them that the unsaved settings changes won't apply to this backup
+* TWEAK: Only warn about very large files found once for each file (rather than once per resumption)
+* TWEAK: Add the UPDRAFTPLUS_GOOGLEDRIVE_DISABLEGZIP constant - define it as true to work-around broken HTTP setups (possibly broken outgoing proxy?) when accessing Google Drive
+* TWEAK: When claiming an add-on (paid versions), the user's updraftplus.com password will automatically be forgotten once it is no longer needed
+* TWEAK: Handle the case of the user typing in an invalid number of backups to retain more elegantly
+* TWEAK: No longer require the php-mcrypt module for Dropbox 
+* TWEAK: Also retry a smaller chunk size if it looks like mod_security unhelpfully replaced a 413 HTTP code with a 200 success message despite the operation actually failing for this reason, or if it looks like sending is just timing out before the PHP timeout (so that we don't get notified).
+* TWEAK: Added new CA root certificates to store (http://curl.haxx.se/ca/cacert.pem)
+* TWEAK: If the Migrator's direct-send component drops its chunk size, then store this information so that it doesn't have to go through the cycle of finding the best chunk size the next time.
+* TWEAK: Added UPDRAFTPLUS_IPV4_ONLY constant to prevent use of IPv6 (currently implemented by Google Drive only)
+* TWEAK: Deal with a case where the web host appears to be losing disk I/O near kill time, despite later database writes going through (so, the order of operations was insufficient to guarantee what had been completed). This issue was only cosmetic - backup sets were intact (hence "tweak", not "fix")
+* TWEAK: Increase HTTP timeout for remote site-to-site operations
+* TWEAK: Don't cause the 'debug' tab to abort rendering if the web host has disabled the gzopen() function (which is an odd/pointless thing to do)
+* TWEAK: Resolve PHP 'strict standards' coding internal notice in Google Drive module
 
 = 1.10.3 - 2015-06-09 =
 
@@ -133,7 +391,7 @@ N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which i
 * TWEAK: Add constant UPDRAFTPLUS_SFTP_TIMEOUT allowing users to over-ride (via wp-config.php) the default SFTP timeout (default now: 15 seconds).
 * TWEAK: Make Copy.Com filter out non-backups from remote file listings at an earlier stage
 * TWEAK: Log more information when a curl error occurs when getting a OneDrive access token
-* TWEAK: Code re-arrangement in OneDrive library to deal with apparently broken curl installations
+* TWEAK: Code re-arrangement in OneDrive library to deal with sites using the obsolete PHP safe_mode
 * TWEAK: Clearer message for users whose access to paid plugin updates has expired (paid versions)
 * TWEAK: Improve detection of started pre-upgrade automatic backups in case of webserver misbehaviour
 * TWEAK: Fix untranslated message when confirming the wiping of settings
@@ -383,7 +641,7 @@ Importer add-on (https://updraftplus.com/shop/importer/)
 * DEPRECATED: Bitcasa support has been deprecated, and the links removed from
 the free version. (Existing Premium users using Bitcasa will continue to be
 able to do so). See:
-http://updraftplus.com/bitcasas-current-direction-unclear/
+https://updraftplus.com/bitcasas-current-direction-unclear/
 * FIX: Fix corner-case in URL search/replace when migrating a site that had WP
 in a different directory to the site home, and migration to a sub-directory of
 the original site.
@@ -411,7 +669,7 @@ Augustin-Mihai Mufturel and Teodor Muraru
 = 1.9.25 - 2014/09/17 =
 
 * FEATURE: Copy (https://copy.com) cloud storage support (Premium -
-http://updraftplus.com/shop/updraftplus-premium/)
+https://updraftplus.com/shop/updraftplus-premium/)
 * FEATURE: The search/replace expert tool can now work on selected tables only
 * PERFORMANCE: Use PageVisibility API to be more intelligent about when we
 need to poll for progress in the dashboard
@@ -508,7 +766,7 @@ incompatible Google SDK
 
 * FEATURE: New search/replace expert tool (Premium)
 * TWEAK: UI has been simplified - see:
-http://updraftplus.com/gentle-re-design/
+https://updraftplus.com/gentle-re-design/
 * TWEAK: "Backup Now" now avoids the WordPress scheduler - thus meaning it can
 work on sites where the WordPress scheduler is broken (e.g. Heart Internet)
 * TWEAK: Make sure that server HTTP-level errors are shown directly to the
@@ -540,7 +798,7 @@ errors, Y warnings".
 * FEATURE: Google Drive now works without the PHP curl module being needed
 * FEATURE: UpdraftPlus Premium can now back up non-WordPress tables and
 external databases; database encryption is also now a Premium feature; see:
-http://updraftplus.com/backing-external-databases/
+https://updraftplus.com/backing-external-databases/
 * FIX: Work around conflicts with the Google Analyticator and Appointments+
 plugins when using Google Drive since 1.9.4 (see:
 http://wordpress.org/support/topic/dont-unconditionally-load-old-google-sdk)
@@ -577,12 +835,12 @@ encrypted database and Google Drive storage in 1.9.4
 
 * FEATURE: New remote storage back-end for OpenStack Swift
 * FEATURE: New remote storage back-end for Bitcasa (Premium -
-http://updraftplus.com/shop/updraftplus-premium/)
+https://updraftplus.com/shop/updraftplus-premium/)
 * FEATURE: New Google Drive back-end now uses new SDK; resulting new
 capabilities include ability to rescan remote storage, and chunked downloading
 for huge files; also requires a shorter list of permissions
 * FEATURE: Restore backups that were created by the plugin BackWPup (Premium -
-http://updraftplus.com/shop/updraftplus-premium/)
+https://updraftplus.com/shop/updraftplus-premium/)
 * FIX: WebDAV storage: remove requirement for PEAR to be pre-installed on
 server
 * FIX: Fix restoration on sites where WP did not have direct filesystem access
@@ -634,7 +892,7 @@ backup plugins (Premium) (supported: BackUpWordPress and Simple Backups
 * FEATURE: Feature to re-scan remote storage (allows detection of existing
 backups after a restore to an earlier site version, and allows quicker moving
 of data from site to site when migrating)
-* FEATURE: SFTP add-on (http://updraftplus.com/shop/sftp/) now supports
+* FEATURE: SFTP add-on (https://updraftplus.com/shop/sftp/) now supports
 key-based logins (as well as password-based)
 * TWEAK: Add a warning message and link to helpful page for people whose WP
 schedulers don't seem to be working (at least 4 overdue jobs in the queue)
@@ -779,10 +1037,10 @@ limited maximum pathname lengths
 = 1.8.1 - 2013/12/10 =
 
 * FEATURE: New "Reporting" add-on - more sophisticated/flexible backup reports
-(http://updraftplus.com/shop/reporting/)
+(https://updraftplus.com/shop/reporting/)
 * FEATURE: New enhanced add-on for Rackspace Cloud Files users, allowing them
 to create a new sub-user with exclusive access to the backup container
-(http://updraftplus.com/shop/cloudfiles-enhanced/) (PHP 5.3.3+ required for
+(https://updraftplus.com/shop/cloudfiles-enhanced/) (PHP 5.3.3+ required for
 this feature)
 * FEATURE: Add region-selection (Dallas/Chicago/Northern Virginia/Sydney/Hong
 Kong) to Rackspace Cloud Files (PHP 5.3.3+ required for this feature)
@@ -865,7 +1123,7 @@ section
 = 1.7.34 - 2013/10/21 =
 
 * FEATURE: Options in the "Backup Now" dialog to exclude files or database
-from the backup (http://updraftplus.com/more-flexibility-in-backup-now/)
+from the backup (https://updraftplus.com/more-flexibility-in-backup-now/)
 * FEATURE: Use binary mysqldump, if available, for much faster dumps of large
 tables
 * FEATURE: New Ελληνική / Greek translation (el): Κώστας Θερμογιάννης (Kostas
@@ -921,11 +1179,11 @@ multiple jobs on overloaded systems
 restoring, and display information on the restore process earlier
 
 = 1.7.18 - 2013/09/17 =
-* FEATURE: <a href="http://updraftplus.com/shop/morestorage/">New "more
+* FEATURE: <a href="https://updraftplus.com/shop/morestorage/">New "more
 storage" add-on</a>, enabling backing up to multiple storage destinations
 * FEATURE: New progress meter on dashboard page when a backup is running
 * FEATURE: SCP support (in the <a
-href="http://updraftplus.com/shop/sftp/">SFTP/FTPS/SCP add-on</a>)
+href="https://updraftplus.com/shop/sftp/">SFTP/FTPS/SCP add-on</a>)
 * FEATURE: If (and only if) your settings page is open, then UpdraftPlus will
 automatically perform tricks to help backups run even if your WordPress
 install has its scheduler disabled (of course, enabling your scheduler would
@@ -951,12 +1209,12 @@ section
 incomplete message
 * TWEAK: Warn the user if they seem to be a on a dev website that is not
 visited + so can't backup
-(http://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/)
+(https://updraftplus.com/faqs/why-am-i-getting-warnings-about-my-site-not-having-enough-visitors/)
 * TWEAK: More detection of possible overlaps (use temporary files as evidence)
 * TWEAK: Extra check that the directory is writable before unpacking zip in
 restore (so user gets friendly error message instead of trickier one)
 * TWEAK: Provide option to remember the "automatic backup" setting
-* TWEAK: <a href="http://updraftplus.com/shop/webdav/">The WebDAV add-on</a>
+* TWEAK: <a href="https://updraftplus.com/shop/webdav/">The WebDAV add-on</a>
 now has support for WebDAV servers that don't support Content-Range (e.g.
 ownCloud)
 
@@ -977,10 +1235,10 @@ ZipArchive class.
 
 = 1.7.0 - 2013/08/20 =
 * FEATURE: Split large sites into multiple zips (see:
-http://updraftplus.com/splitting-large-sites-into-multiple-archives/)
+https://updraftplus.com/splitting-large-sites-into-multiple-archives/)
 * FEATURE: Fix time add-on can now also choose the day of the week
 * FEATURE: New add-on/Premium feature - Automatic Backups (automatically take
-backups before plugin/theme updates) - http://updraftplus.com/shop/autobackup/
+backups before plugin/theme updates) - https://updraftplus.com/shop/autobackup/
 * FEATURE: Svensk / Swedish translation (sv_SE) by Steve Sandström
 (http://www.brandicon.se)
 * FEATURE: Français / French translation (fr_FR) by ufo3D - http://ufo-3d.fr/
@@ -1025,7 +1283,7 @@ gmail.com)
 notified prominently of warning-level conditions (non-fatal conditions, but
 things the user should be advised of)
 * FEATURE: Allow some hiding of secrets in the admin area (see:
-http://updraftplus.com/faqs/in-the-administration-section-it-shows-my-amazon-ftp-etc-passwords-without-using-stars-is-this-safe/)
+https://updraftplus.com/faqs/in-the-administration-section-it-shows-my-amazon-ftp-etc-passwords-without-using-stars-is-this-safe/)
 * FEATURE: Restorer now obtains files at an earlier stage, allowing analysis +
 more intelligent presentation of options and applicable warnings pre-restore.
 Now warns if you are migrating without having chosen search/replace of DB.
@@ -1090,7 +1348,7 @@ plugins which call WP wrongly from over-writing new cron schedules (e.g.
 BackupBuddy)
 
 = 1.6.17 - 2013/06/06 =
-* FEATURE: News blog - http://updraftplus.com/news/ - please subscribe if you
+* FEATURE: News blog - https://updraftplus.com/news/ - please subscribe if you
 want to stay up to date with news of new features, tips, and special offers.
 RSS link: http://feeds.feedburner.com/UpdraftPlus
 * FEATURE: Restoration/migration now copes with a change of table prefix, and
@@ -1145,7 +1403,7 @@ turn it off, then ask for support when they see lots of debugging notices)
 
 = 1.6.1 - 05/06/2013 =
 * FEATURE: New "Migrator" add-on for moving sites from one WordPress install
-to another (http://updraftplus.com/shop/)
+to another (https://updraftplus.com/shop/)
 * FEATURE: The "More files" add-on can now back up any files from anywhere on
 your filesystem (not just parts of WordPress)
 * FEATURE: The "More files" add-on can now exclude specified directories from
@@ -1228,7 +1486,7 @@ options
 * When restoring, you can now select only some components to restore
 * History of previous backups can re-scan to find backups manually imported
 (e.g. via FTP) (trunk has drag-and-drop uploader)
-* Multisite add-on (http://updraftplus.com/shop/) now stores/restores blogs
+* Multisite add-on (https://updraftplus.com/shop/) now stores/restores blogs
 and mu-plugins separately
 * Display UpdraftPlus's disk space usage
 * Internationalisation hooks in main body of plugin
@@ -1286,12 +1544,12 @@ hosts with low max_execution_time values
 
 = 1.4.13 - 02/18/2013 =
 * Some extra hooks for "fix time" add-on
-(http://updraftplus.com/shop/fix-time/)
+(https://updraftplus.com/shop/fix-time/)
 * Some internal simplification
 * Small spelling + text fixes
 
 = 1.4.11 - 02/13/2013 =
-* Various branding tweaks - <a href="http://updraftplus.com">launch of
+* Various branding tweaks - <a href="https://updraftplus.com">launch of
 updraftplus.com</a>
 * Important fix for people with non-encrypted database backups
 
@@ -1538,7 +1796,7 @@ improvements
 
 == License ==
 
-    Copyright 2011-15 David Anderson
+    Copyright 2011-16 David Anderson
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -1560,4 +1818,4 @@ We recognise and thank the following for code and/or libraries used and/or modif
 
 
 == Upgrade Notice ==
-* 1.10.3 : Various tweaks and fixes. New feature for sending a backup directly to another site (in UpdraftPlus Premium).
+* 1.12.2: Compatible with the forthcoming UpdraftCentral; various minor tweaks

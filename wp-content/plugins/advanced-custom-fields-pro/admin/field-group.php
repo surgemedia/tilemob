@@ -32,7 +32,7 @@ class acf_admin_field_group {
 		
 		// actions
 		add_action('current_screen',									array($this, 'current_screen'));
-		add_action('save_post',											array($this, 'save_post'));
+		add_action('save_post',											array($this, 'save_post'), 10, 2);
 		
 		
 		// ajax
@@ -92,11 +92,11 @@ class acf_admin_field_group {
 	*  @date	21/07/2014
 	*  @since	5.0.0
 	*
-	*  @param	$current_screen (object)
+	*  @param	n/a
 	*  @return	n/a
 	*/
 	
-	function current_screen( $current_screen ) {
+	function current_screen() {
 		
 		// validate screen
 		if( !acf_is_screen('acf-field-group') ) {
@@ -111,8 +111,9 @@ class acf_admin_field_group {
 		
 		
 		// actions
-		add_action('admin_enqueue_scripts',		array($this,'admin_enqueue_scripts'));
-		add_action('admin_head', 				array($this,'admin_head'));
+		add_action('admin_enqueue_scripts',		array($this,'admin_enqueue_scripts'), 20);
+		add_action('admin_head', 				array($this,'admin_head'), 20);
+		add_action('admin_footer', 				array($this,'admin_footer'), 20);
 		
 	}
 	
@@ -164,6 +165,50 @@ class acf_admin_field_group {
 	function admin_head() {
 		
 		// global
+		global $post, $field_group;
+		
+		
+		// set global var
+		$field_group = acf_get_field_group( $post );
+		
+		
+		// metaboxes
+		add_meta_box('acf-field-group-fields', __("Fields",'acf'), array($this, 'mb_fields'), 'acf-field-group', 'normal', 'high');
+		add_meta_box('acf-field-group-locations', __("Location",'acf'), array($this, 'mb_locations'), 'acf-field-group', 'normal', 'high');
+		add_meta_box('acf-field-group-options', __("Settings",'acf'), array($this, 'mb_options'), 'acf-field-group', 'normal', 'high');
+		
+		
+		// actions
+		add_action('post_submitbox_misc_actions',	array($this, 'post_submitbox_misc_actions'), 10, 0);
+		add_action('edit_form_after_title',			array($this, 'edit_form_after_title'), 10, 0);
+		
+		
+		// filters
+		add_filter('screen_settings',				array($this, 'screen_settings'), 10, 1);
+		
+		
+		// action for 3rd party customisation
+		do_action('acf/field_group/admin_head');
+		
+	}
+	
+	
+	/*
+	*  admin_footer
+	*
+	*  description
+	*
+	*  @type	function
+	*  @date	11/01/2016
+	*  @since	5.3.2
+	*
+	*  @param	$post_id (int)
+	*  @return	$post_id (int)
+	*/
+	
+	function admin_footer() {
+		
+		// global
 		global $post;
 		
 		
@@ -178,7 +223,6 @@ class acf_admin_field_group {
 			'fields'				=> __("Fields",'acf'),
 			'parent_fields'			=> __("Parent fields",'acf'),
 			'sibling_fields'		=> __("Sibling fields",'acf'),
-			'hide_show_all'			=> __("Hide / Show All",'acf'),
 			'move_field'			=> __("Move Custom Field",'acf'),
 			'move_field_warning'	=> __("This field cannot be moved until its changes have been saved",'acf'),
 			'null'					=> __("Null",'acf'),
@@ -194,34 +238,26 @@ class acf_admin_field_group {
 			'validation'			=> 0,
 		);
 		
-		?>
-		<script type="text/javascript">
-		(function($) {
-			
-			acf.o = <?php echo json_encode( $o ); ?>;
-			acf.l10n = <?php echo json_encode( $l10n ); ?>;
-			
-		})(jQuery);	
-		</script>
-		<?php
+		
+?>
+<script type="text/javascript">
+/* <![CDATA[ */
+if( typeof acf !== 'undefined' ) {
+
+	acf.o = <?php echo json_encode($o); ?>;
+	acf.l10n = <?php echo json_encode($l10n); ?>;
+	<?php do_action('acf/field_group/admin_footer_js'); ?>
+	
+	acf.do_action('prepare');
+	
+}
+/* ]]> */
+</script>
+<?php
 		
 		
-		// metaboxes
-		add_meta_box('acf-field-group-fields', __("Fields",'acf'), array($this, 'mb_fields'), 'acf-field-group', 'normal', 'high');
-		add_meta_box('acf-field-group-locations', __("Location",'acf'), array($this, 'mb_locations'), 'acf-field-group', 'normal', 'high');
-		add_meta_box('acf-field-group-options', __("Options",'acf'), array($this, 'mb_options'), 'acf-field-group', 'normal', 'high');
-		
-		
-		// add screen settings
-		add_filter('screen_settings', array($this, 'screen_settings'), 10, 1);
-		
-		
-		// 3rd party hook
-		do_action('acf/field_group/admin_head');
-		
-		
-		// hidden $_POST data
-		add_action('edit_form_after_title', array($this, 'edit_form_after_title'));
+		// action for 3rd party customisation
+		do_action('acf/field_group/admin_footer');
 		
 	}
 	
@@ -239,26 +275,65 @@ class acf_admin_field_group {
 	*  @return	$current
 	*/
 	
-	function screen_settings( $current ) {
+	function screen_settings( $html ) {
 		
 		// vars
-		$show_field_keys = acf_get_user_setting('show_field_keys', 0);
+		$checked = acf_get_user_setting('show_field_keys') ? 'checked="checked"' : '';
 		
 		
-		// heading
-	    $current .= '<h5>' . __("Fields",'acf') . '</h5>';
-	    
-	    
-	    // radio buttons
-	    $current .= '<div class="show-field-keys">' . __('Show Field Keys','acf') . ':';
-		$current .= '<label><input type="radio" ' . ( $show_field_keys ? 'checked="checked"' : '' ) . ' name="show_field_keys" value="1" />' . __('Yes','acf') . '</label>';
-		$current .= '<label><input type="radio" ' . ( $show_field_keys ? '' : 'checked="checked"' ) . ' name="show_field_keys" value="0" />' . __('No','acf') . '</label>';
-		$current .= '</div>';
+		// append
+	    $html .= '<div id="acf-append-show-on-screen" class="acf-hidden">';
+	    $html .= '<label for="acf-field-key-hide"><input id="acf-field-key-hide" type="checkbox" value="1" name="show_field_keys" ' . $checked . ' /> ' . __('Field Keys','acf') . '</label>';
+		$html .= '</div>';
 	    
 	    
 	    // return
-	    return $current;
+	    return $html;
 	    
+	}
+	
+	
+	/*
+	*  post_submitbox_misc_actions
+	*
+	*  This function will customize the publish metabox
+	*
+	*  @type	function
+	*  @date	17/07/2015
+	*  @since	5.2.9
+	*
+	*  @param	n/a
+	*  @return	n/a
+	*/
+	
+	function post_submitbox_misc_actions() {
+		
+		// global
+		global $field_group;
+		
+		
+		// vars
+		$status = $field_group['active'] ? __("Active",'acf') : __("Disabled",'acf');
+		
+?>
+<script type="text/javascript">
+(function($) {
+	
+	// modify status
+	$('#post-status-display').html('<?php echo $status; ?>');
+	
+	
+	// remove edit links
+	$('#misc-publishing-actions a').remove();
+	
+	
+	// remove editables (fixes status text changing on submit)
+	$('#misc-publishing-actions .hide-if-js').remove();
+	
+})(jQuery);	
+</script>
+<?php	
+		
 	}
 	
 	
@@ -300,11 +375,19 @@ class acf_admin_field_group {
 	*  @return	$post_id (int)
 	*/
 	
-	function save_post( $post_id ) {
+	function save_post( $post_id, $post ) {
 		
 		// do not save if this is an auto save routine
 		if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) {
 		
+			return $post_id;
+			
+		}
+		
+		
+		// bail early if not acf-field-group
+		if( $post->post_type !== 'acf-field-group' ) {
+			
 			return $post_id;
 			
 		}
@@ -418,11 +501,7 @@ class acf_admin_field_group {
 	function mb_fields() {
 		
 		// global
-		global $post;
-
-		
-		// vars
-		$field_group = acf_get_field_group( $post );
+		global $field_group;
 		
 		
 		// get fields
@@ -453,11 +532,7 @@ class acf_admin_field_group {
 	function mb_options() {
 		
 		// global
-		global $post;
-
-		
-		// vars
-		$field_group = acf_get_field_group( $post );
+		global $field_group;
 		
 		
 		// field key (leave in for compatibility)
@@ -490,11 +565,7 @@ class acf_admin_field_group {
 	function mb_locations() {
 		
 		// global
-		global $post;
-
-		
-		// vars
-		$field_group = acf_get_field_group( $post );
+		global $field_group;
 		
 		
 		// UI needs at lease 1 location rule
@@ -561,38 +632,25 @@ class acf_admin_field_group {
 		
 		switch( $options['param'] ) {
 			
-			/*
-			*  Basic
-			*/
-			
-			case "post_type" :
-				
-				// all post types except attachment
-				$exclude = array('attachment');
-				$choices = acf_get_post_types( $exclude );
-				$choices = acf_get_pretty_post_types( $choices );
-
-				break;
-			
-			
-			case "user_type" :
-				
-				global $wp_roles;
-				
-				$choices = $wp_roles->get_names();
-
-				if( is_multisite() )
-				{
-					$choices['super_admin'] = __('Super Admin');
-				}
-								
-				break;
-				
 			
 			/*
 			*  Post
 			*/
 			
+			case "post_type" :
+			
+				// get post types
+				$choices = acf_get_pretty_post_types();
+				
+				
+				// remove attachments
+				unset( $choices['attachment'] );
+				
+				
+				// end
+				break;
+
+				
 			case "post" :
 				
 				// get post types
@@ -601,7 +659,7 @@ class acf_admin_field_group {
 				
 						
 				// get posts grouped by post type
-				$groups = acf_get_posts(array(
+				$groups = acf_get_grouped_posts(array(
 					'post_type' => $post_types
 				));
 				
@@ -655,15 +713,17 @@ class acf_admin_field_group {
 			
 			case "post_status" :
 				
-				$choices = array(
-					'publish'	=> __('Publish', 'acf'),
-					'pending'	=> __('Pending Review', 'acf'),
-					'draft'		=> __('Draft', 'acf'),
-					'future'	=> __('Future', 'acf'),
-					'private'	=> __('Private', 'acf'),
-					'inherit'	=> __('Revision', 'acf'),
-					'trash'		=> __('Trash', 'acf')
-				);
+				global $wp_post_statuses;
+				
+				if( !empty($wp_post_statuses) ) {
+					
+					foreach( $wp_post_statuses as $status ) {
+						
+						$choices[ $status->name ] = $status->label;
+						
+					}
+					
+				}
 								
 				break;
 			
@@ -690,7 +750,7 @@ class acf_admin_field_group {
 				
 				
 				// get posts grouped by post type
-				$groups = acf_get_posts(array(
+				$groups = acf_get_grouped_posts(array(
 					'post_type' => 'page'
 				));
 				
@@ -728,7 +788,7 @@ class acf_admin_field_group {
 				$choices = array(
 					'front_page'	=>	__("Front Page",'acf'),
 					'posts_page'	=>	__("Posts Page",'acf'),
-					'top_level'		=>	__("Top Level Page (parent of 0)",'acf'),
+					'top_level'		=>	__("Top Level Page (no parent)",'acf'),
 					'parent'		=>	__("Parent Page (has children)",'acf'),
 					'child'			=>	__("Child Page (has parent)",'acf'),
 				);
@@ -746,8 +806,9 @@ class acf_admin_field_group {
 			case "page_template" :
 				
 				$choices = array(
-					'default'	=>	__("Default Template",'acf'),
+					'default' => apply_filters( 'default_page_template_title',  __('Default Template', 'acf') ),
 				);
+				
 				
 				$templates = get_page_templates();
 				
@@ -763,6 +824,38 @@ class acf_admin_field_group {
 			/*
 			*  User
 			*/
+			
+			case "current_user" :
+				
+				// viewing
+				$choices = array(
+					'logged_in'		=> __('Logged in', 'acf'),
+					'viewing_front'	=> __('Viewing front end', 'acf'),
+					'viewing_back'	=> __('Viewing back end', 'acf')
+				);
+								
+				break;
+			
+			case "current_user_role" :
+				
+				// global
+				global $wp_roles;
+				
+				
+				// specific roles
+				$choices = $wp_roles->get_names();
+				
+				
+				// multi-site
+				if( is_multisite() ) {
+					
+					$choices = array_merge(array(
+						'super_admin' => __('Super Admin', 'acf')
+					), $choices);
+					
+				}
+				
+				break;
 			
 			case "user_role" :
 				
@@ -812,8 +905,17 @@ class acf_admin_field_group {
 				
 			case "comment" :
 				
-				$choices = array('all' => __('All', 'acf'));
-			
+				// vars
+				$choices = array(
+					'all'	=> __('All', 'acf')
+				);
+				
+				
+				// append post types
+				$choices = array_merge( $choices, acf_get_pretty_post_types() );
+				
+				
+				// end
 				break;
 			
 			
@@ -872,7 +974,7 @@ class acf_admin_field_group {
 	function ajax_render_location_value() {
 		
 		// validate
-		if( ! wp_verify_nonce($_POST['nonce'], 'acf_nonce') ) {
+		if( !acf_verify_ajax() ) {
 		
 			die();
 			
@@ -892,7 +994,7 @@ class acf_admin_field_group {
 	/*
 	*  ajax_render_field_settings
 	*
-	*  This function can be accessed via an AJAX action and will return the result from the acf_render_field_settings function
+	*  This function will return HTML containing the field's settings based on it's new type
 	*
 	*  @type	function (ajax)
 	*  @date	30/09/13
@@ -919,7 +1021,7 @@ class acf_admin_field_group {
 		
 		
 		// verify nonce
-		if( ! wp_verify_nonce($options['nonce'], 'acf_nonce') ) {
+		if( !wp_verify_nonce($options['nonce'], 'acf_nonce') ) {
 		
 			die(0);
 			
@@ -927,7 +1029,7 @@ class acf_admin_field_group {
 		
 		
 		// required
-		if( ! $options['type'] ) {
+		if( !$options['type'] ) {
 		
 			die(0);
 			
@@ -945,7 +1047,7 @@ class acf_admin_field_group {
 		
 		
 		// render
-		acf_render_field_settings( $field );
+		do_action("acf/render_field_settings/type={$field['type']}", $field);
 		
 		
 		// die
@@ -1010,9 +1112,9 @@ class acf_admin_field_group {
 			$v2 = '<a href="' . admin_url("post.php?post={$field_group['ID']}&action=edit") . '" target="_blank">' . $field_group['title'] . '</a>';
 			
 			echo '<p><strong>' . __('Move Complete.', 'acf') . '</strong></p>';
-			echo  sprintf( __('The %s field can now be found in the %s field group', 'acf'), $v1, $v2 ). '</p>';
+			echo '<p>' . sprintf( __('The %s field can now be found in the %s field group', 'acf'), $v1, $v2 ). '</p>';
 			
-			echo '<a href="#" class="acf-button blue acf-close-popup">' . __("Close Window",'acf') . '</a>';
+			echo '<a href="#" class="button button-primary acf-close-popup">' . __("Close Window",'acf') . '</a>';
 			
 			die();
 			
@@ -1054,7 +1156,7 @@ class acf_admin_field_group {
 			// render
 			acf_render_field_wrap( $field );
 			
-			echo '<button type="submit" class="acf-button blue">' . __("Move Field",'acf') . '</button>';
+			echo '<button type="submit" class="button button-primary">' . __("Move Field",'acf') . '</button>';
 			
 		echo '</form>';
 		

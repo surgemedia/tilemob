@@ -3,7 +3,7 @@ $id   = $_GET['id'];
 $msg  = $_GET['s2'];
 if(!empty($_GET['id'])) {
 	$item_id = trim($_GET['id']);
-	$result_item = mysql_query("SELECT * FROM shop_webitems WHERE item_id='$item_id' AND WebExport='YES' AND is_active='1'");
+	$result_item = mysql_query("SELECT * FROM shop_webitems WHERE Code='$item_id' AND WebExport='YES' AND is_active='1'");
 	if($row_item=mysql_fetch_array($result_item)) {
            //echo "<pre/>"; print_r($row_item);
             //*****
@@ -123,7 +123,14 @@ if(!empty($_GET['id'])) {
 			$image1_imgsrc = '<img src="images/blank.gif" alt="'.$item_Desc.'" border="0" />';
 		}
 	} else {
-		header('location:index.php');
+		//header('location:index.php');
+		echo 'this';
+		$item_id = trim($_GET['id']);
+		$result_item = mysql_query("SELECT * FROM shop_webitems WHERE item_id='$item_id' AND WebExport='YES' AND is_active='1'");
+		if($row_item=mysql_fetch_array($result_item)) {
+			$item_Code = $row_item['Code'];
+			header('location:/shop/detail.php?id='.$item_Code);
+		}
 	}
 } else {
 	header('location:index.php');
