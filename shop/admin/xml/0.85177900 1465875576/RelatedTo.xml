@@ -1,0 +1,778 @@
+<UserDefinedCodes xmlns="http://www.clearsoftware.com.au">
+  <UserDefinedCode>
+    <Code>30X10</Code>
+    <Description>30X10CM SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>3D-CUBE</Code>
+    <Description>3D-CUBE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>60X15</Code>
+    <Description>60X15CM SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>60X30</Code>
+    <Description>60X30CM SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ABSTRACT</Code>
+    <Description>ABSTRACT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AESTHETICS</Code>
+    <Description>AESTHETICS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AGUA</Code>
+    <Description>AGUA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ALLOY</Code>
+    <Description>ALLOY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ALMOND</Code>
+    <Description>ALMOND SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AMMOLITE</Code>
+    <Description>AMMOLITE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ANDES</Code>
+    <Description>ANDES SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ANTICA</Code>
+    <Description>ANTICA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ANTIQUITY</Code>
+    <Description>ANTIQUITY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AQUARIAN</Code>
+    <Description>AQUARIAN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ARABESQUE</Code>
+    <Description>ARABESQUE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ARABESQUEM</Code>
+    <Description>ARABESQUE MAX SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ARCADIAN</Code>
+    <Description>ARDADIAN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ARCHERFLOO</Code>
+    <Description>ARCHERFLOOR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ASSISI</Code>
+    <Description>ASSISI SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AUGUSTA</Code>
+    <Description>AUGUSTA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>AZTEC</Code>
+    <Description>AZTEC SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BASKET-NEO</Code>
+    <Description>BASKET WEAVE NEO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BAY</Code>
+    <Description>BAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BEEHIVE</Code>
+    <Description>BEEHIVE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BIOTITE</Code>
+    <Description>BIOTITE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BIRKSHIRE</Code>
+    <Description>BIRKSHIRE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BLUEHEX</Code>
+    <Description>BLUESTONE HEXAGON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BLUESTONE</Code>
+    <Description>BLUESTONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BRIGHT</Code>
+    <Description>BRIGHT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BRIGHTON</Code>
+    <Description>BRIGHTON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BRITTANIA</Code>
+    <Description>BRITTANIA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BROOKLYN</Code>
+    <Description>BROOKLYN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>BYRON</Code>
+    <Description>BYRON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CALIFORNIA</Code>
+    <Description>CALIFORNIA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CANALETTO</Code>
+    <Description>CANALETTO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CARRARAHEX</Code>
+    <Description>CARRARA HEXAGON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CARRARASUB</Code>
+    <Description>CARRARA SUBWAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CEMENTRIX</Code>
+    <Description>CEMENTRIX SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CHEVRON</Code>
+    <Description>CHEVRON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CHICAGO</Code>
+    <Description>CHICAGO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CITY</Code>
+    <Description>CITY SUBWAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CLADDING</Code>
+    <Description>CLADDING SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CLASSICO</Code>
+    <Description>CLASSICO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>COLLINGW</Code>
+    <Description>COLLINGWOOD SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>COMFLOOR</Code>
+    <Description>COMFLOOR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CONCENTRIC</Code>
+    <Description>CONCENTRIC SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CONCRETION</Code>
+    <Description>CONCRETION SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CONCRETO</Code>
+    <Description>CONCRETO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CRISTAL</Code>
+    <Description>CRISTAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CRISTALLO</Code>
+    <Description>CRISTALLO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CROCHET</Code>
+    <Description>CROCHET SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>CRYSTAL</Code>
+    <Description>CRYSTAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DAKAR</Code>
+    <Description>DAKAR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DAMASK</Code>
+    <Description>DAMASK SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DECKWOOD</Code>
+    <Description>DECKWOOD SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DECOEUR</Code>
+    <Description>DECOEUR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DESIGNER</Code>
+    <Description>DESIGNER SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>DISTRESSED</Code>
+    <Description>DISTRESSED SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>EARTHSTONE</Code>
+    <Description>EARTHSTONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>EGG-SHAPED</Code>
+    <Description>EGG-SHAPED SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ELEGANT</Code>
+    <Description>ELEGANT MARBLE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>EMBOSSED</Code>
+    <Description>EMBOSSED SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ENCAUSTIC</Code>
+    <Description>ENCAUSTIC SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>EXCELLANCE</Code>
+    <Description>EXCELLANCE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FABRIX</Code>
+    <Description>FABRIX SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FACADE</Code>
+    <Description>FACADE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FELDSPAR</Code>
+    <Description>FELDSPAR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FERRO</Code>
+    <Description>FERRO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FEZ</Code>
+    <Description>FEZ SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FILIGREE</Code>
+    <Description>FILIGREE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FLAMENCO</Code>
+    <Description>FLAMENCO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FLEURS</Code>
+    <Description>FLEURS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FORESTA</Code>
+    <Description>FORESTA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>FORESTGLEN</Code>
+    <Description>FORESTGLEN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GENERATION</Code>
+    <Description>GENERATION SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GENOA</Code>
+    <Description>GENOA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GLASS</Code>
+    <Description>GLASS COLLECTION SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GRAFICO</Code>
+    <Description>GRAFICO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>GRANADA</Code>
+    <Description>GRANADA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HAVEN</Code>
+    <Description>HAVEN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HAWTHORNE</Code>
+    <Description>HAWTHORNE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HERRINGBON</Code>
+    <Description>HERRINGBONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HEXAGON</Code>
+    <Description>HEXAGON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HEXAGONAL</Code>
+    <Description>HEXAGONAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HEXAGONALD</Code>
+    <Description>HEXAGONAL DECOR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HIMALAYAN</Code>
+    <Description>HIMALAYAN STONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HOLLYWOOD</Code>
+    <Description>HOLLYWOOD SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HONEYCOMBE</Code>
+    <Description>HONEYCOMBE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HORIZON</Code>
+    <Description>HORIZON SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>HOROSCOPE</Code>
+    <Description>HOROSCOPE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>IMMERSION</Code>
+    <Description>IMMERSION SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>INTEGRA</Code>
+    <Description>INTEGRA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ISKANDAR</Code>
+    <Description>ISKANDAR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>KSAR</Code>
+    <Description>KSAR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>LAMPSHADE</Code>
+    <Description>LAMPSHADE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>LIMESTONE</Code>
+    <Description>LIMESTONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>LINEA</Code>
+    <Description>LINEA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>LOZENGE</Code>
+    <Description>LOZENGE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MACHINED</Code>
+    <Description>MACHINED SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MARBLE CLA</Code>
+    <Description>MARBLE CLADDING SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MARFIL</Code>
+    <Description>MARFIL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MARRAKESH</Code>
+    <Description>MARRAKESH SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MATRIX</Code>
+    <Description>MATRIX SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MAYKING</Code>
+    <Description>MAYKING SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>METAIL</Code>
+    <Description>METAIL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>METALMOS</Code>
+    <Description>METAL MOSAICS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>METROPOLIS</Code>
+    <Description>METROPOLIS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MING</Code>
+    <Description>MING SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MIRAGE</Code>
+    <Description>MIRAGE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MIRRORBALL</Code>
+    <Description>MIRRORBALL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MOKO</Code>
+    <Description>MOKO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MONOCHROME</Code>
+    <Description>MONOCHROME SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MONTAGE</Code>
+    <Description>MONTAGE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MONTEGO</Code>
+    <Description>MONTEGO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MONTREAL</Code>
+    <Description>MONTREAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MOROCCAN</Code>
+    <Description>MOROCCAN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MOROCCO</Code>
+    <Description>MOROCCO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MULTIDIMEN</Code>
+    <Description>MULTIDIMENSIONAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>MYSTIC</Code>
+    <Description>MYSTIC SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>NEWMARKET</Code>
+    <Description>NEWMARKET SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OBLONG</Code>
+    <Description>OBLONG SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OCEANIC</Code>
+    <Description>OCEANIC SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OCTAGONAL</Code>
+    <Description>OCTAGONAL AND DOT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OLDAGEMIRR</Code>
+    <Description>OLD AGE MIRROR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OLYMPUS</Code>
+    <Description>OLYMPUS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OPAQUE</Code>
+    <Description>OPAQUE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>OSAKA</Code>
+    <Description>OSAKA PORCELAIN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PALETTE</Code>
+    <Description>PALETTE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PARDESI</Code>
+    <Description>PARDESI SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PATCHWORK</Code>
+    <Description>PATCHWORK SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PEARL</Code>
+    <Description>PEARL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PENNY</Code>
+    <Description>PENNY ROUND SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PLATEAU</Code>
+    <Description>PLATEAU SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PLATINUM</Code>
+    <Description>PLATINUM SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PRADESH</Code>
+    <Description>PRADESH SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PRIMADONNA</Code>
+    <Description>PRIMA DONNA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PRINCESS</Code>
+    <Description>PRINCESS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>PROVINCIAL</Code>
+    <Description>PROVINCIAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>QUARTZSTON</Code>
+    <Description>QUARTZ STONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>QUILTED-PA</Code>
+    <Description>QUILTED PATCHWORK SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RAILWAY</Code>
+    <Description>RAILWAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RAKU</Code>
+    <Description>RAKU SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RAWSTONE</Code>
+    <Description>RAWSTONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>REGENT</Code>
+    <Description>REGENT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RETRO</Code>
+    <Description>RETRO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>REVERSE</Code>
+    <Description>REVERSE BEVEL SUBWAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RHUMBA</Code>
+    <Description>RHUMBA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ROMAN</Code>
+    <Description>ROMAN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>RUSTIC</Code>
+    <Description>RUSTIC BRICK SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SASSOLINO</Code>
+    <Description>SASSOLINO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SCONCE</Code>
+    <Description>SCONCE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SCOPE</Code>
+    <Description>SCOPE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SHARKSKIN</Code>
+    <Description>SHARK SKIN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SMASH</Code>
+    <Description>SMASH SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SOAP</Code>
+    <Description>SOAP FITTING SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SONATA</Code>
+    <Description>SONATA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SPECTRUM</Code>
+    <Description>SPECTRUM SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>STORY</Code>
+    <Description>STORY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>STRATA</Code>
+    <Description>STRATA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SUBWAY</Code>
+    <Description>SUBWAY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SURF</Code>
+    <Description>SURF SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>SURFER</Code>
+    <Description>SURFER SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TAPESTRY</Code>
+    <Description>TAPESTRY SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TARA</Code>
+    <Description>TARA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TECHNICRYS</Code>
+    <Description>TECHNICRYSTAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TERRA1</Code>
+    <Description>TERRA UNE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIDAL</Code>
+    <Description>TIDAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIJARA</Code>
+    <Description>TIJARA MULTICOLOUR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIMBERGRAI</Code>
+    <Description>TIMBERGRAIN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIMBERMAX</Code>
+    <Description>TIMBERMAX SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TIMBERMINI</Code>
+    <Description>TIMBERMINI SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TRAVERTINE</Code>
+    <Description>TRAVERTINE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TRIBAL</Code>
+    <Description>TRIBAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TRILATERAL</Code>
+    <Description>TRILATERAL SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TURBULENT</Code>
+    <Description>TURBULENT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>TUSCANO</Code>
+    <Description>TUSCANO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VALENCIA</Code>
+    <Description>VALENCIA SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VAPOROUS</Code>
+    <Description>VAPOROUS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VECCHIO</Code>
+    <Description>VECCHIO SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VEINSTONE</Code>
+    <Description>VEINSTONE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VENICE</Code>
+    <Description>VENICE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VERSAFLOOR</Code>
+    <Description>VERSAFLOOR SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VESUVIUS</Code>
+    <Description>VESUVIUS SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VICTORIANT</Code>
+    <Description>VICTORIAN TESSELLATED SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VISION</Code>
+    <Description>VISION SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VIT-ARKITE</Code>
+    <Description>COMMERCIAL PORCELAIN -- VITRA ARKITECT SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VITAL</Code>
+    <Description>VITAL SERIES SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>VULCAN</Code>
+    <Description>VULCAN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WATERLINE</Code>
+    <Description>WATERLINE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WESTWOOD</Code>
+    <Description>WESTWOOD SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WHITES</Code>
+    <Description>WHITE TILE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>WOODGRAIN</Code>
+    <Description>WOODGRAIN SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ZAZZLE</Code>
+    <Description>ZAZZLE SERIES</Description>
+  </UserDefinedCode>
+  <UserDefinedCode>
+    <Code>ZEN</Code>
+    <Description>ZEN SERIES</Description>
+  </UserDefinedCode>
+</UserDefinedCodes>

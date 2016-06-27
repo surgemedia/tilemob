@@ -4,6 +4,7 @@ include('includes/prerun.php');
 include('includes/connection.php');
 include('includes/global_variables.php');
 include('includes/requests.php');
+//print_r(mysql_query("SELECT * FROM shop_webitems WHERE Code='NC225420' AND WebExport='YES' "));
 $qty     = $_POST['qty'];
 $item_id = $_POST['productId'];
 $unit = $_POST['unit'];
@@ -12,7 +13,7 @@ $unit = $_POST['unit'];
 //    $item_PcsBox = $_POST['item_M2Box'];
 //}
 //$item_M2Box  = $_POST['item_M2Box'];
-$result_item = mysql_query("SELECT * FROM shop_webitems WHERE item_id='$item_id' AND WebExport='YES' AND is_active='1'");
+$result_item = mysql_query("SELECT * FROM shop_webitems WHERE Code='$item_id' AND WebExport='YES' ");
 if($row_item=mysql_fetch_array($result_item)) {
    // echo "<pre/>";print_r($row_item);
 	$item_Code = $row_item['Code'];

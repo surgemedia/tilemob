@@ -80,7 +80,7 @@
 			text-align: left;
 			border-left: 1px solid $grey-light;
 			@media (min-width: $screen-lg-min) {
-				@extend .translateY-400;
+				//@extend .translateY-400;
 			}
 			@media (max-width: $screen-sm-min) {
 				text-align: center;

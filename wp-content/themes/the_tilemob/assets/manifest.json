@@ -12,6 +12,12 @@
       ],
       "main": true
     },
+    "waf.css": {
+      "files": [
+        "styles/waf.scss"
+      ],
+      "main": false
+    },
     "editor-style.css": {
       "files": [
         "styles/editor-style.scss"

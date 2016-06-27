@@ -1,4 +1,7 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
 /**
  * The base configurations of the WordPress.
  *
@@ -13,6 +16,15 @@
  *
  * @package WordPress
  */
+
+ // Include local configuration
+ if (file_exists(dirname(__FILE__) . '/local-config.php')) {
+ 	include(dirname(__FILE__) . '/local-config.php');
+ } else {
+ 	// define('WP_HOME','http://piccalilli.surgehost.com.au/');
+ 	// define('WP_SITEURL','http://piccalilli.surgehost.com.au/');
+ }
+
 
 // if(!class_exists('acf')){
 // 	echo "Advanced Custom Fields is Required for this website";
@@ -73,7 +85,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

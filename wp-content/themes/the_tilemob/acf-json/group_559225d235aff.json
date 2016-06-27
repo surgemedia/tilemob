@@ -6,7 +6,6 @@
             "key": "field_559225d23a75e",
             "label": "PDF",
             "name": "pdf",
-            "prefix": "",
             "type": "file",
             "instructions": "Please select the file you would like to upload",
             "required": 0,
@@ -17,13 +16,15 @@
                 "id": ""
             },
             "return_format": "array",
-            "library": "all"
+            "library": "all",
+            "min_size": 0,
+            "max_size": 0,
+            "mime_types": ""
         },
         {
             "key": "field_559225d23a780",
             "label": "Thumbnail",
             "name": "thumbnail",
-            "prefix": "",
             "type": "image",
             "instructions": "the thumbnail for that pdf",
             "required": 0,
@@ -35,7 +36,45 @@
             },
             "return_format": "url",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5760f1ffa9792",
+            "label": "Category",
+            "name": "category",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Bathroom": "Bathroom",
+                "Kitchen": "Kitchen",
+                "Outdoor": "Outdoor",
+                "Internal": "Internal",
+                "Latest": "Latest"
+            },
+            "default_value": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
         }
     ],
     "location": [
@@ -55,5 +94,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1444174515
+    "active": 1,
+    "description": "",
+    "modified": 1465971271
 }

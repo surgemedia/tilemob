@@ -1,7 +1,7 @@
 # Ignore the backup_database directory:
 Database_Backup/
 
-# Ignore the wordpress directory and default themes 
+# Ignore the wordpress directory and default themes
 *.php
 *.html
 wp-includes
@@ -9,17 +9,21 @@ wp-admin
 wp-content/*
 wp-content/plugins
 wp-content/languages
-wp-content/updraft
+wp-content/updraft/*
+shop/admin/xml*
+shop/images/*
 wp-content/themes/twentythirteen
 wp-content/themes/twentyfourteen
 wp-content/themes/twentyfifteen
 wp-content/themes/twentysixteen
 wp-content/themes/twentyseventeen
-
+*.xml
+xml_upload/*
+*.zip
 bower_components
 node_modules
-dist
-
+dist  
+shop/images/*
 wp-content/updraft
 # wordpress/*/uploads
 
@@ -28,7 +32,7 @@ tilemob.com.au
 # Include wp-config.php and other wordpress themes and plugins
 !wp-config.php
 !wp-content
-!wp-content/updraft/*
+wp-content/updraft/*
 !wp-content/themes/the_tilemob
 
 

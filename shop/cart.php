@@ -42,7 +42,9 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                         <div class="col-lg-8">
                             <div id="cart" class="cart">
                                 <h1>Your collection contains <?php echo $_shop_total_cart; ?> items<p class="sales-hotline">Sales Hotline: <?php the_field('sales_hotline','option') ?></p></h1>
-                                <p>$_shop_user_id is <?php echo $_shop_user_id; ?></p>
+                                <script>
+                                  console.log(<?php echo $_shop_user_id; ?>);
+                                </script>
                                 <?php
                                   $cart_string = '';
                                   $cart_final_total = 0;

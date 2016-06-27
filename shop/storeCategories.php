@@ -188,10 +188,10 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
                                         //*****Flag Images****
                         $gallery_string .= 
                         '<div class="thumb">
-                            <div class="thumbnail"><a href="detail.php?id='.$item_id.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
+                            <div class="thumbnail"><a href="detail.php?id='.$item_code.'" title="'.$item_name.'">'.$image1_imgsrc.'</a></div>
                             <div class="size">'.$item_display_size.'</div>
                             <div class="code">'.$row_webitems['Code'].'</div>
-                            <div class="name"><a href="detail.php?id='.$item_id.'" title="More info">'.$row_webitems['Desc'].'</a></div>
+                            <div class="name"><a href="detail.php?id='.$item_code.'" title="More info">'.$row_webitems['Desc'].'</a></div>
                             <div class="price_info hide">
                                 <div class="price_buy">Buy $'.number_format($item_buy,2).''.$item_unit.'</div>
                                 <div class="price_rrp">RRP $'.number_format($item_rrp,2).''.$item_unit.'</div>
@@ -200,7 +200,7 @@ $resSearchFor    = mysql_fetch_array($sqlSearchFor);
                             </div>
                             <div><a href="#" >'.$img_s.'</a></div>                         
                             <div id="addtocart_button_'.$item_id.'" class="button"><!--<a href="javascript:void(0);" title="add to cart" onclick="addToCart(\''.$_shop_user_id_encoded.'\',\''.$_shop_user_session.'\',\''.$item_code.'\',1,\''.$item_id.'\');">add to cart</a>-->
-                                                            <a href="detail.php?id='.$item_id.'" title="'.$item_name.'">View details</a></div>
+                                                            <a href="detail.php?id='.$item_code.'" title="'.$item_name.'">View details</a></div>
                             <div id="addtocart_feedback_'.$item_id.'" class="feedback">Item added</div>
                             <div class="clear"></div>
                         </div>';

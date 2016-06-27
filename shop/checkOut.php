@@ -9,7 +9,7 @@ include("class/class.watermark.php");
 $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPricePce+TradePricePce) as pricesum FROM shop_webitems WHERE WebExport='YES' AND is_active='1' ORDER BY RAND() LIMIT 0,20") or die(mysql_error());
 ?>
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?> >
     <head>
         <meta name="google-site-verification" content="aQXedls-hbPpeEDjYSu_ZRZC-Z_5Ty9KYbUeocNoxGE" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -42,10 +42,10 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                         <!-- Main -->
                         <div class="col-lg-8">
                         	<form action="process.php?action=process" method="post" onsubmit="return validate();">
-						            <? //<form action="process.php?action=process" method="post" onsubmit="return validate();">?>
+						            <?php //<form action="process.php?action=process" method="post" onsubmit="return validate();"> ?>
 								<div id="body_right" class="body_right">
 						                    <div id="cart" class="cart">
-						                    <h2 style="color:RED;"><?php echo $succ_mag;?></h2>
+						                    <h2 style="color:RED;"><?php echo $succ_mag; ?></h2>
 											<h1>	Customer Information  <p class="sales-hotline">Sales Hotline: <?php the_field('sales_hotline','option') ?></p></h1>				
 						                                <table class="form-listing">
 						                                    <tr>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require( '../wp-load.php' );
 include('includes/prerun.php');
@@ -33,7 +33,7 @@ if($row_content = mysql_fetch_array($result_content)) {
                 include('includes/attach_scripts.php'); //Javascripts and scripts
         ?>
         <?php get_template_part('templates/head'); ?>
-    
+
     </head>
 <body class='grey_bg' ?>>
         <!--[if lt IE 9]>
@@ -47,7 +47,7 @@ if($row_content = mysql_fetch_array($result_content)) {
         ?>
         <div class="wrap container" role="document">
             <div class="content row">
-              
+
                     <main class="main" role="main">
                      <div class="clearfix white_bg">
                      <div class="col-lg-4">
@@ -57,7 +57,7 @@ if($row_content = mysql_fetch_array($result_content)) {
                      </div>
                     <div class="col-lg-8">
 
-                <?php 
+                <?php
                 $string = '<h1>'.$heading1.'</h1>';
                 if($is_multicolumn==1) {
                     if($indent_body2==1){$require_indent_style='<div class="indent_body2"></div>';}else{$require_indent_style='';}
@@ -74,9 +74,9 @@ if($row_content = mysql_fetch_array($result_content)) {
                 }
                 echo $string;
                 ?>
- 
-            
-                        
+
+
+
                     </div>
                     </div>
                     </main><!-- /.main -->

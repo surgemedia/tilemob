@@ -14,13 +14,13 @@ if((!empty($_GET['user_id'])||!empty($_GET['user_session']))&&!empty($_GET['shop
         
 	if(intval($item_quantity)>=1) {
 		//--user exists--
-		$result_item = mysql_query("SELECT * FROM shop_webitems WHERE Code='$item_code' AND is_active='1'");
+		$result_item = mysql_query("SELECT * FROM shop_webitems WHERE Code='$item_code'");
 		if($row_item = mysql_fetch_array($result_item)) { //item available
 			$item_id = $row_item['item_id'];
 			if(!empty($user_id)) {
-				$result_cart = mysql_query("SELECT * FROM shop_cart WHERE user_id='$user_id' AND item_code='$item_code' AND is_active='1'"); //item exists in cart
+				$result_cart = mysql_query("SELECT * FROM shop_cart WHERE user_id='$user_id' AND Code='$item_code'"); //item exists in cart
 			} else if(!empty($guest_session)) {
-				$result_cart = mysql_query("SELECT * FROM shop_cart WHERE guest_session='$guest_session' AND item_code='$item_code' AND is_active='1'"); //item exists in cart
+				$result_cart = mysql_query("SELECT * FROM shop_cart WHERE guest_session='$guest_session' AND Code='$item_code'"); //item exists in cart
 			}
 			if($row_cart = mysql_fetch_array($result_cart)) { //update qty
 				$my_cart_id = $row_cart['cart_id'];

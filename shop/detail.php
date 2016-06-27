@@ -170,7 +170,7 @@ include("includes/detail-db-call.php");
             // })
             
             function callAjax() {
-                console.log("clicked");
+                // console.log("clicked");
                 keyuptime();
                 var shop_user_id_encoded = $("#shop_user_id_encoded").val();
                         var shop_user_session    = $("#shop_user_session").val();
@@ -181,6 +181,7 @@ include("includes/detail-db-call.php");
                         var item_order_qty       = $("#totm2").val();
                                 var item_id              = $("#item_id").val();
                             //  var totprice             = $("#totprice").val();
+                            // console.log([shop_user_id_encoded,shop_order_id,shop_user_session,item_Code,item_order_qty,item_id,totprice]);
                     if(pdtunit == "M2")
                         {
                                 var totprice             = $("#totprice").val();
