@@ -9,7 +9,7 @@ wp-admin
 #wp-content/*
 wp-content/plugins
 wp-content/languages
-wp-content/updraft
+wp-content/updraft/*
 wp-content/themes/twentythirteen
 wp-content/themes/twentyfourteen
 wp-content/themes/twentyfifteen
