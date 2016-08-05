@@ -45,7 +45,7 @@ function new_in_store_post_type() {
 function new_in_store_filters() {
 
 	$labels = array(
-		'name'                       => _x( 'Filters', 'Taxonomy General Name', 'text_domain' ),
+		'name'                       => _x( 'filters', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'Filter', 'Taxonomy Singular Name', 'text_domain' ),
 		'menu_name'                  => __( 'Filters', 'text_domain' ),
 		'all_items'                  => __( 'All Filters', 'text_domain' ),
@@ -78,6 +78,6 @@ function new_in_store_filters() {
 	register_taxonomy( 'filters', array( 'new_in_store' ), $args );
 
 }
-add_action( 'init', 'new_in_store_filters', 0 );
 // Hook into the 'init' action
 add_action( 'init', 'new_in_store_post_type', 0 );
+add_action( 'init', 'new_in_store_filters', 0 );
