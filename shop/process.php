@@ -109,7 +109,7 @@ switch ($_GET['action']) {
 
 	          $cart_string = '';
 			  $cart_final_total = 0;
-			  $result_cart = mysql_query("SELECT * FROM shop_cart WHERE order_id='$_shop_order_id' AND qty>0 AND is_active='1'");
+			  $result_cart = mysql_query("SELECT * FROM shop_cart WHERE order_id='$_shop_order_id' AND qty>0 ");
 			  if($_shop_total_cart>0) {
 			  	  $cart_string .= '
 					<table id="cart_table" width="50%" class="cart_table">
@@ -166,7 +166,7 @@ switch ($_GET['action']) {
 						  $cart_final_total += $cart_price;
 						  $cart_string .= '
 							<tr>
-								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_code.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
+								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_code.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a><br><span>'.$cart_item_code.'</span> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
 								<td align="center" valign="middle">
 									<div class="qty">
 										<div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'</div>
@@ -202,7 +202,8 @@ switch ($_GET['action']) {
 				  ';
 			  $message .= 'Quote Request Details'."<br/>\n";
 			  $message .= 'TILEMOB.COM.AU'."<br/>\n";
-              $message .= 'Hi '. $name. ',Thank you for requesting a quote with The Tilemob. Your reference No is :' .$orderNo. ".<br/>\n";
+
+              $message .= 'Hi '. $name. ', Thank you for requesting a quote with The Tile Mob Pty Ltd, Mitchelton. Your reference No is :' .$orderNo. ". We will work on your request and contact you asap with pricing for your project.<br/>\n";
 			  $message .= '************************************************************************'."<br/>\n";
               $message .= $billing_string."<br/>\n";
               $message .= 'Shipping Option :'.$shipping_option."<br/>\n";
