@@ -51,7 +51,7 @@ $result_webitems = mysql_query("SELECT *, WebPricePce, TradePricePce, (WebPriceP
                                   $result_cart = mysql_query("SELECT * FROM shop_cart WHERE user_id='$_shop_user_id' AND qty>0 AND is_active='1'");
                                   if($_shop_total_cart>0) {
                                       $cart_string .= '
-                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection for a Quote</a></div>
+                                      <div class="checkout_button"><a href="checkOut.php" title="Checkout now">Submit my collection to request a Quote</a></div>
                                       <table id="cart_table" width="100%" class="cart_table">
                                               <tr>
                                                 <th width="90">Thumbnail</th>

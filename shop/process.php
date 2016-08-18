@@ -166,7 +166,7 @@ switch ($_GET['action']) {
 						  $cart_final_total += $cart_price;
 						  $cart_string .= '
 							<tr>
-								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_id.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
+								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_code.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
 								<td align="center" valign="middle">
 									<div class="qty">
 										<div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'</div>
@@ -200,14 +200,14 @@ switch ($_GET['action']) {
 				  
 				  <body>
 				  ';
-			  $message .= 'Quote Details'."<br/>\n";
+			  $message .= 'Quote Request Details'."<br/>\n";
 			  $message .= 'TILEMOB.COM.AU'."<br/>\n";
-              $message .= 'Hi '. $name. ',Thank you for requesting quote with The Tilemob. Your Quote No is :' .$orderNo. ".<br/>\n";
+              $message .= 'Hi '. $name. ',Thank you for requesting a quote with The Tilemob. Your reference No is :' .$orderNo. ".<br/>\n";
 			  $message .= '************************************************************************'."<br/>\n";
               $message .= $billing_string."<br/>\n";
               $message .= 'Shipping Option :'.$shipping_option."<br/>\n";
               $message .= '************************************************************************'."<br/>\n";
-              $message .= '<u>Quote Content</u>'."<br/>\n";
+              $message .= '<u>Request Content</u>'."<br/>\n";
 			  $message .= $cart_string."\n";
 			  $message .= '************************************************************************'."<br/>\n";
               $message .= "<br/>\n";
@@ -245,13 +245,13 @@ switch ($_GET['action']) {
 				<body>
 				';
 		      $message1 .= 'There is a new quote request from www.tilemob.com.au'."<br/>\n";
-		      $message1 .= '<u>Quote Details</u>'. ".<br/>\n";
-              $message1 .= 'Quote No :' .$orderNo. ".<br/>\n";
+		      $message1 .= '<u>Quote Request Details</u>'. ".<br/>\n";
+              $message1 .= 'Reference No :' .$orderNo. ".<br/>\n";
 		      $message1 .= '************************************************************************'."<br/>\n";
               $message1 .= $billing_string."<br/>\n";
               $message1 .= 'Shipping Option :'.$shipping_option."<br/>\n";
               $message1 .= '************************************************************************'."<br/>\n";
-              $message1 .= '<u>Quote Content</u>'."<br/>\n";
+              $message1 .= '<u>Request Content</u>'."<br/>\n";
 			  $message1 .= $cart_string."\n";
 			  $message1 .= '************************************************************************'."<br/>\n";
               $message1 .= "<br/>\n";

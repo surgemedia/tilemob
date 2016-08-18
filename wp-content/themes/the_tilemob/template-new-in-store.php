@@ -60,7 +60,7 @@
         <xsl:for-each select="//pdfs">
         <li class=" {colclass} ">
                     <div class="pdf-object {is_featured}">
-                        <a target="_blank" href="{property_image}">
+                        <a target="_blank" href="{link}">
                             <img src="{img}" alt="" />
                             <span class="title"><xsl:value-of select="title"/></span>
                         </a>
@@ -98,6 +98,7 @@ var data = {
         "is_featured": "featured",
          "colclass": "col-sm-6",
          "img": "<?php the_field('thumbnail') ?>",
+         "link": "<?php echo get_field('pdf')['url']; ?>",
           "title": "<?php the_title() ?>"
            <?php $objTerms = wp_get_post_terms( get_the_id(), 'filters', array("fields" => "all") );
                             for ($j=0; $j < sizeof($objTerms); $j++) {
@@ -132,11 +133,13 @@ var data = {
         // The Loop
         if ( $new_in_store_query->have_posts() ) {
             while ( $new_in_store_query->have_posts() ) { $new_in_store_query->the_post();
+
     ?>
         {
         "is_featured": "",
         "colclass": "col-sm-3",
          "img": "<?php the_field('thumbnail') ?>",
+         "link": "<?php echo get_field('pdf')['url']; ?>",
           "title": "<?php the_title() ?>"
            <?php $objTerms = wp_get_post_terms( get_the_id(), 'filters', array("fields" => "all") );
                             for ($j=0; $j < sizeof($objTerms); $j++) {
