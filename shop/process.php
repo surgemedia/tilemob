@@ -112,25 +112,33 @@ switch ($_GET['action']) {
 			  $result_cart = mysql_query("SELECT * FROM shop_cart WHERE order_id='$_shop_order_id' AND qty>0 ");
 			  if($_shop_total_cart>0) {
 			  	  $cart_string .= '
-					<table id="cart_table" width="50%" class="cart_table">
+					<table id="cart_table" width="100%" class="cart_table">
 						<tr>
 							<th align="left" valign="middle">Item</th>
 							<th align="center" valign="middle">QTY</th>
-							<!--<th  align="right" valign="middle">Price</th>
-							<th  align="right" valign="middle">Total</th>-->
+							<th  align="right" valign="middle">Size</th>
+							<!--<th  align="right" valign="middle">Total</th>-->
 						</tr>';
 
 				  while($row_cart = mysql_fetch_array($result_cart)) {
 				  	  $row_cart_id = $row_cart['cart_id'];
 					  $cart_item_code = $row_cart['item_code'];
+					  $cart_RetailPrice = $row_cart['RetailPriceM2'];
 					  $cart_qty = $row_cart['qty'];
                       $cart_price = $row_cart['price'];
+                      $cart_price = $row_cart['price'];
+
                       $result_cart_webitems = mysql_query("SELECT * FROM shop_webitems WHERE Code='$cart_item_code' AND is_active='1'");
                       if($row_cart_webitems = mysql_fetch_array($result_cart_webitems)) {
                       	  $cart_item_id = $row_cart_webitems['item_id'];
 						  $cart_item_name = $row_cart_webitems['Desc'];
 					  	  $cart_item_pcsm2 = floatval($row_cart_webitems['PcsM2']);
 						  $cart_item_unit = $row_cart_webitems['Unit'];
+
+						  $cart_item_size = $row_cart_webitems['Size'];
+						  $result_size = mysql_query("SELECT * FROM shop_size WHERE Code='$cart_item_size' AND is_active='1'");
+							if($row_size=mysql_fetch_array($result_size)){$cart_item_size=$row_size['Description'];}
+
 						  if($cart_item_pcsm2>0) { //sell in m2
 								$item_WebPriceM2    = floatval($row_cart_webitems['WebPriceM2']);
                                 $item_RetailPriceM2 = floatval($row_cart_webitems['RetailPriceM2']);
@@ -167,19 +175,7 @@ switch ($_GET['action']) {
 						  $cart_string .= '
 							<tr>
 								<td align="left" valign="middle"><a href="http://www.tilemob.com.au/shop/detail.php?id='.$cart_item_code.'" title="'.$cart_item_name.'">'.$cart_item_name.'</a><br><span>'.$cart_item_code.'</span> </td><!--(<span class="redlink"><a href="javascript:void(0);" title="Remove" onclick="removeFromCart(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');">remove</a></span>)</td>-->
-								<td align="center" valign="middle">
-									<div class="qty">
-										<div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'</div>
-										<!--<div id="qty_controls_'.$row_cart_id.'" class="controls">
-											<div id="increase_'.$row_cart_id.'" class="increase"><a href="javascript:void(0);" title="+" onclick="increaseCartQty(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');"><div class="clear"></div></a>
-											<div id="decrease_'.$row_cart_id.'" class="decrease"><a href="javascript:void(0);" title="-" onclick="decreaseCartQty(\''.$_shop_user_id_encoded.'\',\'\','.$row_cart_id.');"><div class="clear"></div></a>
-											<div class="clear"></div>
-										</div>-->
-										<div class="clear"></div>
-									</div>
-								</td>
-								<!--<td align="right" valign="middle">$'.number_format($cart_item_buy,2).''.$cart_item_unit.'</td>
-								<td align="right" valign="middle"><div id="subtotal_'.$row_cart_id.'">$'.number_format($cart_price,2).'</div></td>-->
+								<td align="center" valign="middle"><div class="qty"><div id="qty_value_'.$row_cart_id.'" class="text">'.$cart_qty.'</div></div></td><td align="right" valign="middle"><div class="size" >'.$cart_item_size.'</td></div>
 							</tr>';
 						  
                       }
@@ -189,7 +185,7 @@ switch ($_GET['action']) {
 					</table>';
 			  }
 			  $message = $responder = '';
-              $subject .= 'TILEMOB.COM.AU: Your Quote Request';
+              $subject .= 'TILEMOB.COM.AU: Quote Request Details';
 			  $message .= '
 				  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 				  <html xmlns="http://www.w3.org/1999/xhtml">
@@ -259,7 +255,7 @@ switch ($_GET['action']) {
               $message1 .="</body>
 				  </html>";
 			  $store_message1 = $message1."<br/>\n";
-			  // $sendto_admin =   array('vani@surgemedia.com.au');
+			  // $sendto_admin =   array('dave@dmwcreative.com.au');
 			  // $sendto_admin =   array('sales@tilemob.com.au','thetilemob@gmail.com');
 			  $sendto_admin =   array('sales@tilemob.com.au');
 			  $strtotime = strtotime('now');
